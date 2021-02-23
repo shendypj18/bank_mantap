@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Videos extends Model
+class GeneralInfo extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'nama_video',
-        'link_video',
-
+        'nama_perusahaan',
+        'logo',
+        'icon',
+        'alamat',
+        'no_telp',
     ];
 }
