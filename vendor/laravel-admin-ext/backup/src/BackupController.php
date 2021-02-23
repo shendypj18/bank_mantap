@@ -26,7 +26,6 @@ class BackupController
             $content->body(view('laravel-admin-backup::index', [
                 'backups' => $backup->getExists(),
             ]));
-            // dd($content);
         });
     }
 
@@ -64,7 +63,7 @@ class BackupController
             ini_set('max_execution_time', 300);
 
             // start the backup process
-            Artisan::call('backup:run --only-db');
+            Artisan::call('backup:run --disable-notifications --only-db');
 
             $output = Artisan::output();
 
