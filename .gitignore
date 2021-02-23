@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor/*
 !/vendor/laravel-admin-ext
+!/vendor/spatie
 .env
 .env.backup
 .phpunit.result.cache
