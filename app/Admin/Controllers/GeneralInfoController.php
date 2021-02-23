@@ -49,8 +49,11 @@ class GeneralInfoController extends AdminController
         $show = new Show(GeneralInfo::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nama_perusahaan', __('Nama video'));
-        $show->field('link_video', __('Link video'));
+        $show->field('nama_perusahaan', __('Nama Perusahaan'));
+        $show->avatar()->image('logo', __('logo perusahaan'));
+        $show->avatar()->image('icon', __('icon perusahaan'));
+        $show->field('alamat', __('Alamat Perusahaan'));
+        $show->field('no_telp', __('Nomor Telp Perusahaan'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -67,6 +70,8 @@ class GeneralInfoController extends AdminController
     {
         $form = new Form(new GeneralInfo());
 
+        $form->text('nama_perusahaan', __('Nama Perusahaan'));
+        $form->text('alamat', __('Alamat Perusahaan'));
 
 
         return $form;
