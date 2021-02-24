@@ -72,9 +72,9 @@ class GeneralInfoController extends AdminController
 
         $form->text('nama_perusahaan', __('Nama Perusahaan'));
         $form->image('logo', __('logo perusahaan'));
-        $form->image('icon', __('logo perusahaan'));
+        $form->image('icon', __('icon perusahaan'));
         $form->text('alamat', __('Alamat Perusahaan'));
-        $form->text('no_telp', __('Alamat Perusahaan'));
+        $form->text('no_telp', __('no telp Perusahaan'));
 
 
         return $form;

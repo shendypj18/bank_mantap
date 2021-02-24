@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGeneralInfoTable extends Migration
+class CreateGeneralInfosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateGeneralInfoTable extends Migration
      */
     public function up()
     {
-        Schema::create('general_info', function (Blueprint $table) {
+        Schema::create('general_infos', function (Blueprint $table) {
             $table->id();
             $table->string('nama_perusahaan');
             $table->string('logo');
