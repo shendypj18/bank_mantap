@@ -103,4 +103,7 @@ return [
     'menu_titles'            => [],
     'prev'                   => 'Sebelumnya',
     'next'                   => 'Selanjutnya',
+    'company'                => 'Perusahaan',
+    'address'                => 'alamat',
+    
 ];

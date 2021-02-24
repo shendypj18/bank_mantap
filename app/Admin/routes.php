@@ -14,5 +14,6 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('videos', VideosController::class);
     $router->resource('generalinfo', GeneralInfoController::class);
+    $router->resource('smtps', SmtpController::class);
 
 });
