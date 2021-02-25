@@ -7,28 +7,26 @@ use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
+use Encore\Admin\Widgets\Box;
+
 
 class HomeController extends Controller
 {
     public function index(Content $content)
     {
         return $content
-            ->title('Dashboard')
-            ->description('Description...')
-            ->row(Dashboard::title())
-            ->row(function (Row $row) {
-
+            ->row('Google Analytics')
+            ->row(function (Row $row){
                 $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::environment());
+                    $column->append(new Box('Bar chart', view('admin.chartjs')));
                 });
-
                 $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::extensions());
+                    $column->append(new Box('Bar chart 2', view('admin.ww')));
                 });
-
                 $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::dependencies());
+                    $column->append(new Box('pie', view('admin.pie')));
                 });
             });
     }
+
 }
