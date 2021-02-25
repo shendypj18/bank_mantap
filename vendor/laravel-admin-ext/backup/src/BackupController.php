@@ -63,7 +63,7 @@ class BackupController
             ini_set('max_execution_time', 300);
 
             // start the backup process
-            Artisan::call('backup:run');
+            Artisan::call('backup:run --only-db --disable-notifications');
 
             $output = Artisan::output();
 
