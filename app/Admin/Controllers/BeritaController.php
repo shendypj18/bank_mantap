@@ -30,8 +30,8 @@ class BeritaController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('judul_berita', __('Judul berita'));
         $grid->column('kategori_id', __('Kategori Berita'))->pluck('nama');
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Created at'))->sortable();
+        $grid->column('updated_at', __('Updated at'))->sortable();
 
 
 
