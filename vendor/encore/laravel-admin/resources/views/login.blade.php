@@ -26,6 +26,27 @@
   <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  {!! htmlScriptTagJsApi() !!}
+  <style type="text/css" media="screen">
+  .g-recaptcha {
+      margin: 0 auto;
+      display: table;
+      transform:scale(0.87);
+   }
+   @media only screen and (max-width: 300px) {
+       .g-recaptcha {
+           margin-left: -16%;
+           transform:scale(0.57);
+       }
+  }
+
+}
+
+  </style>
+
+
+
+
 </head>
 <body class="hold-transition login-page" @if(config('admin.login_background_image'))style="background: url({{config('admin.login_background_image')}}) no-repeat;background-size: cover;"@endif>
 <div class="login-box">
@@ -37,16 +58,16 @@
     <p class="login-box-msg">{{ trans('admin.login') }}</p>
 
     <form action="{{ admin_url('auth/login') }}" method="post">
+        @csrf
       <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
+          @if($errors->has('username'))
+              @foreach($errors->get('username') as $message)
+                  <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+              @endforeach
+          @endif
 
-        @if($errors->has('username'))
-          @foreach($errors->get('username') as $message)
-            <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
-          @endforeach
-        @endif
-
-        <input type="text" class="form-control" placeholder="{{ trans('admin.username') }}" name="username" value="{{ old('username') }}">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="{{ trans('admin.username') }}" name="username" value="{{ old('username') }}">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback {!! !$errors->has('password') ?: 'has-error' !!}">
 
@@ -60,22 +81,37 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
-          @if(config('admin.auth.remember'))
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox" name="remember" value="1" {{ (!old('username') || old('remember')) ? 'checked' : '' }}>
-              {{ trans('admin.remember_me') }}
-            </label>
+          <div class="col-xs-12">
+            @if(config('admin.auth.remember'))
+                <div class="checkbox icheck">
+                    <label>
+                        <input type="checkbox" name="remember" value="1" {{ (!old('username') || old('remember')) ? 'checked' : '' }}>
+                        {{ trans('admin.remember_me') }}
+                    </label>
+                </div>
+            @endif
           </div>
-          @endif
-        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-4 form-group has-feedback {!! !$errors->has('g-recaptcha-response') ?: 'has-error' !!}">
+              @if($errors->has('g-recaptcha-response'))
+                  @foreach($errors->get('g-recaptcha-response') as $message)
+                      <label class="control-label text-danger" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+                  @endforeach
+              @endif
+          </div>
+      </div>
+      <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+              {!! htmlFormSnippet() !!}
+          </div>
+      </div>
         <!-- /.col -->
-        <div class="col-xs-4">
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin.login') }}</button>
-        </div>
-        <!-- /.col -->
+      <div class="row">
+          <div class="col-xs-12">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin.login') }}</button>
+          </div>
       </div>
     </form>
 

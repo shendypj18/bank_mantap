@@ -68,6 +68,7 @@ class AuthController extends Controller
         return Validator::make($data, [
             $this->username()   => 'required',
             'password'          => 'required',
+            recaptchaFieldName() => recaptchaRuleName()
         ]);
     }
 
