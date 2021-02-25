@@ -5,6 +5,7 @@
 /vendor/*
 !/vendor/laravel-admin-ext
 !/vendor/spatie
+!/vendor/encore
 .env
 .env.backup
 .phpunit.result.cache

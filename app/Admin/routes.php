@@ -15,5 +15,7 @@ Route::group([
     $router->resource('videos', VideosController::class);
     $router->resource('generalinfo', GeneralInfoController::class);
     $router->resource('smtps', SmtpController::class);
+    $router->resource('kategori-berita', KategoriBeritaController::class);
+    $router->resource('beritas', BeritaController::class);
 
 });

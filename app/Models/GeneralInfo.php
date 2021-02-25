@@ -15,4 +15,9 @@ class GeneralInfo extends Model
         'alamat',
         'no_telp',
     ];
+
+//     public function getShowImageAttribute()
+// {
+//     return \Storage::disk('public')->url('images/'. $this->attributes['image_column_name_here']);
+// }
 }

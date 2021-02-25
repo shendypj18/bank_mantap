@@ -275,7 +275,7 @@ return [
     |    "skin-red", "skin-red-light", "skin-black", "skin-black-light".
     |
     */
-    'skin' => 'skin-blue-light',
+    'skin' => 'skin-yellow-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -411,6 +411,12 @@ return [
                 // Select a local disk that you configured in `config/filesystem.php`
                 'disk' => 'public'
             ],
+            
+        'chartjs' => [
+        
+            // Set to `false` if you want to disable this extension
+            'enable' => true,
+        ]
 
     ],
 ];
