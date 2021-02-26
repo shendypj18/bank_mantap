@@ -56,8 +56,10 @@ class BeritaController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('judul_berita', __('Judul Berita'));
-        $show->field('kategori_id', __('Kategori Berita'))->pluck('nama');
-        $show->avatar()->image('gambar_berita', __('Gambar Berita'));
+        $show->field('kategori_id', __('Kategori Berita'))->display(function($id) {
+            return Kategori_berita::find($id)->nama;
+        });
+        $show->field('gambar_berita', __('Gambar Berita'))->image();
         $show->field('isi_berita', __('Isi Berita'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
