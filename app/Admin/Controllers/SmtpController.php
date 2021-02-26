@@ -26,7 +26,11 @@ class SmtpController extends AdminController
     {
         $grid = new Grid(new Smtp());
         
-
+        $grid->column('id', __('Id'));
+        $grid->column('nama_video', __('Nama video'));
+        $grid->column('link_video', __('Link video'));
+        $grid->column('created_at', __('Created at'));
+        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }

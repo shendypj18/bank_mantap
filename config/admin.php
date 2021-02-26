@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Bank Mantap',
+    'name' => 'Bank Mandiri Taspen',
 
     /*
     |--------------------------------------------------------------------------
