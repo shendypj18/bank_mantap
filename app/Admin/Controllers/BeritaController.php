@@ -29,7 +29,9 @@ class BeritaController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('judul_berita', __('Judul berita'));
-        $grid->column('kategori_id', __('Kategori Berita'))->pluck('nama')->label();
+        $grid->column('kategori_id', __('Kategori Berita'))->display(function($id) {
+            return Kategori_berita::find($id)->nama;
+        })->label('warning');
         $grid->column('status', __('Status Berita'))->label([
             'publish' => 'success',
             'draft' => 'info'
@@ -75,6 +77,7 @@ class BeritaController extends AdminController
 
         $form->text('judul_berita', __('Judul Berita'));
         $form->select('kategori_id', __('Kategori Berita'))->options(Kategori_berita::all()->pluck('nama','id'));
+        // dd($form);
         $form->image('gambar_berita', __('Gambar Berita'));
         $form->ckeditor('isi_berita', __('Isi Berita'));
         $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft']);
