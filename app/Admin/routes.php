@@ -18,5 +18,7 @@ Route::group([
     $router->resource('smtps', SmtpController::class);
     $router->resource('kategori-berita', KategoriBeritaController::class);
     $router->resource('beritas', BeritaController::class);
+    $router->resource('laporan', LaporanController::class);
+    $router->post('/beritas/admin/images/upload', 'AuthController@upload')->name('admin.ck-editor.upload');
 
 });

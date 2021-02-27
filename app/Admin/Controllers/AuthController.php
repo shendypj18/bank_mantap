@@ -219,4 +219,19 @@ class AuthController extends BaseAuthController
     {
         return Admin::guard();
     }
+
+    public function upload(Request $request)
+{
+    $image = $request->file('upload'); // get file
+    $tujuan_upload = 'images';
+    $file->move($tujuan_upload,$image->getClientOriginalName());
+
+    // response
+    $param = [
+            'uploaded' => 1,
+            'fileName' => 'fileName',
+            'url' => 'url'
+    ];
+    return response()->json($param, 200); 
+}
 }
