@@ -11,7 +11,7 @@ Route::group([
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
 
-    //membuat route 
+    //membuat route
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('videos', VideosController::class);
     $router->resource('generalinfo', GeneralInfoController::class);
@@ -20,5 +20,6 @@ Route::group([
     $router->resource('beritas', BeritaController::class);
     $router->resource('laporan', LaporanController::class);
     $router->post('/beritas/admin/images/upload', 'AuthController@upload')->name('admin.ck-editor.upload');
+    $router->resource('en-beritas', EnBeritaController::class);
 
 });
