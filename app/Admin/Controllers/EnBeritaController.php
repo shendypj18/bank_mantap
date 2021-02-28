@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\EnBerita;
+use App\Models\Kategori_berita;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -27,11 +28,14 @@ class EnBeritaController extends AdminController
         $grid = new Grid(new EnBerita());
 
         $grid->column('id', __('Id'));
-        $grid->column('category_id', __('Category id'));
         $grid->column('title_berita', __('Title berita'));
-        $grid->column('picture_berita', __('Picture berita'));
-        $grid->column('content_berita', __('Content berita'));
-        $grid->column('status', __('Status'));
+        $grid->column('category_id', __('Category Berita'))->display(function ($id) {
+            return Kategori_berita::find($id)->nama;
+        })->label('warning');
+        $grid->column('status', __('Status Berita'))->label([
+            'publish' => 'success',
+            'draft' => 'info'
+        ]);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -49,11 +53,12 @@ class EnBeritaController extends AdminController
         $show = new Show(EnBerita::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('category_id', __('Category id'));
-        $show->field('title_berita', __('Title berita'));
-        $show->field('picture_berita', __('Picture berita'));
-        $show->field('content_berita', __('Content berita'));
-        $show->field('status', __('Status'));
+        $show->field('title_berita', __('Title Berita'));
+        $show->field('category_id', __('Category Berita'))->display(function($id) {
+            return Kategori_berita::find($id)->nama;
+        });
+        $show->field('picture_berita', __('Picture Berita'))->image();
+        $show->field('Content_berita', __('Content Berita'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -69,11 +74,13 @@ class EnBeritaController extends AdminController
     {
         $form = new Form(new EnBerita());
 
-        $form->number('category_id', __('Category id'));
         $form->text('title_berita', __('Title berita'));
-        $form->text('picture_berita', __('Picture berita'));
-        $form->textarea('content_berita', __('Content berita'));
-        $form->text('status', __('Status'));
+        $form->select('category_id', __('Category Berita'))->options(Kategori_berita::all()->pluck('nama', 'id'));
+        $form->image('picture_berita', __('Picture berita'));
+        $form->ckeditor('content_berita', __('Content Berita'))->options([
+            'filebrowserImageUploadUrl' => config('admin.extensions.ckeditor.config.filebrowserImageUploadUrl') . '?_token=' . csrf_token(),
+        ]);
+        $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft']);
 
         return $form;
     }
