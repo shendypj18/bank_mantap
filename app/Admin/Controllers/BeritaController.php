@@ -41,7 +41,7 @@ class BeritaController extends AdminController
 
         // dd($grid);
         return $grid;
-        
+
     }
 
     /**
@@ -78,8 +78,8 @@ class BeritaController extends AdminController
         $form = new Form(new Berita());
 
         $form->text('judul_berita', __('Judul Berita'));
-        $form->select('kategori_id', __('Kategori Berita'))->options(Kategori_berita::all()->pluck('nama','id'));
-        // dd($form);
+        $form->select('kategori_id', __('Kategori Berita'))->creationRules('required')
+             ->options(Kategori_berita::all()->pluck('nama','id'));
         $form->image('gambar_berita', __('Gambar Berita'));
         $form->ckeditor('isi_berita', __('Isi Berita'))->options([
             'filebrowserImageUploadUrl' => config('admin.extensions.ckeditor.config.filebrowserImageUploadUrl').'?_token='.csrf_token(),

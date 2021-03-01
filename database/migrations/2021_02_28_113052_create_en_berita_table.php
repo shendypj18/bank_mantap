@@ -17,9 +17,9 @@ class CreateEnBeritaTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('kategori_beritas');
-            $table->string('title_berita');
-            $table->string('picture_berita');
-            $table->longText('content_berita');
+            $table->string('title_berita')->nullable();
+            $table->string('picture_berita')->nullable();
+            $table->longText('content_berita')->nullable();
             $table->string('status');
             $table->timestamps();
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaporansTable extends Migration
+class CreateSmtpTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateLaporansTable extends Migration
      */
     public function up()
     {
-        Schema::create('laporans', function (Blueprint $table) {
+        Schema::create('_smtp', function (Blueprint $table) {
             $table->id();
-            $table->string('nama')->nullable();
-            $table->string('tahun')->nullable();
-            $table->string('gambar')->nullable();
-            $table->string('jenis_laporan')->nullable();
-            $table->string('nama_file')->nullable();
             $table->timestamps();
+            $table->string('email_pengirim');
+            $table->string('email_host');
+            $table->string('username');
+            $table->string('password');
+            $table->integer('port')->nullable();
+
         });
     }
 
@@ -31,6 +32,6 @@ class CreateLaporansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laporans');
+        Schema::dropIfExists('_smtp');
     }
 }

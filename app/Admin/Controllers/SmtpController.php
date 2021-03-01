@@ -24,11 +24,13 @@ class SmtpController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new Smtp());
-        
+        $grid= new Grid(new Smtp());
+
         $grid->column('id', __('Id'));
-        $grid->column('nama_video', __('Nama video'));
-        $grid->column('link_video', __('Link video'));
+        $grid->column('email_pengirim', __('Email Pengirim'));
+        $grid->column('email_host', __('Email Host'));
+        $grid->column('username', __('Username'));
+        $grid->column('port', __('Port'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -44,8 +46,14 @@ class SmtpController extends AdminController
     protected function detail($id)
     {
         $show = new Show(Smtp::findOrFail($id));
-
-
+        $show->field('id', __('Id'));
+        $show->field('email_pengirim', __('Email Pengirim'));
+        $show->field('email_host', __('Email Host'));
+        $show->field('username', __('Username'));
+        $show->field('password', __('Password'));
+        $show->field('port', __('Port'));
+        $show->field('created_at', __('Created at'));
+        $show->field('updated_at', __('Updated at'));
 
         return $show;
     }
@@ -58,8 +66,11 @@ class SmtpController extends AdminController
     protected function form()
     {
         $form = new Form(new Smtp());
-
-
+        $form->text('email_pengirim', __('Email Pengirim'));
+        $form->text('email_host', __('Email Host'));
+        $form->text('username', __('Username'));
+        $form->password('password', __('Password'))->creationRules('required');
+        $form->text('port', __('Port'))->creationRules('max:4');
 
         return $form;
     }

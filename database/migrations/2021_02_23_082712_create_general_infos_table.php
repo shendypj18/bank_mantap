@@ -15,11 +15,11 @@ class CreateGeneralInfosTable extends Migration
     {
         Schema::create('general_infos', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_perusahaan');
-            $table->string('logo');
-            $table->string('icon');
-            $table->string('alamat');
-            $table->string('no_telp');
+            $table->string('nama_perusahaan')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('icon')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('no_telp')->nullable();
             $table->timestamps();
         });
     }

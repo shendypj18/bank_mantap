@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicBeritaController;
+use App\Http\Controllers\PublicSmptController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 
 Route::get('/berita/{locale}', [PublicBeritaController::class, 'berita']);
+
+Route::get('/email', [PublicSmptController::class, 'index']);
+Route::post('/email', [PublicSmptController::class, 'postSendEmail']);

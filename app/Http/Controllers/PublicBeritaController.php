@@ -10,7 +10,7 @@ class PublicBeritaController extends Controller
     {
 
         if (!in_array($locale, ['en', 'id'])) {
-            return abort(400);
+            return abort(404);
         }
 
         App::setLocale($locale);
