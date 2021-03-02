@@ -6,6 +6,7 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use App\Models\Laporan;
 
 class MediaController extends Controller
 {
@@ -84,6 +85,10 @@ class MediaController extends Controller
 
         try {
             if ($manager->move($new)) {
+                $extenstion = array('pdf', 'doc', 'docx', 'csv', 'xls', 'xlsx');
+                $column = (in_array(substr($path, -3), $extenstion)) ? 'nama_file' : 'gambar';
+                Laporan::where($column, $path)->update(array($column => $new));
+
                 return response()->json([
                     'status'  => true,
                     'message' => trans('admin.move_succeeded'),

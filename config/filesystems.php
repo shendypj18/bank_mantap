@@ -37,8 +37,8 @@ return [
 
         'admin' => [
             'driver' => 'local',
-            'root' => public_path('images'),
-            'url' => env('APP_URL').'images/',
+            'root' => public_path('storage'),
+            'url' => env('APP_URL').'storage/',
             'visibility' => 'public',
         ],
 

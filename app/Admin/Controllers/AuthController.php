@@ -133,7 +133,7 @@ class AuthController extends BaseAuthController
 
         $form->display('username', trans('admin.username'));
         $form->text('name', trans('admin.name'))->rules('required');
-        $form->image('avatar', trans('admin.avatar'));
+        $form->image('avatar', trans('admin.avatar'))->move('images')->uniqueName();
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules('confirmed|required');
         $form->password('password_confirmation', trans('admin.password_confirmation'))->rules('required')
@@ -232,6 +232,6 @@ class AuthController extends BaseAuthController
             'fileName' => 'fileName',
             'url' => 'url'
     ];
-    return response()->json($param, 200); 
+    return response()->json($param, 200);
 }
 }

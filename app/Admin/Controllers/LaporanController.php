@@ -73,10 +73,9 @@ class LaporanController extends AdminController
 
         $form->text('nama', __('Nama Laporan'));
         $form->text('tahun', __('Tahun Laporan'));
-        $form->image('gambar', __('Gambar Laporan'));
+        $form->image('gambar', __('Gambar Laporan'))->move('laporan');
         $form->select('jenis_laporan', __('Jenis Laporan'))->options(['Tahunan' => 'tahunan', 'Keuangan' => 'keuangan']);
-        $form->file('nama_file', __('FIle Laporan'));
-
+        $form->file('nama_file', __('FIle Laporan'))->move('laporan');
         return $form;
     }
 }
