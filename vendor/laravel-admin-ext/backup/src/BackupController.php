@@ -28,13 +28,10 @@ class BackupController
     {
         return Admin::content(function (Content $content) {
             $content->header('Backup');
-
-           $tables = $this->allTablesMySQL();
-           dd($tables);
-           $backup = new Backup();
-           $x = $backup->getExists();
-           $x[0]['disk'] = $this->remove_tag($x[0]['disk'], 'error');
-           $content->body(view('laravel-admin-backup::index', [
+            $backup = new Backup();
+            $x = $backup->getExists();
+            $x[0]['disk'] = $this->remove_tag($x[0]['disk'], 'error');
+            $content->body(view('laravel-admin-backup::index', [
                 'backups' => $x,
             ]));
         });
@@ -53,6 +50,7 @@ class BackupController
         $file = $request->get('file');
 
         $storage = Storage::disk($disk);
+
 
         $fullPath = $storage->getDriver()->getAdapter()->applyPathPrefix($file);
 
@@ -107,6 +105,16 @@ class BackupController
         $get_all_table_query = "SHOW TABLES";
         $result = DB::select(DB::raw($get_all_table_query));
         $tables = $this->allTablesMySQL();
+        $tables = $this->allTablesMySQL();
+        $j = 0;
+        for ($i = 0; $i < count($tables); $i++) {
+            if (strpos($tables[$i], 'kategori') !== false) {
+                $temp = $tables[$j];
+                $tables[$j] = $tables[$i];
+                $tables[$i] = $temp;
+                $j += 1;
+            }
+        }
 
         $structure = '';
         $data = '';
