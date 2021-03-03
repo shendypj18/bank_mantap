@@ -14,10 +14,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel-admin-ext/backup": "^1.1",
         "laravel-admin-ext/chartjs": "^1.0",
-        "laravel-admin-ext/ckeditor": "^1.0",
-        "laravel-admin-ext/media-manager": "1.x",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "spatie/laravel-backup": "^6.14"
