@@ -148,6 +148,9 @@ class BackupController
                 $data .= "('" . implode("','", $table_value_array) . "');\n";
             }
         }
+        if (!file_exists(storage_path('app/Laravel'))) {
+            File::makeDirectory(storage_path('app/Laravel'), 0775);
+        }
         $file_name = storage_path('app/Laravel/'). date('Y-m-d-h-i-s') . '.sql';
         $file_handle = fopen($file_name, 'w + ');
 
