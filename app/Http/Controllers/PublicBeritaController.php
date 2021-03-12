@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\App;
+use App\Models\Berita;
+use App\Models\EnBerita;
 
 class PublicBeritaController extends Controller
 {
@@ -16,10 +18,13 @@ class PublicBeritaController extends Controller
         App::setLocale($locale);
 
         if (App::isLocale('en')) {
-            return "hellow human";
+            $enberita =  EnBerita::all();
+            return view('berita', $enberita);
         }
         if (App::isLocal('id')) {
-            return "apo dio";
+            $allberita =  Berita::all();
+            return view('berita', ['allberita' => $allberita]);
+            //return "apo dio";
         }
     }
 
