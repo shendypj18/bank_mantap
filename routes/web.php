@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicBeritaController;
 use App\Http\Controllers\PublicSmptController;
+use App\Models\Berita;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use App\Http\Controllers\PublicSmptController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $allberita = Berita::all();
+    return view('index', ['allberita' => $allberita]);
 });
 
 Route::get('/sekilasperusahaan', function () {

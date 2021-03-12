@@ -77,7 +77,7 @@ class EnBeritaController extends AdminController
         $form->text('title_berita', __('Title berita'));
         $form->select('category_id', __('Category Berita'))->creationRules('required')
              ->options(Kategori_berita::all()->pluck('nama', 'id'));
-        $form->image('picture_berita', __('Picture berita'));
+        $form->image('picture_berita', __('Picture berita'))->thumbnail('mini', $width = 269, $height = 247);
         $form->ckeditor('content_berita', __('Content Berita'))->options([
             'filebrowserImageUploadUrl' => config('admin.extensions.ckeditor.config.filebrowserImageUploadUrl') . '?_token=' . csrf_token(),
         ]);
