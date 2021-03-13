@@ -20,6 +20,7 @@ class CreateBeritasTable extends Migration
             $table->string('judul_berita')->nullable();
             $table->string('gambar_berita')->nullable();
             $table->longText('isi_berita')->nullable();
+            $table->string('bahasa');
             $table->string('status');
             $table->timestamps();
         });

@@ -81,7 +81,7 @@ class EnBeritaController extends AdminController
         $form->ckeditor('content_berita', __('Content Berita'))->options([
             'filebrowserImageUploadUrl' => config('admin.extensions.ckeditor.config.filebrowserImageUploadUrl') . '?_token=' . csrf_token(),
         ]);
-        $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft']);
+        $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft'])->default('draft');
 
         return $form;
     }

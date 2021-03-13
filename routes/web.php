@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicBeritaController;
 use App\Http\Controllers\PublicSmptController;
@@ -16,10 +17,9 @@ use App\Models\Berita;
 |
 */
 
-Route::get('/', function () {
-    $allberita = Berita::all();
-    return view('index', ['allberita' => $allberita]);
-});
+Route::get('/', [Controller::class, 'home']);
+
+Route::get('/{locale}', [Controller::class, 'pilihBahasa']);
 
 Route::get('/sekilasperusahaan', function () {
     return view('sekilasperusahaan');
@@ -51,12 +51,6 @@ Route::get('/goodcorpgovernance', function () {
 Route::get('/whistleblowingsystem', function () {
     return view('whistleblowingsystem');
 });
-
-
-
-
-
-
 
 
 Route::get('/berita/{locale}', [PublicBeritaController::class, 'berita']);

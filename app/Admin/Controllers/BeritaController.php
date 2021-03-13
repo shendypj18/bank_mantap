@@ -32,6 +32,7 @@ class BeritaController extends AdminController
         $grid->column('kategori_id', __('Kategori Berita'))->display(function($id) {
             return Kategori_berita::find($id)->nama;
         })->label('warning');
+        $grid->column('bahasa', __('Bahasa'));
         $grid->column('status', __('Status Berita'))->label([
             'publish' => 'success',
             'draft' => 'info'
@@ -61,6 +62,7 @@ class BeritaController extends AdminController
         });
         $show->field('gambar_berita', __('Gambar Berita'))->image();
         $show->field('isi_berita', __('Isi Berita'));
+        $show->field('bahasa', __('Bahasa'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -84,7 +86,8 @@ class BeritaController extends AdminController
         $form->ckeditor('isi_berita', __('Isi Berita'))->options([
             'filebrowserImageUploadUrl' => config('admin.extensions.ckeditor.config.filebrowserImageUploadUrl').'?_token='.csrf_token(),
         ]);
-        $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft']);
+        $form->select('bahasa', __('Bahasa'))->options(['indonesia' => 'indonesia', 'inggris' => 'inggris'])->default('indonesia');
+        $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft'])->default('draft');
 
         return $form;
     }

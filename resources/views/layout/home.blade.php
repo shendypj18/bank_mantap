@@ -141,26 +141,35 @@
     <div class="carousel-inner" role="listbox">
         <!--First slide-->
         <div class="carousel-item active">
-        @for($i = 1; $i <= count($allberita); $i++)
+         @php
+            $i = 1;
+         @endphp
+        @foreach($berita as $b)
             <div class="col-md-3" style="float:left;">
                 <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-                    <img class="card-img-top" src="{{ url('storage/' .$allberita[$i - 1]->gambar_berita) }}" alt="Card image cap"  style="height: 12rem;">
+                    <img class="card-img-top" src="{{ url('storage/' .$b->gambar_berita) }}" alt="Card image cap"  style="height: 12rem;">
                     <div class="card-body">
-                        <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($allberita[$i - 1]->updated_at)) }}</small></p>
-                        <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="{{url('berita/id/'.$allberita[$i - 1]->$id)}}">{{ $allberita[$i - 1]->judul_berita }}</p>
+                        <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
+                        <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="{{url('berita/id/'.$b->id)}}">
+                            {{ $b->judul_berita }}
+                        </p>
                     </div>
                 </div>
             </div>
             @if ($i % 4 == 0)
                </div>
-               @if($i <= count($allberita) - 1)
+               @if($i <= count($berita) - 1)
                    <div class="carousel-item">
                @endif
             @endif
-            @if ($i == count($allberita) and $i % 4 != 0)
+
+            @if($i == count($berita) and $i % 4 != 0)
                    </div>
             @endif
-        @endfor
+            @php
+             $i++;
+            @endphp
+        @endforeach
     </div>
 
   <!-- Indicator Slider -->
