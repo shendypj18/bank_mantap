@@ -18,9 +18,11 @@ class CreateBeritasTable extends Migration
             $table->unsignedBigInteger('kategori_id');
             $table->foreign('kategori_id')->references('id')->on('kategori_beritas');
             $table->string('judul_berita')->nullable();
+            $table->string('slug')->nullable();
             $table->string('gambar_berita')->nullable();
             $table->longText('isi_berita')->nullable();
             $table->string('bahasa');
+            $table->string('id_bahasa_lain')->nullable();
             $table->string('status');
             $table->timestamps();
         });

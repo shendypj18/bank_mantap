@@ -105,5 +105,16 @@ return [
     'next'                   => 'Selanjutnya',
     'company'                => 'Perusahaan',
     'address'                => 'alamat',
-    
+    'BERANDA'                => 'BERANDA',
+    'Sekilas_Perusahaan'     => 'Sekilas Perusahan',
+    'Struktur_Organisasi'    => 'Struktur Organisasi',
+    'Budaya_Kerja'           => 'Budaya Kerja',
+    'Manajemen'              => 'Manajemen',
+    'Pemegang_Saham'         => 'Pemegang Saham',
+    'Good_Corporate_Governance' => 'Good Corporate Governance',
+    'Whistleblowing_System' => 'Wistleblowing System',
+    'Pengungkapan_Kuantitatif_Eksposur_Risiko' => 'Pengungkapan Kuantitatif Eksposur Resiko',
+    'Penghargaan'            => 'Penghargaan',
+    'TENTANG_KAMI'           => 'TENTANG KAMI',
+
 ];

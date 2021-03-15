@@ -28,4 +28,34 @@ class PublicBeritaController extends Controller
         }
     }
 
+    public function getBeritaById($locale, $slug)
+    {
+
+        $bahasa = ["id", "en"];
+        if (!in_array($locale, $bahasa)) {
+            return abort(404);
+        }
+        App::setLocale($locale);
+
+        $berita =  Berita::all()->where('slug', $slug)->first();
+        if ($berita->bahasa == "inggris") {
+            $this->swap($bahasa[0], $bahasa[1]);
+        }
+        $bahasa_lain = Berita::all('id', 'slug')->where('id', $berita->id_bahasa_lain)->first();
+        return view('berita',
+                    ["bahasa" => $bahasa[0],
+                     $bahasa[0]. "_route" => '/berita/'.  $bahasa[0] .'/' .$berita->slug,
+                     $bahasa[1]. "_route" => '/berita/'. $bahasa[1] . '/' .$bahasa_lain->slug,
+                     "berita" => $berita
+                    ],
+        );
+    }
+
+    function swap(&$x, &$y)
+    {
+        $tmp=$x;
+        $x=$y;
+        $y=$tmp;
+    }
+
 }

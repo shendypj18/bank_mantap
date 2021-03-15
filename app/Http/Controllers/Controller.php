@@ -37,10 +37,14 @@ class Controller extends BaseController
     public function allDataInEnglish ()
     {
         return [
+            'bahasa' => 'en',
             'berita' => Berita::all()
             ->where('bahasa', 'inggris')
             ->where('status', 'publish')
             ->take(8),
+            'id_route' => '/id',
+            'en_route' => '/en',
+
 
         ];
     }
@@ -48,10 +52,13 @@ class Controller extends BaseController
     public function allDataInIndonesia ()
     {
         return [
+            'bahasa' => 'id',
             'berita' => Berita::all()
             ->where('status', 'publish')
             ->where('bahasa', 'indonesia')
             ->take(8),
+            'id_route' => '/id',
+            'en_route' => '/en',
         ];
     }
 }

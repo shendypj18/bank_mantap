@@ -54,6 +54,7 @@ Route::get('/whistleblowingsystem', function () {
 
 
 Route::get('/berita/{locale}', [PublicBeritaController::class, 'berita']);
+Route::get('/berita/{locale}/{slug}', [PublicBeritaController::class, 'getBeritaById']);
 
 Route::get('/email', [PublicSmptController::class, 'index']);
 Route::post('/email', [PublicSmptController::class, 'postSendEmail']);

@@ -26,21 +26,21 @@
 
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
     <li class="nav-item active" >
-    <a class="nav-link mr-3" href="{{ url('/') }}">BERANDA <span class="sr-only">(current)</span></a>
+    <a class="nav-link mr-3" href="{{ url('/') }}">{{ __('admin.BERANDA') }}<span class="sr-only">(current)</span></a>
     </li>
          
     <li class="nav-item dropdown">
-    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TENTANG KAMI</a>
+    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __('admin.TENTANG_KAMI') }}</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{ url('sekilasperusahaan') }}">Sekilas Perusahaan</a>
-      <a class="dropdown-item" href="{{ url('strukturorganisasi') }}">Struktur Organisasi</a>
-      <a class="dropdown-item" href="{{ url('budayakerja') }}">Budaya Kerja</a>
-      <a class="dropdown-item" href="{{ url('manajemen') }}" >Manajemen</a>
-      <a class="dropdown-item" href="{{ url('pemegangsaham') }}">Pemegang Saham</a>
-      <a class="dropdown-item" href="{{ url('penghargaan') }}" >Penghargaan</a>
-      <a class="dropdown-item" href="{{ url('goodcorpgovernance') }}" >Good Corporate Governance</a>
-      <a class="dropdown-item" href="{{ url('whistleblowingsystem') }}" >Whistleblowing System</a>
-      <a class="dropdown-item" href="">Pengungkapan Kuantitatif Eksposur Risiko</a>
+      <a class="dropdown-item" href="{{ url('sekilasperusahaan') }}">{{ __('admin.Sekilas_Perusahaan') }}</a>
+      <a class="dropdown-item" href="{{ url('strukturorganisasi') }}">{{ __('admin.Struktur_Organisasi') }}</a>
+      <a class="dropdown-item" href="{{ url('budayakerja') }}">{{ __('admin.Budaya_Kerja') }}</a>
+      <a class="dropdown-item" href="{{ url('manajemen') }}" >{{ __('admin.Manajemen') }}</a>
+      <a class="dropdown-item" href="{{ url('pemegangsaham') }}">{{ __('admin.Pemegang_Saham') }}</a>
+      <a class="dropdown-item" href="{{ url('penghargaan') }}" >{{ __('admin.Penghargaan') }}</a>
+      <a class="dropdown-item" href="{{ url('goodcorpgovernance') }}" >{{ __('admin.Good_Corporate_Governance') }}</a>
+      <a class="dropdown-item" href="{{ url('whistleblowingsystem') }}" >{{ __('admin.Whistleblowing_System') }}</a>
+      <a class="dropdown-item" href="">{{ __('admin.Pengungkapan_Kuantitatif_Eksposur_Risiko') }}</a>
     </div>
     </li> 
 
@@ -109,12 +109,18 @@
     </a> 
     <!-- End Bottom Here -->
 
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-sm btn-warning">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked>IDN
+    <div class="btn-group btn-group-toggle" >
+    <label id="bahasa-indonesia" class="
+               @if($bahasa=="en") btn-outline-warning text-dark
+               @else btn-warning @endif
+               btn btn-sm ">
+    <input type="radio" name="options" id="option1" onclick="window.location='{{url($id_route)}}'">IDN
     </label>
-    <label class="btn btn-sm btn-outline-warning text-dark">
-    <input type="radio" name="options" id="option2" autocomplete="off">ENG
+    <label id="bahasa-inggris" class="
+               @if($bahasa=="id") btn-outline-warning text-dark
+               @else btn-warning @endif
+               btn btn-sm">
+    <input type="radio" name="options" id="option2" onclick="window.location='{{url($en_route)}}'">ENG
     </label>
     </div>
 

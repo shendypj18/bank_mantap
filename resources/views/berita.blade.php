@@ -11,6 +11,7 @@
 </section>
 
 <div class="container">
+    {{$berita}}
 <h4 style="color:#0F2B5B;">Good Corporate Governance</h4>
 <p  class="mb-5">Laporan Tata Kelola Perusahaan</p>
 <h1> ini berita </h1>

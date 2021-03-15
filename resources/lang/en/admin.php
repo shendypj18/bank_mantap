@@ -104,4 +104,17 @@ return [
     'prev'                   => 'Prev',
     'next'                   => 'Next',
     'quick_create'           => 'Quick create',
+    'BERANDA'                => 'Home',
+    'Sekilas_Perusahaan'     => 'The company at a glance',
+    'Struktur_Organisasi'    => 'Organizational structure',
+    'Budaya_Kerja'           => 'Corporate culture',
+    'Manajemen'              => 'Managements',
+    'Pemegang_Saham'         => 'Shareholder',
+    'Penghargaan'            => 'Achievements',
+    'Good_Corporate_Governance' => 'Good Corporate Governance',
+    'Whistleblowing_System' => 'Wistleblowing System',
+    'Pengungkapan_Kuantitatif_Eksposur_Risiko' =>'Quantitative disclosure of risk exposure',
+    'TENTANG_KAMI'    => 'ABOUT US',
+
+
 ];
