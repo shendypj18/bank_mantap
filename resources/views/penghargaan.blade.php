@@ -1,8 +1,7 @@
 @include('layout.header')
- 
 
 <section id="img-header" class="img-header">
-<img src="asset/slider6.png">
+<img src="{{ asset('asset/slider6.png') }}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
@@ -56,7 +55,7 @@ tr .footer{
 <table>
 <thead>
   <tr>
-    <th class="pl-4" style="border-radius: 16px 0px 0px 0px;" colspan="2">Tahun 2000</th>
+    <th class="pl-4" style="border-radius: 16px 0px 0px 0px;" colspan="2">Tahun</th>
     <th>Diskripsi</th>
     
   <th style="border-radius: 0px 16px 0px 0px; width:12%;">

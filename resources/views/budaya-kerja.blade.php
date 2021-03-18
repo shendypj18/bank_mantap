@@ -1,8 +1,7 @@
 @include('layout.header')
- 
 
 <section id="img-header" class="img-header">
-<img src="asset/slider7.png">
+<img src="{{ asset('asset/slider7.png') }}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
@@ -41,7 +40,7 @@
       </div>
       
       <div class="col-sm-5">
-        <img src="asset/budayakerja.png"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
+        <img src="{{ asset('asset/budayakerja.png') }}"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
       </div>
     </div>
 </section>

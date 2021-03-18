@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicBeritaController;
 use App\Http\Controllers\PublicSmptController;
-use App\Models\Berita;
+use App\Http\Controllers\TentangKamiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +16,11 @@ use App\Models\Berita;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', [Controller::class, 'home']);
 
 Route::get('/{locale}', [Controller::class, 'pilihBahasa']);
 
-Route::get('/sekilasperusahaan', function () {
-    return view('sekilasperusahaan');
-});
+Route::get('/sekilas-perusahaan/{locale}',[TentangKamiController::class, 'sekilasPerusahaan']);
 
 Route::get('/strukturorganisasi', function () {
     return view('strukturorganisasi');

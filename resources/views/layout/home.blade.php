@@ -1,4 +1,3 @@
-
 <!-- ====================================================== CAROUSEL  ======================================================= -->
 <section id="hero" class="carousel slide" data-ride="carousel">
 
@@ -12,7 +11,7 @@
         <div class="carousel-item active w-100" style="background-color: #0F2B5B; height: 38rem;">
             <img class="d-block" style="margin-left:50%" src="{{ asset('asset/herobg.png') }}" width="39%" alt="First slide">
 
-            <!--<img class="d-block w-100" src="asset/1.png" width="5%" alt="First slide"> -->
+            <!--<img class="d-block w-100" src="{{ asset('asset/1.png') }}" width="5%" alt="First slide"> -->
 
             <div class="container">
                 <div class="row">
@@ -65,7 +64,7 @@
     </div>
 
     <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}"></a>
-    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img src="{{ asset('asset/right.svg') }}"></a>
+    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}"></a>
 
 </section>
 <!-- ====================================================== /CAROUSEL  ==================================================== -->
@@ -82,10 +81,10 @@
                 <div class="card card-one">
                     <div class="card-body">
                         <br/>
-                        <h3 class="card-title text-light">   <img src="{{ asset('asset/campain.png') }}"  alt="Logo" width="10%"> Whistleblowing System</h3>
+                        <h3 class="card-title text-light">   <img src="{{ url('asset/campain.png') }}"  alt="Logo" width="10%"> Whistleblowing System</h3>
                         <p class="card-text">Jika Anda yang memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi
                             pelanggaran yang terjadi di lingkungan PT Mandiri Taspen</p>
-                        <a class="btn btn-simulasi-light" role="button" href="#">LAPOR WHISTLEBLOWING</a>
+                        <a class="btn btn-simulasi-light" role="button" href="whistleblowing-system.php">LAPOR WHISTLEBLOWING</a>
                     </div>
                 </div>
             </div>
@@ -95,9 +94,9 @@
                 <div class="card card-two">
                     <div class="card-body">
                         <br/>
-                        <h4 class="card-title"> <img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
+                        <h4 class="card-title"> <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
                         <p class="card-text mt-4">Lakukan simulasi perhitungan besar dana yang terkumpul dengan rentang bulan yang Anda pilih.</p>
-                        <a class="btn btn-outline-light btn-simulasi-dark" href="#" role="button">HITUNG SIMULASI</a>
+                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="simulasi.php" role="button">HITUNG SIMULASI</a>
                     </div>
                 </div>
             </div>
@@ -107,14 +106,14 @@
 
 
     <br><br><br><br>
-    <div class="container" align="center">
+    <div class="container text-center">
         <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
 
         <p><br/></p>
-        <p><a class="btn btn-lg btn-outline-secondary btn-wr" href="#" role="button">Berita Mantap</a>
-            <a class="btn btn-lg btn-outline-secondary  btn-wr" href="#" role="button">Promosi Mantap</a>
-            <a class="btn btn-lg btn-outline-secondary  btn-wr" href="#" role="button">Program Mantap</a>
-            <a class="btn btn-lg btn-outline-secondary  btn-wr" href="#" role="button">Laporan Keuangan</a></p>
+        <p><a class="btn btn-lg  btn-wr active" href="#" role="button">Berita Mantap</a>
+            <a class="btn btn-lg  btn-wr" href="#" role="button">Promosi Mantap</a>
+            <a class="btn btn-lg  btn-wr" href="#" role="button">Program Mantap</a>
+            <a class="btn btn-lg  btn-wr" href="#" role="button">Laporan Keuangan</a></p>
 
 </section>
 <!-- ==================================================  /SIMULATION ====================================================== -->
@@ -130,17 +129,15 @@
         <!--Carousel Wrapper-->
         <div id="news" class="carousel slide carousel-multi-item" data-ride="carousel" style="margin-top: -20rem;">
             <ol class="carousel-indicators" style="top: 25rem;">
-                <li data-target="#test" data-slide-to="0" class="active"  style="width: 8%; height: 7px; background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
+                <li data-target="#news" data-slide-to="0" class="active"  style="width: 8%; height: 7px; background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
                                  background: #FCD116 0% 0% no-repeat padding-box; border-radius: 6px;"></li>
                 <li data-target="#news" data-slide-to="1"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
                 <li data-target="#news" data-slide-to="2"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
                 <li data-target="#news" data-slide-to="3"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
             </ol>
-
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
-                <!--First slide-->
-                <div class="carousel-item active">
+                 <div class="carousel-item active">
                     @php
                     $i = 1;
                     @endphp
@@ -150,7 +147,7 @@
                                 <img class="card-img-top" src="{{ url('storage/' .$b->gambar_berita) }}" alt="Card image cap"  style="height: 12rem;">
                                 <div class="card-body">
                                     <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
-                                    <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="{{url('berita/'. $bahasa . '/' .$b->slug)}}">
+                                    <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('berita/'. $bahasa . '/' .$b->slug)}}'">
                                         {{ $b->judul_berita }}
                                     </p>
                                 </div>
@@ -171,18 +168,20 @@
                         @endphp
                     @endforeach
             </div>
+            <!--/.Slides-->
 
             <!-- Indicator Slider -->
-            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}" style="margin-left: -10rem;"></a>
-            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ asset('asset/right.svg') }}" style="margin-right: -10rem;"></a>
+            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -10rem;"></a>
+            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -10rem;"></a>
             <!-- End Indicator Slider -->
+
         </div>
 
 
         <br/><br/><br/>
         <p class="text-center"><a class="btn btn-lg btn-more" href="#" role="button">Lihat Semua Info</a></p>
     </div>
-   <!-- </div> -->
+    </div>
 
 
     <!-- ================================================  VIDEO YOUTUBE ====================================================== -->
@@ -262,6 +261,7 @@
                         <p>Sebagai bank pesiunan terbaik di Indonesia</p>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-sm2">
                         <a class="fa fa-lightbulb-o"></a>

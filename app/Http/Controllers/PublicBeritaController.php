@@ -10,7 +10,6 @@ class PublicBeritaController extends Controller
 {
     public function berita($locale)
     {
-
         if (!in_array($locale, ['en', 'id'])) {
             return abort(404);
         }
@@ -19,11 +18,11 @@ class PublicBeritaController extends Controller
 
         if (App::isLocale('en')) {
             $enberita =  EnBerita::all();
-            return view('berita', $enberita);
+            return view('berita-mantap', $enberita);
         }
         if (App::isLocal('id')) {
             $allberita =  Berita::all();
-            return view('berita', ['allberita' => $allberita]);
+            return view('berita-mantap', ['allberita' => $allberita]);
             //return "apo dio";
         }
     }
@@ -42,11 +41,14 @@ class PublicBeritaController extends Controller
             $this->swap($bahasa[0], $bahasa[1]);
         }
         $bahasa_lain = Berita::all('id', 'slug')->where('id', $berita->id_bahasa_lain)->first();
-        return view('berita',
+        return view('berita-mantap',
                     ["bahasa" => $bahasa[0],
                      $bahasa[0]. "_route" => '/berita/'.  $bahasa[0] .'/' .$berita->slug,
                      $bahasa[1]. "_route" => '/berita/'. $bahasa[1] . '/' .$bahasa_lain->slug,
-                     "berita" => $berita
+                     "berita" => $berita,
+                     "pages" => Berita::where('bahasa', $berita->bahasa)
+                                       ->orderBy('created_at', 'DESC')
+                                       ->paginate(4),
                     ],
         );
     }
