@@ -28,5 +28,6 @@ class CreateKategoriLaporanTable extends Migration
     public function down()
     {
         Schema::dropIfExists('kategori_laporan');
+        //test
     }
 }
