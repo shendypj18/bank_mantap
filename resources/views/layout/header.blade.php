@@ -32,15 +32,15 @@
     <li class="nav-item dropdown">
     <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TENTANG KAMI</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{  url('/sekilas-perusahaan/id') }}">Sekilas Perusahaan</a>
-      <a class="dropdown-item" href="struktur-organisasi.php">Struktur Organisasi</a>
-      <a class="dropdown-item" href="budaya-kerja.php">Budaya Kerja</a>
-      <a class="dropdown-item" href="manajemen.php">Manajemen</a>
-      <a class="dropdown-item" href="pemegang-saham.php">Pemegang Saham</a>
-      <a class="dropdown-item" href="penghargaan.php">Penghargaan</a>
-      <a class="dropdown-item" href="goodcorpgovernance.php">Good Corporate Governance</a>
-      <a class="dropdown-item" href="whistleblowing-system.php">Whistleblowing System</a>
-      <a class="dropdown-item" href="pengungkapan-ksk.php">Pengungkapan Kuantitatif Eksposur Risiko</a>
+      <a class="dropdown-item" href="{{url('sekilas-perusahaan/'. $bahasa) }}">Sekilas Perusahaan</a>
+      <a class="dropdown-item" href="{{ url('struktur-organisasi/'. $bahasa) }}">Struktur Organisasi</a>
+      <a class="dropdown-item" href="{{ url('budaya-kerja/'. $bahasa) }}">Budaya Kerja</a>
+      <a class="dropdown-item" href="{{ url('manajemen/'. $bahasa) }}">Manajemen</a>
+      <a class="dropdown-item" href="{{ url('pemegang-saham/'. $bahasa) }}">Pemegang Saham</a>
+      <a class="dropdown-item" href="{{ url('penghargaan/'. $bahasa) }}">Penghargaan</a>
+      <a class="dropdown-item" href="{{ url('goodcorpgovernance/'. $bahasa) }}">Good Corporate Governance</a>
+      <a class="dropdown-item" href=" {{ url('whistleblowing-system/'. $bahasa) }}">Whistleblowing System</a>
+      <a class="dropdown-item" href="{{ url('pengungkapan-ksk/'. $bahasa) }}">Pengungkapan Kuantitatif Eksposur Risiko</a>
     </div>
     </li>
 

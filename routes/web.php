@@ -17,39 +17,20 @@ use App\Http\Controllers\TentangKamiController;
 |
 */
 Route::get('/', [Controller::class, 'home']);
-
 Route::get('/{locale}', [Controller::class, 'pilihBahasa']);
 
+// tentang kami
 Route::get('/sekilas-perusahaan/{locale}',[TentangKamiController::class, 'sekilasPerusahaan']);
+Route::get('/struktur-organisasi/{locale}',[TentangKamiController::class, 'strukturOrganisasi']);
+Route::get('/budaya-kerja/{locale}', [TentangKamiController::class, 'budayaKerja']);
+Route::get('/manajemen/{locale}', [TentangKamiController::class, 'manajemen']);
+Route::get('/pemegang-saham/{locale}', [TentangKamiController::class, 'pemegangSaham']);
+Route::get('/penghargaan/{locale}', [TentangKamiController::class, 'penghargaan']);
+Route::get('/goodcorpgovernance/{locale}', [TentangKamiController::class, 'goodCorpGovernance']);
+Route::get('/whistleblowing-system/{locale}', [TentangKamiController::class, 'whistleblowingSystem']);
+Route::get('/pengungkapan-ksk/{locale}', [TentangKamiController::class, 'pengungkapanKsk']);
 
-Route::get('/strukturorganisasi', function () {
-    return view('strukturorganisasi');
-});
-
-Route::get('/budayakerja', function () {
-    return view('budayakerja');
-});
-
-Route::get('/manajemen', function () {
-    return view('manajemen');
-});
-
-Route::get('/pemegangsaham', function () {
-    return view('pemegangsaham');
-});
-
-Route::get('/penghargaan', function () {
-    return view('penghargaan');
-});
-Route::get('/goodcorpgovernance', function () {
-    return view('goodcorpgovernance');
-});
-
-Route::get('/whistleblowingsystem', function () {
-    return view('whistleblowingsystem');
-});
-
-
+// berita
 Route::get('/berita/{locale}', [PublicBeritaController::class, 'berita']);
 Route::get('/berita/{locale}/{slug}', [PublicBeritaController::class, 'getBeritaById']);
 

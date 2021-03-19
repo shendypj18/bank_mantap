@@ -34,7 +34,6 @@ class BeritaController extends AdminController
             return Kategori_berita::find($id)->nama;
         })->label('warning');
         $grid->column('bahasa', __('Bahasa'));
-        $grid->column('id_bahasa_lain', __('Hubugkan Ke: '));
         $grid->column('status', __('Status Berita'))->label([
             'publish' => 'success',
             'draft' => 'info'
@@ -65,7 +64,7 @@ class BeritaController extends AdminController
         $show->field('gambar_berita', __('Gambar Berita'))->image();
         $show->field('isi_berita', __('Isi Berita'));
         $show->field('bahasa', __('Bahasa'));
-        $grid->column('id_bahasa_lain', __('Hubugkan Ke: '));
+        $show->field('id_bahasa_lain', __('Hubugkan Ke: '));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 

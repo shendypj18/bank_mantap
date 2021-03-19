@@ -86,7 +86,7 @@ class AdminMenuSeeder extends Seeder
             [
                 'parent_id' => 0,
                 'order'     => 2,
-                'title'     => 'Admin',
+                'title'     => 'User Management',
                 'icon'      => 'fa-tasks',
                 'uri'       => '',
             ],
@@ -139,65 +139,67 @@ class AdminMenuSeeder extends Seeder
                 'icon'      => 'fa-newspaper-o',
                 'uri'       => '/beritas',
             ],
+            /////////////////////////////////////////////////
+            // [                                           //
+            //     'parent_id' => 8,                       //
+            //     'order'     => 10,                      //
+            //     'title'     => 'Tambah Berita Inggris', //
+            //     'icon'      => 'fa-newspaper-o',        //
+            //     'uri'       => 'en-beritas',            //
+            // ],                                          //
+            /////////////////////////////////////////////////
             [
                 'parent_id' => 8,
                 'order'     => 10,
-                'title'     => 'Tambah Berita Inggris',
-                'icon'      => 'fa-newspaper-o',
-                'uri'       => 'en-beritas',
-            ],
-            [
-                'parent_id' => 8,
-                'order'     => 11,
                 'title'     => 'Kategori Berita',
                 'icon'      => 'fa-newspaper-o',
                 'uri'       => '/kategori-berita',
             ],
             [
                 'parent_id' => 0,
-                'order'     => 12,
+                'order'     => 11,
                 'title'     => 'Video',
                 'icon'      => 'fa-video-camera',
                 'uri'       => '/videos',
             ],
             [
                 'parent_id' => 0,
-                'order'     => 13,
+                'order'     => 12,
                 'title'     => 'Media Manager',
                 'icon'      => 'fa-file',
                 'uri'       => '/media',
             ],
             [
                 'parent_id' => 0,
-                'order'     => 14,
+                'order'     => 13,
                 'title'     => 'Laporan',
                 'icon'      => 'fa-file-text',
                 'uri'       => '/laporan',
             ],
             [
                 'parent_id' => 0,
-                'order'     => 15,
+                'order'     => 14,
                 'title'     => 'Setting',
                 'icon'      => 'fa-gear',
                 'uri'       => '',
             ],
             [
-                'parent_id' => 15,
-                'order'     => 16,
+                'parent_id' => 14,
+                'order'     => 15,
                 'title'     => 'info',
                 'icon'      => 'fa-gear',
                 'uri'       => '/generalinfo',
             ],
             [
-                'parent_id' => 15,
-                'order'     => 17,
+                'parent_id' => 14,
+                'order'     => 16,
                 'title'     => 'Backup',
                 'icon'      => 'fa-database',
                 'uri'       => '/backup',
             ],
             [
-                'parent_id' => 15,
-                'order'     => 18,
+                'parent_id' => 14,
+                'order'     => 17,
                 'title'     => 'smtp',
                 'icon'      => 'fa-envelope-o',
                 'uri'       => '/smtp',

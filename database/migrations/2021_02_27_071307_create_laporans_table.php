@@ -11,11 +11,13 @@ class CreateLaporansTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->nullable();
+            $table->string('deskripsi')->nullable();
             $table->string('tahun')->nullable();
             $table->string('gambar')->nullable();
             $table->string('jenis_laporan')->nullable();

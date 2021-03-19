@@ -27,11 +27,14 @@ class LaporanController extends AdminController
         $grid = new Grid(new Laporan());
 
         $grid->column('id', __('Id'));
-        $grid->column('nama', __('Nama Laporan'));
+        $grid->column('nama', __('Nama'));
+        $grid->column('nama', __('Deskripsi'));
         $grid->column('tahun', __('Tahun'));
-        $grid->column('jenis_laporan', __('Jenis Laporan'))->label([
+        //$grid->column('tahun', __('Tahun'));
+        $grid->column('jenis_laporan', __('Jenis'))->label([
             'tahunan' => 'success',
-            'keuangan' => 'warning'
+            'keuangan' => 'warning',
+            'ksk'     => 'danger',
         ]);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
@@ -51,10 +54,12 @@ class LaporanController extends AdminController
         $show = new Show(Laporan::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nama', __('Nama Laporan'));
-        $show->field('tahun', __('Tahun Laporan'));
-        $show->field('gambar', __('Gambar Laporan'))->image();
-        $show->field('jenis_laporan', __('Jenis Laporan'));
+        $show->field('nama', __('Nama'));
+        $show->field('Deskripsi', __('Deskripsi'));
+        //$show->field('tahun', __('Tahun Laporan'));
+        $show->field('tahun', __('Tahun'))->format('YYYY');
+        $show->field('gambar', __('Gambar '))->image();
+        $show->field('jenis_laporan', __('Jenis'));
         $show->field('nama_file', __('Nama File'))->file();
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
@@ -72,9 +77,15 @@ class LaporanController extends AdminController
         $form = new Form(new Laporan());
 
         $form->text('nama', __('Nama Laporan'));
-        $form->text('tahun', __('Tahun Laporan'));
+        $form->text('deskripsi', __('Deskripsi Laporan'));
+        //$form->text('tahun', __('Tahun Laporan'));
+        $form->date('tahun', __('Tahun'))->format('YYYY');
         $form->image('gambar', __('Gambar Laporan'))->move('laporan');
-        $form->select('jenis_laporan', __('Jenis Laporan'))->options(['Tahunan' => 'tahunan', 'Keuangan' => 'keuangan']);
+        $form->select('jenis_laporan', __('Jenis Laporan'))
+             ->options(['Tahunan' => 'tahunan',
+                        'Keuangan' => 'keuangan',
+                        'ksk'      => 'ksk'
+             ]);
         $form->file('nama_file', __('FIle Laporan'))->move('laporan');
         return $form;
     }
