@@ -36,13 +36,17 @@ class TentangKamiController extends Controller
 
     public function penghargaan($locale)
     {
-        return $this->template($locale, "whistleblowing-system", []);
+        return $this->template($locale, "penghargaan", []);
     }
 
 
-    public function goodCorporateGovernance($locale)
+    public function goodCorpGovernance($locale)
     {
-        return $this->template($locale, "goodcorpgovernance", []);
+        return $this->template($locale, "goodcorpgovernance", [
+            'laporan' =>  Laporan::where('jenis_laporan', 'tata kelola')
+                                 ->orderBy('created_at', 'DESC')
+                                 ->paginate(2),
+        ]);
     }
 
     public function whistleblowingSystem($locale)

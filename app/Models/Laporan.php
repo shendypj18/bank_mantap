@@ -8,8 +8,8 @@ use Encore\Admin\Traits\DefaultDatetimeFormat;
 
 class Laporan extends Model
 {
-    use HasFactory,DefaultDatetimeFormat;
 
+    use HasFactory,DefaultDatetimeFormat;
     protected $fillable = [
         'nama',
         'deskripsi',

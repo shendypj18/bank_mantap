@@ -21,5 +21,6 @@ Route::group([
     $router->resource('laporan', LaporanController::class);
     $router->post('/beritas/admin/images/upload', 'AuthController@upload')->name('admin.ck-editor.upload');
     $router->resource('en-beritas', EnBeritaController::class);
+    $router->resource('kategori-laporan', KategoriLaporanController::class);
 
 });

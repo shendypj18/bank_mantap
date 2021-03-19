@@ -20,7 +20,7 @@ class CreateLaporansTable extends Migration
             $table->string('deskripsi')->nullable();
             $table->string('tahun')->nullable();
             $table->string('gambar')->nullable();
-            $table->string('jenis_laporan')->nullable();
+            $table->string('jenis_laporan');
             $table->string('nama_file')->nullable();
             $table->timestamps();
         });

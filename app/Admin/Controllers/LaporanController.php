@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use App\Models\KategoriLaporan;
 
 class LaporanController extends AdminController
 {
@@ -28,16 +29,26 @@ class LaporanController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('nama', __('Nama'));
-        $grid->column('nama', __('Deskripsi'));
+        $grid->column('deskripsi', __('Deskripsi'));
         $grid->column('tahun', __('Tahun'));
         //$grid->column('tahun', __('Tahun'));
-        $grid->column('jenis_laporan', __('Jenis'))->label([
-            'tahunan' => 'success',
-            'keuangan' => 'warning',
-            'ksk'     => 'danger',
-        ]);
+        $grid->column('jenis_laporan', __('Jenis'))->display(function($id){
+           return KategoriLaporan::find($id)->jenis;
+        });
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
+        $grid->filter(function ($filter) {
+
+            // Remove the default id filter
+            $filter->disableIdFilter();
+
+            // Add a column filter
+            $filter->like('id', 'id');
+            $filter->like('nama', 'nama');
+            $filter->like('tahun', 'tahun');
+            $filter->like('jenis_laporan', 'jenis laporan');
+        });
+
 
 
         return $grid;
@@ -81,11 +92,9 @@ class LaporanController extends AdminController
         //$form->text('tahun', __('Tahun Laporan'));
         $form->date('tahun', __('Tahun'))->format('YYYY');
         $form->image('gambar', __('Gambar Laporan'))->move('laporan');
-        $form->select('jenis_laporan', __('Jenis Laporan'))
-             ->options(['Tahunan' => 'tahunan',
-                        'Keuangan' => 'keuangan',
-                        'ksk'      => 'ksk'
-             ]);
+        $form->select('jenis_laporan', __('Jenis Laporan'))->creationRules('required')
+             ->options(KategoriLaporan::all()->pluck('jenis','id'))->default("umum");
+
         $form->file('nama_file', __('FIle Laporan'))->move('laporan');
         return $form;
     }

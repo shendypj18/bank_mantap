@@ -83,7 +83,7 @@ class BeritaController extends AdminController
 
         $form->text('judul_berita', __('Judul Berita'));
         $form->select('kategori_id', __('Kategori Berita'))->creationRules('required')
-             ->options(Kategori_berita::all()->pluck('nama','id'));
+             ->options(Kategori_berita::all()->pluck('nama','id'))->default("umum");
         $form->image('gambar_berita', __('Gambar Berita'))->thumbnail('mini', $width = 269, $height = 247);
         $form->ckeditor('isi_berita', __('Isi Berita'))->options([
             'filebrowserImageUploadUrl' => config('admin.extensions.ckeditor.config.filebrowserImageUploadUrl').'?_token='.csrf_token(),

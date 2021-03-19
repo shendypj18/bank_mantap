@@ -75,87 +75,37 @@ tr .footer{
   </tr>
 </thead>
 <tbody>
-  <tr>
-    <td class="text-right" style="width:4%">1.</td>
-    <td style="width:25%;">2019</td>
-    <td>Laporan Tata Kelola Perusahaan Tahun 2019</td>
-    <td>Unduh File  <img class="ml-2" src="{{ asset('') }}asset/download.svg"></td>
-  </tr>
-  
-  <tr>
-    <td  class="text-right">2.</td>
-    <td>2019</td>
-    <td>KEPUTUSAN RUPST Tahun Buku 2019 Bank Mantap</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-  <tr>
-    <td  class="text-right">3.</td>
-    <td>2019</td>
-    <td>Visi Misi Bank Mantap dari Annual Report 2019</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-  
-  <tr>
-    <td  class="text-right">4.</td>
-    <td>2019</td>
-    <td>Hubungan Afiliasi Pengurus</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-  
-  <tr>
-    <td  class="text-right">5.</td>
-    <td>2019</td>
-    <td>Mantap CSR</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-
-  <tr>
-    <td  class="text-right">6.</td>
-    <td>2019</td>
-    <td>Kebijakan Risk Manajemen</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-
-  <tr>
-    <td  class="text-right">7.</td>
-    <td>2019</td>
-    <td>Kebijakan Mekanisme Sistem Pelaporan Pelanggaran</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-
-  <tr>
-    <td  class="text-right">8.</td>
-    <td>2019</td>
-    <td>KEP.DIR Komite Pemantau Risiko</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  <tr>
-    <td  class="text-right" style="border-radius: 0px 0px 0px 16px;">9.</td>
-    <td>2019</td>
-    <td>KEP.DIR Komite Audit</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
-  <tr>
-    <td  class="text-right" style="border-radius: 0px 0px 0px 16px;">9.</td>
-    <td>2019</td>
-    <td>Charter Komite Remunerasi dan Nominasi</td>
-    <td>Unduh File  <img class="ml-2" src="asset/download.svg"></td>
-  </tr>
+    @foreach($laporan as $l)
+        <tr>
+            <td class="text-right" style="width:4%">{{$l->id}}</td>
+            <td>{{$l->tahun}}</td>
+            <td>{{$l->deskripsi}}</td>
+            <td><a href="{{url('storage/'. $l->nama_file)}}">lihat file</a> <img class="ml-2" src="{{ asset('asset/download.svg') }}"></td>
+        </tr>
+   @endforeach
 </tbody>
 
 </table>
-
+@if($laporan->hasPages())
 <nav aria-label="Page navigation example" class="mb-5">
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#" style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">First</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;"><<</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">1</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">2</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">3</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">4</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">5</a></li>
-              <li class="page-item"><a class="page-link" href="#" style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">>></a></li>
-              <li class="page-item"><a class="page-link" href="#" style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Last</a></li>
-            </ul>
-          </nav>
+    <ul class="pagination">
+        <li class="page-item"><a class="btn page-link
+                                        @if($laporan->onFirstPage()) disabled @endif
+                                        "
+                                 href="{{$laporan->previousPageUrl()}}"
+                                 style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Prev</a></li>
+        @for($i = 1; $i <= $laporan->lastPage(); $i++)
+            <li class="page-item"><a class="btn page-link
+                                            @if($laporan->currentPage() == $i ) bg-warning @endif
+                                            "
+                                     href="{{$laporan->url($i)}}"
+                                     style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">{{$i}}</a></li>
+        @endfor
+            <li class="page-item"><a class="btn page-link"
+                                     href="{{$laporan->nextPageUrl()}}"
+                                     style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Next</a></li>
+    </ul>
+</nav>
+@endif
 </div>
 @include('layout.footer')
