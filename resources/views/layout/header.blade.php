@@ -16,7 +16,7 @@
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
 <nav class="navbar navbar-expand-lg p-3 fixed-top navbar-light bg-white border-bottom">
-<a class="navbar-brand ml-4 mr-5" href="{{url('/')}}"><img src="{{asset('asset/logo_mantap.png')}}"  alt="Logo" width="80%"></a>
+<a class="navbar-brand ml-4 mr-5" href="{{url('/'. $bahasa)}}"><img src="{{asset('asset/logo_mantap.png')}}"  alt="Logo" width="80%"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -25,70 +25,25 @@
 <div class="collapse navbar-collapse" style="margin-left:10%;" id="navbarSupportedContent">
 
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
-    <li class="nav-item" >
-    <a class="nav-link mr-3" href="{{url('/')}}">BERANDA <span class="sr-only">(current)</span></a>
-    </li>
+        <li class="nav-item" >
+            <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">BERANDA <span class="sr-only">(current)</span></a>
+        </li>
 
-    <li class="nav-item dropdown">
-    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TENTANG KAMI</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{url('sekilas-perusahaan/'. $bahasa) }}">Sekilas Perusahaan</a>
-      <a class="dropdown-item" href="{{ url('struktur-organisasi/'. $bahasa) }}">Struktur Organisasi</a>
-      <a class="dropdown-item" href="{{ url('budaya-kerja/'. $bahasa) }}">Budaya Kerja</a>
-      <a class="dropdown-item" href="{{ url('manajemen/'. $bahasa) }}">Manajemen</a>
-      <a class="dropdown-item" href="{{ url('pemegang-saham/'. $bahasa) }}">Pemegang Saham</a>
-      <a class="dropdown-item" href="{{ url('penghargaan/'. $bahasa) }}">Penghargaan</a>
-      <a class="dropdown-item" href="{{ url('goodcorpgovernance/'. $bahasa) }}">Good Corporate Governance</a>
-      <a class="dropdown-item" href=" {{ url('whistleblowing-system/'. $bahasa) }}">Whistleblowing System</a>
-      <a class="dropdown-item" href="{{ url('pengungkapan-ksk/'. $bahasa) }}">Pengungkapan Kuantitatif Eksposur Risiko</a>
-    </div>
-    </li>
+        @foreach($kategorinavbar as $nv)
+            <li class="nav-item dropdown">
+                <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @foreach($navbar[$nv->nama] as $subnavbar)
+                        <a class="dropdown-item" href="{{url('article/' .$subnavbar[$bahasa. "_slug"].'/'. $bahasa) }}">{{$subnavbar[$bahasa. "_navigasi"]}}</a>
+                    @endforeach
+                </div>
+            </li>
+        @endforeach
 
-    <li class="nav-item dropdown">
-    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PINJAMAN</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{ url('kredit-mantap-pensiun/'. $bahasa) }}">Kredit Mantap Pensiun</a>
-      <a class="dropdown-item" href="{{ url('pinjaman-ritel/'. $bahasa) }}">Pinjaman Ritel</a>
-      <a class="dropdown-item" href="{{ url('pinjaman-mikro/'. $bahasa) }}">Pinjaman Mikro</a>
-    </div>
-    </li>
+        <li class="nav-item"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">CABANG</a></li>
+        <li class="nav-item"><a class="nav-link mr-3" href="{{url('simulasi/'. $bahasa)}}" tabindex="-1" aria-disabled="true">SIMULASI</a></li>
 
-    <li class="nav-item dropdown">
-    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIMPANAN</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{ url('simpanan-tabunganku/'. $bahasa) }}">Simpanan Tabunganku</a>
-      <a class="dropdown-item" href="{{ url('tabungan-simantap-berjangka/'. $bahasa) }}">Tabungan siMantap Berjangka</a>
-      <a class="dropdown-item" href="{{ url('tabungan-simantap/'. $bahasa) }}">Tabungan Simantap</a>
-      <a class="dropdown-item" href="{{ url('tabungan-simantap-pensiun/'. $bahasa) }}">Tabungan Simantap Pensiun</a>
-      <a class="dropdown-item" href="{{ url('deposito-mantap/'. $bahasa) }}">Deposito Mantap</a>
-      <a class="dropdown-item" href="{{ url('giro/') }}">Giro</a>
-    </div>
-    </li>
-
-    <li class="nav-item dropdown">
-    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">INFO MANTAP</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="berita-mantap.php">Berita Mantap</a>
-      <a class="dropdown-item" href="promosi-mantap.php">Promosi Mantap</a>
-      <a class="dropdown-item" href="program-mantap.php">Program Mantap</a>
-      <a class="dropdown-item" href="laporan-keuangan.php">Laporan Keuangan</a>
-    </div>
-    </li>
-
-
-    <li class="nav-item dropdown">
-    <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JASA BANK</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="tarif-layanan.php">Tarif Layanan</a>
-      <a class="dropdown-item" href="bank-garansi.php">Bank Garansi</a>
-      <a class="dropdown-item" href="referensi-bank.php">Referensi Bank</a>
-      <a class="dropdown-item" href="transfer.php">Transfer</a>
-      <a class="dropdown-item" href="inkaso.php">Inkaso</a>
-    </div>
-    </li>
-
-    <li class="nav-item"><a class="nav-link mr-3" href="kantor-cabang.php" tabindex="-1" aria-disabled="true">CABANG</a></li>
-    <li class="nav-item"><a class="nav-link mr-3" href="simulasi.php" tabindex="-1" aria-disabled="true">SIMULASI</a></li>
     </ul>
 
     <!-- Search Bottom Here -->
@@ -114,13 +69,13 @@
                    @if($bahasa=="en") btn-outline-warning text-dark
                    @else btn-warning @endif
                    btn btn-sm ">
-            <input type="radio" name="options" id="option1" onclick="window.location='{{asset($id_route)}}'">IDN
+            <input type="radio" name="options" id="option1" onclick="window.location='{{url($id_route .'/id' )}}'">IDN
         </label>
         <label id="bahasa-inggris" class="
                    @if($bahasa=="id") btn-outline-warning text-dark
                    @else btn-warning @endif
                    btn btn-sm">
-            <input type="radio" name="options" id="option2" onclick="window.location='{{asset($en_route)}}'">ENG
+            <input type="radio" name="options" id="option2" onclick="window.location='{{url($en_route .'/en' )}}'">ENG
         </label>
     </div>
 

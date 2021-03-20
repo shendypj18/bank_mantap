@@ -10,73 +10,16 @@
        </div>
      </div>
       <div class="row text-left text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-2 col-sm-2">
-          <h5>TENTANG KAMI</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="sekilasperusahaan.php">Sekilas Perusahaan</a></li>
-            <li><a href="strukturorganisasi.php">Struktur Organisasi</a></li>
-            <li><a href="budayakerja.php">Budaya Kerja</a></li>
-            <li><a href="manajemen.php">Manajemen</a></li>
-            <li><a href="pemegangsaham.php">Pemegang Saham</a></li>
-            <li><a href="#">Penghargaan</a></li>
-            <li><a href="#">Good Corporate Governance</a></li>
-            <li><a href="#">Pengungkapan Kuantitatif Eksposur Risiko</a></li>
-
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-2 col-sm-2">
-          <h5>PINJAMAN</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="#">Kredit Mantap Pensiun </a></li>
-            <li><a href="#">Retail</a></li>
-            <li><a href="#">Mikro</a></li>
-
-          </ul>
-        </div>
-
-       <div class="col-xs-12 col-sm-2 col-sm-2">
-          <h5>SIMPANAN</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="#">Tabunganku</a></li>
-            <li><a href="#">Tabungan Simantap Berjangka </a></li>
-            <li><a href="#">Tabungan Simantap Gold </a></li>
-            <li><a href="#">Tabungan Simantap Pensiun </a></li>
-            <li><a href="#">Deposito Mantap</a></li>
-            <li><a href="#">Giro</a></li>
-          </ul>
-        </div>
-
-       <div class="col-xs-12 col-sm-2 col-sm-2">
-          <h5>INFO MANTAP</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="#">Berita Mantap</a></li>
-            <li><a href="#">Promosi Mantap</a></li>
-            <li><a href="#">Program Mantap</a></li>
-            <li><a href="#">Laporan Keuangan</a></li>
-          </ul>
-        </div>
-
-        <div class="col-xs-12 col-sm-2 col-sm-2">
-          <h5>JASA BANK</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="#">Tarif Layanan</a></li>
-            <li><a href="#">Bank Garansi</a></li>
-            <li><a href="#">Referensi Bank</a></li>
-            <li><a href="#">Transfer</a></li>
-            <li><a href="#">Inkaso</a></li>
-          </ul>
-        </div>
-
-        <div class="col-xs-12 col-sm-1 col-sm-1">
-          <h5>LANINNYA</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="#">Simulasi</a></li>
-            <li><a href="#">Cabang</a></li>
-            </ul>
-        </div>
-      </div>
-
-
+          @foreach($kategorinavbar as $nv)
+              <div class="col-xs-12 col-sm-2 col-sm-2">
+                  <h5>{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</h5>
+                  <ul class="list-unstyled quick-links">
+                      @foreach($navbar[$nv->nama] as $subnavbar)
+                          <li><a href="{{url('article/' .$subnavbar[$bahasa. "_slug"] .'/'. $bahasa)}}">{{$subnavbar[$bahasa. "_navigasi"]}}</a></li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endforeach
     </div>
 </section>
 <!--  ================================================ /FIRST FOOTER ========================================================= -->

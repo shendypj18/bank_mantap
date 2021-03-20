@@ -115,6 +115,11 @@ return [
     'Whistleblowing_System' => 'Wistleblowing System',
     'Pengungkapan_Kuantitatif_Eksposur_Risiko' =>'Quantitative disclosure of risk exposure',
     'TENTANG_KAMI'    => 'ABOUT US',
-
+    'SIMPANAN'        => 'SAVING',
+    'PINJAMAN'        => 'LOAN',
+    'INFO_MANTAP'     => 'INFO MANTAP',
+    'JASA_BANK'       => 'BANK SERVICES',
+    'CABANG'          => 'BRANCH',
+    'SIMULASI'        => 'SIMULATION',
 
 ];

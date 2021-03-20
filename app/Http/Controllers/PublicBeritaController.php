@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\App;
 use App\Models\Berita;
 use App\Models\EnBerita;
+use App\Models\KategoriNavbar;
+use App\Models\Navbar;
 
 class PublicBeritaController extends Controller
 {
@@ -43,6 +45,8 @@ class PublicBeritaController extends Controller
         $bahasa_lain = Berita::all('id', 'slug')->where('id', $berita->id_bahasa_lain)->first();
         return view('berita-mantap',
                     ["bahasa" => $bahasa[0],
+                     'kategorinavbar' => KategoriNavbar::all(),
+                     'navbar' => $this->navBar($locale),
                      $bahasa[0]. "_route" => '/berita/'.  $bahasa[0] .'/' .$berita->slug,
                      $bahasa[1]. "_route" => '/berita/'. $bahasa[1] . '/' .$bahasa_lain->slug,
                      "berita" => $berita,
@@ -58,6 +62,17 @@ class PublicBeritaController extends Controller
         $tmp=$x;
         $x=$y;
         $y=$tmp;
+    }
+
+    public function navBar()
+    {
+        //$data = Navbar::all()->groupBy('kategori_navigasi');
+        //dd($columns); // dump the result and die
+        $data = [];
+        foreach (KategoriNavbar::all() as $kn) {
+            $data[$kn->nama] = Navbar::where('Kategori_navbar', $kn->nama)->get();
+        }
+        return $data;
     }
 
 }

@@ -116,5 +116,11 @@ return [
     'Pengungkapan_Kuantitatif_Eksposur_Risiko' => 'Pengungkapan Kuantitatif Eksposur Resiko',
     'Penghargaan'            => 'Penghargaan',
     'TENTANG_KAMI'           => 'TENTANG KAMI',
+    'SIMPANAN'        => 'SIMPANAN',
+    'PINJAMAN'        => 'PINJAMAN',
+    'INFO_MANTAP'     => 'INFO MANTAP',
+    'JASA_BANK'       => 'JASA BANK',
+    'CABANG'          => 'CABANG',
+    'SIMULASI'        => 'SIMULASI',
 
 ];

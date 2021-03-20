@@ -57,10 +57,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="carousel-item"><img class="d-block w-100" src="{{ asset('asset/slider2.png') }}" alt="Second slide"></div>
-        <div class="carousel-item"><img class="d-block w-100" src="{{ asset('asset/slider3.png') }}" alt="Third slide"></div>
-
+        @foreach($banner as $banner)
+        <div class="carousel-item"><img class="d-block w-100" src="{{ url('storage/'. $banner->nama) }}" alt="Second slide"></div>
+        @endforeach
     </div>
 
     <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}"></a>
@@ -84,7 +83,7 @@
                         <h3 class="card-title text-light">   <img src="{{ url('asset/campain.png') }}"  alt="Logo" width="10%"> Whistleblowing System</h3>
                         <p class="card-text">Jika Anda yang memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi
                             pelanggaran yang terjadi di lingkungan PT Mandiri Taspen</p>
-                        <a class="btn btn-simulasi-light" role="button" href="whistleblowing-system.php">LAPOR WHISTLEBLOWING</a>
+                        <a class="btn btn-simulasi-light" role="button" href="{{url('/article/whistleblowing-system/'. $bahasa)}}">LAPOR WHISTLEBLOWING</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +95,7 @@
                         <br/>
                         <h4 class="card-title"> <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
                         <p class="card-text mt-4">Lakukan simulasi perhitungan besar dana yang terkumpul dengan rentang bulan yang Anda pilih.</p>
-                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="simulasi.php" role="button">HITUNG SIMULASI</a>
+                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="{{url('/simulasi/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
                     </div>
                 </div>
             </div>
@@ -188,10 +187,10 @@
     <br/><br/>
     <div class="container">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
-        <p align="center"><a>Bank Mantap memahami Anda untuk tetap produktif demi keluarga yang selalu bahagia.</a></p>
+        <p align="center"><a>{{$video_1->nama}}</a></p>
         <br/><br/><br/>
         <div align="center">
-            <iframe width="750" height="400" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/ablEvldqTCY"></iframe>
+            <iframe width="750" height="400" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="{{url($video_1->link_video)}}"></iframe>
         </div>
         <br/><br/>
 
@@ -276,14 +275,14 @@
 
             <!-- Video Youtube -->
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <iframe width="420" height="285" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/QGZeCE-3QJ0"></iframe>
+                <iframe width="420" height="285" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="{{$video_2->link_video}}"></iframe>
             </div>
             <!-- / Video Youtube -->
 
         </div>
 
 
-        <p><a class="btn btn-lg btn-more" href="#" role="button">Selengkapnya tentang Bank Mantap</a></p>
+        <p><a class="btn btn-lg btn-more" href="#" role="button">{{$video_2->nama}}</a></p>
     </div>
 
 </section>

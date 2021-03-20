@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "539bf78c1cffa293a7ed261046bbec97",
+    "content-hash": "7ad0f534274639abf9babd39b2e47ec8",
     "packages": [
+        {
+            "name": "asm-laravel-admin-ext/tmeditor",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asmxaker/tmeditor.git",
+                "reference": "cb122044d63f9a2701a191e7fd649a7d39d482e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asmxaker/tmeditor/zipball/cb122044d63f9a2701a191e7fd649a7d39d482e7",
+                "reference": "cb122044d63f9a2701a191e7fd649a7d39d482e7",
+                "shasum": ""
+            },
+            "require": {
+                "encore/laravel-admin": "^1.6.0",
+                "laravel/framework": ">=5.5",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Encore\\TMEditor\\TMEditorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Encore\\TMEditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "asm",
+                    "email": "asm@xaker.ru"
+                }
+            ],
+            "description": "Integrate tmeditor into laravel-admin",
+            "support": {
+                "issues": "https://github.com/asmxaker/tmeditor/issues",
+                "source": "https://github.com/asmxaker/tmeditor/tree/v1.0.2"
+            },
+            "time": "2020-06-11T20:14:21+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
@@ -1529,64 +1578,6 @@
                 "source": "https://github.com/laravel-admin-extensions/chartjs/tree/master"
             },
             "time": "2018-09-16T17:28:26+00:00"
-        },
-        {
-            "name": "laravel-admin-ext/ckeditor",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel-admin-extensions/ckeditor.git",
-                "reference": "33b0be1f489f923617417f8135a198d984a6b12f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel-admin-extensions/ckeditor/zipball/33b0be1f489f923617417f8135a198d984a6b12f",
-                "reference": "33b0be1f489f923617417f8135a198d984a6b12f",
-                "shasum": ""
-            },
-            "require": {
-                "encore/laravel-admin": "~1.6",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Encore\\CKEditor\\CKEditorServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Encore\\CKEditor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "song",
-                    "email": "zosong@126.com"
-                }
-            ],
-            "description": "Integrate CKEDITOR into laravel-admin",
-            "homepage": "https://github.com/laravel-admin-ext/ckeditor",
-            "keywords": [
-                "CKEditor",
-                "editor",
-                "extension",
-                "laravel-admin"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel-admin-extensions/ckeditor/issues",
-                "source": "https://github.com/laravel-admin-extensions/ckeditor/tree/master"
-            },
-            "time": "2018-11-03T06:08:00+00:00"
         },
         {
             "name": "laravel-admin-ext/media-manager",
