@@ -1,11 +1,9 @@
-< Bank Mantap >
+# Bankmantap
+This Repository for Redesign Landing Page bank mandiri taspen
 
+## Web Component
+<img src="asset/tools.png"/>
 
-Install - Admin Panel
+## ScreenShot
 
-sesuaikan dahulu file .env
-
-1. php artisan admin:install
-2. php artisan migrate
-3. php artisan optimize
-4. php artisan serve
+<img src="asset/ss.png"/>
