@@ -1,11 +1,15 @@
 < Bank Mantap >
 
+- clone aplikasi
 
-Install - Admin Panel
+run on terminal
+- composer install
+- cp .env.example .env
 
-sesuaikan dahulu file .env
+edit file .env sesuai dengan konfigurasi database
 
-1. php artisan admin:install
-2. php artisan migrate
-3. php artisan optimize
-4. php artisan serve
+- php artisan key:generate
+- php artisan optimize
+- php artisan cache:clear
+- php artisan serve
+
