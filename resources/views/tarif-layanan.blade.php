@@ -36,7 +36,7 @@ th {
 </style>
 
 
-<section id="img-header" class="img-header">
+{{-- <section id="img-header" class="img-header">
 <img src="{{ asset('asset/slider21.png') }}">
  
 <ul class="breadcrumb">
@@ -47,7 +47,7 @@ th {
 </div>
 </ul>
  
-</section>
+</section> --}}
 
 <section class="section">
 <!-- Content Start Here -->

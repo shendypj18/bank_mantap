@@ -29,6 +29,7 @@ class BeritaController extends AdminController
         $grid = new Grid(new Berita());
 
         $grid->column('id', __('Id'));
+        $grid->column('gambar_berita', __('Gambar'))->image('',$width = 45, $height = 45);
         $grid->column('judul_berita', __('Judul berita'));
         $grid->column('kategori_id', __('Kategori Berita'))->display(function($id) {
             return Kategori_berita::find($id)->nama;

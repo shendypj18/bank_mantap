@@ -1,4 +1,4 @@
-@include('layout.header')
+{{-- @include('layout.header')
 
 <section id="img-header" class="img-header">
 <img src="{{ asset('asset/slider6.png') }}">
@@ -134,4 +134,4 @@ tr .footer{
 
 </table>
 </div>
-@include('layout.footer')
+@include('layout.footer') --}}

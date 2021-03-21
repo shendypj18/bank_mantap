@@ -97,8 +97,8 @@ class NavbarController extends AdminController
         $form->text('en_navigasi', __('Navigasi Inggris'))->creationRules('required');
         $form->tmeditor('id_text_content', __('Konten Indonesia'));
         $form->tmeditor('en_text_content', __('Konten Inggris'));
-        $form->image('id_banner', __('Banner Indonesia'));
-        $form->image('en_banner', __('Banner Inggris'));
+        $form->image('id_banner', __('Banner Indonesia'))->uniqueName();
+        $form->image('en_banner', __('Banner Inggris'))->uniqueName();
         $form->select('kategori_laporan', __('Kategori laporan'))
              ->options(KategoriLaporan::all()->pluck('jenis','jenis'))->default("umum");
         $form->saved(function (Form $form) {

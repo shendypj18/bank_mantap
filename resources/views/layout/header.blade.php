@@ -26,7 +26,7 @@
 
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
         <li class="nav-item" >
-            <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">BERANDA <span class="sr-only">(current)</span></a>
+            <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">{{__('admin.BERANDA')}} <span class="sr-only">(current)</span></a>
         </li>
 
         @foreach($kategorinavbar as $nv)
@@ -41,8 +41,8 @@
             </li>
         @endforeach
 
-        <li class="nav-item"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">CABANG</a></li>
-        <li class="nav-item"><a class="nav-link mr-3" href="{{url('simulasi/'. $bahasa)}}" tabindex="-1" aria-disabled="true">SIMULASI</a></li>
+        <li class="nav-item"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.CABANG')}}</a></li>
+        <li class="nav-item"><a class="nav-link mr-3" href="{{url('simulasi/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.SIMULASI')}}</a></li>
 
     </ul>
 

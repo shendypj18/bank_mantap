@@ -49,7 +49,7 @@ class Controller extends BaseController
         return [
             'bahasa' => 'en',
             'berita' => Berita::all()
-            ->where('bahasa', 'inggris')
+            ->where('bahasa', 'en')
             ->where('status', 'publish')
             ->take(8),
             'banner' => Banner::all(),
@@ -71,7 +71,7 @@ class Controller extends BaseController
             'bahasa' => 'id',
             'berita' => Berita::all()
             ->where('status', 'publish')
-            ->where('bahasa', 'indonesia')
+            ->where('bahasa', 'id')
             ->take(8),
             'video_1' => Videos::all()->first(),
             'video_2' => Videos::orderBy('id', 'DESC')->first(),
@@ -130,11 +130,11 @@ class Controller extends BaseController
             'kategorinavbar' => KategoriNavbar::all(),
             'laporan' => Laporan::where('jenis_laporan', $laporan->id)
                                  ->orderBy('created_at', 'DESC')
-                                 ->paginate(2),
+                                 ->paginate(10),
             "berita" => "",
             "pages" => Berita::where('bahasa', $locale)
                                        ->orderBy('created_at', 'DESC')
-                                       ->paginate(4),
+                                       ->paginate(10),
 
             "laporanTahunan" => Laporan::where('jenis_laporan', $tahunan->id)->get(),
             $bahasa[0]. '_route' => 'article/'. $navbarslug,

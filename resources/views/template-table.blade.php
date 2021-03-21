@@ -65,7 +65,9 @@
                         <td class="text-right" style="width:4%">{{$l->id}}</td>
                         <td>{{$l->tahun}}</td>
                         <td>{{$l->deskripsi}}</td>
+                        @if($l->nama_file)
                         <td><a href="{{url('storage/'. $l->nama_file)}}">lihat file</a> <img class="ml-2" src="{{ asset('asset/download.svg') }}"></td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>

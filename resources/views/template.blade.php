@@ -7,8 +7,8 @@
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
-  <li>Tentang Kami</li>
-  <li>Sekilas Perusahaan</li>
+  <li>{{$navbardata->kategori_navbar}}</li>
+  <li>{{$navbardata[$bahasa. '_navigasi']}}</li>
 </div>
 </ul>
  
