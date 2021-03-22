@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')<style>
 <style>
 .active,.btn-wr:hover{
 	background-color: #FCD116;
@@ -16,7 +16,7 @@
  }
 </style>
 <section id="img-header" class="img-header">
-<img src="asset/slider_berita_mantap.png">
+<img src="{{ asset('asset/slider_berita_mantap.png') }}">
  
 <ul class="breadcrumb">
 <div class="container">
@@ -44,7 +44,7 @@
 <div class="row">
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}"alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -54,7 +54,7 @@
  
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -64,7 +64,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -74,7 +74,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -84,7 +84,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -94,7 +94,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}"alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -104,7 +104,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -115,7 +115,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -126,7 +126,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -136,7 +136,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -146,7 +146,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -156,7 +156,7 @@
 
 <div class="col-sm-3 mb-5">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top"  src="{{ asset('asset/minislide2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
           <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
@@ -208,4 +208,4 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
