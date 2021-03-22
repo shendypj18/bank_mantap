@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <section id="img-header" class="img-header">
 <div>
@@ -46,11 +46,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;<a href="">Lihat Map</a></h3>
+        <h3><img src="{{ asset('asset/icon/maps.png') }}" alt="Maps"  style="width: 5%"> &nbsp;<a href="">Lihat Map</a></h3>
         </div>
       </div>
 		</div>
@@ -59,11 +59,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+        <h3><img src="{{ asset('asset/icon/maps.png') }}" style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -72,11 +72,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+        <h3><img src="{{ asset('asset/icon/maps.png') }}" alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -85,11 +85,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+         <img src="{{ asset('asset/logo_mantap.png') }}"style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+       <h3><img src="{{ asset('asset/icon/maps.png') }}" alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -105,11 +105,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+         <h3><img src="{{ asset('asset/icon/maps.png') }}"   alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -118,11 +118,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+             <img src="{{ asset('asset/logo_mantap.png') }}"  style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+         <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -131,11 +131,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+         <img src="{{ asset('asset/logo_mantap.png') }}"  style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -144,11 +144,11 @@
       <div class="card branch">
         <div class="card-body">
         <br/>
-        <img src="asset/logo_mantap.png" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+         <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
         <p><small>Wisma Mandiri</small><br/>
         <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
         <small>021-230265</small></p>
-        <h3><img src="asset/icon/maps.png"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
+       <h3><img src="{{ asset('asset/icon/maps.png') }}"   alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
         </div>
       </div>
 		</div>
@@ -165,4 +165,4 @@
 <br/>
 <br/>
   
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
