@@ -1,8 +1,8 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
  
 
 <section id="img-header" class="img-header">
-<img src="asset/slider5.png">
+<img src="{{ asset('asset/slider5.png') }}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
@@ -98,4 +98,4 @@ tr .footer{
 
 </table>
 </div>
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
