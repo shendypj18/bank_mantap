@@ -1,8 +1,8 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <!-- Breadcrumb menu -->
 <section id="img-header" class="img-header">
-<img src="asset/slider_berita_mantap.png">
+<img src="{{ asset('asset/slider_berita_mantap.png') }}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
@@ -27,7 +27,8 @@
 
 <!-- Picture News -->
 <div class="container mt-5">
-<img src="asset/pic-berita.png">
+ <img src="{{ asset('asset/pic-berita.png') }}">   
+ 
 
 <div class="row">
 <div class="col-sm-7 mt-5">
@@ -82,7 +83,7 @@
         
       <div class="col-md-3" style="float:left;">
        <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report1.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report1.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';"><strong>Sustainablity Report 2019</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -92,7 +93,7 @@
   
       <div class="col-md-3" style="float:left">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';"><strong>Penguatan Wirausaha Membangun Daya Tahan Sistemik</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -102,7 +103,7 @@
       
       <div class="col-md-3" style="float:left">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report3.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report3.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';"><strong>Berkarya Bersama Mantap</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -112,7 +113,7 @@
       
       <div class="col-md-3" style="float:left">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report4.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report4.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';"><strong>Penguatan Bisnis Membangun Kesejahteraan</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -128,7 +129,7 @@
       
     <div class="col-md-3" style="float:left;">
        <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report1.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report1.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='404.html';"><strong>Sustainablity Report 2019</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -138,7 +139,7 @@
   
       <div class="col-md-3" style="float:left">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report2.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report2.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='404.html';"><strong>Penguatan Wirausaha Membangun Daya Tahan Sistemik</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -148,7 +149,7 @@
       
       <div class="col-md-3" style="float:left">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report3.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report3.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='404.html';"><strong>Berkarya Bersama Mantap</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -158,7 +159,7 @@
       
       <div class="col-md-3" style="float:left">
         <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/report4.png" alt="Card image cap"  style="height: 12rem;">
+          <img class="card-img-top" src="{{ asset('asset/report4.png') }}" alt="Card image cap"  style="height: 12rem;">
           <div class="card-body">
           <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='404.html';"><strong>Penguatan Bisnis Membangun Kesejahteraan</strong></p>
           <p class="card-text text-left"><small class="text-muted">Tahun 2019</small></p>
@@ -203,4 +204,4 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
