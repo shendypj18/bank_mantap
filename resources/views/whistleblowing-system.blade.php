@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+ @include('layout.header')
 <style>
 table {
   margin-bottom:5%;
@@ -29,8 +29,9 @@ th {
 
 </style>
 
+{!! htmlScriptTagJsApi() !!}
 <section id="img-header" class="img-header">
-<img src="asset/slider9.png">
+<img src="{{ asset('asset/slider9.png') }}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
@@ -51,7 +52,7 @@ th {
        
         </div>
       <div class="col-sm-5">
-        <img src="asset/whistle.png"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
+        <img src="{{ asset('asset/whistle.png') }}" alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
       </div>
     </div>
 </div>
@@ -115,13 +116,14 @@ th {
         <h4 class="text-center mb-3 mt-3">Formulir Pelaporan Whistleblowing System Bank Mantap</h5>
         <div class="container" style="padding: 6px 5%;">
         <form action="whistleblowing-system-respond.php" method="post">
+            @csrf
           <div class="mb-3">
             <label class="form-label">Nama Pelapor*</label>
             <input type="text" name="nama_pelapor" class="form-control" placeholder="Nama lengkap pelapor" required>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Nomor Telepon*</label>
-            <input type="text" class="form-control" placeholder="Nomor telepon hp, rumah tau kantor" required>
+            <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"  placeholder="Nomor telepon hp, rumah tau kantor" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Email*</label>
@@ -177,7 +179,7 @@ th {
           </div>
 
           
-          <img src="asset/recaptcha.gif" width="590px"> <!-- this area for google reCapthca Script -->
+             {!! htmlFormSnippet() !!}<!-- this area for google reCapthca Script -->
           <button type="submit" class="btn btn-lg btn-more">Kirim </button> 
         </form>
         </div>
@@ -185,4 +187,4 @@ th {
 
      <br/>
 </div>
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
