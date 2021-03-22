@@ -1,7 +1,7 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <section id="img-header" class="img-header">
-<img src="asset/slider_simulasi.png">
+<img src="{{ asset('asset/slider_simulasi.png') }}"> 
 <ul class="breadcrumb">
 
 <div class="container">
@@ -122,4 +122,4 @@ border-radius: 12px;">
  
  
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
