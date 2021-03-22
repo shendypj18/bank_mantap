@@ -120,18 +120,18 @@
          </div>
       </div>
 </div>
-      <!-- Right Coloum -->
+       <!-- Right Coloum -->
       <div class="col-sm">
 
         <div class="cell text-center">
-          <img src="asset/mantapcall.png" alt="Partner2"/>
-          <img src="asset/milea.png" width="30%" alt="Partner3"  style="padding-left: 7%;"/>
-     
+          <img src="{{ asset('asset/mantapcall.png') }}" alt="Partner2"/>
+          <img src="{{ asset('asset/milea.png') }}" width="30%" alt="Partner3"  style="padding-left: 7%;"/>
+
           </div>
       <div class="cell text-center">
-        <img src="asset/logo-OJK.png" alt="Ojk"/>
-        <img src="asset/logo-lps.png" alt="Lps"/>
-        <img src="asset/logo-kebank.png" alt="AyoKebank">
+        <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk"/>
+        <img src="{{ asset('asset/logo-lps.png') }}" alt="Lps"/>
+        <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank">
       </div>
       </div>
       <!-- End Right Coloum -->
@@ -175,25 +175,25 @@
       <li>
         <a data-toggle="modal" data-target="#ModalEmail" data-whatever="email" href="#">
           <span class="text">email</span>
-          <img style="height: 30px;" src="asset/icon/mail.png">
+          <img style="height: 30px;" src="{{ asset('asset/icon/mail.png') }}">
         </a>    
       </li>
       <li>
         <a data-toggle="modal" data-target="#ModalPhone" data-whatever="phone" href="#">
           <span class="text">phone</span>
-          <img style="height: 30px;" src="asset/icon/phone.png">
+         <img style="height: 30px;" src="{{ asset('asset/icon/phone.png') }}">
         </a>    
       </li>
       <li>
         <a href="kantor-cabang.php">
           <span class="text">location</span>
-          <img style="width: 30px;" src="asset/icon/maps.png">
+           <img style="width: 30px;" src="{{ asset('asset/icon/maps.png') }}">
         </a>    
       </li>
       <li>
         <a data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#">
           <span class="text">share</span>
-          <img style="height: 30px;" src="asset/icon/share.png">
+            <img style="height: 30px;" src="{{ asset('asset/icon/share.png') }}">
       </li>
     </ul>
   </div>
@@ -205,7 +205,7 @@
 <a id="milea" href="https://milea.bankmantap.co.id/" target="_blank">
    
     <div>
-      <img src="asset/icon/milea.png" width="5%">
+       <img src="{{ asset('asset/icon/milea.png') }}" width="5%">
     </div>
   </a>
   <div id="milea-tol" class="tooltip fade top in" role="tooltip" id="tooltip416138" style="top: -35px; left: -60px; display: none;">
