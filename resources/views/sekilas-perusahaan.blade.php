@@ -1,8 +1,7 @@
-<?php include 'layout/header.php';?>
- 
+@include('layout.header')
 
 <section id="img-header" class="img-header">
-<img src="asset/slider2.png">
+<img src="{{ asset('asset/slider2.png') }}">
 
  
 <ul class="breadcrumb">
@@ -33,7 +32,7 @@
       </div>
       
       <div class="col-sm-5">
-        <img src="asset/pic-sekilas.png"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
+         <img src="{{ asset('asset/pic-sekilas.png') }}"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
       </div>
     </div>
 
@@ -110,5 +109,4 @@
     
 </section>
 
-
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
