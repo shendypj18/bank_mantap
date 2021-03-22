@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
  
 
 <section id="img-header" class="img-header">
@@ -12,7 +12,9 @@
 </section>
 
 <div class="container text-center">
-<img src="asset/amplop.png" width="50%">
+    
+<img src="{{ asset('asset/amplop.png') }}" width="50%">
+ 
         <?php
         $namapelapor = $_POST["nama_pelapor"];
         ?>
@@ -22,4 +24,4 @@
 </div>
 <br/><br/><br/><br/><br/><br/><br/> 
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
