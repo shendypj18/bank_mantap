@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <style>
 /* -----------------> can start accordion style copy from here ------------------------*/
@@ -108,7 +108,7 @@
 </style>
 
 <section id="img-header" class="img-header">
-<img src="asset/slider11.png">
+<img src="{{ asset('asset/slider11.png') }}">
 
  
 <ul class="breadcrumb">
@@ -140,7 +140,7 @@
         </div>
         
         <div class="col-sm-5">
-          <img src="asset/pic_content_2.png"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
+          <img src="{{ asset('') }}asset/pic_content_2.png" alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
         </div>
       </div>
 
@@ -297,7 +297,7 @@
 		<div class="card card-simulation">
 		  <div class="card-body">
 		  <br/>
-		  <h4 class="card-title"> <img src="asset/icon/calculator.png"  alt="Logo" width="15%"><strong> Simulasi Kredit Pensiun</strong></h4>
+		  <h4 class="card-title"> <img src="{{ asset('') }}asset/icon/calculator.png"   alt="Logo" width="15%"><strong> Simulasi Kredit Pensiun</strong></h4>
 		  <p class="card-text mt-5">Manfaat kesempatan untuk terus berkarya dan<br/>mewujudkan rencana Anda kedepan</p>
       <a class="btn btn-outline-light btn-simulasi-flat" href="simulasi.php" role="button">HITUNG SIMULASI</a>
 		  </div>
@@ -311,4 +311,5 @@
 
 
 
-<?php include 'layout/footer.php';?>
+
+@include('layout.footer')
