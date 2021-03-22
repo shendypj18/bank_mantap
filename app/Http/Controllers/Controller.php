@@ -148,25 +148,53 @@ class Controller extends BaseController
         $x=$y;
         $y=$tmp;
     }
-    public function simulasi ($locale)
+
+    public function simulasiGrup($locale, $route)
     {
-        return view('simulasi',[
+        return view($route, [
             'bahasa' => $locale,
             'navbar' => $this->navBar($locale),
             'kategorinavbar' => KategoriNavbar::all(),
-            'id_route' => 'simulasi',
-            'en_route' => 'simulasi'
-            ]);
+            'id_route' => $route,
+            'en_route' => $route
+        ]);
+    }
+
+    public function simulasi ($locale)
+    {
+        return $this->simulasiGrup($locale, 'simulasi');
     }
 
     public function kantorCabang($locale)
     {
-        return view('kantor-cabang', [
-            'bahasa' => $locale,
-            'navbar' => $this->navBar($locale),
-            'kategorinavbar' => KategoriNavbar::all(),
-            'id_route' => 'kantor-cabang',
-            'en_route' => 'kantor-cabang'
-        ]);
+        return $this->simulasiGrup($locale, 'kantor-cabang');
     }
+
+    public function simulasiTabunganBerjangka($locale)
+    {
+        return $this->simulasiGrup($locale, 'simulasi-tabungan-berjangka');
+    }
+
+    public function simulasiTabunganBerjangkaHasil($locale)
+    {
+        return $this->simulasiGrup($locale, 'simulasi-tabungan-berjangka-hasil');
+    }
+
+    public function simulasiDeposito($locale)
+    {
+        return $this->simulasiGrup($locale, 'simulasi-deposito');
+    }
+
+    public function simulasiMikro($locale)
+    {
+        return $this->simulasiGrup($locale, 'simulasi-tabungan-serbaguna-mikro');
+    }
+
+    public function simulasiKreditPensiun($locale)
+    {
+        return $this->simulasiGrup($locale, 'simulasi-kredit-pensiun');
+    }
+
+    
+
 }
