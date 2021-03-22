@@ -9,7 +9,7 @@
     <!-- CSS Bootsrap ver.4.0 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
   
 </head>
 
@@ -26,42 +26,42 @@
 
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
     <li class="nav-item" >
-    <a class="nav-link mr-3" href="index.php">BERANDA <span class="sr-only">(current)</span></a>
+    <a class="nav-link mr-3" href="{{url('/')}}">BERANDA <span class="sr-only">(current)</span></a>
     </li>
          
     <li class="nav-item dropdown">
     <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TENTANG KAMI</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="sekilas-perusahaan.php">Sekilas Perusahaan</a>
-      <a class="dropdown-item" href="struktur-organisasi.php">Struktur Organisasi</a>
-      <a class="dropdown-item" href="budaya-kerja.php">Budaya Kerja</a>
-      <a class="dropdown-item" href="manajemen.php">Manajemen</a>
-      <a class="dropdown-item" href="pemegang-saham.php">Pemegang Saham</a>
-      <a class="dropdown-item" href="penghargaan.php">Penghargaan</a>
-      <a class="dropdown-item" href="goodcorpgovernance.php">Good Corporate Governance</a>
-      <a class="dropdown-item" href="whistleblowing-system.php">Whistleblowing System</a>
-      <a class="dropdown-item" href="pengungkapan-ksk.php">Pengungkapan Kuantitatif Eksposur Risiko</a>
+       <a class="dropdown-item" href="{{url('sekilas-perusahaan/'. $bahasa) }}">Sekilas Perusahaan</a>
+      <a class="dropdown-item" href="{{ url('struktur-organisasi/'. $bahasa) }}">Struktur Organisasi</a>
+      <a class="dropdown-item" href="{{ url('budaya-kerja/'. $bahasa) }}">Budaya Kerja</a>
+      <a class="dropdown-item" href="{{ url('manajemen/'. $bahasa) }}">Manajemen</a>
+      <a class="dropdown-item" href="{{ url('pemegang-saham/'. $bahasa) }}">Pemegang Saham</a>
+      <a class="dropdown-item" href="{{ url('penghargaan/'. $bahasa) }}">Penghargaan</a>
+      <a class="dropdown-item" href="{{ url('goodcorpgovernance/'. $bahasa) }}">Good Corporate Governance</a>
+      <a class="dropdown-item" href=" {{ url('whistleblowing-system/'. $bahasa) }}">Whistleblowing System</a>
+      <a class="dropdown-item" href="{{ url('pengungkapan-ksk/'. $bahasa) }}">Pengungkapan Kuantitatif Eksposur Risiko</a>
     </div>
     </li> 
 
     <li class="nav-item dropdown">
     <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PINJAMAN</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="kredit-mantap-pensiun.php">Kredit Mantap Pensiun</a>
-      <a class="dropdown-item" href="pinjaman-ritel.php">Pinjaman Ritel</a>
-      <a class="dropdown-item" href="pinjaman-mikro.php">Pinjaman Mikro</a>
+      <a class="dropdown-item" href="{{ url('kredit-mantap-pensiun/'. $bahasa) }}">Kredit Mantap Pensiun</a>
+      <a class="dropdown-item" href="{{ url('pinjaman-ritel/'. $bahasa) }}">Pinjaman Ritel</a>
+      <a class="dropdown-item" href="{{ url('pinjaman-mikro/'. $bahasa) }}">Pinjaman Mikro</a>
     </div>
     </li> 
  
     <li class="nav-item dropdown">
     <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SIMPANAN</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="simpanan-tabunganku.php">Simpanan Tabunganku</a>
-      <a class="dropdown-item" href="tabungan-simantap-berjangka.php">Tabungan siMantap Berjangka</a>
-      <a class="dropdown-item" href="tabungan-simantap.php">Tabungan Simantap</a>
-      <a class="dropdown-item" href="tabungan-simantap-pensiun.php">Tabungan Simantap Pensiun</a>
-      <a class="dropdown-item" href="deposito-mantap.php">Deposito Mantap</a>
-      <a class="dropdown-item" href="giro.php">Giro</a>
+      <a class="dropdown-item" href="{{ url('simpanan-tabunganku/'. $bahasa) }}">Simpanan Tabunganku</a>
+      <a class="dropdown-item" href="{{ url('tabungan-simantap-berjangka/'. $bahasa) }}">Tabungan siMantap Berjangka</a>
+      <a class="dropdown-item" href="{{ url('tabungan-simantap/'. $bahasa) }}">Tabungan Simantap</a>
+      <a class="dropdown-item" href="{{ url('tabungan-simantap-pensiun/'. $bahasa) }}">Tabungan Simantap Pensiun</a>
+      <a class="dropdown-item" href="{{ url('deposito-mantap/'. $bahasa) }}">Deposito Mantap</a>
+      <a class="dropdown-item" href="{{ url('giro/') }}">Giro</a>
     </div>
     </li> 
 
@@ -79,7 +79,7 @@
     <li class="nav-item dropdown">
     <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JASA BANK</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="tarif-layanan.php">Tarif Layanan</a>
+        <a class="dropdown-item" href="tarif-layanan.php">Tarif Layanan</a>
       <a class="dropdown-item" href="bank-garansi.php">Bank Garansi</a>
       <a class="dropdown-item" href="referensi-bank.php">Referensi Bank</a>
       <a class="dropdown-item" href="transfer.php">Transfer</a>
@@ -109,13 +109,19 @@
     </a> 
     <!-- End Bottom Here -->
 
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-sm btn-warning">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked>IDN
-    </label>
-    <label class="btn btn-sm btn-outline-warning text-dark">
-    <input type="radio" name="options" id="option2" autocomplete="off">ENG
-    </label>
+    <div class="btn-group btn-group-toggle">
+        <label id="bahasa-indonesia" class="
+                   @if($bahasa=="en") btn-outline-warning text-dark
+                   @else btn-warning @endif
+                   btn btn-sm ">
+            <input type="radio" name="options" id="option1" onclick="window.location='{{asset($id_route)}}'">IDN
+        </label>
+        <label id="bahasa-inggris" class="
+                   @if($bahasa=="id") btn-outline-warning text-dark
+                   @else btn-warning @endif
+                   btn btn-sm">
+            <input type="radio" name="options" id="option2" onclick="window.location='{{asset($en_route)}}'">ENG
+        </label>
     </div>
 
 </div>
