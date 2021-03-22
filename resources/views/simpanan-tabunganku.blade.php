@@ -1,7 +1,6 @@
-<?php include 'layout/header.php';?>
-
+@include('layout.header')
 <section id="img-header" class="img-header">
-<img src="asset/slider14.png">
+<img src="{{ asset('asset/slider14.png') }}">
  
 <ul class="breadcrumb">
 <div class="container">
@@ -74,7 +73,7 @@
 		<div class="card card-simulation">
 		  <div class="card-body">
 		  <br/>
-		  <h4 class="card-title"> <img src="asset/icon/calculator.png"  alt="Logo" width="15%"><strong> Simulasi Tabungan Berjangka</strong></h4>
+		  <h4 class="card-title"> <img src="{{ asset('asset/icon/calculator.png') }}" alt="Logo" width="15%"><strong> Simulasi Tabungan Berjangka</strong></h4>
 		  <p class="card-text mt-5">Tabungan Samantap Berjangka (TSB) adalah<br/>tabungan setoran wajid bulanan</p>
       <a class="btn btn-outline-light btn-simulasi-flat" href="simulasi.php" role="button">HITUNG SIMULASI</a>
 		  </div>
@@ -89,4 +88,4 @@
 
 </section>
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
