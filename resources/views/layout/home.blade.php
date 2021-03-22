@@ -9,9 +9,9 @@
     <div class="carousel-inner">
      
     <div class="carousel-item active w-100" style="background-color: #0F2B5B; height: 38rem;">
-    <img class="d-block" style="margin-left:50%" src="asset/herobg.png" width="39%" alt="First slide">
+    <img class="d-block" style="margin-left:50%" src="{{ asset('asset/1.png') }}" width="39%" alt="First slide">
       
-    <!--<img class="d-block w-100" src="asset/1.png" width="5%" alt="First slide"> -->
+    
 
     <div class="container">
        <div class="row"> 
@@ -29,11 +29,11 @@
       <div class="text-left col-md-4">
       <p class="text-light" style="font-size: 11px;">PT Bank Mandiri Taspen adalah pelaku jasa keuangan terdaftar dan diawasi oleh<br/>
       Otoritas Jasa Keuangan serta merupakan bank peseta penjamin LPS</p>
-      </div>
+      </div> 
       <div class="text-right">
-        <img src="asset/logo-OJK.png" alt="Ojk"/>
-        <img src="asset/logo-lps.png" alt="Lps"/>
-        <img src="asset/logo-kebank.png" alt="AyoKebank">
+         <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk"/>
+         <img src="{{ asset('asset/logo-lps.png') }}" alt="Lps"/>
+         <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank">
       </div>
       </div>
 
@@ -50,7 +50,7 @@
                 margin-left: 30%;
                }
               </style>
-          <img src="asset/1.png" width="80%">
+           <img src="{{ asset('asset/1.png') }}" width="80%">
          </div>
           </div>
 
@@ -58,13 +58,14 @@
     </div>
     </div>
 
-    <div class="carousel-item"><img class="d-block w-100" src="asset/slider2.png" alt="Second slide"></div>
-    <div class="carousel-item"><img class="d-block w-100" src="asset/slider3.png" alt="Third slide"></div>
+     <div class="carousel-item"><img class="d-block w-100" src="{{ asset('asset/slider2.png') }}" alt="Second slide"></div>
+     <div class="carousel-item"><img class="d-block w-100" src="{{ asset('asset/slider3.png') }}" alt="Third slide"></div>
+
 
     </div>
 
-    <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="asset/left.svg"></a>
-    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img src="asset/right.svg"></a>
+     <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}"></a>
+    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}"></a>
  
 </section>
 <!-- ====================================================== /CAROUSEL  ==================================================== -->
@@ -81,7 +82,7 @@
 		<div class="card card-one">
 		  <div class="card-body">
 		  <br/>
-		  <h3 class="card-title text-light">   <img src="asset/campain.png"  alt="Logo" width="10%"> Whistleblowing System</h3>
+		  <h3 class="card-title text-light">   <img src="{{ url('asset/campain.png') }}"   alt="Logo" width="10%"> Whistleblowing System</h3>
 		  <p class="card-text">Jika Anda yang memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi
       pelanggaran yang terjadi di lingkungan PT Mandiri Taspen</p>
 		  <a class="btn btn-simulasi-light" role="button" href="whistleblowing-system.php">LAPOR WHISTLEBLOWING</a> 
@@ -94,7 +95,7 @@
 		<div class="card card-two">
 		  <div class="card-body">
 		  <br/>
-		  <h4 class="card-title"> <img src="asset/icon/calculator.png"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
+		  <h4 class="card-title">  <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
 		  <p class="card-text mt-4">Lakukan simulasi perhitungan besar dana yang terkumpul dengan rentang bulan yang Anda pilih.</p>
       <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="simulasi.php" role="button">HITUNG SIMULASI</a>
 		  </div>
@@ -141,98 +142,44 @@
     <div class="carousel-item active">
         
       <div class="col-md-3" style="float:left;">
-       <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide1.png" alt="Card image cap"  style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 7 Des 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Bank Mantap Serahkan Bantuan Alat Pelindung Diri Kepada RSPI Sulianti Saroso</p>
-          </div>
-        </div>
+         @php
+                    $i = 1;
+                    @endphp
+                    @foreach($berita as $b)
+                        <div class="col-md-3" style="float:left;">
+                            <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
+                                <img class="card-img-top" src="{{ url('storage/' .$b->gambar_berita) }}" alt="Card image cap"  style="height: 12rem;">
+                                <div class="card-body">
+                                    <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
+                                    <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('berita/'. $bahasa . '/' .$b->slug)}}'">
+                                        {{ $b->judul_berita }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        @if ($i % 4 == 0)
       </div>
-  
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap"  style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
-          <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide3.png" alt="Card image cap" style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 10 Nov 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Pegawai Bank Mandiri Taspen Sisihkan Gaji Untuk Bantuan Akibat Dampak Virus Covid-19</p>
-          </div>
-        </div>
-      </div>
-      
-       <div class="col-md-3" style="float:left">
-       <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide4.png" alt="Card image cap" style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 25 Okt 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Badan Kepegawaian Negara Taspen dan Bank Mantap Perkuat Sinergi</p>
-          </div>
-        </div>
-      </div>
-  
-    </div>
-    <!--/.First slide-->
-    <div class="carousel-item">
         
-      <div class="col-md-3" style="float:left">
-       <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide1.png" alt="Card image cap" style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 7 Des 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Bank Mantap Serahkan Bantuan Alat Pelindung Diri Kepada RSPI Sulianti Saroso</p>
-          </div>
-        </div>
-      </div>
+         @if($i <= count($berita) - 1)
+                    <div class="carousel-item">
+                @endif
+                        @endif
+
+                        @if($i == count($berita) and $i % 4 != 0)
+                    </div>
+                        @endif
+                        @php
+                        $i++;
+                        @endphp
+                    @endforeach
   
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide2.png" alt="Card image cap" style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 16 Nov 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Hadiah langsung tabungan siMantap, tentukan hadiahmu!</p>   
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide3.png" alt="Card image cap" style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 10 Nov 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Pegawai Bank Mandiri Taspen Sisihkan Gaji Untuk Bantuan Akibat Dampak Virus Covid-19</p>
-          </div>
-        </div>
-      </div>
-      
-       <div class="col-md-3" style="float:left">
-       <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-          <img class="card-img-top" src="asset/minislide4.png" alt="Card image cap" style="height: 12rem;">
-          <div class="card-body">
-          <p class="card-text text-left"><small class="text-muted">Last Update : 25 Okt 2020</small></p>
-          <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='berita-mantap-detail.php';">Badan Kepegawaian Negara Taspen dan Bank Mantap Perkuat Sinergi</p>
-          </div>
-        </div>
-      </div>
-  
-    </div>
-    <!--Second slide--> 
  
   </div>
   <!--/.Slides-->
 
   <!-- Indicator Slider -->
-  <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="asset/left.svg" style="margin-left: -10rem;"></a>
-  <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="asset/right.svg" style="margin-right: -10rem;"></a>
+   <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -10rem;"></a>
+   <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -10rem;"></a>
    <!-- End Indicator Slider -->
     
   </div>
