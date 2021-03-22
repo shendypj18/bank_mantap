@@ -1,8 +1,7 @@
-<?php include 'layout/header.php';?>
- 
+@include('layout.header')
 
 <section id="img-header" class="img-header">
-<img src="asset/slider3.png">
+<img src="{{ asset('asset/slider3.png') }}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="#">Home</a></li>
@@ -67,7 +66,7 @@
     <div class="row">
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_01.png" class="card-img" alt="..."
+                    <img src="{{ asset('asset/dewankomisaris_01.png') }}" class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -78,7 +77,7 @@
 
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_02.png" class="card-img" alt="..."
+                    <img src="{{ asset('asset/dewankomisaris_02.png') }}" class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -89,7 +88,7 @@
 
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                            <img src="asset/dewankomisaris_03.png" class="card-img" alt="..."
+                           <img src="{{ asset('asset/dewankomisaris_03.png') }}" class="card-img" alt="..."
                             style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -104,7 +103,7 @@
 
                 <div class="col-lg-4">
                 <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_04.png" class="card-img" alt="..."
+                   <img src="{{ asset('asset/dewankomisaris_04.png') }}"class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -125,7 +124,7 @@
     <div class="row">
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_01.png" class="card-img" alt="..."
+                   <img src="{{ asset('asset/dewankomisaris_01.png') }}" class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -136,7 +135,7 @@
 
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_02.png" class="card-img" alt="..."
+                    <img src="{{ asset('asset/dewankomisaris_02.png') }}" class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -147,7 +146,7 @@
 
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                            <img src="asset/dewankomisaris_03.png" class="card-img" alt="..."
+                      <img src="{{ asset('asset/dewankomisaris_03.png') }}"class="card-img" alt="..."
                             style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -158,18 +157,13 @@
 
                 </div>
                  
-                <div class="row mt-4">
-
-                <div class="col-lg-4">
-               
-                </div>
-                </div>
+                 
     </div>
     <div id="menu2" class="container tab-pane fade"><br>
     <div class="row">
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_01.png" class="card-img" alt="..."
+                    <img src="{{ asset('asset/dewankomisaris_01.png') }}" class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -180,7 +174,7 @@
 
                     <div class="col-lg-4">
                     <div class="card bg-white text-white">
-                    <img src="asset/dewankomisaris_02.png" class="card-img" alt="..."
+                    <img src="{{ asset('asset/dewankomisaris_02.png') }}"class="card-img" alt="..."
                     style="width: 22rem; box-shadow: 0px 20px 40px #00000014; border-radius: 16 px 16px; height:25rem;">
                         <div class="card-img-overlay" style="margin-top:86%;">
                             <p class="card-text" style="font-size: 20px; font-weight: 500;"><!-- nama pejabat --></p>
@@ -262,4 +256,4 @@
             <!-- /.modal-content -->
     
  
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
