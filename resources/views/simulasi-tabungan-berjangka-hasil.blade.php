@@ -1,6 +1,7 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <section id="img-header" class="img-header">
+<img src="{{ asset('asset/slider19.png') }}">
 <img src="asset/slider_simulasi.png">
 <ul class="breadcrumb">
 
@@ -89,7 +90,7 @@ td {
 <br/>
 <br/>
   
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
 
 
 <!-- script hitung simulasi pada form 
