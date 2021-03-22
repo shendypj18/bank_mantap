@@ -1,7 +1,6 @@
-<?php include 'layout/header.php';?>
-
+@include('layout.header')
 <section id="img-header" class="img-header">
-<img src="asset/slider13.png">
+<img src="{{ asset('asset/slider13.png') }}">
  
 <ul class="breadcrumb">
 <div class="container">
@@ -87,4 +86,6 @@
 		</div>
     </div>
 </section>
-<?php include 'layout/footer.php';?>
+@include('layout.header')
+<section id="img-header" class="img-header">
+<img src="{{ asset('asset/slider13.png') }}">
