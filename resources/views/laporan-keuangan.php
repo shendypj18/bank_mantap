@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <style>
 .active,.btn-wr:hover{
@@ -58,7 +58,7 @@ tr .footer{
 
 
 <section id="img-header" class="img-header">
-<img src="asset/slider20.png">
+<img src="{{ asset('asset/slider20.png') }}">
  
 <ul class="breadcrumb">
 <div class="container">
@@ -196,8 +196,8 @@ tr .footer{
   <!--/.Slides-->
 
   <!-- Indicator Slider -->
-  <a class="carousel-control-prev" href="#report" role="button" data-slide="prev"><img src="asset/left.svg" style="margin-left: -10rem;"></a>
-  <a class="carousel-control-next" href="#report" role="button" data-slide="next"><img src="asset/right.svg" style="margin-right: -10rem;"></a>
+  <a class="carousel-control-prev" href="#report" role="button" data-slide="prev"><img src="{{ asset('asset/left.png') }}" style="margin-left: -10rem;"></a>
+  <a class="carousel-control-next" href="#report" role="button" data-slide="next"><img src="{{ asset('asset/right.png') }}"  style="margin-right: -10rem;"></a>
    <!-- End Indicator Slider -->
  
 </div>
@@ -320,4 +320,4 @@ border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size
 
  
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
