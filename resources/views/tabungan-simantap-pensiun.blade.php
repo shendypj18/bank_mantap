@@ -1,7 +1,7 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <section id="img-header" class="img-header">
-<img src="asset/slider17.png">
+<img src="{{ asset('asset/slider17.png') }}">
  
 <ul class="breadcrumb">
 <div class="container">
@@ -28,7 +28,7 @@
       </div>
       
       <div class="col-sm-5">
-        <img src="asset/img-tabungan-simantap.png"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
+        <img src="{{ asset('asset/img-tabungan-simantap.png') }}"  alt="Logo" width="550px" style="left: 686px; height: 360px; margin-bottom:8%;">
       </div>
 
       <div class="col-sm-10">
@@ -69,7 +69,7 @@
 		<div class="card card-simulation">
 		  <div class="card-body">
 		  <br/>
-		  <h4 class="card-title"> <img src="asset/icon/calculator.png"  alt="Logo" width="15%"><strong> Simulasi Deposito</strong></h4>
+		  <h4 class="card-title"> <img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="15%"><strong> Simulasi Deposito</strong></h4>
 		  <p class="card-text mt-5">Untuk memastikna uang Anda diinvestasikan<br/>ditempat yang aman dan terpercaya sekaligus<br/> menguntungkan</p>
       <a class="btn btn-outline-light btn-simulasi-flat" href="simulasi.php" role="button">HITUNG SIMULASI</a>
 		  </div>
@@ -83,4 +83,4 @@
 
 </section>
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
