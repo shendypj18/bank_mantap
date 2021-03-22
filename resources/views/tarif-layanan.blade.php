@@ -1,4 +1,4 @@
-<?php include 'layout/header.php';?>
+@include('layout.header')
 
 <style>
 table {
@@ -38,7 +38,7 @@ th {
 
 
 <section id="img-header" class="img-header">
-<img src="asset/slider21.png">
+@include('layout.header')
  
 <ul class="breadcrumb">
 <div class="container">
@@ -482,4 +482,4 @@ th {
 
 </section>
 
-<?php include 'layout/footer.php';?>
+@include('layout.footer')
