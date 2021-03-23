@@ -149,7 +149,7 @@ class Controller extends BaseController
                               ->where('bahasa', $locale)
                               ->where('status', 'publish')
                               ->orderBy('created_at', 'DESC')
-                              ->paginate(10);
+                              ->paginate(8);
         }
         return $data;
     }

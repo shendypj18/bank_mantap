@@ -1,3 +1,6 @@
+@if($berita)
+    @include('layout.header')
+@endif
 <style>
 .active,.btn-wr:hover{
 	background-color: #FCD116;
@@ -110,3 +113,6 @@
      });
  }
 </script>
+@if($berita)
+    @include('layout.footer')
+@endif
