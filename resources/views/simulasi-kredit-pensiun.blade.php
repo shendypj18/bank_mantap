@@ -172,7 +172,7 @@ td {
 
  
 
-{{-- @include('layout.footer') --}}
+@include('layout.footer')
 
 
 <script>
@@ -296,4 +296,3 @@ td {
   }
 </script>
 
-@include('layout.footer')
