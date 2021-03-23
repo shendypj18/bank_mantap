@@ -14,8 +14,8 @@ use App\Models\Laporan;
 use App\Models\Navbar;
 use App\Models\Videos;
 use Illuminate\Support\Facades\App;
-
-
+use Illuminate\Http\Request;
+use App\Models\Kategori_berita;
 
 class Controller extends BaseController
 {
@@ -121,6 +121,8 @@ class Controller extends BaseController
 
         $navbarData = Navbar::all()->where($locale. '_slug', $navbarslug)->first();
         //dd($navbarData);
+        //dd($navbarslug);
+        //dd($navbarData);
         $laporan = KategoriLaporan::where('jenis', $navbarData->kategori_laporan)->first();
         $tahunan = KategoriLaporan::where('jenis', 'tahunan')->first();
         return view('template', [
@@ -132,14 +134,23 @@ class Controller extends BaseController
                                  ->orderBy('created_at', 'DESC')
                                  ->paginate(10),
             "berita" => "",
-            "pages" => Berita::where('bahasa', $locale)
-                                       ->orderBy('created_at', 'DESC')
-                                       ->paginate(10),
-
+            "pages" => $this->page($locale),
             "laporanTahunan" => Laporan::where('jenis_laporan', $tahunan->id)->get(),
             $bahasa[0]. '_route' => 'article/'. $navbarslug,
             $bahasa[1]. '_route' => 'article/'. $navbarData[$bahasa[1]. '_slug'],
         ]);
+    }
+
+    function page($locale)
+    {
+        $data = [];
+        foreach (Kategori_berita::all() as $kb) {
+            $data[$kb->id] = Berita::where('kategori_id', $kb->id)
+                              ->where('bahasa', $locale)
+                              ->orderBy('created_at', 'DESC')
+                              ->paginate(10);
+        }
+        return $data;
     }
 
     function swap(&$x, &$y)
@@ -151,6 +162,12 @@ class Controller extends BaseController
 
     public function simulasiGrup($locale, $route)
     {
+        if (!in_array($locale, $bahasa = ['id', 'en'])) {
+            return redirect()->action([Controller::class, 'home']);
+        }
+
+        App::setLocale($locale);
+
         return view($route, [
             'bahasa' => $locale,
             'navbar' => $this->navBar($locale),
@@ -198,6 +215,12 @@ class Controller extends BaseController
     
     public function termCondition($locale)
     {
+        if (!in_array($locale, $bahasa = ['id', 'en'])) {
+            return redirect()->action([Controller::class, 'home']);
+        }
+
+        App::setLocale($locale);
+
         return view('term-condition', [
             'bahasa' => $locale,
             'navbar' => $this->navBar($locale),
@@ -207,14 +230,17 @@ class Controller extends BaseController
         ]);
     }
 
-    public function searchResault($locale)
+    public function searchResault(Request $request, $locale)
     {
+        $hasil_pencarian = Berita::where('judul_berita', "like", "%". $request->search. "%" )->paginate();
         return view('search-resault', [
             'bahasa' => $locale,
             'navbar' => $this->navBar($locale),
             'kategorinavbar' => KategoriNavbar::all(),
             'id_route' => 'search-resault',
-            'en_route' => 'search-resault'
+            'en_route' => 'search-resault',
+            'hasil_pencarian' => $hasil_pencarian,
+            'search' => $request->search,
         ]);
     }
 

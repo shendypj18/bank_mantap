@@ -48,7 +48,7 @@
 
     <div class="container text-center mt-5">
         <div class="row">
-            @foreach ($pages[2] as $page)
+            @foreach ($pages as $page)
                 <div class="col-sm-3 mb-5">
                     <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar_berita)}}" alt="Card image cap"  style="height: 12rem;">
@@ -66,7 +66,7 @@
 
 
     <!-- PAGGING -->
-    @if ($pages[2]->hasPages())
+    @if ($pages->hasPages())
         <div class="container" id="page">
             <nav aria-label="Page navigation example" class="paging mb-5" style="margin-left:30%;">
                 <ul class="pagination">

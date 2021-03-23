@@ -209,7 +209,7 @@
 
                    </div> -->
               <br>
-              <button type="button" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >Kirim Pesan</button>
+              <button type="button" data-dismiss="modal" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >Kirim Pesan</button>
             </form>
           </div>
         </div>
