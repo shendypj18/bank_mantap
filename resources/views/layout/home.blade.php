@@ -95,7 +95,7 @@
                         <br/>
                         <h4 class="card-title"> <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
                         <p class="card-text mt-4">Lakukan simulasi perhitungan besar dana yang terkumpul dengan rentang bulan yang Anda pilih.</p>
-                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="{{url('/simulasi/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
+                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
                     </div>
                 </div>
             </div>
