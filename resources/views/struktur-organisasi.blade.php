@@ -1,4 +1,4 @@
-@include('layout.header')
+{{-- @include('layout.header')
 <section id="img-header" class="img-header">
 <img src="{{ asset('asset/slider4.png') }}">
 <ul class="breadcrumb">
@@ -32,4 +32,4 @@
  <div class="container mb-5 text-center"><img src="{{ asset('asset/strukturusaha.png') }}" width="70%" class="mb-5"></div>
  <br/><br/><br/>
   
-@include('layout.footer')
+@include('layout.footer') --}}
