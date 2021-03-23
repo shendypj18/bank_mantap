@@ -38,6 +38,16 @@
      }
     </style>
     <div class="container" >
+
+        <div class="container text-center" id="report">
+            <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
+            
+            <p><br/></p>
+            <p><a class="btn btn-lg btn-wr" href="berita-mantap.php" role="button">Berita Mantap</a>
+            <a class="btn btn-lg btn-wr" href="promosi-mantap.php" role="button">Promosi Mantap</a>
+            <a class="btn btn-lg btn-wr" href="program-mantap.php" role="button">Program Mantap</a>
+            <a class="btn btn-lg btn-wr active" href="laporan-keuangan.php" role="button">Laporan Keuangan</a></p>
+            </div>
         <!-- MENU CARD SLIDER -->
 
         <!--Carousel Wrapper-->

@@ -194,7 +194,6 @@ class Controller extends BaseController
     {
         return $this->simulasiGrup($locale, 'simulasi-kredit-pensiun');
     }
-
     
 
 }

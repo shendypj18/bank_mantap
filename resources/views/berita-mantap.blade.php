@@ -40,9 +40,9 @@
         </div>
         <p><br/></p>
         <p><a class="btn btn-lg btn-wr active" href="#" role="button">Berita Mantap</a>
-            <a class="btn btn-lg btn-wr" href="#" role="button">Promosi Mantap</a>
-            <a class="btn btn-lg btn-wr" href="#" role="button">Program Mantap</a>
-            <a class="btn btn-lg btn-wr" href="#" role="button">Laporan Keuangan</a></p>
+            <a class="btn btn-lg btn-wr" href="{{url('article/promosi-mantap/'.$bahasa)}}" role="button">Promosi Mantap</a>
+            <a class="btn btn-lg btn-wr" href="{{url('article/program-mantap/'.$bahasa)}}" role="button">Program Mantap</a>
+            <a class="btn btn-lg btn-wr" href="{{url('article/laporan-keuangan/'.$bahasa)}}" role="button">Laporan Keuangan</a></p>
 
     </div>
 
