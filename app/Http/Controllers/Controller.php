@@ -145,8 +145,9 @@ class Controller extends BaseController
     {
         $data = [];
         foreach (Kategori_berita::all() as $kb) {
-            $data[$kb->id] = Berita::where('kategori_id', $kb->id)
+            $data[$kb->nama] = Berita::where('kategori', $kb->nama)
                               ->where('bahasa', $locale)
+                              ->where('status', 'publish')
                               ->orderBy('created_at', 'DESC')
                               ->paginate(10);
         }

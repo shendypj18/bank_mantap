@@ -1,4 +1,3 @@
-@include('layout.header')
 <style>
 .active,.btn-wr:hover{
 	background-color: #FCD116;
@@ -45,10 +44,9 @@
         @endforeach
         </p>
     </div>
-
     <div class="container text-center mt-5">
         <div class="row">
-            @foreach ($pages[2] as $page)
+            @foreach ($pages["Berita Mantap"] as $page)
                 <div class="col-sm-3 mb-5">
                     <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar_berita)}}" alt="Card image cap"  style="height: 12rem;">
@@ -66,31 +64,33 @@
 
 
     <!-- PAGGING -->
-    @if ($pages[2]->hasPages())
-        <div class="container" id="page">
-            <nav aria-label="Page navigation example" class="paging mb-5" style="margin-left:30%;">
-                <ul class="pagination">
-                    <li class="page-item mr-3"><a class="btn page-link active pl-4
-                                                         @if($pages->onFirstPage()) disabled @endif
-                                                         " href="{{ $pages->previousPageUrl() }}"
-                                                  style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
-                                                         border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px; "><</a></li>
-                    @for($i = 1; $i <= $pages->lastPage(); $i++)
-                        <li class="page-item mr-3"><a class="btn page-link pl-3
-                                                             @if($pages->currentPage() == $i) bg-warning @endif
-                                                             "
-                                                      href="{{$pages->url($i)}}"
-                                                      style="border: 1px solid #0f2b5b;background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
-                                                             border-radius: 12px;opacity: 1; width: 54px;height: 44px; font-size:14px;">{{$i}}</a></li>
-                    @endfor
-                    <li class="page-item mr-3"><a class="btn page-link pl-3"
-                                                  href="{{$pages->nextPageUrl() }}"
-                                                  style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
-                                                         border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px">></a></li>
-                </ul>
-            </nav>
-        </div>
-    @endif
+    @if ($pages["Berita Mantap"])
+        @if ($pages["Berita Mantap"]->hasPages())
+            <div class="container" id="page">
+                <nav aria-label="Page navigation example" class="paging mb-5" style="margin-left:30%;">
+                    <ul class="pagination">
+                        <li class="page-item mr-3"><a class="btn page-link active pl-4
+                                                             @if($pages["Berita Mantap"]->onFirstPage()) disabled @endif
+                                                             " href="{{ $pages["Berita Mantap"]->previousPageUrl() }}"
+                                                      style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
+                                                             border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px; "><</a></li>
+                        @for($i = 1; $i <= $pages["Berita Mantap"]->lastPage(); $i++)
+                            <li class="page-item mr-3"><a class="btn page-link pl-3
+                                                                 @if($pages["Berita Mantap"]->currentPage() == $i) bg-warning @endif
+                                                                 "
+                                                          href="{{$pages["Berita Mantap"]->url($i)}}"
+                                                          style="border: 1px solid #0f2b5b;background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
+                                                                 border-radius: 12px;opacity: 1; width: 54px;height: 44px; font-size:14px;">{{$i}}</a></li>
+                        @endfor
+                        <li class="page-item mr-3"><a class="btn page-link pl-3"
+                                                      href="{{$pages["Berita Mantap"]->nextPageUrl() }}"
+                                                      style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
+                                                             border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px">></a></li>
+                    </ul>
+                </nav>
+            </div>
+        @endif
+     @endif
     <!-- PAGGING -->
 
 
@@ -110,5 +110,3 @@
      });
  }
 </script>
-
-@include('layout.footer')

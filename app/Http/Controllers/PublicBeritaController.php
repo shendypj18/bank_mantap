@@ -7,6 +7,7 @@ use App\Models\Berita;
 use App\Models\EnBerita;
 use App\Models\KategoriNavbar;
 use App\Models\Navbar;
+use App\Models\Kategori_berita;
 
 class PublicBeritaController extends Controller
 {
@@ -50,11 +51,22 @@ class PublicBeritaController extends Controller
                      $bahasa[0]. "_route" => '/berita/'.  $bahasa[0] .'/' .$berita->slug,
                      $bahasa[1]. "_route" => '/berita/'. $bahasa[1] . '/' .$bahasa_lain->slug,
                      "berita" => $berita,
-                     "pages" => Berita::where('bahasa', $berita->bahasa)
-                                       ->orderBy('created_at', 'DESC')
-                                       ->paginate(4),
+                     "pages" => $this->page($bahasa[0]),
                     ],
         );
+    }
+
+    function page($locale)
+    {
+        $data = [];
+        foreach (Kategori_berita::all() as $kb) {
+            $data[$kb->id] = Berita::where('kategori_id', $kb->id)
+                              ->where('bahasa', $locale)
+                              ->where('status', 'publish')
+                              ->orderBy('created_at', 'DESC')
+                              ->paginate(10);
+        }
+        return $data;
     }
 
     function swap(&$x, &$y)

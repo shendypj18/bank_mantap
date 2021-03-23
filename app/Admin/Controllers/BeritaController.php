@@ -31,9 +31,7 @@ class BeritaController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('gambar_berita', __('Gambar'))->image('',$width = 45, $height = 45);
         $grid->column('judul_berita', __('Judul berita'));
-        $grid->column('kategori_id', __('Kategori Berita'))->display(function($id) {
-            return Kategori_berita::find($id)->nama;
-        })->label('warning');
+        $grid->column('kategori', __('Kategori Berita'));
         $grid->column('bahasa', __('Bahasa'));
         $grid->column('status', __('Status Berita'))->label([
             'publish' => 'success',
@@ -59,9 +57,7 @@ class BeritaController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('judul_berita', __('Judul Berita'));
-        $show->field('kategori_id', __('Kategori Berita'))->display(function($id) {
-            return Kategori_berita::find($id)->nama;
-        });
+        $show->field('kategori', __('Kategori Berita'));
         $show->field('gambar_berita', __('Gambar Berita'))->image();
         $show->field('isi_berita', __('Isi Berita'));
         $show->field('bahasa', __('Bahasa'));
@@ -83,8 +79,8 @@ class BeritaController extends AdminController
         $form = new Form(new Berita());
 
         $form->text('judul_berita', __('Judul Berita'));
-        $form->select('kategori_id', __('Kategori Berita'))->creationRules('required')
-             ->options(Kategori_berita::all()->pluck('nama','id'))->default("umum");
+        $form->select('kategori', __('Kategori Berita'))->creationRules('required')
+             ->options(Kategori_berita::all()->pluck('nama','nama'))->default("umum");
         $form->image('gambar_berita', __('Gambar Berita'))->thumbnail('mini', $width = 269, $height = 247);
         $form->tmeditor('isi_berita', __('Isi Berita'));
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

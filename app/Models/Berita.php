@@ -12,7 +12,7 @@ class Berita extends Model
     use DefaultDatetimeFormat;
 
     protected $fillable = [
-        'kategori_id',
+        'kategori',
         'judul_berita',
         'slug',
         'gambar_berita',
@@ -21,9 +21,9 @@ class Berita extends Model
         'id_bahasa_lain'
     ];
 
-    public function kategori()
-    {
-        return $this->belongsTo(kategori_berita::class);
-    }
+    // public function kategori()
+    // {
+    //     return $this->belongsTo(kategori_berita::class);
+    // }
 }
 
