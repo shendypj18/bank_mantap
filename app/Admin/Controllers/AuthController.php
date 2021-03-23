@@ -136,10 +136,12 @@ class AuthController extends BaseAuthController
         $form->image('avatar', trans('admin.avatar'))->move('images')->uniqueName();
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules('confirmed|required');
-        $form->password('password_confirmation', trans('admin.password_confirmation'))->rules('required')
+        $form->password('password_confirmation', trans('admin.password_confirmation'))
+             ->rules('required|min:6|regex:[a-z]|regex:/[A-Z]|regex:/[0-9]|regex:/[@$!%*#?&]')
              ->default(function ($form) {
                  return $form->model()->password;
              });
+
 
         $form->setAction(admin_url('auth/setting'));
 

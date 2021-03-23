@@ -1,3 +1,4 @@
+{!! htmlScriptTagJsApi() !!}
 <!--  ================================================ FIRST FOOTER ========================================================== -->
 <section id="footer">
     <div class="container">
@@ -172,7 +173,7 @@
             <img style="width: 100%" src="{{asset('asset/modal_backg.png')}}">
           </div>
           <div class="col-xs-12 col-md-6" style="background-color: #b6b7ba;">
-            <form id="formEmailModal" action="https://www.bankmantap.co.id/email/send_email" method="POST" style="padding-top: 20px;
+            <form id="formEmailModal" action="{{url('send/keluhan')}}" method="POST" style="padding-top: 20px;
               padding-right: 33px;
               padding-bottom: 19px;" >
               <div class="form-group">
@@ -188,7 +189,25 @@
               <div class="form-group">   
                 <textarea rows="5" class="form-control" required="required" id="pesan_cs" name="pesan" placeholder="Pesan"></textarea>
               </div>
-              <div class="g-recaptcha" data-sitekey="6Lczr3AUAAAAAAMpepL92q3HfgESp_ncdzlUPV66"></div> 
+
+              <div class="row">
+                  <div class="col-xs-4 form-group has-feedback {!! !$errors->has('g-recaptcha-response') ?: 'has-error' !!}">
+                      @if($errors->has('g-recaptcha-response'))
+                          @foreach($errors->get('g-recaptcha-response') as $message)
+                              <label class="control-label text-danger" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+                          @endforeach
+                      @endif
+                  </div>
+              </div>
+
+
+              <div class="mb-3">
+                  {!!htmlFormSnippet()!!}
+              </div>
+
+              <!-- <div class="g-recaptcha" data-sitekey="6Lczr3AUAAAAAAMpepL92q3HfgESp_ncdzlUPV66">
+
+                   </div> -->
               <br>
               <button type="button" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >Kirim Pesan</button>
             </form>

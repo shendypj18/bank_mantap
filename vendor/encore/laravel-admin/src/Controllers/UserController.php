@@ -6,6 +6,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Illuminate\Support\Facades\Hash;
+use App\Rules\Uppercase;
 
 class UserController extends AdminController
 {
@@ -97,13 +98,43 @@ class UserController extends AdminController
 
         $form->display('id', 'ID');
         $form->text('username', trans('admin.username'))
-            ->creationRules(['required', "unique:{$connection}.{$userTable}"])
-            ->updateRules(['required', "unique:{$connection}.{$userTable},username,{{id}}"]);
+             ->creationRules(['required', "unique:{$connection}.{$userTable}"])
+             ->updateRules(['required', "unique:{$connection}.{$userTable},username,{{id}}"]);
 
         $form->text('name', trans('admin.name'))->rules('required');
         $form->image('avatar', trans('admin.avatar'));
-        $form->password('password', trans('admin.password'))->rules('required|confirmed');
-        $form->password('password_confirmation', trans('admin.password_confirmation'))->rules('required')
+        $form->password('password', trans('admin.password'))
+             ->rules([
+                 'required',
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[0-9]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one digit');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[a-z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one lowercase letter');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[A-Z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one uppercase letter');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[A-Z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
+                     }
+                 },
+                 'string',
+                 'min:6',             // must be at least 10 characters in length
+                 //'regex:/[a-z]/',      // must contain at least one lowercase letter
+                 //'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                 //'regex:/[0-9]/',      // must contain at least one digit
+                 //'regex:/[@$!%*#?&]/', // must contain a special character
+             ]);
+        $form->password('password_confirmation', trans('admin.password_confirmation'))
+             ->rules('required')
             ->default(function ($form) {
                 return $form->model()->password;
             });
