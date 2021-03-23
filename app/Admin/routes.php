@@ -26,4 +26,5 @@ Route::group([
     $router->resource('kategori-navbar', KategoriNavbarController::class);
     $router->resource('navbar', NavbarController::class);
     $router->resource('banner', BannerController::class);
+    $router->resource('profil-manajemen', ProfileManajemenController::class);
 });
