@@ -185,9 +185,9 @@ class Controller extends BaseController
         return $this->simulasiGrup($locale, 'simulasi-deposito');
     }
 
-    public function simulasiMikro($locale)
+    public function simulasiKreditSerbagunaMikro($locale)
     {
-        return $this->simulasiGrup($locale, 'simulasi-tabungan-serbaguna-mikro');
+        return $this->simulasiGrup($locale, 'simulasi-kredit-serbaguna-mikro');
     }
 
     public function simulasiKreditPensiun($locale)

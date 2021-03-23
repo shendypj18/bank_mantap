@@ -29,11 +29,11 @@
         border-radius: 8px;
         opacity: 1; width: 260px;
         height: 40px;">
-    <option value="volvo">Pilih simulasi produk lain</option>
-    <option value="Simulasi Tabungan Berjangka">Simulasi Tabungan Berjangka</option>
-    <option value="Simulasi Deposito">Simulasi Deposito</option>
-    <option value="Simulasi kredit Serbaguna Mikro">Simulasi kredit Serbaguna Mikro</option>
-    <option value="Simulasi Kredit Pensiun">Simulasi Kredit Pensiun</option>
+    <option value="volvo" selected>Pilih simulasi produk lain</option>
+    <option value="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">Simulasi Tabungan Berjangka</option>
+    <option value="{{url('simulasi-deposito/'.$bahasa)}}">Simulasi Deposito</option>
+    <option value="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">Simulasi kredit Serbaguna Mikro</option>
+    <option value="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">Simulasi Kredit Pensiun</option>
   </select>
  
   </div>
