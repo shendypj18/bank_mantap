@@ -135,10 +135,38 @@ class AuthController extends BaseAuthController
         $form->text('name', trans('admin.name'))->rules('required');
         $form->image('avatar', trans('admin.avatar'))->move('images')->uniqueName();
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
-        $form->password('password', trans('admin.password'))->rules('confirmed|required');
+        $form->password('password', trans('admin.password'))->rules(
+            [
+                 'required',
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[0-9]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one digit');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[a-z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one lowercase letter');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[A-Z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one uppercase letter');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[A-Z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
+                     }
+                 },
+                 'string',
+                 'min:6',             // must be at least 10 characters in length
+                 //'regex:/[a-z]/',      // must contain at least one lowercase letter
+                 //'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                 //'regex:/[0-9]/',      // must contain at least one digit
+                 //'regex:/[@$!%*#?&]/', // must contain a special character
+             ]);
         $form->password('password_confirmation', trans('admin.password_confirmation'))
-             ->rules('required|min:6|regex:[a-z]|regex:/[A-Z]|regex:/[0-9]|regex:/[@$!%*#?&]')
-             ->default(function ($form) {
+             ->rules('required')->default(function ($form) {
                  return $form->model()->password;
              });
 
