@@ -207,4 +207,15 @@ class Controller extends BaseController
         ]);
     }
 
+    public function searchResault($locale)
+    {
+        return view('search-resault', [
+            'bahasa' => $locale,
+            'navbar' => $this->navBar($locale),
+            'kategorinavbar' => KategoriNavbar::all(),
+            'id_route' => 'search-resault',
+            'en_route' => 'search-resault'
+        ]);
+    }
+
 }
