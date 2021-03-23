@@ -231,7 +231,7 @@
 		            <br/>
 		            <h4 class="card-title"> <img src="{{ asset('') }}asset/icon/calculator.png"  alt="Logo" width="15%"><strong> Simulasi Kredit Pensiun</strong></h4>
 		            <p class="card-text mt-5">Manfaat kesempatan untuk terus berkarya dan<br/>mewujudkan rencana Anda kedepan</p>
-                <a class="btn btn-outline-light btn-simulasi-flat" href="simulasi.php" role="button">HITUNG SIMULASI</a>
+                <a class="btn btn-outline-light btn-simulasi-flat" href="{{url('simulasi-kredit-pensiun/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
 		        </div>
 		    </div>
     </div>
