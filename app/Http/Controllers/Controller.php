@@ -175,10 +175,10 @@ class Controller extends BaseController
         return $this->simulasiGrup($locale, 'simulasi-tabungan-berjangka');
     }
 
-    public function simulasiTabunganBerjangkaHasil($locale)
-    {
-        return $this->simulasiGrup($locale, 'simulasi-tabungan-berjangka-hasil');
-    }
+    // public function simulasiTabunganBerjangkaHasil($locale)
+    // {
+    //     return $this->simulasiGrup($locale, 'simulasi-tabungan-berjangka-hasil');
+    // }
 
     public function simulasiDeposito($locale)
     {

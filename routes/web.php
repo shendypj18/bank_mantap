@@ -29,7 +29,7 @@ Route::get('kantor-cabang/{locale}', [Controller::class, 'kantorcabang']);
 
 //simulasi
 Route::get('simulasi-tabungan-berjangka/{locale}', [Controller::class, 'simulasiTabunganBerjangka']);
-Route::get('simulasi-tabungan-berjangka-hasil/{locale}', [Controller::class, 'simulasiTabunganBerjangkaHasil']);
+// Route::get('simulasi-tabungan-berjangka-hasil/{locale}', [Controller::class, 'simulasiTabunganBerjangkaHasil']);
 Route::get('simulasi-deposito/{locale}', [Controller::class, 'simulasiDeposito']);
 Route::get('simulasi-kredit-pensiun/{locale}', [Controller::class, 'simulasiKreditPensiun']);
 Route::get('simulasi-kredit-serbaguna-mikro/{locale}', [Controller::class, 'simulasiKreditSerbagunaMikro']);
