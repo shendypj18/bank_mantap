@@ -100,8 +100,8 @@
      <div class="col-sm small-footer">
       <div class="cell box text-center">
        <small class="small-footer">
-         <a href="#" style="color: #808080;">Syarat Penggunaan</a>
-         <a href="#" style="color: #808080; padding-left: 5%;">Kebijakan Privasi</a>
+         <a href="{{url('term-condition/'.$bahasa)}}" style="color: #808080;">Syarat Penggunaan</a>
+         <a href="{{url('term-condition/'.$bahasa)}}" style="color: #808080; padding-left: 5%;">Kebijakan Privasi</a>
          <a href="#" style="color: #808080; padding-left: 5%;">Hubungi Kami</a>
        </small>
       </div>

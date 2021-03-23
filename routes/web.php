@@ -34,6 +34,9 @@ Route::get('simulasi-deposito/{locale}', [Controller::class, 'simulasiDeposito']
 Route::get('simulasi-kredit-pensiun/{locale}', [Controller::class, 'simulasiKreditPensiun']);
 Route::get('simulasi-kredit-serbaguna-mikro/{locale}', [Controller::class, 'simulasiKreditSerbagunaMikro']);
 
+//term-condition
+
+Route::get('term-condition/{locale}', [Controller::class, 'termCondition']);
 
 // berita
 Route::get('/berita/{locale}', [PublicBeritaController::class, 'berita']);
