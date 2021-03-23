@@ -50,7 +50,7 @@
     <div id="myOverlay" class="overlay">
       <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
       <div class="overlay-content">
-        <form action="/hasil.php">
+        <form action="{{url('search-resault/'.$bahasa)}}">
           <input type="text" placeholder="Search.." name="search">
           <button class="btn" type="submit"><i class="fa fa-search"></i></button>
         </form>
