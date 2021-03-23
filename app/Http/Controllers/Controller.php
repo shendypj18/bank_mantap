@@ -194,6 +194,17 @@ class Controller extends BaseController
     {
         return $this->simulasiGrup($locale, 'simulasi-kredit-pensiun');
     }
+
     
+    public function termCondition($locale)
+    {
+        return view('term-condition', [
+            'bahasa' => $locale,
+            'navbar' => $this->navBar($locale),
+            'kategorinavbar' => KategoriNavbar::all(),
+            'id_route' => 'term-condition',
+            'en_route' => 'term-condition'
+        ]);
+    }
 
 }
