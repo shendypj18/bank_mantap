@@ -35,13 +35,10 @@ class Controller extends BaseController
         }
 
         App::setLocale($locale);
-
-        if (App::isLocale('en')) {
+        if ($locale == 'en') {
             return view('index', $this->allDataInEnglish());
         }
-        if (App::isLocal('id')) {
-            return view('index', $this->allDataInIndonesia());
-        }
+        return view('index', $this->allDataInIndonesia());
     }
 
     public function allDataInEnglish ()
