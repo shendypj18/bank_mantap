@@ -6,7 +6,7 @@
  
 <ul class="breadcrumb">
 <div class="container">
-  <li><a href="#">Home</a></li>
+  <li><a href="{{url('/')}}">Home</a></li>
   <li>{{$navbardata->kategori_navbar}}</li>
   <li>{{$navbardata[$bahasa. '_navigasi']}}</li>
 </div>
@@ -27,8 +27,9 @@
         @endif
     @endif
 </section>
-
-    @include('template-table')
+   @isset($laporan)
+       @include('template-table')
+   @endisset
 
 
 @include('layout.footer')

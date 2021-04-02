@@ -3,83 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\App;
-use App\Models\Berita;
-use App\Models\EnBerita;
+use App\Models\InfoMantap;
 use App\Models\KategoriNavbar;
 use App\Models\Navbar;
-use App\Models\Kategori_berita;
+use App\Models\KategoriInfoMantap;
 
 class PublicBeritaController extends Controller
 {
-    public function berita($locale)
+
+    public function __construct()
     {
-        if (!in_array($locale, ['en', 'id'])) {
-            return abort(404);
-        }
-
-        App::setLocale($locale);
-
-        if (App::isLocale('en')) {
-            $enberita =  EnBerita::all();
-            return view('berita-mantap', $enberita);
-        }
-        if (App::isLocal('id')) {
-            $allberita =  Berita::all();
-            return view('berita-mantap', ['allberita' => $allberita]);
-            //return "apo dio";
-        }
+        $this->bahasa = 'id';
+        $this->kategorinavbar = KategoriNavbar::all();
+        $this->navbar = $this->setNavigasi();
+    }
+    public function data()
+    {
+        return [
+            'bahasa' => $this->bahasa,
+            'navbar' => $this->navbar,
+            'kategorinavbar' => $this->kategorinavbar,
+        ];
     }
 
-    public function getBeritaById($locale, $slug)
+    public function setNavigasi()
     {
-
-        $bahasa = ["id", "en"];
-        if (!in_array($locale, $bahasa)) {
-            return abort(404);
-        }
-        App::setLocale($locale);
-
-        $berita =  Berita::all()->where('slug', $slug)->first();
-        if ($berita->bahasa == "inggris") {
-            $this->swap($bahasa[0], $bahasa[1]);
-        }
-        $bahasa_lain = Berita::all('id', 'slug')->where('id', $berita->id_bahasa_lain)->first();
-        return view('berita-mantap',
-                    ["bahasa" => $bahasa[0],
-                     'kategorinavbar' => KategoriNavbar::all(),
-                     'navbar' => $this->navBar($locale),
-                     $bahasa[0]. "_route" => '/berita/'.  $bahasa[0] .'/' .$berita->slug,
-                     $bahasa[1]. "_route" => '/berita/'. $bahasa[1] . '/' .$bahasa_lain->slug,
-                     "berita" => $berita,
-                     "pages" => $this->page($bahasa[0]),
-                    ],
-        );
-    }
-
-    function page($locale)
-    {
-        $data = [];
-        foreach (Kategori_berita::all() as $kb) {
-            $data[$kb->nama] = Berita::where('kategori', $kb->nama)
-                              ->where('bahasa', $locale)
-                              ->where('status', 'publish')
-                              ->orderBy('created_at', 'DESC')
-                              ->paginate(8);
-        }
-        return $data;
-    }
-
-    function swap(&$x, &$y)
-    {
-        $tmp=$x;
-        $x=$y;
-        $y=$tmp;
-    }
-
-    public function navBar()
-    {
-        //$data = Navbar::all()->groupBy('kategori_navigasi');
-        //dd($columns); // dump the result and die
         $data = [];
         foreach (KategoriNavbar::all() as $kn) {
             $data[$kn->nama] = Navbar::where('Kategori_navbar', $kn->nama)->get();
@@ -87,4 +35,74 @@ class PublicBeritaController extends Controller
         return $data;
     }
 
+    public function setLocale($locale = null)
+    {
+        if ($locale == null) $locale = 'id';
+        if (!in_array($locale, ['en', 'id'])) {
+            return redirect()->action([Controller::class, 'home']);
+        }
+        $this->bahasa = $locale;
+        App::setLocale($this->bahasa);
+    }
+
+    public function isNavbarSlugValid($navbarslug)
+    {
+        $slugs = Navbar::all('id_slug', "en_slug");
+        $ok = null;
+        foreach ($slugs as $slug) {
+            if ($slug->id_slug == $navbarslug or $slug->en_slug) {
+                $ok = true;
+                break;
+            }
+        }
+        // if navbarslug request not valid redirect to home
+        if (!$ok) return redirect()->action([Controller::class, 'home']);
+    }
+
+    function page($locale, $slug)
+    {
+        $data = [];
+        foreach (KategoriInfoMantap::all() as $kb) {
+            $data[$kb->nama] = InfoMantap::where('kategori', $kb->nama)
+                ->where('status', 'publish')
+                ->where($locale . '_slug', '!=', $slug)
+                ->orderBy('created_at', 'DESC')
+                ->paginate(4);
+        }
+        return $data;
+    }
+
+    function swap(&$x, &$y)
+    {
+        $tmp = $x;
+        $x = $y;
+        $y = $tmp;
+    }
+    public function getBeritaById($slug, $locale)
+    {
+
+        $bahasa = ["id", "en"];
+        if (!in_array($locale, $bahasa)) {
+            return abort(404);
+        }
+        App::setLocale($locale);
+        if ($locale == "en") {
+            $this->swap($bahasa[0], $bahasa[1]);
+        }
+        $info_mantap = InfoMantap::where($locale . '_slug', $slug)->first();
+        $navbarData = Navbar::all()->where('id_slug', 'berita-mantap')->first();
+        return view(
+            'berita-mantap',
+            [
+                "bahasa" => $bahasa[0],
+                'kategorinavbar' => KategoriNavbar::all(),
+                'navbar' => $this->navBar($locale),
+                'navbardata' => $navbarData,
+                $bahasa[0] . "_route" => '/berita/' . $info_mantap[$bahasa[0] . '_slug'],
+                $bahasa[1] . "_route" => '/berita/' . $info_mantap[$bahasa[1] . '_slug'],
+                "berita" => $info_mantap,
+                "pages" => $this->page($bahasa[0], $slug),
+            ],
+        );
+    }
 }

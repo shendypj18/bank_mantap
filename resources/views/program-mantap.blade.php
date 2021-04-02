@@ -18,32 +18,34 @@
  }
 </style>
 
-<section id="img-header" class="img-header">
-    @if($berita)
-        <img src="{{ asset('storage/'. $berita->gambar_berita) }}">
-    <ul class="breadcrumb">
-        <div class="container">
-            <li><a href="{{url('/')}}">Home</a></li>
-            <li>Info Mantap</li>
-            <li>Berita Mantap</li>
-        </div>
-    </ul>
-    @endif
-</section>
+@if($berita)
+    <section id="img-header" class="img-header">
+        <img src="{{ url('storage/'. $navbardata[$bahasa .'_banner'])}}">
+        <ul class="breadcrumb">
+            <div class="container">
+                <li><a href="{{url('/')}}">Home</a></li>
+                <li>{{$navbardata->kategori_navbar}}</li>
+                <li>{{$navbardata[$bahasa. '_navigasi']}}</li>
+            </div>
+        </ul>
+    </section>
+@endif
 
 <section class="section">
     <!-- Content Start Here -->
     <div class="container text-center" id="news">
-        <h3 class="text-center">@if($berita){{$berita->judul_berita}} @endif</h3>
-        <div style="text-align: left;">
-            @if($berita)
-                {!!  $berita->isi_berita !!}
-            @endif
-        </div>
+        @if($berita)
+            <img src="{{ url('storage/'. $berita->gambar)}}" style="width: 100%; height: auto;">
+            <div style="text-align: left;">
+                {!!  $berita[$bahasa. '_isi'] !!}
+            </div>
+        @endif
         <p><br/></p>
         <p>
         @foreach($navbar["INFO MANTAP"] as $nv)
-            <a class="btn btn-lg btn-wr" href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
+            <a class="btn btn-lg btn-wr
+                      @if($nv['id_slug'] == 'program-mantap') active @endif "
+               href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
         @endforeach
         </p>
     </div>
@@ -52,11 +54,11 @@
             @foreach ($pages["Program Mantap"] as $page)
                 <div class="col-sm-3 mb-5">
                     <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-                        <img class="card-img-top" src="{{url('storage/'. $page->gambar_berita)}}" alt="Card image cap"  style="height: 12rem;">
+                        <img class="card-img-top" src="{{url('storage/'. $page->gambar)}}" alt="Card image cap"  style="height: 12rem;">
                         <div class="card-body">
                             <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
-                            <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('berita/'. $bahasa . '/' .$page->slug)}}'">
-                                {{ $page->judul_berita }}
+                            <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
+                                {{ $page[$bahasa. '_judul']}}
                             </p>
                         </div>
                     </div>
@@ -73,20 +75,20 @@
                 <nav aria-label="Page navigation example" class="paging mb-5" style="margin-left:30%;">
                     <ul class="pagination">
                         <li class="page-item mr-3"><a class="btn page-link active pl-4
-                                                             @if($pages["Program Mantap"]->onFirstPage()) disabled @endif
-                                                             " href="{{ $pages["Program Mantap"]->previousPageUrl() }}"
+                                                             @if($pages["Berita Mantap"]->onFirstPage()) disabled @endif
+                                                             " href="{{ $pages["Berita Mantap"]->previousPageUrl() }}"
                                                       style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
                                                              border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px; "><</a></li>
-                        @for($i = 1; $i <= $pages["Program Mantap"]->lastPage(); $i++)
+                        @for($i = 1; $i <= $pages["Berita Mantap"]->lastPage(); $i++)
                             <li class="page-item mr-3"><a class="btn page-link pl-3
-                                                                 @if($pages["Program Mantap"]->currentPage() == $i) bg-warning @endif
+                                                                 @if($pages["Berita Mantap"]->currentPage() == $i) bg-warning @endif
                                                                  "
-                                                          href="{{$pages["Program Mantap"]->url($i)}}"
+                                                          href="{{$pages["Berita Mantap"]->url($i)}}"
                                                           style="border: 1px solid #0f2b5b;background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
                                                                  border-radius: 12px;opacity: 1; width: 54px;height: 44px; font-size:14px;">{{$i}}</a></li>
                         @endfor
                         <li class="page-item mr-3"><a class="btn page-link pl-3"
-                                                      href="{{$pages["Program Mantap"]->nextPageUrl() }}"
+                                                      href="{{$pages["Berita Mantap"]->nextPageUrl() }}"
                                                       style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
                                                              border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px">></a></li>
                     </ul>

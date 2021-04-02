@@ -459,7 +459,7 @@ function topFunction() {
   function closeSearch() {
     document.getElementById("myOverlay").style.display = "none";
   }
-  </script>
+</script>
 
 
 <!-- MAPS -->

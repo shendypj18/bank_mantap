@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\KategoriJabatan;
 use App\Models\ProfileManajemen;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -30,8 +31,21 @@ class ProfileManajemenController extends AdminController
         $grid->column('nama', __('Nama'));
         $grid->column('jabatan', __('Jabatan'));
         $grid->column('domisili', __('Domisili'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('kategori_jabatan', __('Kategori Jabatan'));
+        //$grid->column('created_at', __('Created at'));
+        //$grid->column('updated_at', __('Updated at'));
+
+        $grid->filter(function ($filter) {
+
+            // Remove the default id filter
+            $filter->disableIdFilter();
+
+            // Add a column filter
+            $filter->like('nama', 'nama');
+            $filter->like('jabatan', 'jabatan');
+            $filter->like('domisili', 'domisili');
+            $filter->like('kategori_jabatan', 'kategori jabatan');
+        });
 
         return $grid;
     }
@@ -54,8 +68,8 @@ class ProfileManajemenController extends AdminController
         $show->field('domisili', __('domisili'));
         $show->field('pendidikan', __('pendidikan'));
         $show->field('gambar', __('gambar'));
-        $show->field('id_deskripsi', __('deskripsi'));
-        $show->field('en_deskripsi', __('deskripsi Inggris'));
+        //$show->field('id_deskripsi', __('deskripsi'));
+        //$show->field('en_deskripsi', __('deskripsi Inggris'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -76,19 +90,23 @@ class ProfileManajemenController extends AdminController
         $form->text('warga_negara', __('warga negara'));
         $form->text('domisili', __('domisili'));
         $form->text('pendidikan', __('pendidikan'));
-        $form->select('kategori_jabatan', __('Kategori Jabatan'))->options(['dewan komisaris' => 'dewan komisaris', 'direksi' => 'direksi', 'sekretaris perusahaan' => 'sekretaris perusahaan'])->default('dewan direksi');
-        $form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
+        $form->select('kategori_jabatan', __('Kategori Jabatan'))
+             ->options(KategoriJabatan::all()->pluck('nama','nama'))->default("Dewan Komisaris");
+        $form->image('gambar', __('Gambar'));
+             //->thumbnail('mini', $width = 269, $height = 247);
         // $form->tmeditor('id_deskripsi', __('deskripsi'));
         // $form->tmeditor('en_deskripsi', __('deskripsi Inggris'));
         
-        $form->saved(function (Form $form) {
-            $id = $form->model()->id;
-
-            // update slug
-            ProfileManajemen::where('id', $id)
-                ->update(['slug' => Str::slug($form->model()->nama, '-')]);
-
-        });
+        /////////////////////////////////////////////////////////////////////////
+        // $form->saved(function (Form $form) {                                //
+        //     $id = $form->model()->id;                                       //
+        //                                                                     //
+        //     // update slug                                                  //
+        //     ProfileManajemen::where('id', $id)                              //
+        //         ->update(['slug' => Str::slug($form->model()->nama, '-')]); //
+        //                                                                     //
+        // });                                                                 //
+        /////////////////////////////////////////////////////////////////////////
         return $form;
     }
 }

@@ -90,7 +90,7 @@ class NavbarController extends AdminController
     protected function form()
     {
         $form = new Form(new Navbar());
-
+        $form->setWidth(10, 2);
         $form->select('kategori_navbar', __('Kategori navbar'))->creationRules('required')
              ->options(KategoriNavbar::all()->pluck('nama','nama'))->default("TENTANG KAMI");
         $form->text('id_navigasi', __('Navigasi Indonesia'))->creationRules('required');

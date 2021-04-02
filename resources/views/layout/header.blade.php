@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
-
 </head>
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
@@ -46,21 +45,21 @@
 
     </ul>
 
-    <!-- Search Bottom Here -->
+    <!-- Search Botton Here -->
     <div id="myOverlay" class="overlay">
-      <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-      <div class="overlay-content">
-        <form action="{{url('search-resault/'.$bahasa)}}">
-          <input type="text" placeholder="Search.." name="search">
-          <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="{{url('search-resault/'.$bahasa)}}">
+                <input type="text" placeholder="Search.." name="search">
+                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </div>
 
-    <a class="text-muted" href="" onclick="openSearch()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3">
-    <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+    <a class="text-muted" onclick="openSearch()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3">
+            <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
     </a>
     <!-- End Bottom Here -->
 

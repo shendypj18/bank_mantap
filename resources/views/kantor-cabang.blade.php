@@ -1,166 +1,91 @@
 @include('layout.header')
 <section id="img-header" class="img-header">
-<div>
-     
+    <div>
+
         <div class="row">
             &nbsp
             <div id="googlemap" style="width: 100%; height: 470px;"></div>
         </div>
- 
-</div>
 
-<ul class="breadcrumb">
+    </div>
 
-<div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Kantor Cabang</li>
-</div>
+    <ul class="breadcrumb">
 
-</ul>
+        <div class="container">
+            <li><a href="#">Home</a></li>
+            <li>Kantor Cabang</li>
+        </div>
+
+    </ul>
 </section>
 
 <div class="container" id="search">
+    <script type="text/javascript">
+     function show(obj) {
+         no = obj.options[obj.selectedIndex].value;
+         count = obj.options.length;
+         for(i=1;i<=count;i++)
+             document.getElementById('myDiv'+i).style.display = 'none';
+         document.getElementById('myDiv'+no).style.display = 'block';
+     }
+     function showw(obj) {
+         no = obj.options[obj.selectedIndex].value;
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+             if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
+                 if (xmlhttp.status == 200) {
+                     document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                 }
+                 else if (xmlhttp.status == 400) {
+                     alert('There was an error 400');
+                 }
+                 else {
+                     alert('something else other than 200 was returned');
+                 }
+             }
+         };
+         xmlhttp.open("GET", "{{url('/cabang/teling?provinsi=')}}" + no, true);
+         xmlhttp.send();
+     }
+     document.addEventListener("DOMContentLoaded", function(event) {
+         let select = document.getElementById("pilih");
+         select.dispatchEvent(new Event('change'));
+     });
+
+    </script>
     <h4><b>Lokasi Kantor Cabang Mandiri Taspen</b></h4>
-        <div class="row mt-4">
-          <div class="col-sm text-left">
-            <form action="home.php">
-            <select class="btn btn-lg" aria-label="Default select example">
-              <option selected>Pilih area kantor cabang (Provinsi)</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div class="col-sm text-center"><button class="btn btn-lg btn-search" type="submit">Cari</button></div>
-        </form>
+    <div class="row mt-4">
+        <div class="col-sm-4 text-left">
+            <form action="">
+                @csrf
+                <select id="pilih" class="btn btn-lg" aria-label="Default select example" onchange="showw(this)">
+                    @php $i = 1; @endphp
+                    @foreach($provinsi as $pr)
+                        <option value="{{$pr->provinsi}}" @if($i == 1) selected="selected" @endif>{{$pr->provinsi}}</option>
+                        @php $i++; @endphp
+                    @endforeach
+                </select>
         </div>
+        <!-- <div class="col-sm text-center"><button class="btn btn-lg btn-search" type="submit">Cari</button></div> -->
+            </form>
+
+    </div>
+    <div id="myDiv" style="display:block;" class="mt-5">
+        <div  class="row mb-5">
+        </div>
+    </div>
 </div>
 
- 
-<div class="container mt-5">
-
-  <div   class="row mb-5">
-
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;<a href="">Lihat Map</a></h3>
-        </div>
-      </div>
-		</div>
-
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
-
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
-
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
-
- 
-
-  </div> <!-- End Row -->
 
 
-  <div   class="row mb-5">
 
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
+    </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
-
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
-
-    <div class="col-sm">
-      <div class="card branch">
-        <div class="card-body">
-        <br/>
-        <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-        <p><small>Wisma Mandiri</small><br/>
-        <small>Jalan M.H. Thamrin No. 5, Kelurahan Kebon Sirih, Kecamatan Menteng</small><br/>
-        <small>021-230265</small></p>
-        <h3><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;Lihat Map</h3>
-        </div>
-      </div>
-		</div>
-
- 
-
-  </div>  <!-- End Row -->
-
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 @include('layout.footer')

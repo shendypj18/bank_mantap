@@ -49,26 +49,31 @@
                             <button type="button" class="btn btn-sm btn-primary dropdown-toggle text-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Pilih Tahun
                             </button>
-
                             <div class="dropdown-menu dropdown-menu-right">
-                                <button class="dropdown-item" type="button">2010</button>
-                                <button class="dropdown-item" type="button">2011</button>
-                                <button class="dropdown-item" type="button">2012</button>
+                                @foreach($tahun as $tahun)
+                                    <a href="{{url('article/'. $navbardata[$bahasa . '_slug'] .'/?tahun=' . $tahun->tahun)}}" class="dropdown-item" type="button">{{$tahun->tahun}}</a>
+                                @endforeach
                             </div>
                         </div>
                     </th>
                 </tr>
             </thead>
             <tbody>
+                @php
+                   $i = 1;
+                @endphp
                 @foreach($laporan as $l)
                     <tr>
-                        <td class="text-right" style="width:4%">{{$l->id}}</td>
+                        <td class="text-right" style="width:4%">{{$i.'. '}}</td>
                         <td>{{$l->tahun}}</td>
                         <td>{{$l->deskripsi}}</td>
                         @if($l->nama_file)
                         <td><a href="{{url('storage/'. $l->nama_file)}}">lihat file</a> <img class="ml-2" src="{{ asset('asset/download.svg') }}"></td>
                         @endif
                     </tr>
+                    @php
+                    $i++;
+                    @endphp
                 @endforeach
             </tbody>
 

@@ -1,5 +1,22 @@
 @if($laporanTahunan)
     <style>
+     .active,.btn-wr:hover{
+         background-color: #FCD116;
+         color:black;
+         color: #121212;
+         opacity: 1;
+         font-size: 13px;
+         border-radius: 25px;
+         font-family: 'Roboto', sans-serif;
+         font-weight: 900;
+         border:none;
+         transition-duration: 0.7s;
+         box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
+     }
+    </style>
+
+
+    <style>
      table {
          margin-bottom:8%;
          margin-top:2%;
@@ -37,17 +54,21 @@
 
      }
     </style>
-    <div class="container" >
 
-        <div class="container text-center" id="report">
-            <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
-            
-            <p><br/></p>
-            <p><a class="btn btn-lg btn-wr" href="berita-mantap.php" role="button">Berita Mantap</a>
-            <a class="btn btn-lg btn-wr" href="promosi-mantap.php" role="button">Promosi Mantap</a>
-            <a class="btn btn-lg btn-wr" href="program-mantap.php" role="button">Program Mantap</a>
-            <a class="btn btn-lg btn-wr active" href="laporan-keuangan.php" role="button">Laporan Keuangan</a></p>
-            </div>
+    <div class="container text-center" id="report">
+        <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
+        <p><br/></p>
+        @foreach($navbar["INFO MANTAP"] as $nv)
+            <a class="btn btn-lg btn-wr
+                      @if($nv['id_slug'] == 'laporan-keuangan') active @endif "
+               href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
+        @endforeach
+    </div> <!-- container -->
+    <div class="container mt-5 mb-5">
+        <h4><strong>Laporan Tahunan</strong></h4>
+    </div>
+
+    <div class="container mt-5" >
         <!-- MENU CARD SLIDER -->
 
         <!--Carousel Wrapper-->
@@ -60,6 +81,7 @@
                 <li data-target="#report" data-slide-to="3"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
             </ol>
             <!--Slides-->
+
             <div class="carousel-inner" role="listbox">
                 <!--First slide-->
                 <div class="carousel-item active">
@@ -93,10 +115,13 @@
                         @endphp
                     @endforeach
             </div>
+            <!--/.Slides-->
 
-        <!-- Indicator Slider -->
-        <a class="carousel-control-prev" href="#report" role="button" data-slide="prev"><img src="{{url('asset/left.svg')}}" style="margin-left: -10rem;"></a>
-        <a class="carousel-control-next" href="#report" role="button" data-slide="next"><img src="{{url('asset/right.svg')}}" style="margin-right: -10rem;"></a>
-        <!-- End Indicator Slider -->
-    </div>
+            <!-- Indicator Slider -->
+            <a style="" class="carousel-control-prev" href="#report" role="button" data-slide="prev"><img src="{{asset('asset/left.svg')}}" style="margin-left: -10rem;"></a>
+            <a style="" class="carousel-control-next" href="#report" role="button" data-slide="next"><img src="{{asset('asset/right.svg')}}" style="margin-right: -10rem;"></a>
+            <!-- End Indicator Slider -->
+
+        </div>
+        <br/> <br/> <br/>
 @endif

@@ -137,34 +137,26 @@
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
                  <div class="carousel-item active">
-                    @php
-                    $i = 1;
-                    @endphp
+                    @php $i = 1; @endphp
                     @foreach($berita as $b)
                         <div class="col-md-3" style="float:left;">
                             <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-                                <img class="card-img-top" src="{{ url('storage/' .$b->gambar_berita) }}" alt="Card image cap"  style="height: 12rem;">
+                                <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem;">
                                 <div class="card-body">
                                     <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
-                                    <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('berita/'. $bahasa . '/' .$b->slug)}}'">
-                                        {{ $b->judul_berita }}
+                                    <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
+                                        {{ $b[$bahasa. '_judul']}}
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        @if ($i % 4 == 0)
-                </div>
-                @if($i <= count($berita) - 1)
-                    <div class="carousel-item">
-                @endif
+                        @if ($i % 4 == 0) </div>
+                            @if($i <= count($berita) - 1)
+                                <div class="carousel-item">
+                            @endif
                         @endif
-
-                        @if($i == count($berita) and $i % 4 != 0)
-                    </div>
-                        @endif
-                        @php
-                        $i++;
-                        @endphp
+                        @if($i == count($berita) and $i % 4 != 0) </div> @endif
+                        @php $i++; @endphp
                     @endforeach
             </div>
             <!--/.Slides-->

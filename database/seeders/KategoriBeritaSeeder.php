@@ -15,7 +15,7 @@ class KategoriBeritaSeeder extends Seeder
     public function run()
     {
         Kategori_berita::create([
-            "nama" => 'umum',
+            "nama" => 'none',
         ]);
     }
 }

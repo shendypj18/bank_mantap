@@ -17,15 +17,13 @@ use App\Http\Controllers\TentangKamiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// test
-Route::get('/article/{navbarslug}/{locale?}', [Controller::class, 'navi']);
-
-Route::get('/', [Controller::class, 'home']);
-Route::get('/{locale}', [Controller::class, 'pilihBahasa']);
+Route::get('{locale?}', [Controller::class, 'home']);
+Route::get('/article/{navbarslug}/{locale?}', [Controller::class, 'navigasi']);
 
 Route::get('simulasi/{locale}', [Controller::class, 'simulasi']);
 Route::get('kantor-cabang/{locale}', [Controller::class, 'kantorcabang']);
+Route::get('cabang/teling', [Controller::class, 'reqCabang']);
+
 
 //simulasi
 Route::get('simulasi-tabungan-berjangka/{locale}', [Controller::class, 'simulasiTabunganBerjangka']);
@@ -41,9 +39,10 @@ Route::get('term-condition/{locale}', [Controller::class, 'termCondition']);
 Route::get('search-resault/{locale}', [Controller::class, 'searchResault']);
 
 
-// berita
+// info mantap
 Route::get('/berita/{locale}', [PublicBeritaController::class, 'berita']);
-Route::get('/berita/{locale}/{slug}', [PublicBeritaController::class, 'getBeritaById']);
+//Route::get('/berita/{slug}/{locale}', [PublicBeritaController::class, 'getBeritaById']);
+Route::get('/info/{slug}/{locale}', [Controller::class, 'getInfoMantapBySlug']);
 
 //Route::get('/email', [PublicSmptController::class, 'index']);
 //Route::post('/kirim-aduan', [PublicSmptController::class, 'postSendEmail']);

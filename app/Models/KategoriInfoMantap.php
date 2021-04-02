@@ -2,18 +2,16 @@
 
 namespace App\Models;
 
-use Encore\Admin\Traits\DefaultDatetimeFormat;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Encore\Admin\Traits\DefaultDatetimeFormat;
 
-class KategoriNavbar extends Model
+class KategoriInfoMantap extends Model
 {
     use HasFactory;
     use DefaultDatetimeFormat;
-    protected $table = "kategori_navbar";
+    protected $table = "kategori_info_mantap";
     protected $fillable = [
         'nama',
     ];
-
-
 }
