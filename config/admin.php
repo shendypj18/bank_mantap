@@ -447,13 +447,17 @@ return [
             'images_upload_url' => '/admin/file_oupload',
 
             'templates' => [
-                 ['title' =>  'template1', 'description' =>  '', 'content' =>  '<div class="class">Text</div>'],
-                 ['title' =>  'template2', 'description' =>  '', 'content' =>  '<div class="class2">Text2</div>']
+                 //['title' =>  'template1', 'description' =>  '', 'content' =>  '<div class="class">Text</div>'],
+                 ['title' =>  'template content', 'description' =>  '', 'url' => '/template-content.html']
             ],
             //'content_css' => "/css/editor.css",
 
             'image_caption' => true,
-            'images_upload_credentials' => true
+            'images_upload_credentials' => true,
+            'image_dimensions'=> false,
+            'image_class_list'=> [
+                ['title'=> 'Responsive', 'value'=> 'img-responsive']
+            ]
           ]
         ],
 
