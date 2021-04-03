@@ -159,66 +159,66 @@
 </div>
 <!--  ================================================ END MILEA ============================================================== -->
 
-<!-- Modal Email -->
+<!-- Modal email -->>
 <div class="modal fade bs-example-modal-lg" id="ModalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-      <div style="text-align: right;    width: 103%;">
-        <a data-dismiss="modal" href="#" id="x"><i class="fa fa-times-circle-o fa-3x" aria-hidden="true" style="color: #b6b7ba;"></i></a>
-      </div>
-    <div class="modal-content" style="background-color: transparent; box-shadow: none; border: none;" >
-      <div class="modal-body"  >
-      <div class="container-fluid" >
-        <div class="row">
-          <div class="col-xs-6 col-md-6 hilang" style="padding-left: 4px; padding-right: 0;" >
-            <img style="width: 100%" src="{{asset('asset/modal_backg.png')}}">
-          </div>
-          <div class="col-xs-12 col-md-6" style="background-color: #b6b7ba;">
-            <form id="formEmailModal" action="{{url('send/keluhan')}}" method="POST" style="padding-top: 20px;
-              padding-right: 33px;
-              padding-bottom: 19px;" >
-              <div class="form-group">
-                
-                <input type="text" class="form-control" required="required" id="nama_cs" name="nama" placeholder="Nama">
-              </div>
-              <div class="form-group">   
-                <input type="text" class="form-control" required="required" id="email_cs" name="email" placeholder="Email">
-              </div>
-              <div class="form-group">   
-                <input type="text" class="form-control" required="required" id="telp_cs" name="telp" placeholder="Telp">
-              </div>
-              <div class="form-group">   
-                <textarea rows="5" class="form-control" required="required" id="pesan_cs" name="pesan" placeholder="Pesan"></textarea>
-              </div>
-
-              <div class="row">
-                  <div class="col-xs-4 form-group has-feedback {!! !$errors->has('g-recaptcha-response') ?: 'has-error' !!}">
-                      @if($errors->has('g-recaptcha-response'))
-                          @foreach($errors->get('g-recaptcha-response') as $message)
-                              <label class="control-label text-danger" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
-                          @endforeach
-                      @endif
-                  </div>
-              </div>
-
-
-              <div class="mb-3">
-                  {!!htmlFormSnippet()!!}
-              </div>
-
-              <!-- <div class="g-recaptcha" data-sitekey="6Lczr3AUAAAAAAMpepL92q3HfgESp_ncdzlUPV66">
-
-                   </div> -->
-              <br>
-              <button type="button" data-dismiss="modal" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >Kirim Pesan</button>
-            </form>
-          </div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div style="text-align: right;    width: 103%;">
+            <a data-dismiss="modal" href="#" id="x"><i class="fa fa-times-circle-o fa-3x" aria-hidden="true" style="color: #b6b7ba;"></i></a>
         </div>
-      </div>
-      </div>
+        <div class="modal-content" style="background-color: transparent; box-shadow: none; border: none;" >
+            <div class="modal-body"  >
+                <div class="container-fluid" >
+                    <div class="row">
+
+                        <div class="col-xs-6 col-md-6 hilang" style="padding-left: 4px; padding-right: 0;" >
+                            <img style="width: 100%" src="{{ asset('asset/modal_backg.png') }}">
+                        </div>
+                        <div class="col-xs-12 col-md-6" style="background-color: #b6b7ba;">
+                            <form id="formEmailModal" action="{{url('send/keluhan')}}" method="POST" style="padding-top: 20px;
+                                      padding-right: 33px;
+                                      padding-bottom: 19px;" >
+                                @csrf
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" required="required" id="nama_cs" name="nama" placeholder="Nama">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" required="required" id="email_cs" name="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" required="required" id="telp_cs" name="telp" placeholder="Telp">
+                                </div>
+                                <div class="form-group">
+                                    <textarea rows="5" class="form-control" required="required" id="pesan_cs" name="pesan" placeholder="Pesan"></textarea>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-xs-4 form-group has-feedback {!! !$errors->has('g-recaptcha-response') ?: 'has-error' !!}">
+                                        @if($errors->has('g-recaptcha-response'))
+                                            @foreach($errors->get('g-recaptcha-response') as $message)
+                                                <label class="control-label text-danger" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    {!!htmlFormSnippet()!!}
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >Kirim Pesan</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-      
+
 </div>
+
 
 <!-- Modal Phone -->
 <div class="modal fade" id="ModalPhone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -297,26 +297,109 @@
 </body>
 </html>
 
-<script>
-//Get the button
-var mybutton = document.getElementById("onTop");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+<script type="text/javascript">
+  function validateModal(){
+    var bValidName = check_validation("#nama_cs");
+    var bValidEmail = check_validation_email("#email_cs");
+    var bValidTelp = check_validation("#telp_cs");
+    var bValidDigit = check_validation_modal_phone("#telp_cs");
+    var bValidMessage = check_validation("#pesan_cs");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+
+    if(bValidName && bValidEmail && bValidTelp && bValidDigit && bValidMessage){
+      submit_form();
+    }
   }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+  function submit_form(){
+    $('#formEmailModal').submit();
+  }
+
+  function check_validation_modal_phone(id){
+    var number = $(id).val();
+    if(isNaN(number)){
+      $(id).attr("placeholder", "Input harus berupa angka");
+
+      return false;
+    }
+    else{
+      if(number.length < 10 || number.length > 13){
+        //alert(number.length);
+        $(id).val("");
+        $(id).attr("placeholder", "Input harus 10 - 13 digit");
+
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+  }
+
+  function check_validation(id){
+    var nama_pel = $(id).val();
+    if(nama_pel == "")
+    {
+      $(id).attr("placeholder", "Wajib diisi");
+
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
+  function check_validation_email(id){
+    var value = $(id).val();
+
+    if(value == "")
+    {
+      $(id).attr("placeholder", "Wajib diisi");
+
+      return false;
+    }
+    else
+    {
+      if (!validateEmail(value)) {
+        $(id).val("");
+        $(id).attr("placeholder", "Format email salah");
+
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+  }
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+</script>
+
+<script>
+ //Get the button
+ var mybutton = document.getElementById("onTop");
+
+ // When the user scrolls down 20px from the top of the document, show the button
+ window.onscroll = function() {scrollFunction()};
+
+ function scrollFunction() {
+     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+         mybutton.style.display = "block";
+     } else {
+         mybutton.style.display = "none";
+     }
+ }
+
+ // When the user clicks on the button, scroll to the top of the document
+ function topFunction() {
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
+ }
 </script>
 
 

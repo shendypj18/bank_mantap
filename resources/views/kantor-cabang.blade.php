@@ -44,7 +44,7 @@
                  }
              }
          };
-         xmlhttp.open("GET", "{{url('/cabang/teling?provinsi=')}}" + no, true);
+         xmlhttp.open("GET", "{{url('/cabang/kantor?provinsi=')}}" + no, true);
          xmlhttp.send();
      }
      document.addEventListener("DOMContentLoaded", function(event) {

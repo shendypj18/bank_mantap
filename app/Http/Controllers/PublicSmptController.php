@@ -11,21 +11,21 @@ use Illuminate\Http\Request;
 use App\Mail\SendMail;
 use App\Mail\SendMailKeluhan;
 use Config;
-
+use Illuminate\Support\Facades\Crypt;
 
 class PublicSmptController extends Controller
 {
     protected function index()
     {
-        $form = new Form(new Email());
+        // $form = new Form(new Email());
 
-        $form->text('nama', __('Nama'));
-        $form->email('email', __('Email'));
-        $form->text('telpon', __('Telpon'));
-        $form->textarea('pesan', __('Pesan'));
-        $form->setAction('/teling/kirim-aduan');
+        // $form->text('nama', __('Nama'));
+        // $form->email('email', __('Email'));
+        // $form->text('telpon', __('Telpon'));
+        // $form->textarea('pesan', __('Pesan'));
+        // //$form->setAction('/kirim-aduan');
 
-        return $form;
+        //return $form;
     }
 
     public function setEnv()
@@ -36,7 +36,8 @@ class PublicSmptController extends Controller
         Config::set('mail.port', $data['port']);
         Config::set('mail.encryption', 'ssl');
         Config::set('mail.username', $data['username']);
-        Config::set('mail.password', $data['password']);
+        //Config::set('mail.password', Crypt::decryptString($data['password']));
+        Config::set('mail.password', base64_decode($data['password']));
 
     }
 
@@ -65,12 +66,6 @@ class PublicSmptController extends Controller
         $this->loginValidator($request->all())->validate();
         $data = Smtp::all()->last();
         $this->setEnv();
-        Config::set('mail.driver', 'smtp');
-        Config::set('mail.host', $data['email_host']);
-        Config::set('mail.port', $data['port']);
-        Config::set('mail.encryption', 'ssl');
-        Config::set('mail.username', $data['username']);
-        Config::set('mail.password', $data['password']);
         //$nama = "Wildan Fuady";
         //$email = "wildanfuady@gmail.com";
         $kirim = Mail::to($data['username'])->send(new SendMailKeluhan(
@@ -79,7 +74,7 @@ class PublicSmptController extends Controller
             $request->telp,
             $request->pesan,
         ));
-        return redirect()->intended('article/whistleblowing-system/id');
+        return redirect()->intended('/');
     }
 
     public function whistle(Request $request)
@@ -89,12 +84,6 @@ class PublicSmptController extends Controller
 
         $data = Smtp::all()->last();
         $this->setEnv();
-        Config::set('mail.driver', 'smtp');
-        Config::set('mail.host', $data['email_host']);
-        Config::set('mail.port', $data['port']);
-        Config::set('mail.encryption', 'ssl');
-        Config::set('mail.username', $data['username']);
-        Config::set('mail.password', $data['password']);
         $kirim = Mail::to($data['username'])->send(new SendMail(
             $request->nama_pelapor,
             $request->nomer_telepon,

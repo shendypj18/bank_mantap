@@ -7,6 +7,8 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 
 class SmtpController extends AdminController
 {
@@ -50,7 +52,7 @@ class SmtpController extends AdminController
         $show->field('email_pengirim', __('Email Pengirim'));
         $show->field('email_host', __('Email Host'));
         $show->field('username', __('Username'));
-        $show->field('password', __('Password'));
+        //$show->field('password', __('Password'));
         $show->field('port', __('Port'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
@@ -70,7 +72,16 @@ class SmtpController extends AdminController
         $form->text('email_host', __('Email Host'));
         $form->text('username', __('Username'));
         $form->password('password', __('Password'))->creationRules('required');
-        $form->text('port', __('Port'))->creationRules('max:4');
+        $form->number('port', __('Port'))->creationRules('max:4');
+
+        $form->saving(function (Form $form) {
+            if ($form->password && $form->model()->password != $form->password) {
+                //$form->password = Hash::make($form->password);
+                //$form->password = Crypt::encryptString($form->password);
+                $form->password = base64_encode($form->password);
+            }
+        });
+
 
         return $form;
     }
