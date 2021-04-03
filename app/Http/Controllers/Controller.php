@@ -205,7 +205,7 @@ class Controller extends BaseController
             'id_route' => $route,
             'en_route' => $route,
         ];
-        $simulasi_data +=  $data;
+        if($data) $simulasi_data +=  $data;
         return view($route, $this->data() + $simulasi_data);
     }
 

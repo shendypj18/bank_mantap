@@ -179,10 +179,10 @@
     <br/><br/>
     <div class="container">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
-        <p align="center"><a>{{$video_1->nama}}</a></p>
+        <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p>
         <br/><br/><br/>
         <div align="center">
-            <iframe width="750" height="400" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="{{url($video_1->link_video)}}"></iframe>
+            <iframe width="750" height="400" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src=@if($video_1)"{{url($video_1->link_video)}}"@endif></iframe>
         </div>
         <br/><br/>
 
@@ -267,14 +267,14 @@
 
             <!-- Video Youtube -->
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <iframe width="420" height="285" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="{{$video_2->link_video}}"></iframe>
+                <iframe width="420" height="285" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="@if($video_2){{$video_2->link_video}}"@endif></iframe>
             </div>
             <!-- / Video Youtube -->
 
         </div>
 
 
-        <p><a class="btn btn-lg btn-more" href="#" role="button">{{$video_2->nama}}</a></p>
+        <p><a class="btn btn-lg btn-more" href="#" role="button">@if($video_2){{$video_2->nama}}@endif</a></p>
     </div>
 
 </section>
