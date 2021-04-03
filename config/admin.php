@@ -447,8 +447,8 @@ return [
             'images_upload_url' => '/admin/file_oupload',
 
             'templates' => [
-                 //['title' =>  'template1', 'description' =>  '', 'content' =>  '<div class="class">Text</div>'],
-                 ['title' =>  'template content', 'description' =>  '', 'url' => '/template-content.html']
+                 ['title' =>  'template navigasi', 'description' =>  '', 'url' => '/template/navigasi-content.html'],
+                 ['title' =>  'template info mantap', 'description' =>  '', 'url' => '/template/info-mantap.blade.php']
             ],
             //'content_css' => "/css/editor.css",
 

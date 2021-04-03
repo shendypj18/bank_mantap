@@ -46,9 +46,9 @@ class NavbarController extends AdminController
             $filter->disableIdFilter();
 
             // Add a column filter
-            $filter->like('kategori_navbar', 'Kategori Navigasi');
-            $filter->like('id_navigasi', 'id_navigasi');
-            $filter->like('en_navigasi', 'en_navigasi');
+            $filter->like('kategori navbar', 'Kategori Navigasi');
+            $filter->like('id_navigasi', 'Navigasi Indonesia');
+            $filter->like('en_navigasi', 'Navigasi Inggris');
             $filter->like('kategori_laporan', 'kategori laporan');
         });
 
@@ -93,8 +93,12 @@ class NavbarController extends AdminController
         $form->setWidth(10, 2);
         $form->select('kategori_navbar', __('Kategori navbar'))->creationRules('required')
              ->options(KategoriNavbar::all()->pluck('nama','nama'))->default("TENTANG KAMI");
-        $form->text('id_navigasi', __('Navigasi Indonesia'))->creationRules('required');
-        $form->text('en_navigasi', __('Navigasi Inggris'))->creationRules('required');
+        $form->text('id_navigasi', __('Navigasi Indonesia'))
+             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('required|unique:navbar,id_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+        $form->text('en_navigasi', __('Navigasi Inggris'))
+             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->tmeditor('id_text_content', __('Konten Indonesia'));
         $form->tmeditor('en_text_content', __('Konten Inggris'));
         $form->image('id_banner', __('Banner Indonesia'))->uniqueName();

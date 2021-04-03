@@ -49,8 +49,8 @@ class InfoMantapController extends AdminController
 
             // Add a column filter
             $filter->like('kategori', 'Kategori Info');
-            $filter->like('Judul Indonesia', 'id_judul');
-            $filter->like('Judul Inggris', 'en_judul');
+            $filter->like('id_judul', 'Judul Indonesia');
+            $filter->like('en_judul', 'Judul Inggris');
         });
 
         return $grid;
@@ -93,25 +93,12 @@ class InfoMantapController extends AdminController
         $form->setWidth(10, 2);
         $form->select('kategori', __('Kategori Info'))
             ->options(KategoriInfoMantap::all()->pluck('nama', 'nama'))->default('Berita Mantap');
-        $form->text('id_judul', __('Judul Indonesia'))->rules(
-            [
-                function ($attribute, $value, $fail) {
-                    $input_slug = Str::slug($value, '-');
-                    $check = InfoMantap::where('id_slug', $input_slug)->first();
-                     if ($check) $fail('we found simillar judul bahasa indonesia already exist in database');
-                 },
-            ]
-        );
-        $form->text('en_judul', __('Judul Inggris'))->rules(
-            [
-                function ($attribute, $value, $fail) {
-                    $input_slug = Str::slug($value, '-');
-                    $check = InfoMantap::where('en_slug', $input_slug)->first();
-                     if ($check) $fail('we found simillar judul bahasa inggris already exist in database');
-                 },
-
-            ]
-        );
+        $form->text('id_judul', __('Judul Indonesia'))
+             ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
+        $form->text('en_judul', __('Judul Inggris'))
+             ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
         $form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
         $form->tmeditor('id_isi', __('Konten Info Indonesia'));
         $form->tmeditor('en_isi', __('Konten Info Inggris'));
