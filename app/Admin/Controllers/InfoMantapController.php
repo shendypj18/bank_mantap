@@ -116,7 +116,7 @@ class InfoMantapController extends AdminController
                     ->update(['en_slug' => Str::slug($form->model()->en_judul, '-')]);
             } else {
                 InfoMantap::where('id', $id)
-                    ->update(['en_slug' => Str::slug($form->model()->en_judul, '-')]);
+                    ->update(['en_slug' => Str::slug($form->model()->id_judul, '-')]);
             }
         });
 
