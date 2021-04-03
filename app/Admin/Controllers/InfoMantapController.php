@@ -94,8 +94,8 @@ class InfoMantapController extends AdminController
         $form->select('kategori', __('Kategori Info'))
             ->options(KategoriInfoMantap::all()->pluck('nama', 'nama'))->default('Berita Mantap');
         $form->text('id_judul', __('Judul Indonesia'))
-             ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
+             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
         $form->text('en_judul', __('Judul Inggris'))
              ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
              ->updateRules('unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
@@ -112,6 +112,9 @@ class InfoMantapController extends AdminController
                     ->update(['id_slug' => Str::slug($form->model()->id_judul, '-')]);
             }
             if ($form->model()->en_judul){
+                InfoMantap::where('id', $id)
+                    ->update(['en_slug' => Str::slug($form->model()->en_judul, '-')]);
+            } else {
                 InfoMantap::where('id', $id)
                     ->update(['en_slug' => Str::slug($form->model()->en_judul, '-')]);
             }
