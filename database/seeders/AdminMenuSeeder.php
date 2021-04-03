@@ -232,7 +232,7 @@ class AdminMenuSeeder extends Seeder
                 'order'     => 21,
                 'title'     => 'Tambah Profil Manajemen',
                 'icon'      => 'fa-gear',
-                'uri'       => '/profil-manajemen',
+                'uri'       => '/profile-manajemen',
             ],
 
             [
