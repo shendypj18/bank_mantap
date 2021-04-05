@@ -23,7 +23,13 @@
                             <p class="text-light">Dengan kartu ATM Bank Mantap, nasabah pensiunan ASN<br/>dan TNI/POLRI dapat mengambil uang pensiun dan tarik<br/>
                                 tunai tidak harus datang ke kantor cabang</p>
 
-                            <p><a class="btn btn-lg btn-more" href="#" role="button">Selengkapnya</a></p>
+                            <p><a class="btn btn-lg btn-more" href="
+                                         @if($bahasa == 'id')
+                                         {{url('article/berita-mantap/id' )}}
+                                         @else
+                                         {{url('article/mantap-news/en')}} @endif"
+
+                                  role="button">Selengkapnya</a></p>
                             <p>&nbsp;</p><p>&nbsp;</p>
                             <div class="row">
                                 <div class="text-left col-md-4">

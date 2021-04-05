@@ -137,6 +137,7 @@ class AuthController extends BaseAuthController
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules(
             [
+                'confirmed',
                  'required',
                  function ($attribute, $value, $fail) {
                      if (!preg_match('/[0-9]/', $value)) {

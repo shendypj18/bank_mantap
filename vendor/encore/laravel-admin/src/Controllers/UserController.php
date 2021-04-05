@@ -105,6 +105,7 @@ class UserController extends AdminController
         $form->image('avatar', trans('admin.avatar'));
         $form->password('password', trans('admin.password'))
              ->rules([
+                 'confirmed',
                  'required',
                  function ($attribute, $value, $fail) {
                      if (!preg_match('/[0-9]/', $value)) {

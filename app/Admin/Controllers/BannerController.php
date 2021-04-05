@@ -59,7 +59,7 @@ class BannerController extends AdminController
     {
         $form = new Form(new Banner());
 
-        $form->image('nama', __('Banner'))->creationRules('required');
+        $form->image('nama', __('Banner'))->rules('required');
 
         return $form;
     }

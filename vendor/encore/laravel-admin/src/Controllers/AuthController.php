@@ -133,12 +133,38 @@ class AuthController extends Controller
         $form->display('username', trans('admin.username'));
         $form->text('name', trans('admin.name'))->rules('required');
         $form->image('avatar', trans('admin.avatar'));
-        $form->password('password', trans('admin.password'))->rules('confirmed|required');
-        $form->password('password_confirmation', trans('admin.password_confirmation'))->rules('required')
-            ->default(function ($form) {
-                return $form->model()->password;
-            });
-
+        $form->password('password', trans('admin.password'))
+             ->rules([
+                 'confirmed',
+                 'required',
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[0-9]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one digit');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[a-z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one lowercase letter');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[A-Z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least one uppercase letter');
+                     }
+                 },
+                 function ($attribute, $value, $fail) {
+                     if (!preg_match('/[A-Z]/', $value)) {
+                         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
+                     }
+                 },
+                 'string',
+                 'min:6',             // must be at least 10 characters in length
+             ]);
+        $form->password('password_confirmation', trans('admin.password_confirmation'))
+             ->rules('required')
+             ->default(function ($form) {
+                 return $form->model()->password;
+             });
         $form->setAction(admin_url('auth/setting'));
 
         $form->ignore(['password_confirmation']);

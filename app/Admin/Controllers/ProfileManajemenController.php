@@ -84,8 +84,8 @@ class ProfileManajemenController extends AdminController
     protected function form()
     {
         $form = new Form(new ProfileManajemen());
-        $form->text('nama', __('nama'));
-        $form->text('jabatan', __('jabatan'));
+        $form->text('nama', __('nama'))->rules('required');
+        $form->text('jabatan', __('jabatan'))->rules('required');
         $form->text('umur', __('umur'));
         $form->text('warga_negara', __('warga negara'));
         $form->text('domisili', __('domisili'));
