@@ -8,6 +8,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use App\Models\KategoriLaporan;
+use Illuminate\Support\Str;
 
 class LaporanController extends AdminController
 {
@@ -85,17 +86,25 @@ class LaporanController extends AdminController
      */
     protected function form()
     {
+
         $form = new Form(new Laporan());
 
-        $form->text('nama', __('Nama Laporan'));
+        $form->text('nama', __('Nama Laporan'))->rules('required');
+        $form->select('jenis_laporan', __('Jenis Laporan'))->creationRules('required')
+             ->options(KategoriLaporan::all()->pluck('jenis','id'))->default("umum");
         $form->text('deskripsi', __('Deskripsi Laporan'));
         //$form->text('tahun', __('Tahun Laporan'));
         $form->date('tahun', __('Tahun'))->format('YYYY');
-        $form->image('gambar', __('Gambar Laporan'))->move('laporan');
-        $form->select('jenis_laporan', __('Jenis Laporan'))->creationRules('required')
-             ->options(KategoriLaporan::all()->pluck('jenis','id'))->default("umum");
 
-        $form->file('nama_file', __('FIle Laporan'))->move('laporan');
+        $form->image('gambar', __('Gambar Laporan'))->move(function(Form $form){
+            $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
+            return 'laporan/gambar/'. Str::slug($x->jenis, '-');
+        });
+
+        $form->file('nama_file', __('FIle Laporan'))->move(function(Form $form){
+            $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
+            return 'laporan/dokumen/'. Str::slug($x->jenis, '-');
+        });
         return $form;
     }
 }

@@ -64,7 +64,7 @@
             </div>
         </div>
         @foreach($banner as $banner)
-        <div class="carousel-item"><img class="d-block w-100" src="{{ url('storage/'. $banner->nama) }}" alt="Second slide"></div>
+        <div class="carousel-item"><img class="d-block w-100" src="{{ url('storage/'. $banner[$bahasa. '_nama']) }}" alt="Second slide"></div>
         @endforeach
     </div>
 

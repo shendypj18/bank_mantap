@@ -99,7 +99,10 @@ class InfoMantapController extends AdminController
         $form->text('en_judul', __('Judul Inggris'))
              ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
              ->updateRules('unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
-        $form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
+        $form->image('gambar', __('Gambar'))->move(function(Form $form){
+            return 'images/info-mantap/'. Str::slug($form->kategori, '-');
+        });
+        //$form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
         $form->tmeditor('id_isi', __('Konten Info Indonesia'));
         $form->tmeditor('en_isi', __('Konten Info Inggris'));
         $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft'])->default('draft');
@@ -111,12 +114,12 @@ class InfoMantapController extends AdminController
                 InfoMantap::where('id', $id)
                     ->update(['id_slug' => Str::slug('id '. $form->model()->id_judul .$id, '-')]);
             }
-            if ($form->model()->en_judul){
+            if (!empty($form->model()->en_judul)){
                 InfoMantap::where('id', $id)
                     ->update(['en_slug' => Str::slug('en '. $form->model()->en_judul .$id, '-')]);
             } else {
                 InfoMantap::where('id', $id)
-                    ->update(['id_slug' => Str::slug('id '. $form->model()->id_judul .$id, '-')]);
+                    ->update(['en_slug' => Str::slug('id '. $form->model()->id_judul .$id, '-')]);
             }
         });
 

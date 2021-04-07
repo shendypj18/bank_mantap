@@ -2,6 +2,8 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\AdminUser;
+use App\Models\User;
 use Encore\Admin\Controllers\AuthController as BaseAuthController;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
@@ -133,7 +135,7 @@ class AuthController extends BaseAuthController
 
         $form->display('username', trans('admin.username'));
         $form->text('name', trans('admin.name'))->rules('required');
-        $form->image('avatar', trans('admin.avatar'))->move('images')->uniqueName();
+        $form->image('avatar', trans('admin.avatar'))->move('images/avatar')->rules('required');
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules(
             [

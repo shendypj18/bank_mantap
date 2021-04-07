@@ -46,7 +46,7 @@ class NavbarController extends AdminController
             $filter->disableIdFilter();
 
             // Add a column filter
-            $filter->like('kategori navbar', 'Kategori Navigasi');
+            $filter->like('kategori_navbar', 'Kategori Navigasi');
             $filter->like('id_navigasi', 'Navigasi Indonesia');
             $filter->like('en_navigasi', 'Navigasi Inggris');
             $filter->like('kategori_laporan', 'kategori laporan');
@@ -101,8 +101,8 @@ class NavbarController extends AdminController
              ->updateRules('required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->tmeditor('id_text_content', __('Konten Indonesia'));
         $form->tmeditor('en_text_content', __('Konten Inggris'));
-        $form->image('id_banner', __('Banner Indonesia'))->uniqueName();
-        $form->image('en_banner', __('Banner Inggris'))->uniqueName();
+        $form->image('id_banner', __('Banner Indonesia'))->move('images/navbar-banner/indonesia');
+        $form->image('en_banner', __('Banner Inggris'))->move('images/navbar-banner/inggris');
         $form->select('kategori_laporan', __('Kategori laporan'))
              ->options(KategoriLaporan::all()->pluck('jenis','jenis'))->default("umum");
         $form->saved(function (Form $form) {

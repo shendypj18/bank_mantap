@@ -26,9 +26,21 @@ class BannerController extends AdminController
     {
         $grid = new Grid(new Banner());
         $grid->column('id', __('Id'));
-        $grid->column('nama', __('Banner'));
+        $grid->column('id_nama', __('Banner Indonesia'));
+        $grid->column('en_nama', __('Banner Inggris'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
+
+        $grid->filter(function ($filter) {
+
+            // Remove the default id filter
+            $filter->disableIdFilter();
+
+            // Add a column filter
+            $filter->like('en_nama', 'Banner Indonesia');
+            $filter->like('id_nama', 'Banner Inggris');
+        });
+
         return $grid;
     }
 
@@ -43,9 +55,11 @@ class BannerController extends AdminController
         $show = new Show(Banner::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nama', __('Banner'));
+        $show->field('id_nama', __('Banner Indonesia'));
+        $show->field('en_nama', __('Banner Inggris'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
+
 
         return $show;
     }
@@ -59,7 +73,8 @@ class BannerController extends AdminController
     {
         $form = new Form(new Banner());
 
-        $form->image('nama', __('Banner'))->rules('required');
+        $form->image('id_nama', __('Banner Indonesia'))->move('images/slider-banner/indonesia')->rules('required');
+        $form->image('en_nama', __('Banner Inggris'))->move('images/slider-banner/inggris');
 
         return $form;
     }

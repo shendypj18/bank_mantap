@@ -6,13 +6,12 @@ use Encore\Admin\Traits\DefaultDatetimeFormat;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class AdminUser extends Model
 {
     use HasFactory;
     use DefaultDatetimeFormat;
-    protected $table = "banner";
+    protected $table = "admin_users";
     protected $fillable = [
-        'id_nama',
-        'en_nama',
+        'avatar',
     ];
 }
