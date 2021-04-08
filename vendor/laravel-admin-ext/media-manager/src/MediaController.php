@@ -87,44 +87,59 @@ class MediaController extends Controller
     public function checkValiditasPath($path, $new)
     {
         $dirname  = pathinfo($new)['dirname'];
+        $dirname = preg_split('#/#', $dirname);
 
-        if (preg_match('/avatar/', $dirname)) {
-            AdminUser::where('avatar', $path)->update(array('avatar' => $new));
-            return true;
-        }
-
-        if (preg_match('/manajemen/', $dirname )) {
-            ProfileManajemen::where('gambar', $path)->update(array('gambar' => $new));
-            return true;
-        }
-        if (preg_match('/navbar-banner/', $dirname )) {
-            $bahasa = "id";
-            if(preg_match('/inggris/', $dirname)) $bahasa = "en";
-            Navbar::where($bahasa . '_banner', $path)->update(array($bahasa . '_banner' => $new));
-            return true;
-        }
-        if (preg_match('/slider-banner/', $dirname )) {
-            $bahasa = "id";
-            if(preg_match('/inggris/', $dirname)) $bahasa = "en";
-            Banner::where($bahasa . '_nama', $path)->update(array($bahasa . '_nama' => $new));
-            return true;
-        }
-
-        foreach (KategoriInfoMantap::all('nama') as $x) {
-            if (preg_match('/' .Str::slug($x->nama, '-') .'/', $dirname )) {
-                InfoMantap::where('gambar', $path)->update(array('gambar' => $new));
+        foreach($dirname as $d) {
+            if ($d == 'avatar') {
+                AdminUser::where('avatar', $path)->update(array('avatar' => $new));
                 return true;
             }
-        }
-        foreach (KategoriLaporan::all('jenis') as $x) {
-            if (preg_match('/' . Str::slug($x->jenis, '-'). '/', $dirname )) {
-                $column = "nama_file";
-                if(preg_match('/gambar/', $dirname)) $column = "gambar";
-                Laporan::where($column, $path)->update(array($column => $new));
+            if($d == 'manajemen') {
+                ProfileManajemen::where('gambar', $path)->update(array('gambar' => $new));
                 return true;
             }
+            if($dirname == 'navbar-banner') {
+                $bahasa = "id";
+                foreach($dirname as $x) {
+                    if($x == 'inggris') {
+                        $bahasa = "en";
+                        break;
+                    }
+                }
+                Navbar::where($bahasa . '_banner', $path)->update(array($bahasa . '_banner' => $new));
+                return true;
+            }
+            if ($d == 'slider-banner') {
+                $bahasa = "id";
+                foreach($dirname as $x) {
+                    if($x == 'inggris') {
+                        $bahasa = "en";
+                        break;
+                    }
+                }
+                Banner::where($bahasa . '_nama', $path)->update(array($bahasa . '_nama' => $new));
+                return true;
+            }
+            foreach(KategoriInfoMantap::all('nama') as $x) {
+                if($d == Str::slug($x->nama, '-')) {
+                    InfoMantap::where('gambar', $path)->update(array('gambar' => $new));
+                    return true;
+                }
+            }
+            foreach (KategoriLaporan::all('jenis') as $x) {
+                if($d == Str::slug($x->jeni, '-')) {
+                    $column = "nama_file";
+                    foreach($dirname as $x) {
+                        if($x == 'gambar') {
+                            $column = "gambar";
+                            break;
+                        }
+                    }
+                    Laporan::where($column, $path)->update(array($column => $new));
+                    return true;
+                }
+            }
         }
-        
         return false;
     }
 
@@ -134,23 +149,22 @@ class MediaController extends Controller
         $new = $request->get('new');
         $manager = new MediaManager($path);
 
-        try {
-            if ($manager->move($new)) {
-
-                 if (!$this->checkValiditasPath($path, $new)) {
-                     admin_toastr('Cannot move or rename file', 'error');
-                 } else {
+        if($this->checkValiditasPath($path, $new)) {
+            try {
+                if ($manager->move($new)) {
                     return response()->json([
                         'status'  => true,
                         'message' => trans('admin.move_succeeded'),
                     ]);
                 }
+            } catch (\Exception $e) {
+                return response()->json([
+                    'status'  => true,
+                    'message' => $e->getMessage(),
+                ]);
             }
-        } catch (\Exception $e) {
-            return response()->json([
-                'status'  => true,
-                'message' => $e->getMessage(),
-            ]);
+        } else {
+            admin_toastr('Cannot move or rename file', 'error');
         }
     }
 
