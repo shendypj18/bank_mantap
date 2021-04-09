@@ -1,6 +1,9 @@
+<div class="mt-5">
+<div class="row mb-5">
+    @php $i = 1; @endphp
 @foreach($cabang as $c)
-    <div class="col-sm">
-        <div class="card branch">
+    <div class="col-sm"  data-toggle="modal" data-target="#aceh">
+        <div class="card branch" onclick="gmap({{$c}})">
             <div class="card-body">
                 <br/>
                 <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
@@ -10,4 +13,13 @@
             </div>
         </div>
     </div>
+
+    @if($i % 4 == 0) </div></div>
+        @if($i <= count($cabang) - 1)
+            <div class="mt-5">
+                <div class="row mb-5">
+        @endif
+    @endif
+    @if($i == count($cabang) and $i % 4 != 0) </div></div> @endif
+   @php $i++; @endphp
 @endforeach

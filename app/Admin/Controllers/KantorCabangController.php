@@ -74,8 +74,8 @@ class KantorCabangController extends AdminController
         $form->text('nama', __('Nama'));
         $form->text('alamat', __('Alamat'));
         $form->text('provinsi', __('Provinsi'));
-        $form->decimal('latitude', __('Latitude'));
-        $form->decimal('longitude', __('Longitude'));
+        $form->text('latitude', __('Latitude'));
+        $form->text('longitude', __('Longitude'));
         $form->text('telp', __('Nomer Telpon'));
         //$form->mobile('telp', __('Nomer Telpon'))->options(['mask' => '999 9999 9999']);
         return $form;
