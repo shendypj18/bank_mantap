@@ -123,5 +123,6 @@ return [
     'SIMULASI'        => 'SIMULATION',
     'selengkapnya'    => 'more detail',
     'lihat_semua_info' => 'more info',
+    'selengkapnya_tentang_bank_mantap' => 'More About Bank Mantap',
 
 ];
