@@ -239,7 +239,7 @@ EOT;
             return $this->renderFilePicker();
         }
 
-        $this->options(['overwriteInitial' => true, 'msgPlaceholder' => trans('admin.choose_file')]);
+        $this->options(['overwriteInitial' => false, 'msgPlaceholder' => trans('admin.choose_file')]);
 
         $this->setupDefaultOptions();
 

@@ -86,10 +86,10 @@ class ProfileManajemenController extends AdminController
         $form = new Form(new ProfileManajemen());
         $form->text('nama', __('nama'))->rules('required');
         $form->text('jabatan', __('jabatan'))->rules('required');
-        $form->text('umur', __('umur'));
-        $form->text('warga_negara', __('warga negara'));
-        $form->text('domisili', __('domisili'));
-        $form->text('pendidikan', __('pendidikan'));
+        $form->text('umur', __('umur'))->rules('required');
+        $form->text('warga_negara', __('warga negara'))->rules('required');
+        $form->text('domisili', __('domisili'))->rules('required');
+        $form->tmeditor('pendidikan', __('Pendidikan'))->rules('required');
         $form->select('kategori_jabatan', __('Kategori Jabatan'))
              ->options(KategoriJabatan::all()->pluck('nama','nama'))->default("Dewan Komisaris");
         $form->image('gambar', __('Gambar'))->move('images/manajemen')->rules('required')->removable();

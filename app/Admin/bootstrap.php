@@ -1,5 +1,5 @@
 <?php
-
+Use Encore\Admin\Admin;
 /**
  * Laravel-admin - admin builder based on Laravel.
  * @author z-song <https://github.com/z-song>
@@ -19,3 +19,5 @@
  */
 
 Encore\Admin\Form::forget(['map', 'editor']);
+//Encore\Admin\Admin::script('document.addEventListener("load", function(){document.querySelector(".fileinput-remove").innerHTML= "";});');
+Admin::js(asset('/js/x.js'));
