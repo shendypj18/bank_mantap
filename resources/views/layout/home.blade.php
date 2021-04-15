@@ -15,14 +15,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="carousel-caption text-left">
-                            <h2 style="font-weight: bold; color:#FCD116;">{{$banner[$bahasa . '_text_atas']}}</h2>
-                            <p class="text-light">{{$banner[$bahasa. '_text_tengah']}}</p>
+                            <h2 style="font-weight: bold; color:#FCD116;">{!!  $banner[$bahasa . '_text_atas'] !!}}</h2>
+                            <p class="text-light">{!!   $banner[$bahasa. '_text_tengah'] !!}</p>
                             <p><a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}"
                                   role="button"> {{__('admin.selengkapnya')}}  </a></p>
                             <p>&nbsp;</p><p>&nbsp;</p>
                             <div class="row">
                                 <div class="text-left col-md-4">
-                                    <p class="text-light" style="font-size: 11px;">{{$banner[$bahasa. '_text_bawah']}}</p>
+                                    <p class="text-light" style="font-size: 11px;">{!!  $banner[$bahasa. '_text_bawah'] !!}</p>
                                 </div>
                                 <div class="text-right">
                                     <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk"/>
