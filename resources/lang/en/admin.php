@@ -121,8 +121,8 @@ return [
     'JASA_BANK'       => 'BANK SERVICES',
     'CABANG'          => 'BRANCH',
     'SIMULASI'        => 'SIMULATION',
-    'selengkapnya'    => 'more detail',
-    'lihat_semua_info' => 'more info',
+    'selengkapnya'    => 'More Detail',
+    'lihat_semua_info' => 'More Info',
     'selengkapnya_tentang_bank_mantap' => 'More About Bank Mantap',
 
 ];
