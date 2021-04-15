@@ -110,7 +110,6 @@ class Controller extends BaseController
         $this->setLocale($locale);
 
         $navbar_data = Navbar::where($this->bahasa. '_slug', $navbarslug)->first();
-
         $data_for_navigasi = [
             'navbardata' => $navbar_data,
             'id_route' => 'article/'. $navbar_data->id_slug,
@@ -164,7 +163,7 @@ class Controller extends BaseController
         }
 
         // add data if navigasi manajemen diakeses
-        if($navbar_data->id_slug == 'manajemen')
+        if(preg_match('/manajemen/', $navbar_data->id_slug))
         {
             $profil_manajemen =  [
                 "profil_manajemen" => ProfileManajemen::get()
@@ -172,6 +171,14 @@ class Controller extends BaseController
                 "kategori_jabatan" => KategoriJabatan::all(),
             ];
             $data_for_navigasi += $profil_manajemen;
+        }
+
+        if(preg_match('/sekilas-perusahaan/', $navbar_data->id_slug)) {
+            $kategori_laporan = KategoriLaporan::all()->where('jenis', 'profil lengkap bank mantap')->first();
+            $data_pdf = [
+                "profil_lengkap" => Laporan::where('jenis_laporan', $kategori_laporan->id)->first(),
+            ];
+            $data_for_navigasi += $data_pdf;
         }
         return view('template', $data_for_navigasi + $this->data());
     }

@@ -7,34 +7,22 @@
         <li data-target="#hero" data-slide-to="2" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
     </ol>
     <div class="carousel-inner">
+        @php $j = 1 @endphp
+        @foreach($banner as $banner)
+            <div class="carousel-item @if($j == 1) active @endif w-100" style="background-color: #0F2B5B; height: 38rem;">
 
-        <div class="carousel-item active w-100" style="background-color: #0F2B5B; height: 38rem;">
-            <img class="d-block" style="margin-left:50%" src="{{ asset('asset/herobg.png') }}" width="39%" alt="First slide">
-
-            <!--<img class="d-block w-100" src="{{ asset('asset/1.png') }}" width="5%" alt="First slide"> -->
-
-            <div class="container">
-                <div class="row">
-
-                     <div class="carousel-caption text-left" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500">
-                        <h2 style="font-weight: bold; color:#FCD116; text-shadow: 2px 2px #0d0354;"">Ambil uang pensiun
-                            <br/>dari tarik tunai, tidak harus datang
-                            <br/>ke kantor cabang</h2>
-                            <p class="text-light">Dengan kartu ATM Bank Mantap, nasabah pensiunan ASN<br/>dan TNI/POLRI dapat mengambil uang pensiun dan tarik<br/>
-                                tunai tidak harus datang ke kantor cabang</p>
-
-                            <p><a class="btn btn-lg btn-more" href="
-                                         @if($bahasa == 'id')
-                                         {{url('article/berita-mantap/id' )}}
-                                         @else
-                                         {{url('article/mantap-news/en')}} @endif"
-
+                <img class="d-block" style="margin-left:50%" src="{{ asset('asset/herobg.png') }}" width="39%" alt="First slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="carousel-caption text-left">
+                            <h2 style="font-weight: bold; color:#FCD116;">{{$banner[$bahasa . '_text_atas']}}</h2>
+                            <p class="text-light">{{$banner[$bahasa. '_text_tengah']}}</p>
+                            <p><a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}"
                                   role="button">Selengkapnya</a></p>
                             <p>&nbsp;</p><p>&nbsp;</p>
                             <div class="row">
                                 <div class="text-left col-md-4">
-                                    <p class="text-light" style="font-size: 11px;">PT Bank Mandiri Taspen adalah pelaku jasa keuangan terdaftar dan diawasi oleh<br/>
-                                        Otoritas Jasa Keuangan serta merupakan bank peseta penjamin LPS</p>
+                                    <p class="text-light" style="font-size: 11px;">{{$banner[$bahasa. '_text_bawah']}}</p>
                                 </div>
                                 <div class="text-right">
                                     <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk"/>
@@ -42,30 +30,26 @@
                                     <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank">
                                 </div>
                             </div>
+                        </div>
 
-
-                    </div>
-
-                    <div class="carousel-caption text-right">
-                        <div class="hero">
-                            <style>
-                             .hero {
-                                 top:40px;
-                                 z-index:9;
-                                 position:fixed;
-                                 margin-left: 30%;
-                             }
-                            </style>
-                            <img src="{{ asset('asset/1.png') }}" width="80%">
+                        <div class="carousel-caption text-right">
+                            <div class="hero">
+                                <style>
+                                 .hero {
+                                     top:40px;
+                                     z-index:9;
+                                     position:fixed;
+                                     margin-left: 30%;
+                                 }
+                                </style>
+                                <img src="{{ url('storage/'. $banner->id_nama) }}" width="80%">
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-        @foreach($banner as $banner)
-        <div class="carousel-item"><img class="d-block w-100" src="{{ url('storage/'. $banner[$bahasa. '_nama']) }}" alt="Second slide"></div>
-        @endforeach
+            @php $j++ @endphp
+            @endforeach
     </div>
 
     <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}"></a>
@@ -171,10 +155,8 @@
             <!-- End Indicator Slider -->
 
         </div>
-
-
         <br/><br/><br/>
-        <p class="text-center"><a class="btn btn-lg btn-more" href="#" role="button">Lihat Semua Info</a></p>
+        <p class="text-center"><a class="btn btn-lg btn-more" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">Lihat Semua Info</a></p>
     </div>
     </div>
 

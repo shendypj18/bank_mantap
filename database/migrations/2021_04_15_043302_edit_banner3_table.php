@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EditBannerTable extends Migration
+class EditBanner3Table extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,10 @@ class EditBannerTable extends Migration
     public function up()
     {
         Schema::table('banner', function (Blueprint $table) {
-            $table->renameColumn('nama', 'id_nama')->nullable();
-            $table->string('en_nama')->nullable();
+            $table->string('id_nama')->nullable()->change();
         });
     }
+
     /**
      * Reverse the migrations.
      *

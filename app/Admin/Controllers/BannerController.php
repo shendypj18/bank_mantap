@@ -7,6 +7,8 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use App\Models\Navbar;
+use Illuminate\Support\Str;
 
 class BannerController extends AdminController
 {
@@ -55,8 +57,15 @@ class BannerController extends AdminController
         $show = new Show(Banner::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('id_nama', __('Banner Indonesia'));
-        $show->field('en_nama', __('Banner Inggris'));
+        $show->field('id_nama', __('Banner Indonesia')); // ini gambar
+        $show->field('en_nama', __('Banner Inggris'));  // ini gambar
+        $show->field('id_text_atas', __('Teks Atas Indonesia'));
+        $show->field('id_text_tengah', __('Teks Tengah Indonesia'));
+        $show->field('id_text_bawah', __('Teks Bawah Indonesia'));
+        $show->field('en_text_atas', __('Teks Atas Inggris'));
+        $show->field('en_text_tengah', __('Teks Tengah Inggris'));
+        $show->field('en_text_bawah', __('Teks Bawah Inggris'));
+        $show->field('link_button_to', __('link to'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -73,8 +82,36 @@ class BannerController extends AdminController
     {
         $form = new Form(new Banner());
 
-        $form->image('id_nama', __('Banner Indonesia'))->move('images/slider-banner/indonesia')->rules('required');
-        $form->image('en_nama', __('Banner Inggris'))->move('images/slider-banner/inggris');
+        $form->image('id_nama', __('Banner Indonesia'))->move('images/slider-banner/indonesia')
+             ->removable()
+             ->rules('required');
+        $form->image('en_nama', __('Banner Inggris'))->move('images/slider-banner/inggris')
+             ->removable()
+             ->rules('required');
+        $form->textarea('id_text_atas', __('Teks Atas Indonesia'))
+            ->rules('required');
+        $form->textarea('id_text_tengah', __('Teks Tengah Indonesia'))
+             ->rules('required');
+        $form->textarea('id_text_bawah', __('Teks Bawah Indonesia'))
+             ->rules('required');
+        $form->textarea('en_text_atas', __('Teks Atas Inggris'))
+             ->rules('required');
+        $form->textarea('en_text_tengah', __('Teks Tengah Inggris'))
+             ->rules('required');
+        $form->textarea('en_text_bawah', __('Teks Bawah Inggris'))
+             ->rules('required');
+        $form->select('link_button_to', __('Link To'))
+             ->options(Navbar::all()->pluck('id_navigasi','id_navigasi'))->default("Sekilas Perusahaan");
+
+        $form->saved(function (Form $form) {
+            $id = $form->model()->id;
+            $link_to = $form->model()->link_button_to;
+            $data_navigasi = Navbar::where('id_navigasi', $link_to)->first();
+            Banner::where('id', $id)
+            ->update(['id_slug_link_button_to' => $data_navigasi->id_slug]);
+            Banner::where('id', $id)
+                ->update(['en_slug_link_button_to' => $data_navigasi->en_slug]);
+        });
 
         return $form;
     }
