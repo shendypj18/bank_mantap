@@ -17,6 +17,13 @@
 	transition-duration: 0.7s;
 	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
  }
+
+.img-responsive {
+     width: 100%;
+     max-width: 70%;
+     height: auto;
+     max-height: 70%;
+ }
 </style>
 
 @if($berita)
@@ -32,24 +39,33 @@
     </section>
 @endif
 
-<section class="section">
     <!-- Content Start Here -->
-    <div class="container text-center" id="news">
-        @if($berita)
-            <img src="{{ url('storage/'. $berita->gambar)}}" style="width: 100%; height: auto;">
-            <div style="text-align: left;">
-                {!!  $berita[$bahasa. '_isi'] !!}
+<div class="container text-center" id="news">
+    @if($berita)
+        <img class="img-responsive" src="{{ url('storage/'. $berita->gambar)}}">
+        <div class="row">
+            <div class="col-sm-7 mt-5">
+                <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
-        @endif
-        <p><br/></p>
-        <p>
+
+            <div class="col-sm-12 mt-5 ml-5">
+                <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
+            </div>
+        </div>
+
+        <div style="text-align: justify;">
+            {!!  $berita[$bahasa. '_isi'] !!}
+        </div>
+    @endif
+    <p><br/></p>
+    <p>
         @foreach($navbar["INFO MANTAP"] as $nv)
             <a class="btn btn-lg btn-wr
                       @if($nv['id_slug'] == 'promosi-mantap') active @endif "
                href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
         @endforeach
-        </p>
-    </div>
+    </p>
+</div>
     <div class="container text-center mt-5">
         <div class="row">
             @isset($pages["Promosi Mantap"])
@@ -106,7 +122,6 @@
 
     <br/> <br/> <br/> <br/>
 
-</section>
 
 <script>
  // Add active class to the current button (highlight it)

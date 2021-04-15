@@ -133,7 +133,7 @@
                             <p>{{$p->umur}}</p>
                             <p>{{$p->warga_negara}}</p>
                             <p>{{$p->domisili}}</p>
-                            <p>{{$p->pendidikan}}</p>
+                            <p>{!! $p->pendidikan !!}</p>
                         </div>
 
                     </div>

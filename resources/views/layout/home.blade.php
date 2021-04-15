@@ -18,7 +18,7 @@
                             <h2 style="font-weight: bold; color:#FCD116;">{{$banner[$bahasa . '_text_atas']}}</h2>
                             <p class="text-light">{{$banner[$bahasa. '_text_tengah']}}</p>
                             <p><a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}"
-                                  role="button">Selengkapnya</a></p>
+                                  role="button"> {{__('admin.selengkapnya')}}</a></p>
                             <p>&nbsp;</p><p>&nbsp;</p>
                             <div class="row">
                                 <div class="text-left col-md-4">
@@ -97,13 +97,14 @@
     <br><br><br><br>
     <div class="container text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="5000">
         <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
-
         <p><br/></p>
-        <p><a class="btn btn-lg  btn-wr active" href="{{url('article/berita-mantap/'. $bahasa)}}" role="button">Berita Mantap</a>
-            <a class="btn btn-lg  btn-wr" href="{{url('article/promosi-mantap/'. $bahasa)}}" role="button">Promosi Mantap</a>
-            <a class="btn btn-lg  btn-wr" href="{{url('article/program-mantap/'. $bahasa)}}" role="button">Program Mantap</a>
-            <a class="btn btn-lg  btn-wr" href="{{url('article/laporan-keuangan/'. $bahasa)}}" role="button">Laporan Keuangan</a></p>
-
+        @php $t = 1; @endphp
+        <p>
+        @foreach($navbar["INFO MANTAP"] as $nv)
+        <a class="btn btn-lg  btn-wr @if($t == 1) active @endif" href="{{url('article/'. $nv[$bahasa. '_slug'] . '/'. $bahasa)}}" role="button">{{$nv[$bahasa. '_navigasi']}}</a>
+            @php $t++; @endphp;
+        @endforeach
+        </p>
 </section>
 <!-- ==================================================  /SIMULATION ====================================================== -->
 <br/>
@@ -156,7 +157,7 @@
 
         </div>
         <br/><br/><br/>
-        <p class="text-center"><a class="btn btn-lg btn-more" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">Lihat Semua Info</a></p>
+        <p class="text-center"><a class="btn btn-lg btn-more" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button"> {{__('admin.lihat_semua_info')}}</a></p>
     </div>
     </div>
 

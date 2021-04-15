@@ -121,5 +121,7 @@ return [
     'JASA_BANK'       => 'BANK SERVICES',
     'CABANG'          => 'BRANCH',
     'SIMULASI'        => 'SIMULATION',
+    'selengkapnya'    => 'more detail',
+    'lihat_semua_info' => 'more info',
 
 ];

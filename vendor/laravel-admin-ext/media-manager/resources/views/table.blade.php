@@ -432,7 +432,7 @@ $(function () {
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" disabled><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="newFolderModalLabel">New folder</h4>
             </div>
             <form id="new-folder">

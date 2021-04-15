@@ -122,5 +122,6 @@ return [
     'JASA_BANK'       => 'JASA BANK',
     'CABANG'          => 'CABANG',
     'SIMULASI'        => 'SIMULASI',
-
+    'selengkapnya'    => 'selengkapnya',
+    'lihat_semua_info' => 'Lihat Semua Info',
 ];
