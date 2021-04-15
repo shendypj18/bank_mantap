@@ -124,4 +124,5 @@ return [
     'SIMULASI'        => 'SIMULASI',
     'selengkapnya'    => 'selengkapnya',
     'lihat_semua_info' => 'Lihat Semua Info',
+    'selengkapnya_tentang_bank_mantap' => 'Selengkapnya Tentang Bangk Mantap',
 ];

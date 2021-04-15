@@ -266,7 +266,7 @@
         </div>
 
 
-        <p><a class="btn btn-lg btn-more" href="{{url('article/sekilas-perusahaan/'. $bahasa)}}" role="button">Selengkapnya Tentang Bank Mantap</a></p>
+        <p><a class="btn btn-lg btn-more" href="{{url('article/'. $navbar["TENTANG KAMI"][0][$bahasa. '_slug'] .'/'. $bahasa)}}" role="button"> {{__('admin.selengkapnya_tentang_bank_mantap')}}</a></p>
     </div>
 
 </section>
