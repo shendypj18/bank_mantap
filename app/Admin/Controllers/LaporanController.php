@@ -99,7 +99,7 @@ class LaporanController extends AdminController
         $form->image('gambar', __('Gambar Laporan'))->move(function(Form $form){
             $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
             return 'laporan/gambar/'. Str::slug($x->jenis, '-');
-        });
+        })->removable();
 
         $form->file('nama_file', __('FIle Laporan'))->move(function(Form $form){
             $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();

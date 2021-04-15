@@ -102,7 +102,7 @@ class UserController extends AdminController
              ->updateRules(['required', "unique:{$connection}.{$userTable},username,{{id}}"]);
 
         $form->text('name', trans('admin.name'))->rules('required');
-        $form->image('avatar', trans('admin.avatar'))->move('images/avatar');
+        $form->image('avatar', trans('admin.avatar'))->move('images/avatar')->removable();
         $form->password('password', trans('admin.password'))
              ->rules([
                  'confirmed',

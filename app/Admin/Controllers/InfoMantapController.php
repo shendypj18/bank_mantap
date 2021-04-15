@@ -95,16 +95,18 @@ class InfoMantapController extends AdminController
             ->options(KategoriInfoMantap::all()->pluck('nama', 'nama'))->default('Berita Mantap');
         $form->text('id_judul', __('Judul Indonesia'))
              ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
+             ->updateRules('required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
+             ->rules('required');
         $form->text('en_judul', __('Judul Inggris'))
              ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"]);
+             ->updateRules('unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
+             ->rules('required');
         $form->image('gambar', __('Gambar'))->move(function(Form $form){
             return 'images/info-mantap/'. Str::slug($form->kategori, '-');
-        });
+        })->rules('required')->removable();
         //$form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
-        $form->tmeditor('id_isi', __('Konten Info Indonesia'));
-        $form->tmeditor('en_isi', __('Konten Info Inggris'));
+        $form->tmeditor('id_isi', __('Konten Info Indonesia'))->rules('required');
+        $form->tmeditor('en_isi', __('Konten Info Inggris'))->rules('required');
         $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft'])->default('draft');
 
         $form->saved(function (Form $form) {

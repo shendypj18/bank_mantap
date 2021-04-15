@@ -46,10 +46,8 @@ class AuthController extends BaseAuthController
     public function postLogin(Request $request)
     {
         $this->loginValidator($request->all())->validate();
-
         $credentials = $request->only([$this->username(), 'password']);
         $remember = $request->get('remember', false);
-
         if ($this->guard()->attempt($credentials, $remember)) {
             return $this->sendLoginResponse($request);
         }
