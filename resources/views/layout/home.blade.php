@@ -1,7 +1,7 @@
 <!-- ====================================================== CAROUSEL  ======================================================= -->
 <section id="hero" class="carousel slide" data-ride="carousel">
 
-    <ol class="carousel-indicators" style="margin-left:-48rem; margin-bottom:12rem;">
+    <ol class="carousel-indicators" style="margin-left:-43rem; margin-bottom:12rem;">
         <li data-target="#hero" data-slide-to="0" class="active" style="height: 10px; width: 50px; padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="1" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="2" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
@@ -16,8 +16,8 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="carousel-caption text-left">
-                        <h2 style="font-weight: bold; color:#FCD116;">Ambil uang pensiun
+                     <div class="carousel-caption text-left" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500">
+                        <h2 style="font-weight: bold; color:#FCD116; text-shadow: 2px 2px #0d0354;"">Ambil uang pensiun
                             <br/>dari tarik tunai, tidak harus datang
                             <br/>ke kantor cabang</h2>
                             <p class="text-light">Dengan kartu ATM Bank Mantap, nasabah pensiunan ASN<br/>dan TNI/POLRI dapat mengambil uang pensiun dan tarik<br/>
@@ -82,20 +82,20 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-sm">
+             <div class="col-sm" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="4000">
                 <div class="card card-one">
                     <div class="card-body">
                         <br/>
                         <h3 class="card-title text-light">   <img src="{{ url('asset/campain.png') }}"  alt="Logo" width="10%"> Whistleblowing System</h3>
                         <p class="card-text">Jika Anda yang memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi
-                            pelanggaran yang terjadi di lingkungan PT Mandiri Taspen</p>
+                            pelanggaran yang terjadi di lingkungan PT Bank Mandiri Taspen</p>
                         <a class="btn btn-simulasi-light" role="button" href="{{url('/article/whistleblowing-system/'. $bahasa)}}">LAPOR WHISTLEBLOWING</a>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-sm">
+           <div class="col-sm" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="5000">
                 <div class="card card-two">
                     <div class="card-body">
                         <br/>
@@ -111,14 +111,14 @@
 
 
     <br><br><br><br>
-    <div class="container text-center">
+    <div class="container text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="5000">
         <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
 
         <p><br/></p>
-        <p><a class="btn btn-lg  btn-wr active" href="#" role="button">Berita Mantap</a>
-            <a class="btn btn-lg  btn-wr" href="#" role="button">Promosi Mantap</a>
-            <a class="btn btn-lg  btn-wr" href="#" role="button">Program Mantap</a>
-            <a class="btn btn-lg  btn-wr" href="#" role="button">Laporan Keuangan</a></p>
+        <p><a class="btn btn-lg  btn-wr active" href="{{url('article/berita-mantap/'. $bahasa)}}" role="button">Berita Mantap</a>
+            <a class="btn btn-lg  btn-wr" href="{{url('article/promosi-mantap/'. $bahasa)}}" role="button">Promosi Mantap</a>
+            <a class="btn btn-lg  btn-wr" href="{{url('article/program-mantap/'. $bahasa)}}" role="button">Program Mantap</a>
+            <a class="btn btn-lg  btn-wr" href="{{url('article/laporan-keuangan/'. $bahasa)}}" role="button">Laporan Keuangan</a></p>
 
 </section>
 <!-- ==================================================  /SIMULATION ====================================================== -->
@@ -130,16 +130,14 @@
 <section style="margin-top:-8rem;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F2F7FF" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,96C384,117,480,203,576,245.3C672,288,768,288,864,256C960,224,1056,160,1152,128C1248,96,1344,96,1392,96L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     <!-- MENU CARD SLIDER -->
-    <div class="container my-3">
+   <div class="container my-3"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="100">
         <!--Carousel Wrapper-->
         <div id="news" class="carousel slide carousel-multi-item" data-ride="carousel" style="margin-top: -20rem;">
-            <ol class="carousel-indicators" style="top: 25rem;">
-                <li data-target="#news" data-slide-to="0" class="active"  style="width: 8%; height: 7px; background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
-                                 background: #FCD116 0% 0% no-repeat padding-box; border-radius: 6px;"></li>
-                <li data-target="#news" data-slide-to="1"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
-                <li data-target="#news" data-slide-to="2"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
-                <li data-target="#news" data-slide-to="3"  style="width: 6px; height: 6px; padding-box; border-radius: 6px; background-color: #121212;"></li>
-            </ol>
+             <ol class="carousel-indicators" style="top: 25rem;">
+		      <li data-target="#news" data-slide-to="0"  style="width: 8%; height: 8px; background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
+		      background: #FCD116 0% 0% no-repeat padding-box; border-radius: 6px;"></li>
+		      <li data-target="#news" data-slide-to="1"  style="width: 10px; height: 8px; padding-box; border-radius: 6px; background-color: #121212;"></li>
+		    </ol>
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
                  <div class="carousel-item active">
@@ -168,8 +166,8 @@
             <!--/.Slides-->
 
             <!-- Indicator Slider -->
-            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -10rem;"></a>
-            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -10rem;"></a>
+            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -13rem;"></a>
+            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -13rem;"></a>
             <!-- End Indicator Slider -->
 
         </div>
@@ -183,7 +181,7 @@
 
     <!-- ================================================  VIDEO YOUTUBE ====================================================== -->
     <br/><br/>
-    <div class="container">
+    <div class="container"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
         <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p>
         <br/><br/><br/>
@@ -215,7 +213,7 @@
 
 <!-- ================================================ WHY US ================================================================= -->
 <section id="content">
-    <div class="container">
+      <div class="container" data-aos="fade-right" data-aos-delay="300" data-aos-duration="4000">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <h1>Mengapa memilih<br/>Bank Mandiri Taspen</h1>
@@ -280,7 +278,7 @@
         </div>
 
 
-        <p><a class="btn btn-lg btn-more" href="#" role="button">@if($video_2){{$video_2->nama}}@endif</a></p>
+        <p><a class="btn btn-lg btn-more" href="{{url('article/sekilas-perusahaan/'. $bahasa)}}" role="button">Selengkapnya Tentang Bank Mantap</a></p>
     </div>
 
 </section>

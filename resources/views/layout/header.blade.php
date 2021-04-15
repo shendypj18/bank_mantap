@@ -9,7 +9,9 @@
     <!-- CSS Bootsrap ver.4.0 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
+
 </head>
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->

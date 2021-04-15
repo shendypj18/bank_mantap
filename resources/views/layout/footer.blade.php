@@ -3,10 +3,10 @@
 <section id="footer">
     <div class="container">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-7 col-md-5">
+        <div class="col-xs-12 col-sm-7 col-md-5"  data-aos="fade-up" data-aos-delay="300" data-aos-duration="3500">
          <h1>Bank Mantap, tiada kata pensiun untuk berkarya</h1>
        </div>
-        <div class="col-xs-12 col-sm-7 col-md-6">
+        <div class="col-xs-12 col-sm-7 col-md-6"  data-aos="fade-left" data-aos-delay="300" data-aos-duration="4500">
          <img class="small-logo" src="{{ asset('asset/map-dot.png') }}" width="90%" alt="Logo Corp" />
        </div>
      </div>
@@ -31,6 +31,7 @@
 <!--  ================================================ SECOND FOOTER ========================================================= -->
 <section class="footer">
 <div class="container">
+
 
 <div class="table">
 <div class="row">
@@ -288,7 +289,8 @@
 <!-- Start Scrolling -->
 <button onclick="topFunction()" id="onTop" title="Go to top" class="fa fa-angle-double-up"></button>
 <!-- End Scrolling -->
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script> AOS.init(); </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
