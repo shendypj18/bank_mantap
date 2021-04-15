@@ -15,7 +15,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="carousel-caption text-left">
-                            <h2 style="font-weight: bold; color:#FCD116;">{!!  $banner[$bahasa . '_text_atas'] !!}}</h2>
+                            <h2 style="font-weight: bold; color:#FCD116;">{!!  $banner[$bahasa . '_text_atas'] !!}</h2>
                             <p class="text-light">{!!   $banner[$bahasa. '_text_tengah'] !!}</p>
                             <p><a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}"
                                   role="button"> {{__('admin.selengkapnya')}}  </a></p>
