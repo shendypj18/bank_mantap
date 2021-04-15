@@ -123,6 +123,14 @@
 		      <li data-target="#news" data-slide-to="1"  style="width: 10px; height: 8px; padding-box; border-radius: 6px; background-color: #121212;"></li>
 		    </ol>
             <!--Slides-->
+
+
+              <!-- Indicator Slider -->
+            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -13rem;"></a>
+            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -13rem;"></a>
+            <!-- End Indicator Slider -->
+
+            
             <div class="carousel-inner" role="listbox">
                  <div class="carousel-item active">
                     @php $i = 1; @endphp
@@ -149,10 +157,7 @@
             </div>
             <!--/.Slides-->
 
-            <!-- Indicator Slider -->
-            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -13rem;"></a>
-            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -13rem;"></a>
-            <!-- End Indicator Slider -->
+          
 
         </div>
         <br/><br/><br/>
