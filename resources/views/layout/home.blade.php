@@ -18,7 +18,7 @@
                             <h2 style="font-weight: bold; color:#FCD116;">{{$banner[$bahasa . '_text_atas']}}</h2>
                             <p class="text-light">{{$banner[$bahasa. '_text_tengah']}}</p>
                             <p><a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}"
-                                  role="button"> {{__('admin.selengkapnya')}}</a></p>
+                                  role="button"> {{__('admin.selengkapnya')}}  </a></p>
                             <p>&nbsp;</p><p>&nbsp;</p>
                             <div class="row">
                                 <div class="text-left col-md-4">
@@ -157,7 +157,7 @@
 
         </div>
         <br/><br/><br/>
-        <p class="text-center"><a class="btn btn-lg btn-more" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button"> {{__('admin.lihat_semua_info')}}</a></p>
+        <p class="text-center"><a class="btn btn-lg btn-more" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
     </div>
     </div>
 
