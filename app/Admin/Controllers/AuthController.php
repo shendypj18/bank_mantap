@@ -254,17 +254,17 @@ class AuthController extends BaseAuthController
     }
 
     public function upload(Request $request)
-{
-    $image = $request->file('upload'); // get file
-    $tujuan_upload = 'images';
-    $file->move($tujuan_upload,$image->getClientOriginalName());
+    {
+        $image = $request->file('upload'); // get file
+        $tujuan_upload = 'images';
+        $file->move($tujuan_upload, $image->getClientOriginalName());
 
-    // response
-    $param = [
+        // response
+        $param = [
             'uploaded' => 1,
             'fileName' => 'fileName',
             'url' => 'url'
-    ];
-    return response()->json($param, 200);
-}
+        ];
+        return response()->json($param, 200);
+    }
 }
