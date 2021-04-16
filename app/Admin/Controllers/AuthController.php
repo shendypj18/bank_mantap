@@ -82,14 +82,18 @@ class AuthController extends BaseAuthController
      */
     public function getLogout(Request $request)
     {
-        $this->guard()->logout();
         //dd($request->session());
-        $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
-        $user = AdminUser::find($remember);
-        if($user) {
-            $user->session_id = null;
-            $user->save();
+        //dd($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d']);
+        if(isset($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'])) {
+            $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
+            $user = AdminUser::find($remember);
+            if ($user) {
+                $user->session_id = null;
+                $user->save();
+            }
         }
+
+        $this->guard()->logout();
         $request->session()->invalidate();
 
         return redirect(config('admin.route.prefix'));
