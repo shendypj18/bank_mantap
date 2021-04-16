@@ -30,5 +30,5 @@ Route::group([
     $router->resource('kategori-info-mantap', KategoriInfoMantapController::class)->middleware('singlelogin');
     $router->resource('kategori-jabatan', KategoriJabatanController::class)->middleware('singlelogin');
     $router->resource('kantor-cabang', KantorCabangController::class)->middleware('singlelogin');
-    $router->get('/test-session', 'HomeController@test')->name('test-session');
+    //$router->get('/test-session', 'HomeController@test')->name('test-session');
 });
