@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\AdminUser;
+use App\Models\Session;
 use App\Models\User;
 use Encore\Admin\Controllers\AuthController as BaseAuthController;
 use Encore\Admin\Facades\Admin;
@@ -48,6 +49,7 @@ class AuthController extends BaseAuthController
         $this->loginValidator($request->all())->validate();
         $credentials = $request->only([$this->username(), 'password']);
         $remember = $request->get('remember', false);
+
         if ($this->guard()->attempt($credentials, $remember)) {
             return $this->sendLoginResponse($request);
         }
@@ -81,7 +83,13 @@ class AuthController extends BaseAuthController
     public function getLogout(Request $request)
     {
         $this->guard()->logout();
-
+        //dd($request->session());
+        $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
+        $user = AdminUser::find($remember);
+        if($user) {
+            $user->session_id = null;
+            $user->save();
+        }
         $request->session()->invalidate();
 
         return redirect(config('admin.route.prefix'));
@@ -227,6 +235,13 @@ class AuthController extends BaseAuthController
         admin_toastr(trans('admin.login_successful'));
 
         $request->session()->regenerate();
+        $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
+        $user = AdminUser::find($remember);
+        if($user) {
+            //dd($user);
+            $user->session_id = $request->session()->getId();
+            $user->save();
+        }
 
         return redirect()->intended($this->redirectPath());
     }

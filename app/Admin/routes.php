@@ -8,10 +8,9 @@ Admin::routes();
 Route::group([
     'prefix'        => config('admin.route.prefix'),
     'namespace'     => config('admin.route.namespace'),
-    'middleware'    => config('admin.route.middleware'),
+    'middleware'    => config('admin.route.middleware') . ',singlelogin',
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
-
     //membuat route
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('videos', VideosController::class);
@@ -31,4 +30,5 @@ Route::group([
     $router->resource('kategori-info-mantap', KategoriInfoMantapController::class);
     $router->resource('kategori-jabatan', KategoriJabatanController::class);
     $router->resource('kantor-cabang', KantorCabangController::class);
+    //$router->get('/test-session', 'HomeController@test')->name('test-session');
 });

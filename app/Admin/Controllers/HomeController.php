@@ -11,6 +11,8 @@ use Encore\Admin\Layout\Row;
 use Encore\Admin\Widgets\Box;
 use App\Models\User;
 use App\Models\Videos;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -39,6 +41,15 @@ class HomeController extends Controller
                     ])));
                 });
             });
+    }
+
+    public function test(Request $request) {
+        $id = $request->session()->getId();
+        //$request->session()->invalidate();
+        //$request->session()->regenerate();
+        dd($request->session(), session('login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'));
+        //dd(Session:);
+        //ugbHiJ1V0MWVTLLwpjTfrQLJKKmFMjCiHKEbSLt32Tgr3XU5Jl3agKUvfyL6
     }
 
 }
