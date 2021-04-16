@@ -124,13 +124,21 @@
 		      <li data-target="#news" data-slide-to="1"  style="width: 10px; height: 8px; padding-box; border-radius: 6px; background-color: #121212;"></li>
 		    </ol>
             <!--Slides-->
+
+
+              <!-- Indicator Slider -->
+            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -13rem;"></a>
+            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -13rem;"></a>
+            <!-- End Indicator Slider -->
+
+            
             <div class="carousel-inner" role="listbox">
                  <div class="carousel-item active">
                     @php $i = 1; @endphp
                     @foreach($berita as $b)
                         <div class="col-md-3" style="float:left;">
-                            <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
-                                <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem;">
+                            <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A; border-radius: 15px 15px 15px 15px; opacity: 1;">
+                                <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem; border-radius: 15px 15px 0px 0px;">
                                 <div class="card-body">
                                     <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
                                     <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
@@ -150,10 +158,7 @@
             </div>
             <!--/.Slides-->
 
-            <!-- Indicator Slider -->
-            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img src="{{ url('asset/left.svg') }}" style="margin-left: -13rem;"></a>
-            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}" style="margin-right: -13rem;"></a>
-            <!-- End Indicator Slider -->
+          
 
         </div>
         <br/><br/><br/>
