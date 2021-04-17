@@ -60,7 +60,7 @@ class Controller extends BaseController
         App::setLocale($this->bahasa);
     }
 
-    public function isSlugValid($slug, $jenis_slug)
+    public function isSlugValid($slugx, $jenis_slug)
     {
         if ($jenis_slug == 'navbar')
         {
@@ -74,13 +74,14 @@ class Controller extends BaseController
         $ok = null;
         foreach ($slugs as $slug)
         {
-            if ($slug->id_slug == $slug or $slug->en_slug) {
+            if ($slug->id_slug == $slugx or $slug->en_slug == $slugx) {
                 $ok = true;
                 break;
             }
         }
         // if navbarslug request not valid redirect to home
-        if(!$ok) return redirect()->action([Controller::class, 'home']);
+        return $ok;
+        //if($ok == null) return redirect()->action([Controller::class, 'home']);
 
     }
 
@@ -106,8 +107,9 @@ class Controller extends BaseController
     public function navigasi($navbarslug, $locale = null)
     {
 
-        $this->isSlugValid($navbarslug, 'navbar');
         $this->setLocale($locale);
+        if(!$this->isSlugValid($navbarslug, 'navbar'))
+            return redirect()->action([Controller::class, 'home']);
 
         $navbar_data = Navbar::where($this->bahasa. '_slug', $navbarslug)->first();
         $data_for_navigasi = [
@@ -305,7 +307,9 @@ class Controller extends BaseController
     public function getInfoMantapBySlug($slug, $locale = null)
     {
         $this->setLocale($locale);
-        $this->isSlugValid($slug, 'info_mantap');
+        if(!$this->isSlugValid($slug, 'info_mantap'))
+            return redirect()->action([Controller::class, 'home']);
+
         $info_mantap = InfoMantap::where($this->bahasa. '_slug', $slug)->first();
         $kategori_slug = Str::slug($info_mantap->kategori, '-');
         $navbar_data = Navbar::where('id_slug', $kategori_slug)->first();
