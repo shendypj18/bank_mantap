@@ -71,9 +71,8 @@
                     <div class="card-body">
                         <br/>
                         <h3 class="card-title text-light">   <img src="{{ url('asset/campain.png') }}"  alt="Logo" width="10%"> Whistleblowing System</h3>
-                        <p class="card-text">Jika Anda yang memiliki informasi dan ingin melaporkan suatu perbuatan berindikasi
-                            pelanggaran yang terjadi di lingkungan PT Bank Mandiri Taspen</p>
-                        <a class="btn btn-simulasi-light" role="button" href="{{url('/article/whistleblowing-system/'. $bahasa)}}">LAPOR WHISTLEBLOWING</a>
+                        <p class="card-text">{{ __('admin.text_whistleblowing') }}</p>
+                        <a class="btn btn-simulasi-light" role="button" href="{{url('/article/whistleblowing-system/'. $bahasa)}}">{{__('admin.lapor_whistleblowing')}}</a>
                     </div>
                 </div>
             </div>
@@ -83,9 +82,9 @@
                 <div class="card card-two">
                     <div class="card-body">
                         <br/>
-                        <h4 class="card-title"> <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Tahapan Berjangka</h4>
-                        <p class="card-text mt-4">Lakukan simulasi perhitungan besar dana yang terkumpul dengan rentang bulan yang Anda pilih.</p>
-                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
+                        <h4 class="card-title"> <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> {{ __('admin.simulasi_tahapan_berjangka') }}</h4>
+                        <p class="card-text mt-4">{{ __('admin.text_simulasi_tahapan_berjangka') }}</p>
+                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}" role="button">{{__('admin.button_simulasi_tahapan_berjangka')}}</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +95,7 @@
 
     <br><br><br><br>
     <div class="container text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="5000">
-        <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
+        <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
         <p><br/></p>
         @php $t = 1; @endphp
         <p>
@@ -204,13 +203,13 @@
       <div class="container" data-aos="fade-right" data-aos-delay="300" data-aos-duration="4000">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h1>Mengapa memilih<br/>Bank Mandiri Taspen</h1>
+                <h1><span>{{ __('admin.mengapa_memilih_bank_mandiri_taspen') }}</span></h1>
             </div>
         </div>
 
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-8">
-                <p>Melayani lebih dari 28 tahun, Bank Mandiri Taspen senantiasa memberikan kemudahan dan kecepatan dalam merespon berbagai kebutuhan nasabah dengan didukung oleh layanan perbankan yang prima.</p>
+                <p>{{ __('admin.text_mengapa_memilih_bank_mandiri_taspen')}}</p>
                 <br/>
             </div>
         </div>
@@ -221,16 +220,16 @@
                 <div class="row">
                     <div class="col-sm2"><a class="fa fa-globe"></a></div>
                     <div class="col-sm-10">
-                        <h3>Kantor Cabang</h3>
-                        <p>274 jaringan kantor Bank Mantap di 34 provisi</p>
+                        <h3>{{ __('admin.kantor_cabang') }}</h3>
+                        <p>{{ __('admin.text_kantor_cabang')  }}</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm2"><a class="fa fa-thumbs-up"></a></div>
                     <div class="col-sm-10">
-                        <h3>Budaya Kerja</h3>
-                        <p>Kompeten dan dapat dipercaya dan Melayani dengan hati</p>
+                        <h3>{{ __('admin.budaya_kerja') }}</h3>
+                        <p>{{  __('admin.text_budaya_kerja') }}</p>
                     </div>
                 </div>
             </div>
@@ -240,8 +239,8 @@
                 <div class="row">
                     <div class="col-sm2"><a class="fa fa-trophy"></a></div>
                     <div class="col-sm-10">
-                        <h3>Penghargaan</h3>
-                        <p>Sebagai bank pesiunan terbaik di Indonesia</p>
+                        <h3>{{__('admin.penghargaan2')}}</h3>
+                        <p>{{__('admin.text_penghargaan2')}}</p>
                     </div>
                 </div>
 
@@ -250,8 +249,8 @@
                         <a class="fa fa-lightbulb-o"></a>
                     </div>
                     <div class="col-sm-10">
-                        <h3>Terus Berinovasi</h3>
-                        <p>Bank Mantap terus berinovasi mengembangkan produk yang sesuai dengan perkembangan jaman untuk memenuhi kebutuhan nasabah</p>
+                        <h3>{{__('admin.terus_berinovasi')}}</h3>
+                        <p>{{__('admin.text_terus_berinovasi')}}</p>
                     </div>
                 </div>
 

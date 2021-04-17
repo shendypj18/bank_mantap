@@ -124,5 +124,23 @@ return [
     'selengkapnya'    => 'More Detail',
     'lihat_semua_info' => 'More Info',
     'selengkapnya_tentang_bank_mantap' => 'More About Bank Mantap',
+    'lapor_whistleblowing' => 'Report Whistleblowing',
+    'text_whistleblowing'  => 'In case you have an information and want to report an alleged violation that has occurred within PT Bank Mandiri Taspen',
+    'simulasi_tahapan_berjangka' => 'Simulation of Tahapan Berjangka ',
+    'text_simulasi_tahapan_berjangka' => 'Simulate the calculation of the amount of funds collected with the time range of months you choose.',
+    'button_simulasi_tahapan_berjangka' => 'Calculate the Simulation',
+    'mengapa_memilih_bank_mandiri_taspen' => 'Why Choosing Bank
+Mandiri Taspen',
+    'text_mengapa_memilih_bank_mandiri_taspen' => 'In service for 6 years, Bank Mandiri Taspen has always been providing convenience and speed in responding to various customer needs, supported by excellent banking services.',
+    'kantor_cabang' => 'Branch Offices',
+    'text_kantor_cabang' => '274 network of Bank Mantap offices in 34 Provinces.',
+    'budaya_kerja' => 'Work Culture',
+    'text_budaya_kerja' => 'Competent and trustworthy while serving with heart',
+    'penghargaan2' => 'Award',
+    'text_penghargaan2' => 'As the best bank for pensioners in Indonesia',
+    'terus_berinovasi' => 'Keep Innovating',
+    'text_terus_berinovasi' => 'Bank Mantap continues to innovate for developing products in accordance with the current development to meet the customer needs',
+    'dapatkan_informasi_berita' => 'Get information on news, promotion,
+new programs and financial statements of',
 
 ];
