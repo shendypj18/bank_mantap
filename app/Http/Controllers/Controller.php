@@ -109,7 +109,8 @@ class Controller extends BaseController
 
         $this->setLocale($locale);
         if(!$this->isSlugValid($navbarslug, 'navbar'))
-            return redirect()->action([Controller::class, 'home']);
+            abort(404);
+            //return redirect()->action([Controller::class, 'home']);
 
         $navbar_data = Navbar::where($this->bahasa. '_slug', $navbarslug)->first();
         $data_for_navigasi = [
@@ -308,7 +309,8 @@ class Controller extends BaseController
     {
         $this->setLocale($locale);
         if(!$this->isSlugValid($slug, 'info_mantap'))
-            return redirect()->action([Controller::class, 'home']);
+            abort(404);
+            //return redirect()->action([Controller::class, 'home']);
 
         $info_mantap = InfoMantap::where($this->bahasa. '_slug', $slug)->first();
         $kategori_slug = Str::slug($info_mantap->kategori, '-');
