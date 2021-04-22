@@ -177,9 +177,11 @@ class AuthController extends BaseAuthController
 
         $form = new Form(new $class());
 
-        $form->display('username', trans('admin.username'));
+        $form->display('username', trans('admin.username'))->rules('required');
         $form->text('name', trans('admin.name'))->rules('required');
-        $form->image('avatar', trans('admin.avatar'))->move('images/avatar')->rules('required');
+        $form->image('avatar', trans('admin.avatar'))->move('images/avatar')
+             ->removable()
+            ->rules('required');
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules(
             [
