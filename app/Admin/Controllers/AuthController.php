@@ -180,8 +180,7 @@ class AuthController extends BaseAuthController
         $form->display('username', trans('admin.username'))->rules('required');
         $form->text('name', trans('admin.name'))->rules('required');
         $form->image('avatar', trans('admin.avatar'))->move('images/avatar')
-             ->removable()
-            ->rules('required');
+             ->rules('required');
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules(
             [
