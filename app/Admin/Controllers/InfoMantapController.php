@@ -96,17 +96,35 @@ class InfoMantapController extends AdminController
         $form->text('id_judul', __('Judul Indonesia'))
              ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
              ->updateRules('required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
-             ->rules('required');
+             ->rules('required|max:65');
         $form->text('en_judul', __('Judul Inggris'))
-             ->creationRules('unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
              ->updateRules('unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
-             ->rules('required');
+             ->rules('required|max:65');
         $form->image('gambar', __('Gambar'))->move(function(Form $form){
             return 'images/info-mantap/'. Str::slug($form->kategori, '-');
         })->rules('required')->removable();
         //$form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
-        $form->tmeditor('id_isi', __('Konten Info Indonesia'))->rules('required');
-        $form->tmeditor('en_isi', __('Konten Info Inggris'))->rules('required');
+        $form->tmeditor('id_isi', __('Konten Info Indonesia'))->rules([
+            'required',
+            function ($attribute, $value, $fail) {
+                //preg_match('/<span>(.*?)<\/span>/s', $value, $match);
+                $len = strlen(strip_tags($value));
+                if ($len > 10000) {
+                    $fail('Konten Info indonesia cannot more than 10000 characters');
+                }
+                //$fail(strip_tags($value));
+            },
+        ]);
+        $form->tmeditor('en_isi', __('Konten Info Inggris'))->rules([
+            'required',
+            function ($attribute, $value, $fail) {
+                $len = strlen(strip_tags($value));
+                if ($len > 10000) {
+                    $fail('Konten Info Inggris cannot more than 10000 characters');
+                }
+            },
+        ]);
         $form->select('status', __('Status'))->options(['publish' => 'publish', 'draft' => 'draft'])->default('draft');
 
         $form->saved(function (Form $form) {

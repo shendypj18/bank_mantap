@@ -61,7 +61,7 @@ class KategoriLaporanController extends AdminController
     {
         $form = new Form(new KategoriLaporan());
 
-        $form->text('jenis', __('Jenis'));
+        $form->text('jenis', __('Jenis'))->rules('required|max:100');
 
         return $form;
     }

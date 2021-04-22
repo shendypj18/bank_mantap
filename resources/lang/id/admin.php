@@ -143,6 +143,7 @@ Mandiri Taspen',
     'text_terus_berinovasi' => 'Bank Mantap terus berinovasi mengembangkan produk yang sesuai dengan perkembangan zaman untuk memenuhi kebutuhan nasabah',
     'dapatkan_informasi_berita' => 'Dapatkan informasi berita, promosi, program terbaru serta
 laporan keuangan dari',
+    'download_sekilas_perusahaan' => 'Download Profil Lengkap Tentang Bank Mantap',
 
 
 

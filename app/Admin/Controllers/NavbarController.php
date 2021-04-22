@@ -91,18 +91,36 @@ class NavbarController extends AdminController
     {
         $form = new Form(new Navbar());
         $form->setWidth(10, 2);
-        $form->select('kategori_navbar', __('Kategori navbar'))->creationRules('required')
+        $form->select('kategori_navbar', __('Kategori navbar'))->rules('required')
              ->options(KategoriNavbar::all()->pluck('nama','nama'))->default("TENTANG KAMI");
         $form->text('id_navigasi', __('Navigasi Indonesia'))
-             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
-             ->updateRules('required|unique:navbar,id_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+             ->creationRules('required|unique:info_mantap|min:3|max:100', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('required|unique:navbar,id_navigasi,{{id}}|min:3|max:100', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->text('en_navigasi', __('Navigasi Inggris'))
-             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
-             ->updateRules('required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
-        $form->tmeditor('id_text_content', __('Konten Indonesia'));
-        $form->tmeditor('en_text_content', __('Konten Inggris'));
-        $form->image('id_banner', __('Banner Indonesia'))->move('images/navbar-banner/indonesia');
-        $form->image('en_banner', __('Banner Inggris'))->move('images/navbar-banner/inggris');
+             ->creationRules('required|unique:info_mantap|min:3|max:100', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('required|unique:navbar,en_navigasi,{{id}}|min:3|max:100', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+        $form->tmeditor('id_text_content', __('Konten Indonesia'))
+             ->rules([
+                 'required',
+                 function ($attribute, $value, $fail) {
+                     $len = strlen(strip_tags($value));
+                     if ($len > 1000000) {
+                         $fail('Konten Navigasi Indonesia cannot more than 100000 characters');
+                     }
+                 },
+             ]);
+        $form->tmeditor('en_text_content', __('Konten Inggris'))
+             ->rules([
+                 'required',
+                 function ($attribute, $value, $fail) {
+                     $len = strlen(strip_tags($value));
+                     if ($len > 1000000) {
+                         $fail('Konten Navigasi English cannot more than 100000 characters');
+                     }
+                 },
+             ]);
+        $form->image('id_banner', __('Banner Indonesia'))->move('images/navbar-banner/indonesia')->rules('required');
+        $form->image('en_banner', __('Banner Inggris'))->move('images/navbar-banner/inggris')->rules('required');
         $form->select('kategori_laporan', __('Kategori laporan'))
              ->options(KategoriLaporan::all()->pluck('jenis','jenis'))->default("umum");
         $form->saved(function (Form $form) {

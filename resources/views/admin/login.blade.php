@@ -54,11 +54,18 @@
     <a href="{{ admin_url('/') }}"><b>{{config('admin.name')}}</b></a>
   </div>
   <!-- /.login-logo -->
+
   <div class="login-box-body">
     <p class="login-box-msg">{{ trans('admin.login') }}</p>
-
     <form action="{{ admin_url('auth/login') }}" method="post">
         @csrf
+
+        @if($errors->has('lockout'))
+            @foreach($errors->get('lockout') as $message)
+                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
+            @endforeach
+        @endif
+
       <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
           @if($errors->has('username'))
               @foreach($errors->get('username') as $message)

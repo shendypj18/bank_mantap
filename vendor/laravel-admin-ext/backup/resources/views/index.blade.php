@@ -17,6 +17,7 @@
                     if (data.status) {
                         $('.output-box').removeClass('hide');
                         $('.output-box .output-body').html(data.message)
+                        location.reload();
                     }
 
                     $btn.button('reset');
@@ -109,7 +110,7 @@
                     <td>{{ @$backup['newest'] }}</td>
                     <td>{{ @$backup['usedStorage'] }}</td>
                 </tr>
-                <tr class="collapse" id="trace-{{$index+1}}">
+                <tr class="" id="trace-{{$index+1}}">
                     <td colspan="8">
                         <ul class="todo-list ui-sortable">
                             @foreach($backup['files'] as $file)

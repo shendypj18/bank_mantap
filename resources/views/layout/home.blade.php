@@ -101,7 +101,7 @@
         <p>
         @foreach($navbar["INFO MANTAP"] as $nv)
         <a class="btn btn-lg  btn-wr @if($t == 1) active @endif" href="{{url('article/'. $nv[$bahasa. '_slug'] . '/'. $bahasa)}}" role="button">{{$nv[$bahasa. '_navigasi']}}</a>
-            @php $t++; @endphp;
+            @php $t++; @endphp
         @endforeach
         </p>
 </section>

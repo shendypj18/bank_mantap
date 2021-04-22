@@ -61,7 +61,7 @@ class KategoriJabatanController extends AdminController
     {
         $form = new Form(new KategoriJabatan());
 
-        $form->text('nama', __('Nama'));
+        $form->text('nama', __('Nama'))->rules('required|max:50');
 
         return $form;
     }

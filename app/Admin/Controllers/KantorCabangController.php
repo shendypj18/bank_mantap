@@ -71,12 +71,12 @@ class KantorCabangController extends AdminController
     {
         $form = new Form(new KantorCabang());
 
-        $form->text('nama', __('Nama'));
-        $form->text('alamat', __('Alamat'));
-        $form->text('provinsi', __('Provinsi'));
-        $form->text('latitude', __('Latitude'));
-        $form->text('longitude', __('Longitude'));
-        $form->text('telp', __('Nomer Telpon'));
+        $form->text('nama', __('Nama'))->rules('required|max:1000');
+        $form->textarea('alamat', __('Alamat'))->rules('required|max:1000');
+        $form->text('provinsi', __('Provinsi'))->rules('required|max:1000');
+        $form->text('latitude', __('Latitude'))->rules('required|max:1000');
+        $form->text('longitude', __('Longitude'))->rules('required|max:1000');
+        $form->text('telp', __('Nomer Telpon'))->rules('required|max:1000');
         //$form->mobile('telp', __('Nomer Telpon'))->options(['mask' => '999 9999 9999']);
         return $form;
     }

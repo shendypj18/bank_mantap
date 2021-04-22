@@ -59,13 +59,6 @@
 
     <form action="{{ admin_url('auth/login') }}" method="post">
         @csrf
-      <div class="form-group has-feedback {!! !$errors->has('username') ?: 'has-error' !!}">
-          @if($errors->has('username'))
-              @foreach($errors->get('username') as $message)
-                  <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i>{{$message}}</label><br>
-              @endforeach
-          @endif
-
           <input type="text" class="form-control" placeholder="{{ trans('admin.username') }}" name="username" value="{{ old('username') }}">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>

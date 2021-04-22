@@ -25,7 +25,12 @@ class VideosController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Videos());
-
+        $grid->disableCreateButton();
+        $grid->disableExport();
+        $grid->disableFilter();
+        $grid->actions(function ($actions) {
+            $actions->disableDelete();
+        });
         $grid->column('id', __('Id'));
         $grid->column('nama_video', __('Nama video'));
         $grid->column('link_video', __('Link video'));
@@ -63,8 +68,8 @@ class VideosController extends AdminController
     {
         $form = new Form(new Videos());
 
-        $form->text('nama_video', __('Nama video'));
-        $form->text('link_video', __('Link video'));
+        $form->text('nama_video', __('Nama video'))->rules('required');
+        $form->text('link_video', __('Link video'))->rules('required');
 
         return $form;
     }

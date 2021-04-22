@@ -157,7 +157,12 @@ class BackupController
         $output = $structure . $data;
         fwrite($file_handle, $output);
         fclose($file_handle);
-        echo "DB backup ready";
+        return response()->json([
+            'status'  => true,
+            'message' => 'backup succes, please refresh page to download file',
+        ]);
+        return $this->index();
+        //echo "DB backup ready";
     }
 
     public function run2()

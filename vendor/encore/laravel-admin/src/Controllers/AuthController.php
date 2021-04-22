@@ -135,7 +135,7 @@ class AuthController extends Controller
         $form->image('avatar', trans('admin.avatar'));
         $form->password('password', trans('admin.password'))
              ->rules([
-                 'confirmed',
+                 //'confirmed',
                  'required',
                  function ($attribute, $value, $fail) {
                      if (!preg_match('/[0-9]/', $value)) {
@@ -152,16 +152,19 @@ class AuthController extends Controller
                          $fail('The '.$attribute.' must contain at least one uppercase letter');
                      }
                  },
-                 function ($attribute, $value, $fail) {
-                     if (!preg_match('/[A-Z]/', $value)) {
-                         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
-                     }
-                 },
+                 // function ($attribute, $value, $fail) {
+                 //     if (!preg_match('/[A-Z]/', $value)) {
+                 //         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
+                 //     }
+                 // },
                  'string',
-                 'min:6',             // must be at least 10 characters in length
+                 'min:8',             // must be at least 10 characters in length
              ]);
         $form->password('password_confirmation', trans('admin.password_confirmation'))
-             ->rules('required')
+             ->rules( ['required',
+                      'sometimes',
+                      'required_with:password',
+                      'same:password'])
              ->default(function ($form) {
                  return $form->model()->password;
              });

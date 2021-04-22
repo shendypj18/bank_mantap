@@ -25,6 +25,11 @@ class CheckSingleSession
     public function handle(Request $request, Closure $next)
     {
          //dd($request->session()->all());
+         if (!isset($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'])) {
+            $this->guard()->logout();
+            $request->session()->invalidate();
+            return redirect(config('admin.route.prefix'));
+         }
          $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
          $session_id = $request->session()->getId();
          $user = AdminUser::find($remember);

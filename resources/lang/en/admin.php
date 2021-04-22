@@ -142,5 +142,6 @@ Mandiri Taspen',
     'text_terus_berinovasi' => 'Bank Mantap continues to innovate for developing products in accordance with the current development to meet the customer needs',
     'dapatkan_informasi_berita' => 'Get information on news, promotion,
 new programs and financial statements of',
+    'download_sekilas_perusahaan' => 'Download Complete Profil Of Bank Mantap',
 
 ];

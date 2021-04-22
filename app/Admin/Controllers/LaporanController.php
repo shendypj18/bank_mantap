@@ -90,21 +90,21 @@ class LaporanController extends AdminController
         $form = new Form(new Laporan());
 
         $form->text('nama', __('Nama Laporan'))->rules('required');
-        $form->select('jenis_laporan', __('Jenis Laporan'))->creationRules('required')
+        $form->select('jenis_laporan', __('Jenis Laporan'))->rules('required')
              ->options(KategoriLaporan::all()->pluck('jenis','id'))->default("umum");
-        $form->text('deskripsi', __('Deskripsi Laporan'));
+        $form->text('deskripsi', __('Deskripsi Laporan'))->rules('required');
         //$form->text('tahun', __('Tahun Laporan'));
-        $form->date('tahun', __('Tahun'))->format('YYYY');
+        $form->date('tahun', __('Tahun'))->format('YYYY')->rules('required');
 
         $form->image('gambar', __('Gambar Laporan'))->move(function(Form $form){
             $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
             return 'laporan/gambar/'. Str::slug($x->jenis, '-');
         })->removable();
 
-        $form->file('nama_file', __('FIle Laporan'))->move(function(Form $form){
+        $form->file('nama_file', __('File Laporan'))->move(function(Form $form){
             $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
             return 'laporan/dokumen/'. Str::slug($x->jenis, '-');
-        });
+        })->removable()->rules('required');
         return $form;
     }
 }

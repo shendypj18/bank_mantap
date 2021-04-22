@@ -17,6 +17,7 @@ class AdminUser extends Model
         'name',
         'avatar',
         'remember_token',
-        'session_id'
+        'session_id',
+        'attempt'
     ];
 }

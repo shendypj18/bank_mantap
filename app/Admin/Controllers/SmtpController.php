@@ -27,7 +27,12 @@ class SmtpController extends AdminController
     protected function grid()
     {
         $grid= new Grid(new Smtp());
-
+        $grid->disableCreateButton();
+        $grid->disableExport();
+        $grid->disableFilter();
+        $grid->actions(function ($actions) {
+            $actions->disableDelete();
+        });
         $grid->column('id', __('Id'));
         $grid->column('email_pengirim', __('Email Pengirim'));
         $grid->column('email_host', __('Email Host'));
@@ -68,11 +73,11 @@ class SmtpController extends AdminController
     protected function form()
     {
         $form = new Form(new Smtp());
-        $form->text('email_pengirim', __('Email Pengirim'));
-        $form->text('email_host', __('Email Host'));
-        $form->text('username', __('Username'));
-        $form->password('password', __('Password'))->creationRules('required');
-        $form->number('port', __('Port'))->creationRules('max:4');
+        $form->text('email_pengirim', __('Email Pengirim'))->rules('required');
+        $form->text('email_host', __('Email Host'))->rules('required');
+        $form->text('username', __('Username'))->rules('required');
+        $form->password('password', __('Password'))->rules('required');
+        $form->number('port', __('Port'))->rules('max:4');
 
         $form->saving(function (Form $form) {
             if ($form->password && $form->model()->password != $form->password) {

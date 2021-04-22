@@ -61,7 +61,7 @@ class KategoriNavbarController extends AdminController
     {
         $form = new Form(new KategoriNavbar());
 
-        $form->text('nama', __('Nama'));
+        $form->text('nama', __('Nama'))->rules('required');
 
         return $form;
     }

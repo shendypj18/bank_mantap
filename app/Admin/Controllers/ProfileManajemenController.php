@@ -84,12 +84,21 @@ class ProfileManajemenController extends AdminController
     protected function form()
     {
         $form = new Form(new ProfileManajemen());
-        $form->text('nama', __('nama'))->rules('required');
-        $form->text('jabatan', __('jabatan'))->rules('required');
-        $form->text('umur', __('umur'))->rules('required');
-        $form->text('warga_negara', __('warga negara'))->rules('required');
-        $form->text('domisili', __('domisili'))->rules('required');
-        $form->tmeditor('pendidikan', __('Pendidikan'))->rules('required');
+        $form->text('nama', __('nama'))->rules('required|max:200');
+        $form->text('jabatan', __('jabatan'))->rules('required|max:200');
+        $form->text('umur', __('umur'))->rules('required|max:3');
+        $form->text('warga_negara', __('warga negara'))->rules('required|max:200');
+        $form->text('domisili', __('domisili'))->rules('required|max:1000');
+        $form->tmeditor('pendidikan', __('Pendidikan'))
+             ->rules([
+                 'required',
+                 function ($attribute, $value, $fail) {
+                     $len = strlen(strip_tags($value));
+                     if ($len > 10000) {
+                         $fail('maximum input pendidikan adalah 10000');
+                     }
+                 },
+             ]);
         $form->select('kategori_jabatan', __('Kategori Jabatan'))
              ->options(KategoriJabatan::all()->pluck('nama','nama'))->default("Dewan Komisaris");
         $form->image('gambar', __('Gambar'))->move('images/manajemen')->rules('required')->removable();

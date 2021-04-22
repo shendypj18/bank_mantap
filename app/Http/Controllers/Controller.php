@@ -74,9 +74,13 @@ class Controller extends BaseController
         $ok = null;
         foreach ($slugs as $slug)
         {
-            if ($slug->id_slug == $slugx or $slug->en_slug == $slugx) {
-                $ok = true;
-                break;
+            if ($slug->id_slug == $slugx) {
+                $this->setLocale('id');
+                $ok = true; break;
+            }
+            if ($slug->en_slug == $slugx) {
+                $this->setLocale('en');
+                $ok = true; break;
             }
         }
         // if navbarslug request not valid redirect to home

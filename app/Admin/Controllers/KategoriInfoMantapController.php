@@ -59,7 +59,7 @@ class KategoriInfoMantapController extends AdminController
         $form = new Form(new KategoriInfoMantap());
 
 
-        $form->text('nama', __('Nama'));
+        $form->text('nama', __('Nama'))->rules('required');
 
         return $form;
     }

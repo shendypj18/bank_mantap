@@ -20,8 +20,8 @@ class NavbarSeeder extends Seeder
             ["nama" => "SIMPANAN"],
             ["nama" => "INFO MANTAP"],
             ["nama" => "JASA BANK"],
-            ["nama" => "CABANG"],
-            ["nama" => "SIMULASI"],
+            //["nama" => "CABANG"],
+            //["nama" => "SIMULASI"],
         ]);
     }
 }
