@@ -11,7 +11,7 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
-    Route::middleware(['singlelogin'])->group(function (Router $router) {
+    //Route::middleware(['singlelogin'])->group(function (Router $router) {
             //membuat route
             $router->get('/', 'HomeController@index')->name('home');
             $router->resource('videos', VideosController::class);
@@ -32,5 +32,5 @@ Route::group([
             $router->resource('kategori-jabatan', KategoriJabatanController::class);
             $router->resource('kantor-cabang', KantorCabangController::class);
             //$router->get('/test-session', 'HomeController@test')->name('test-session');
-    });
-        });
+    //});
+});

@@ -65,7 +65,7 @@ class BannerController extends AdminController
         $show->field('en_text_atas', __('Teks Atas Inggris'));
         $show->field('en_text_tengah', __('Teks Tengah Inggris'));
         $show->field('en_text_bawah', __('Teks Bawah Inggris'));
-        $show->field('link_button_to', __('link to'));
+        $show->field('link_button_to', __('link To'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 

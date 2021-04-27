@@ -30,14 +30,14 @@ class NavbarController extends AdminController
         $grid = new Grid(new Navbar());
 
         $grid->column('id', __('Id'));
-        $grid->column('kategori_navbar', __('Kategori navbar'));
+        $grid->column('kategori_navbar', __('Kategori Navbar'));
         $grid->column('id_navigasi', __('Id_Navigasi'));
         $grid->column('en_navigasi', __('En_Navigasi'));
         //$grid->column('bahasa', __('Bahasa'));
         //$grid->column('id_slug', __('id_slug'));
         //$grid->column('en_slug', __('en_slug'));
         //$grid->column('id_bahasa_lain', __('Id bahasa lain'));
-        $grid->column('kategori_laporan', __('Kategori laporan'));
+        $grid->column('kategori_laporan', __('Kategori Laporan'));
         //$grid->column('created_at', __('Created at'));
         //$grid->column('updated_at', __('Updated at'));
         $grid->filter(function ($filter) {
@@ -49,7 +49,7 @@ class NavbarController extends AdminController
             $filter->like('kategori_navbar', 'Kategori Navigasi');
             $filter->like('id_navigasi', 'Navigasi Indonesia');
             $filter->like('en_navigasi', 'Navigasi Inggris');
-            $filter->like('kategori_laporan', 'kategori laporan');
+            $filter->like('kategori_laporan', 'Kategori Laporan');
         });
 
         return $grid;
@@ -66,7 +66,7 @@ class NavbarController extends AdminController
         $show = new Show(Navbar::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('kategori_navbar', __('Kategori navbar'));
+        $show->field('kategori_navbar', __('Kategori Navbar'));
         $show->field('id_navigasi', __('Navigasi Indonesia'));
         $show->field('en_navigasi', __('Navigasi Inggris'));
         $show->field('id_slug', __('Slug Indonesia'));
@@ -75,7 +75,7 @@ class NavbarController extends AdminController
         $show->field('text_content', __('Konten Inggris'));
         $show->field('id_banner', __('Banner Indonesia'));
         $show->field('en_banner', __('Banner Inggris'));
-        $show->field('kategori_laporan', __('Kategori laporan'));
+        $show->field('kategori_laporan', __('Kategori Laporan'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -91,7 +91,7 @@ class NavbarController extends AdminController
     {
         $form = new Form(new Navbar());
         $form->setWidth(10, 2);
-        $form->select('kategori_navbar', __('Kategori navbar'))->rules('required')
+        $form->select('kategori_navbar', __('Kategori Navbar'))->rules('required')
              ->options(KategoriNavbar::all()->pluck('nama','nama'))->default("TENTANG KAMI");
         $form->text('id_navigasi', __('Navigasi Indonesia'))
              ->creationRules('required|unique:info_mantap|min:3|max:100', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
@@ -121,7 +121,7 @@ class NavbarController extends AdminController
              ]);
         $form->image('id_banner', __('Banner Indonesia'))->move('images/navbar-banner/indonesia')->rules('required');
         $form->image('en_banner', __('Banner Inggris'))->move('images/navbar-banner/inggris')->rules('required');
-        $form->select('kategori_laporan', __('Kategori laporan'))
+        $form->select('kategori_laporan', __('Kategori Laporan'))
              ->options(KategoriLaporan::all()->pluck('jenis','jenis'))->default("umum");
         $form->saved(function (Form $form) {
             $id = $form->model()->id;

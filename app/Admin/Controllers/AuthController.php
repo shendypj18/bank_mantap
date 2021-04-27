@@ -49,7 +49,7 @@ class AuthController extends BaseAuthController
             AdminUser::where('username', $user->username)->update(['attempt' => 0]);
             $ok = 1;
         }
-        if ($user->attempt == 3 and !$ok) {
+        if ($user->attempt == 2 and !$ok) {
             return false;
         }
         return true;
@@ -68,6 +68,7 @@ class AuthController extends BaseAuthController
         $remember = $request->get('remember', false);
 
         $user = AdminUser::where('username', $request->username)->first();
+
         if ($user) {
             if (!$this->checkAttempt($user)) {
                 return back()->withInput()->withErrors([
@@ -77,14 +78,21 @@ class AuthController extends BaseAuthController
         }
 
         if ($this->guard()->attempt($credentials, $remember)) {
-            return $this->sendLoginResponse($request);
+            if (Session::where('user_id', $remember)->exists()) {
+                $this->guard()->logout();
+                return back()->withInput()->withErrors([
+                    'used' => $this->usedMessage(),
+                ]);
+            } else {
+                return $this->sendLoginResponse($request);
+            }
         }
 
         if (is_null($user->attempt)) {
             AdminUser::where('username', $request->username)
                 ->update(['attempt' => 0]);
         }
-        if ($user->attempt < 3) {
+        if ($user->attempt < 2) {
             $user->increment('attempt', 1, ['last_attempt_time' => Carbon::now()->format('Y-m-d H:i:s')]);
         }
 
@@ -118,15 +126,14 @@ class AuthController extends BaseAuthController
     {
         //dd($request->session());
         //dd($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d']);
-        if(isset($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'])) {
-            $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
-            $user = AdminUser::find($remember);
-            if ($user) {
-                $user->session_id = null;
-                $user->save();
-            }
-        }
-
+        // if(isset($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'])) {
+        //     $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
+        //     $user = AdminUser::find($remember);
+        //     if ($user) {
+        //         $user->session_id = null;
+        //         $user->save();
+        //     }
+        // }
         $this->guard()->logout();
         $request->session()->invalidate();
 
@@ -201,11 +208,11 @@ class AuthController extends BaseAuthController
                          $fail('The '.$attribute.' must contain at least one uppercase letter');
                      }
                  },
-                 // function ($attribute, $value, $fail) {
-                 //     if (!preg_match('/[A-Z]/', $value)) {
-                 //         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
-                 //     }
-                 // },
+                  function ($attribute, $value, $fail) {
+                      if (!preg_match('/[@$!%*#?&]/', $value)) {
+                          $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
+                      }
+                  },
                  'string',
                  'min:8',             // must be at least 10 characters in length
                  //'regex:/[a-z]/',      // must contain at least one lowercase letter
@@ -251,6 +258,11 @@ class AuthController extends BaseAuthController
     protected function getLockAccountMessage()
     {
          return  'This Account has been locked for 30 minutes causes by 3 times login fail attempts';
+    }
+
+    protected function usedMessage()
+    {
+         return  'Tidak bisa login, Akun Sedang Digunakan';
     }
 
     /**

@@ -21,3 +21,4 @@ Use Encore\Admin\Admin;
 Encore\Admin\Form::forget(['map', 'editor']);
 //Encore\Admin\Admin::script('document.addEventListener("load", function(){document.querySelector(".fileinput-remove").innerHTML= "";});');
 Admin::js(asset('/js/x.js'));
+Admin::js(asset('/js/meta.js'));

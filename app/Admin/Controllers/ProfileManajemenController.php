@@ -41,10 +41,10 @@ class ProfileManajemenController extends AdminController
             $filter->disableIdFilter();
 
             // Add a column filter
-            $filter->like('nama', 'nama');
-            $filter->like('jabatan', 'jabatan');
-            $filter->like('domisili', 'domisili');
-            $filter->like('kategori_jabatan', 'kategori jabatan');
+            $filtern>like('nama', 'Nama');
+            $filter->like('jabatan', 'Jabatan');
+            $filter->like('domisili', 'Domisili');
+            $filter->like('kategori_jabatan', 'Kategori Jabatan');
         });
 
         return $grid;
@@ -60,14 +60,14 @@ class ProfileManajemenController extends AdminController
     {
         $show = new Show(ProfileManajemen::findOrFail($id));
         $show->field('id', __('Id'));
-        $show->field('nama', __('nama'));
-        $show->field('jabatan', __('jabatan'));
-        $show->field('kategori_jabatan', __('kategori_jabatan'));
-        $show->field('umur', __('umur'));
-        $show->field('warga_negara', __('warga negara'));
-        $show->field('domisili', __('domisili'));
-        $show->field('pendidikan', __('pendidikan'));
-        $show->field('gambar', __('gambar'));
+        $show->field('nama', __('Nama'));
+        $show->field('jabatan', __('Jabatan'));
+        $show->field('kategori_jabatan', __('Kategori Jabatan'));
+        $show->field('umur', __('Umur'));
+        $show->field('warga_negara', __('Warga Negara'));
+        $show->field('domisili', __('Domisili'));
+        $show->field('pendidikan', __('Pendidikan'));
+        $show->field('gambar', __('Gambar'));
         //$show->field('id_deskripsi', __('deskripsi'));
         //$show->field('en_deskripsi', __('deskripsi Inggris'));
         $show->field('created_at', __('Created at'));
@@ -84,11 +84,11 @@ class ProfileManajemenController extends AdminController
     protected function form()
     {
         $form = new Form(new ProfileManajemen());
-        $form->text('nama', __('nama'))->rules('required|max:200');
-        $form->text('jabatan', __('jabatan'))->rules('required|max:200');
-        $form->text('umur', __('umur'))->rules('required|max:3');
-        $form->text('warga_negara', __('warga negara'))->rules('required|max:200');
-        $form->text('domisili', __('domisili'))->rules('required|max:1000');
+        $form->text('nama', __('Nama'))->rules('required|max:200');
+        $form->text('jabatan', __('Jabatan'))->rules('required|max:200');
+        $form->text('umur', __('Umur'))->rules('required|max:3');
+        $form->text('warga_negara', __('Warga Negara'))->rules('required|max:200');
+        $form->text('domisili', __('Domisili'))->rules('required|max:1000');
         $form->tmeditor('pendidikan', __('Pendidikan'))
              ->rules([
                  'required',

@@ -122,11 +122,11 @@ class UserController extends AdminController
                          $fail('The '.$attribute.' must contain at least one uppercase letter');
                      }
                  },
-                 // function ($attribute, $value, $fail) {
-                 //     if (!preg_match('/[A-Z]/', $value)) {
-                 //         $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
-                 //     }
-                 // },
+                  function ($attribute, $value, $fail) {
+                      if (!preg_match('/[@$!%*#?&]/', $value)) {
+                          $fail('The '.$attribute.' must contain at least a special character: @#$%^&*');
+                      }
+                  },
                  'string',
                  'min:8',             // must be at least 10 characters in length
                  //'regex:/[a-z]/',      // must contain at least one lowercase letter

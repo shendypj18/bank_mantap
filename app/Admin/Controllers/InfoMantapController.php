@@ -17,7 +17,7 @@ class InfoMantapController extends AdminController
      *
      * @var string
      */
-    protected $title = 'InfoMantap';
+    protected $title = 'Info Mantap';
 
     /**
      * Make a grid builder.

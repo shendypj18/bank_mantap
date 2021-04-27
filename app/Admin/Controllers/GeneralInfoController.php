@@ -15,7 +15,7 @@ class GeneralInfoController extends AdminController
      *
      * @var string
      */
-    protected $title = 'GeneralInfo';
+    protected $title = 'General Info';
 
     /**
      * Make a grid builder.
@@ -26,8 +26,8 @@ class GeneralInfoController extends AdminController
     {
         $grid = new Grid(new GeneralInfo());
         $grid->column('id', __('Id'));
-        $grid->column('nama_perusahaan', __('Nama perusahaan'));
-        $grid->column('alamat', __('alamat'));
+        $grid->column('nama_perusahaan', __('Nama Perusahaan'));
+        $grid->column('alamat', __('Alamat'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -71,10 +71,10 @@ class GeneralInfoController extends AdminController
         $form = new Form(new GeneralInfo());
 
         $form->text('nama_perusahaan', __('Nama Perusahaan'));
-        $form->image('logo', __('logo perusahaan'));
-        $form->image('icon', __('icon perusahaan'));
+        $form->image('logo', __('Logo Perusahaan'));
+        $form->image('icon', __('Icon Perusahaan'));
         $form->text('alamat', __('Alamat Perusahaan'));
-        $form->text('no_telp', __('no telp Perusahaan'));
+        $form->text('no_telp', __('No Telepon Perusahaan'));
 
 
         return $form;

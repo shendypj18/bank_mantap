@@ -32,8 +32,8 @@ class VideosController extends AdminController
             $actions->disableDelete();
         });
         $grid->column('id', __('Id'));
-        $grid->column('nama_video', __('Nama video'));
-        $grid->column('link_video', __('Link video'));
+        $grid->column('nama_video', __('Nama Video'));
+        $grid->column('link_video', __('Link Video'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -51,8 +51,8 @@ class VideosController extends AdminController
         $show = new Show(Videos::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nama_video', __('Nama video'));
-        $show->field('link_video', __('Link video'));
+        $show->field('nama_video', __('Nama Video'));
+        $show->field('link_video', __('Link Video'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -68,8 +68,8 @@ class VideosController extends AdminController
     {
         $form = new Form(new Videos());
 
-        $form->text('nama_video', __('Nama video'))->rules('required');
-        $form->text('link_video', __('Link video'))->rules('required');
+        $form->text('nama_video', __('Nama Video'))->rules('required');
+        $form->text('link_video', __('Link Video'))->rules('required');
 
         return $form;
     }
