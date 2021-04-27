@@ -91,13 +91,14 @@ class AuthController extends BaseAuthController
                 ]);
             }
         }
-
-        if (is_null($user->attempt)) {
-            AdminUser::where('username', $request->username)
-                ->update(['attempt' => 0]);
-        }
-        if ($user->attempt < 2) {
-            $user->increment('attempt', 1, ['last_attempt_time' => Carbon::now()->format('Y-m-d H:i:s')]);
+        if($user) {
+            if (is_null($user->attempt)) {
+                AdminUser::where('username', $request->username)
+                    ->update(['attempt' => 0]);
+            }
+            if ($user->attempt < 2) {
+                $user->increment('attempt', 1, ['last_attempt_time' => Carbon::now()->format('Y-m-d H:i:s')]);
+            }
         }
         return back()->withInput()->withErrors([
             $this->username() => $this->getFailedLoginMessage(),
