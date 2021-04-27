@@ -32,7 +32,7 @@ class KantorCabangController extends AdminController
         $grid->column('provinsi', __('Provinsi'));
         $grid->column('latitude', __('Latitude'));
         $grid->column('longitude', __('Longitude'));
-        $grid->column('telp', __('Nomer Telepon'));
+        $grid->column('telp', __('Nomor Telepon'));
         //$grid->column('created_at', __('Created at'));
         //$grid->column('updated_at', __('Updated at'));
 
@@ -55,7 +55,7 @@ class KantorCabangController extends AdminController
         $show->field('provinsi', __('Provinsi'));
         $show->field('latitude', __('Latitude'));
         $show->field('longitude', __('Longitude'));
-        $show->field('telp', __('Nomer Telepon'));
+        $show->field('telp', __('Nomor Telepon'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -76,8 +76,8 @@ class KantorCabangController extends AdminController
         $form->text('provinsi', __('Provinsi'))->rules('required|max:1000');
         $form->text('latitude', __('Latitude'))->rules('required|max:1000');
         $form->text('longitude', __('Longitude'))->rules('required|max:1000');
-        $form->text('telp', __('Nomer Telepon'))->rules('required|max:1000');
-        //$form->mobile('telp', __('Nomer Telpon'))->options(['mask' => '999 9999 9999']);
+        $form->text('telp', __('Nomor Telepon'))->rules('required|max:1000');
+        //$form->mobile('telp', __('Nomor Telpon'))->options(['mask' => '999 9999 9999']);
         return $form;
     }
 }
