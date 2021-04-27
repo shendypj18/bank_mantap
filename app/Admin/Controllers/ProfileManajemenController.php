@@ -41,7 +41,7 @@ class ProfileManajemenController extends AdminController
             $filter->disableIdFilter();
 
             // Add a column filter
-            $filtern>like('nama', 'Nama');
+            $filter->like('nama', 'Nama');
             $filter->like('jabatan', 'Jabatan');
             $filter->like('domisili', 'Domisili');
             $filter->like('kategori_jabatan', 'Kategori Jabatan');
