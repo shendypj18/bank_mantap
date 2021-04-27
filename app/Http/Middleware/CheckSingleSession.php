@@ -6,6 +6,7 @@ use App\Models\AdminUser;
 use Closure;
 use Illuminate\Http\Request;
 use Encore\Admin\Facades\Admin;
+use Illuminate\Support\Carbon;
 
 class CheckSingleSession
 {
@@ -24,26 +25,16 @@ class CheckSingleSession
 
     public function handle(Request $request, Closure $next)
     {
-         //dd($request->session()->all());
-         if (!isset($request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'])) {
+        $muser = $this->guard()->user();
+        $now = Carbon::now();
+        $last_attempt = Carbon::parse($muser->last_attempt_time);
+        $different = $now->diffInMinutes($last_attempt);
+        if ($muser == null or $different > config('session.lifetime')) {
             $this->guard()->logout();
             $request->session()->invalidate();
             return redirect(config('admin.route.prefix'));
-         }
-         $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
-         $session_id = $request->session()->getId();
-         $user = AdminUser::find($remember);
-             if ($user) {
-                 if ($user->session_id != $session_id) {
-                     $this->guard()->logout();
-                     $request->session()->invalidate();
-                     return redirect(config('admin.route.prefix'));
-                 }
-             } else {
-                 $this->guard()->logout();
-                 $request->session()->invalidate();
-                 return redirect(config('admin.route.prefix'));
-             }
+
+        }
         return $next($request);
     }
 }

@@ -41,15 +41,7 @@ class AuthController extends BaseAuthController
 
     private function checkAttempt($user)
     {
-        $current_time = strtotime(Carbon::now()->format('Y-m-d H:i:s'));
-        $last_attempt_time = strtotime($user->last_attempt_time);
-        $difference_in_minute =  round(abs($current_time - $last_attempt_time) / 60,2);
-        $ok = 0;
-        if ($difference_in_minute >= 30) {
-            AdminUser::where('username', $user->username)->update(['attempt' => 0]);
-            $ok = 1;
-        }
-        if ($user->attempt == 2 and !$ok) {
+        if ($user->attempt == 2) {
             return false;
         }
         return true;
@@ -78,13 +70,24 @@ class AuthController extends BaseAuthController
         }
 
         if ($this->guard()->attempt($credentials, $remember)) {
-            if (Session::where('user_id', $remember)->exists()) {
+            $muser = $this->guard()->user();
+            $now = Carbon::now();
+            $last_attempt = Carbon::parse($muser->last_attempt_time);
+            $different = $now->diffInMinutes($last_attempt);
+            if ($last_attempt == null) $different == 5;
+            if ($muser->session_id == 'logout' or $different >= config('session.lifetime')) {
+                $muser->attempt = 0;
+                $muser->last_attempt_time = $now;
+                $muser->session_id = 'login';
+                $muser->save();
+                return $this->sendLoginResponse($request);
+            }
+
+            if ($different < config('session.lifetime')) {
                 $this->guard()->logout();
                 return back()->withInput()->withErrors([
                     'used' => $this->usedMessage(),
                 ]);
-            } else {
-                return $this->sendLoginResponse($request);
             }
         }
 
@@ -95,7 +98,6 @@ class AuthController extends BaseAuthController
         if ($user->attempt < 2) {
             $user->increment('attempt', 1, ['last_attempt_time' => Carbon::now()->format('Y-m-d H:i:s')]);
         }
-
         return back()->withInput()->withErrors([
             $this->username() => $this->getFailedLoginMessage(),
         ]);
@@ -134,9 +136,12 @@ class AuthController extends BaseAuthController
         //         $user->save();
         //     }
         // }
+        //dd($muser->last_attempt_time);
+        $user = $this->guard()->user();
+        $user->session_id = 'logout';
+        $user->save();
         $this->guard()->logout();
         $request->session()->invalidate();
-
         return redirect(config('admin.route.prefix'));
     }
 
@@ -257,7 +262,7 @@ class AuthController extends BaseAuthController
 
     protected function getLockAccountMessage()
     {
-         return  'This Account has been locked for 30 minutes causes by 3 times login fail attempts';
+         return  'This Account has been locked, please contact super admin to unlock this account';
     }
 
     protected function usedMessage()
@@ -290,14 +295,6 @@ class AuthController extends BaseAuthController
     {
         admin_toastr(trans('admin.login_successful'));
         $request->session()->regenerate();
-        $remember = $request->session()->all()['login_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d'];
-         $user = AdminUser::find($remember);
-         if($user) {
-             //dd($user);
-             $user->session_id = $request->session()->getId();
-             $user->save();
-         }
-
         return redirect()->intended($this->redirectPath());
     }
 

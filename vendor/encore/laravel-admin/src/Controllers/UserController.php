@@ -34,8 +34,9 @@ class UserController extends AdminController
         $grid->column('username', trans('admin.username'));
         $grid->column('name', trans('admin.name'));
         $grid->column('roles', trans('admin.roles'))->pluck('name')->label();
-        $grid->column('created_at', trans('admin.created_at'));
-        $grid->column('updated_at', trans('admin.updated_at'));
+        $grid->column('attempt', 'Lock/Unlock')->editable('select', [2 => 'Lock', 0 => 'Unlock']);
+        //$grid->column('created_at', trans('admin.created_at'));
+        //$grid->column('updated_at', trans('admin.updated_at'));
 
         $grid->actions(function (Grid\Displayers\Actions $actions) {
             if ($actions->getKey() == 1) {
@@ -150,6 +151,8 @@ class UserController extends AdminController
 
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
+        $form->select('attempt', 'Lock/Unlock')->options([2 => 'Lock', 0 => 'Unlock'])->default('m');
+        // set text, color, and stored values
 
         $form->saving(function (Form $form) {
             if ($form->password && $form->model()->password != $form->password) {
