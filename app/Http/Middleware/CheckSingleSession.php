@@ -30,6 +30,7 @@ class CheckSingleSession
         $last_attempt = Carbon::parse($muser->last_attempt_time);
         $different = $now->diffInMinutes($last_attempt);
         if ($muser == null or $different > config('session.lifetime')) {
+            $muser->session_id = 'logout';
             $this->guard()->logout();
             $request->session()->invalidate();
             return redirect(config('admin.route.prefix'));

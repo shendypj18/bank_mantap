@@ -29,7 +29,7 @@ class UserController extends AdminController
 
         $grid = new Grid(new $userModel());
 
-        $grid->column('id', 'ID')->sortable();
+        //$grid->column('id', 'ID')->sortable();
         $grid->column('avatar', trans('admin.avatar'))->image(45, 45);
         $grid->column('username', trans('admin.username'));
         $grid->column('name', trans('admin.name'));
