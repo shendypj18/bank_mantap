@@ -7,7 +7,7 @@
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="{{url('/')}}">Home</a></li>
-  <li>{{$navbardata->kategori_navbar}}</li>
+  <li>{{__('admin.' . strtoupper(Str::slug($navbardata->kategori_navbar, '_')))}}</li>
   <li>{{$navbardata[$bahasa. '_navigasi']}}</li>
 </div>
 </ul>
