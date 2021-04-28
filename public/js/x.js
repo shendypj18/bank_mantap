@@ -4,6 +4,6 @@
 
 //});
 $( document ).ready(function() {
-    $(".fileinput-remove").prop('disabled', true);
-    $(".fileinput-remove").hide();
+    //$(".fileinput-remove").prop('disabled', true);
+    //$(".fileinput-remove").hide();
 });

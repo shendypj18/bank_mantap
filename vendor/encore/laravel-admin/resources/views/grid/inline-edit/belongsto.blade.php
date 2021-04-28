@@ -26,7 +26,7 @@
             <div class="modal-content" style="border-radius: 5px;">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="false">jembut</span>
+                        <span aria-hidden="false">&times;</span>
                     </button>
                     <h4 class="modal-title">{{ admin_trans('admin.choose') }}</h4>
                 </div>

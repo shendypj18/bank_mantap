@@ -96,7 +96,6 @@
                     <th>Reachable</th>
                     <th>Healthy</th>
                     <th># of backups</th>
-                    <th>Newest backup</th>
                     <th>Used storage</th>
                 </tr>
                 @foreach($backups as $index => $backup)
@@ -107,7 +106,6 @@
                     <td>{{ @$backup[1] }}</td>
                     <td>{{ @$backup[2] }}</td>
                     <td>{{ @$backup['amount'] }}</td>
-                    <td>{{ @$backup['newest'] }}</td>
                     <td>{{ @$backup['usedStorage'] }}</td>
                 </tr>
                 <tr class="" id="trace-{{$index+1}}">
