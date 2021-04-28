@@ -26,11 +26,17 @@ class CheckSingleSession
     public function handle(Request $request, Closure $next)
     {
         $muser = $this->guard()->user();
+        if ($muser->session_id != $request->session()->getId()) {
+            $this->guard()->logout();
+            $request->session()->invalidate();
+            return redirect(config('admin.route.prefix'));
+        }
         $now = Carbon::now();
         $last_attempt = Carbon::parse($muser->last_attempt_time);
         $different = $now->diffInMinutes($last_attempt);
-        if ($muser == null or $different > config('session.lifetime')) {
-            $muser->session_id = 'logout';
+        if ($muser == null or $different >= config('session.lifetime')) {
+            $muser->session_id = null;
+            $muser->save();
             $this->guard()->logout();
             $request->session()->invalidate();
             return redirect(config('admin.route.prefix'));

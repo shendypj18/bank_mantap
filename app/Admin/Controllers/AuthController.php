@@ -70,26 +70,8 @@ class AuthController extends BaseAuthController
         }
 
         if ($this->guard()->attempt($credentials, $remember)) {
-            $muser = $this->guard()->user();
-            $now = Carbon::now();
-            $last_attempt = Carbon::parse($muser->last_attempt_time);
-            $different = $now->diffInMinutes($last_attempt);
-            if (is_null($muser->last_attempt_time)) $different = 5;
-            //dd($different, $last_attempt, $muser->last_attempt_time);
-            if ($muser->session_id == 'logout' or $different >= config('session.lifetime')) {
-                $muser->attempt = 0;
-                $muser->last_attempt_time = $now;
-                $muser->session_id = 'login';
-                $muser->save();
-                return $this->sendLoginResponse($request);
-            }
+            return $this->sendLoginResponse($request);
 
-            if ($different < config('session.lifetime')) {
-                $this->guard()->logout();
-                return back()->withInput()->withErrors([
-                    'used' => $this->usedMessage(),
-                ]);
-            }
         }
         if($user) {
             if (is_null($user->attempt)) {
@@ -295,9 +277,29 @@ class AuthController extends BaseAuthController
      */
     protected function sendLoginResponse(Request $request)
     {
-        admin_toastr(trans('admin.login_successful'));
-        $request->session()->regenerate();
-        return redirect()->intended($this->redirectPath());
+        $muser = $this->guard()->user();
+        $now = Carbon::now();
+        $last_attempt = Carbon::parse($muser->last_attempt_time);
+        $different = $now->diffInMinutes($last_attempt);
+        if (is_null($muser->last_attempt_time)) $different = 5;
+        //dd($different, $last_attempt, $muser->last_attempt_time);
+        if ($different >= config('session.lifetime')) {
+            admin_toastr(trans('admin.login_successful'));
+            $request->session()->regenerate();
+            $muser->attempt = 0;
+            $muser->last_attempt_time = $now;
+            $muser->session_id = $request->session()->getId();
+            $muser->save();
+            return redirect()->intended($this->redirectPath());
+        }
+        if ($different < config('session.lifetime')) {
+            $this->guard()->logout();
+            return back()->withInput()->withErrors([
+                'used' => $this->usedMessage(),
+            ]);
+        }
+
+
     }
 
     /**
