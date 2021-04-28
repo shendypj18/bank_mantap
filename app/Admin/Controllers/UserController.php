@@ -1,11 +1,12 @@
 <?php
 
-namespace Encore\Admin\Controllers;
+namespace App\Admin\Controllers;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Illuminate\Support\Facades\Hash;
+use Encore\Admin\Controllers\AdminController;
 
 class UserController extends AdminController
 {
@@ -16,7 +17,6 @@ class UserController extends AdminController
     {
         return trans('admin.administrator');
     }
-
     /**
      * Make a grid builder.
      *
