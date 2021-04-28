@@ -122,7 +122,7 @@ class AuthController extends BaseAuthController
         // }
         //dd($muser->last_attempt_time);
         $user = $this->guard()->user();
-        $user->session_id = 'logout';
+        $user->session_id = null;
         $user->save();
         $this->guard()->logout();
         $request->session()->invalidate();
@@ -283,7 +283,7 @@ class AuthController extends BaseAuthController
         $different = $now->diffInMinutes($last_attempt);
         if (is_null($muser->last_attempt_time)) $different = 5;
         //dd($different, $last_attempt, $muser->last_attempt_time);
-        if ($different >= config('session.lifetime')) {
+        if ($muser->session_id == null or $different >= config('session.lifetime')) {
             admin_toastr(trans('admin.login_successful'));
             $request->session()->regenerate();
             $muser->attempt = 0;
@@ -291,14 +291,13 @@ class AuthController extends BaseAuthController
             $muser->session_id = $request->session()->getId();
             $muser->save();
             return redirect()->intended($this->redirectPath());
-        }
-        if ($different < config('session.lifetime')) {
+        } else {
+        //if ($different < config('session.lifetime')) {
             $this->guard()->logout();
             return back()->withInput()->withErrors([
                 'used' => $this->usedMessage(),
             ]);
         }
-
 
     }
 
