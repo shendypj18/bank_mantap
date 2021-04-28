@@ -35,6 +35,16 @@ class KantorCabangController extends AdminController
         $grid->column('telp', __('Nomor Telepon'));
         //$grid->column('created_at', __('Created at'));
         //$grid->column('updated_at', __('Updated at'));
+        $grid->filter(function ($filter) {
+
+            // Remove the default id filter
+            $filter->disableIdFilter();
+
+            // Add a column filter
+            $filter->like('nama', 'Nama');
+            $filter->like('alamat', 'Alamat');
+            $filter->like('provinsi', 'Provinsi');
+        });
 
         return $grid;
     }

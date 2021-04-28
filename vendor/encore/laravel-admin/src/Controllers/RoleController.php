@@ -47,6 +47,15 @@ class RoleController extends AdminController
                 $actions->disableDelete();
             });
         });
+        $grid->filter(function ($filter) {
+
+            // Remove the default id filter
+            $filter->disableIdFilter();
+
+            // Add a column filter
+            $filter->like('slug', 'Slug');
+            $filter->like('name', 'Nama');
+        });
 
         return $grid;
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\AuthController;
 use App\Admin\Controllers\FileUploadController;
 use Illuminate\Routing\Router;
 
@@ -31,6 +32,7 @@ Route::group([
             $router->resource('kategori-info-mantap', KategoriInfoMantapController::class);
             $router->resource('kategori-jabatan', KategoriJabatanController::class);
             $router->resource('kantor-cabang', KantorCabangController::class);
+            $router->resource('auth', AuthController::class);
             //$router->get('/test-session', 'HomeController@test')->name('test-session');
     });
 });

@@ -50,6 +50,16 @@ class UserController extends AdminController
             });
         });
 
+        $grid->filter(function ($filter) {
+
+            // Remove the default id filter
+            $filter->disableIdFilter();
+
+            // Add a column filter
+            $filter->like('name', 'Nama');
+            $filter->like('username', 'Username');
+        });
+
         return $grid;
     }
 
