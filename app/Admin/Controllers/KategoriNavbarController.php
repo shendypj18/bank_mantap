@@ -15,7 +15,7 @@ class KategoriNavbarController extends AdminController
      *
      * @var string
      */
-    protected $title = 'KategoriNavbar';
+    protected $title = 'Kategori Navbar';
 
     /**
      * Make a grid builder.

@@ -101,7 +101,7 @@ class ProfileManajemenController extends AdminController
              ]);
         $form->select('kategori_jabatan', __('Kategori Jabatan'))
              ->options(KategoriJabatan::all()->pluck('nama','nama'))->default("Dewan Komisaris");
-        $form->image('gambar', __('Gambar'))->move('images/manajemen')->rules('required')
+        $form->image('gambar', __('Gambar'))->move('images/manajemen')->rules('required');
              //->removable();
              //->thumbnail('mini', $width = 269, $height = 247);
         // $form->tmeditor('id_deskripsi', __('deskripsi'));

@@ -15,7 +15,7 @@ class KategoriJabatanController extends AdminController
      *
      * @var string
      */
-    protected $title = 'KategoriJabatan';
+    protected $title = 'Kategori Jabatan';
 
     /**
      * Make a grid builder.
