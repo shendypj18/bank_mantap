@@ -133,14 +133,11 @@ class InfoMantapController extends AdminController
             // update slug if judul exist
             if ($form->model()->id_judul) {
                 InfoMantap::where('id', $id)
-                    ->update(['id_slug' => Str::slug($form->model()->id_judul .$id, '-')]);
+                    ->update(['id_slug' => Str::slug('id ' . $form->model()->id_judul .$id, '-')]);
             }
-            if (!empty($form->model()->en_judul)){
+            if (empty($form->model()->en_judul)){
                 InfoMantap::where('id', $id)
-                    ->update(['en_slug' => Str::slug($form->model()->en_judul .$id, '-')]);
-            } else {
-                InfoMantap::where('id', $id)
-                    ->update(['en_slug' => Str::slug($form->model()->id_judul .$id, '-')]);
+                    ->update(['en_slug' => Str::slug('en ' . $form->model()->en_judul .$id, '-')]);
             }
         });
 
