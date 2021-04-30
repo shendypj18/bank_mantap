@@ -129,7 +129,7 @@ return [
         ],
 
         // Add "remember me" to login form
-        'remember' => true,
+        'remember' => false,
 
         // Redirect to the specified URI when user is not authorized.
         'redirect_to' => 'auth/login',
@@ -447,7 +447,9 @@ return [
 
             'templates' => [
                  ['title' =>  'template navigasi', 'description' =>  '', 'url' => '/template/navigasi-content.html'],
-                 ['title' =>  'template info mantap', 'description' =>  '', 'url' => '/template/info-mantap.blade.php']
+                 ['title' =>  'template info mantap', 'description' =>  '', 'url' => '/template/info-mantap.blade.php'],
+                 ['title' =>  'Template kredit mantap pensiun', 'description' =>  '', 'url' => '/template/kredit-mantap-pensiun.html']
+
             ],
             //'content_css' => "/css/editor.css",
 

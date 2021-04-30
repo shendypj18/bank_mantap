@@ -100,7 +100,9 @@
      padding-left: 40px;
      list-style-type: disc;
  }
-
+ .sum-color {
+     color: #000066;
+ }
 
  /* ---------- accordion style end --------------------------------------- */
 </style>

@@ -29,3 +29,9 @@
         @endif
     </div>
 </div>
+<script>
+$(':reset').click(function () {
+        location.reload();
+});
+</script>
+
