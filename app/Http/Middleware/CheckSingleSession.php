@@ -41,6 +41,9 @@ class CheckSingleSession
             $request->session()->invalidate();
             return redirect(config('admin.route.prefix'));
 
+        } else {
+            $muser->last_attempt_time = $now;
+            $muser->save();
         }
         return $next($request);
     }

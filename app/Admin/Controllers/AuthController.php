@@ -271,9 +271,10 @@ class AuthController extends BaseAuthController
         $now = Carbon::now();
         $last_attempt = Carbon::parse($muser->last_attempt_time);
         $different = $now->diffInMinutes($last_attempt);
-        if (is_null($muser->last_attempt_time)) $different = 5;
+        $limit = config('session.lifetime');
+        if (is_null($muser->last_attempt_time)) $different = $limit;
         //dd($different, $last_attempt, $muser->last_attempt_time);
-        if ($muser->session_id == null or $different >= config('session.lifetime')) {
+        if ($muser->session_id == null or $different >= $limit) {
             admin_toastr(trans('admin.login_successful'));
             $request->session()->regenerate();
             $muser->attempt = 0;
