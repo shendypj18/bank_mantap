@@ -99,6 +99,7 @@ class Controller extends BaseController
             'berita' => InfoMantap::all()
                 ->where('status', 'publish')
                 ->where('kategori', 'Berita Mantap')
+                ->sortByDesc('created_at')
                 ->take(8),
             'id_route' => '',
             'en_route' => '',

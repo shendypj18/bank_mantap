@@ -29,15 +29,15 @@ class NavbarController extends AdminController
     {
         $grid = new Grid(new Navbar());
 
-        $grid->column('id', __('Id'));
-        $grid->column('kategori_navbar', __('Kategori Navbar'));
-        $grid->column('id_navigasi', __('Id_Navigasi'));
-        $grid->column('en_navigasi', __('En_Navigasi'));
+        $grid->column('id', __('Id'))->width(30);
+        $grid->column('kategori_navbar', __('Kategori Navbar'))->width(150);
+        $grid->column('id_navigasi', __('Id_Navigasi'))->width(300);
+        $grid->column('en_navigasi', __('En_Navigasi'))->width(300);
         //$grid->column('bahasa', __('Bahasa'));
         //$grid->column('id_slug', __('id_slug'));
         //$grid->column('en_slug', __('en_slug'));
         //$grid->column('id_bahasa_lain', __('Id bahasa lain'));
-        $grid->column('kategori_laporan', __('Kategori Laporan'));
+        $grid->column('kategori_laporan', __('Kategori Laporan'))->width(150);
         //$grid->column('created_at', __('Created at'));
         //$grid->column('updated_at', __('Updated at'));
         $grid->filter(function ($filter) {
@@ -94,11 +94,11 @@ class NavbarController extends AdminController
         $form->select('kategori_navbar', __('Kategori Navbar'))->rules('required')
              ->options(KategoriNavbar::all()->pluck('nama','nama'))->default("TENTANG KAMI");
         $form->text('id_navigasi', __('Navigasi Indonesia'))
-             ->creationRules('required|unique:info_mantap|min:3|max:100', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
-             ->updateRules('required|unique:navbar,id_navigasi,{{id}}|min:3|max:100', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+             ->creationRules('min:3|max:30|required|unique:navbar', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('min:3|max:30|required|unique:navbar,id_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->text('en_navigasi', __('Navigasi Inggris'))
-             ->creationRules('required|unique:info_mantap|min:3|max:100', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
-             ->updateRules('required|unique:navbar,en_navigasi,{{id}}|min:3|max:100', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+             ->creationRules('min:3|max:30|required|unique:navbar', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('min:3|max:30|required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->tmeditor('id_text_content', __('Konten Indonesia'))
              ->rules([
                  'required',

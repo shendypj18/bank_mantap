@@ -29,9 +29,9 @@ class InfoMantapController extends AdminController
         $grid = new Grid(new InfoMantap());
 
         $grid->column('id', __('Id'));
-        $grid->column('kategori', __('Kategori Info'));
-        $grid->column('id_judul', __('Judul Indonesia'));
-        $grid->column('en_judul', __('Judul Inggris'));
+        $grid->column('kategori', __('Kategori Info'))->width(100);
+        $grid->column('id_judul', __('Judul Indonesia'))->width(350);
+        $grid->column('en_judul', __('Judul Inggris'))->width(350);
         //$grid->column('id_slug', __('Id slug'));
         //$grid->column('en_slug', __('En slug'));
         //$grid->column('id_isi', __('Konten Info Indonesia'));
@@ -41,7 +41,7 @@ class InfoMantapController extends AdminController
             'draft' => 'info'
         ]);
         $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        //$grid->column('updated_at', __('Updated at'));
         $grid->filter(function ($filter) {
 
             // Remove the default id filter
@@ -94,13 +94,22 @@ class InfoMantapController extends AdminController
         $form->select('kategori', __('Kategori Info'))
             ->options(KategoriInfoMantap::all()->pluck('nama', 'nama'))->default('Berita Mantap');
         $form->text('id_judul', __('Judul Indonesia'))
-             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
-             ->rules('required|max:65');
+             ->creationRules('max:150|required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('max:150|required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
+             ->rules(//[
+               'required',
+               // function($attribute, $value, $fail) {
+             //       $len = strlen($value);
+             //       if ($len > 10) {
+             //           $fail('Judul Indonesia cannot more than 65 characters');
+             //       }
+             //   }
+             // ]
+             );
         $form->text('en_judul', __('Judul Inggris'))
-             ->creationRules('required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('required|unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
-             ->rules('required|max:65');
+             ->creationRules('max:65|required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('max:65|required|unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
+             ->rules('required');
         $form->image('gambar', __('Gambar'))->move(function(Form $form){
             return 'images/info-mantap/'. Str::slug($form->kategori, '-');
         })->rules('required|max:10024');
