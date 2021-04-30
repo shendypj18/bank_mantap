@@ -9,7 +9,7 @@ return [
     'username'              => 'Username',
     'password'              => 'Sandi',
     'password_confirmation' => 'Konfirmasi Sandi',
-    'remember_me'           => 'Ingatkan saya',
+    'remember_me'           => 'Ingat Saya',
     'user_setting'          => 'Pengaturan Pengguna',
     'avatar'                => 'Avatar',
     'list'                  => 'Daftar',
