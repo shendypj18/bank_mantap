@@ -34,7 +34,7 @@ $(':reset').click(function () {
         location.reload();
 });
 
-if (window.location.pathname == 'admin/auth/settin') {
+if (window.location.pathname == 'admin/auth/setting') {
 $(':submit').click(function () {
 	function refresh() {
 		location.reload();
