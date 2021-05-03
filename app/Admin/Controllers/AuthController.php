@@ -166,7 +166,7 @@ class AuthController extends BaseAuthController
         $form->display('username', trans('admin.username'))->rules('required');
         $form->text('name', trans('admin.name'))->rules('required');
         $form->image('avatar', trans('admin.avatar'))->move('images/avatar')
-             ->rules('required');
+             ->rules('required|max:12500');
         //$form->image('avatar', trans('admin.avatar'))->move('img')->uniqueName();
         $form->password('password', trans('admin.password'))->rules(
             [
@@ -217,7 +217,6 @@ class AuthController extends BaseAuthController
 
         $form->saved(function () {
             admin_toastr(trans('admin.update_succeeded'));
-
             return redirect(admin_url('auth/setting'));
         });
 

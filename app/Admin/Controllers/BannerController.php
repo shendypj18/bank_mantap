@@ -84,10 +84,10 @@ class BannerController extends AdminController
 
         $form->image('id_nama', __('Banner Indonesia'))->move('images/slider-banner/indonesia')
              //->removable()
-             ->rules('required');
+             ->rules('required|max:12500');
         $form->image('en_nama', __('Banner Inggris'))->move('images/slider-banner/inggris')
              //->removable()
-             ->rules('required');
+             ->rules('required|max:12500');
         $form->textarea('id_text_atas', __('Teks Atas Indonesia'))
             ->rules('required');
         $form->textarea('id_text_tengah', __('Teks Tengah Indonesia'))

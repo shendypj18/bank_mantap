@@ -35,5 +35,14 @@
 $(':reset').click(function () {
         location.reload();
 });
+
+if (window.location.pathname == 'admin/auth/settin') {
+$(':submit').click(function () {
+	function refresh() {
+		location.reload();
+	}
+	window.setTimeout(refresh, 3000);
+});
+}
 </script>
 
