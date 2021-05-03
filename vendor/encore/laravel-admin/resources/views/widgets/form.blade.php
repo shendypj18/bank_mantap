@@ -37,13 +37,13 @@ $(':reset').click(function () {
     location.reload();
 });
 
-if (window.location.pathname == 'admin/auth/setting') {
 $(':submit').click(function () {
 	function refresh() {
 		location.reload();
 	}
-	window.setTimeout(refresh, 3000);
-});
+if (window.location.pathname == 'admin/auth/setting') {
+		window.setTimeout(refresh, 3000);
 }
+});
 </script>
 
