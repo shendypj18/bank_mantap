@@ -93,8 +93,6 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Disk</th>
-                    <th>Reachable</th>
-                    <th>Healthy</th>
                     <th># of backups</th>
                     <th>Used storage</th>
                 </tr>
@@ -103,8 +101,6 @@
                     <td>{{ $index+1 }}.</td>
                     <td>{{ @$backup[0] }}</td>
                     <td>{{ @$backup['disk'] }}</td>
-                    <td>{{ @$backup[1] }}</td>
-                    <td>{{ @$backup[2] }}</td>
                     <td>{{ @$backup['amount'] }}</td>
                     <td>{{ @$backup['usedStorage'] }}</td>
                 </tr>

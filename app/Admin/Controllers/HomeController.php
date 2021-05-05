@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Berita;
+use App\Models\InfoMantap;
 use App\Models\Laporan;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
@@ -22,12 +23,11 @@ class HomeController extends Controller
             ->row('Google Analytics')
             ->row(function (Row $row){
                 $row->column(4, function (Column $column) {
-                    $column->append(new Box('Jumlah Berita', view('admin.cards-berita',
+                    $column->append(new Box('Jumlah Info Mantap', view('admin.cards-berita',
                     [
-                        "data" => Berita::all()->count(),
+                        "data" => InfoMantap::where('status', 'publish')->count(),
                     ])));
                 });
-
                 $row->column(4, function (Column $column) {
                     $column->append(new Box('Jumlah Video', view('admin.cards-video',
                     [
