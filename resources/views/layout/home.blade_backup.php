@@ -1,57 +1,100 @@
 <!-- ====================================================== CAROUSEL  ======================================================= -->
-<section id="hero" class="carousel slide  mt-4" data-ride="carousel">
+<section id="hero" class="carousel slide" data-ride="carousel">
 
-    <ol class="carousel-indicators" style="margin-left:-43rem; margin-bottom:10rem;">
+    <ol class="carousel-indicators" style="margin-left:-43rem; margin-bottom:12rem;">
         <li data-target="#hero" data-slide-to="0" class="active" style="height: 10px; width: 50px; padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="1" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="2" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
     </ol>
-
     <div class="carousel-inner">
         @php $j = 1 @endphp
         @foreach($banner as $banner)
-            <div class="carousel-item @if($j == 1) active @endif w-100">
-                <img class="d-block w-100" src="{{ asset('asset/slider-one.png') }}"  alt="First slide">
-                <div class="carousel-caption text-left">
+            <div class="carousel-item @if($j == 1) active @endif w-100" style="background-color: #0F2B5B; height: 38rem;">
+
+                <img class="d-block" style="margin-left:50%" src="{{ asset('asset/herobg.png') }}" width="39%" alt="First slide">
                 <div class="container">
-                <a class="btn btn-lg btn-more" href="#" role="button">Selengkapnya</a>
-                </div>
+                    <div class="row">
+                        <div class="carousel-caption text-left">
+                            <h2 style="font-weight: bold; color:#FCD116;">{!!  $banner[$bahasa . '_text_atas'] !!}</h2>
+                            <p class="text-light">{!!   $banner[$bahasa. '_text_tengah'] !!}</p>
+                            <p><a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}"
+                                  role="button"> {{__('admin.selengkapnya')}}  </a></p>
+                            <p>&nbsp;</p><p>&nbsp;</p>
+                            <div class="row">
+                                <div class="text-left col-md-4">
+                                    <p class="text-light" style="font-size: 11px;">{!!  $banner[$bahasa. '_text_bawah'] !!}</p>
+                                </div>
+                                <div class="text-right">
+                                    <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk"/>
+                                    <img src="{{ asset('asset/logo-lps.png') }}" alt="Lps"/>
+                                    <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-caption text-right">
+                            <div class="hero">
+                                <style>
+                                 .hero {
+                                     top:40px;
+                                     z-index:9;
+                                     position:fixed;
+                                     margin-left: 30%;
+                                 }
+                                </style>
+                                <img src="{{ url('storage/'. $banner->id_nama) }}" width="80%">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-          
             @php $j++ @endphp
             @endforeach
- 
+    </div>
 
-    </div>
-    </div>
-  
     <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}"></a>
     <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}"></a>
 
 </section>
 <!-- ====================================================== /CAROUSEL  ==================================================== -->
 
-<!-- ======================================================  SECTION PROFILE ====================================================== -->
 
- 
-<section id="profile" class="profile" >
- 
-<div class="profile-text">
-    <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank) didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagua Alit Sudiatmika, S.H, Notrasi di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
-    <br/> <br/> 
-    <a class="btn btn-profile-light" role="button" href="whistleblowing-system.php">Profil Perusahaan</a> 
-  </div>
-</section>
-
- 
 
 <!-- ======================================================  SIMULATION ====================================================== -->
 <section id="simulasi" class="simulasi">
-  
-    <br><br><br>
-    <div class="container text-center">
+    <br/>
+    <div class="container">
+
+        <div class="row">
+             <div class="col-sm" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="4000">
+                <div class="card card-one">
+                    <div class="card-body">
+                        <br/>
+                        <h3 class="card-title text-light">   <img src="{{ url('asset/campain.png') }}"  alt="Logo" width="10%"> Whistleblowing System</h3>
+                        <p class="card-text">{{ __('admin.text_whistleblowing') }}</p>
+                        <a class="btn btn-simulasi-light" role="button" href="{{url('/article/whistleblowing-system/'. $bahasa)}}">{{__('admin.lapor_whistleblowing')}}</a>
+                    </div>
+                </div>
+            </div>
+
+
+           <div class="col-sm" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="5000">
+                <div class="card card-two">
+                    <div class="card-body">
+                        <br/>
+                        <h4 class="card-title"> <img src="{{ url('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> {{ __('admin.simulasi_tahapan_berjangka') }}</h4>
+                        <p class="card-text mt-4">{{ __('admin.text_simulasi_tahapan_berjangka') }}</p>
+                        <a class="btn btn-outline-light btn-simulasi-dark mt-5" href="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}" role="button">{{__('admin.button_simulasi_tahapan_berjangka')}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br><br><br><br>
+    <div class="container text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="5000">
         <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
         <p><br/></p>
         @php $t = 1; @endphp
@@ -61,20 +104,19 @@
             @php $t++; @endphp
         @endforeach
         </p>
- 
+</section>
 <!-- ==================================================  /SIMULATION ====================================================== -->
-<br/><br/>
 <br/>
- 
 
 
- 
+
 <!-- ================================================  NEWS SLIDER ============================================================ -->
- 
+<section style="margin-top:-8rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F2F7FF" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,96C384,117,480,203,576,245.3C672,288,768,288,864,256C960,224,1056,160,1152,128C1248,96,1344,96,1392,96L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     <!-- MENU CARD SLIDER -->
-   <div class="container my-3">
+   <div class="container my-3"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="100">
         <!--Carousel Wrapper-->
-        <div id="news" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div id="news" class="carousel slide carousel-multi-item" data-ride="carousel" style="margin-top: -20rem;">
              <ol class="carousel-indicators" style="top: 25rem;">
 		      <li data-target="#news" data-slide-to="0"  style="width: 8%; height: 8px; background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
 		      background: #FCD116 0% 0% no-repeat padding-box; border-radius: 6px;"></li>
@@ -119,69 +161,14 @@
 
         </div>
         <br/><br/><br/>
-        <p class="text-center"><a class="btn btn-lg btn-primary" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
+        <p class="text-center"><a class="btn btn-lg btn-more" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
     </div>
     </div>
-</section>
-
-
-
-<!-- ================================================ SECTION BISNIS ==================================================== -->
-<br/>
-<section id="bisnis" class="bisnis">
-<div class="container text-center">
-<h3 class="text-center" style="color:#0F2B5B;">Bisnis</h3>
-
- 
- <div class="row">
-    <div class="col-sm">
-        <div class="card card-pinjaman">
-          <div class="card-body">
-          <br/>
-          <a class="card-title"><strong>Pinjaman Mantap</strong></a>
-          <p class="card-text"><small>Apapun kebutuhan anda,</small><br/>
-      <small><b>Wujudkan dengan kredit mantap pensiun</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a> 
-          </div>
-        </div>
-        </div>
- 
-    <div class="col-sm">
-        <div class="card card-simpanan">
-          <div class="card-body">
-          <br/>
-          <a class="card-title"><strong>Simpanan Mantap</strong></a>
-          <p class="card-text"><small>Dengan tabungan siMantap Gold</small><br/>
-      <small><b>Nimati kemudahan transaksi</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a> 
-          </div>
-        </div>
-        </div>
-</div>
-
-<div class="row mt-5">
-<div class="col-sm">
-<div class="card card-jasabank">
-          <div class="card-body">
-          <br/>
-          <h3 class="card-title">Jasa Bank</h3>
-          <p class="card-text"><small>Kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada<br/>pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya</small></p>
-          <a class="btn btn-profile-light" role="button" href="#">Selengkapnya</a> 
-          </div>
-        </div>
-    </div>
-</div>
-
-</section>
-
-<!-- ==================================================================================================================== -->
-
 
 
     <!-- ================================================  VIDEO YOUTUBE ====================================================== -->
-    <section id="video" class="video">
     <br/><br/>
-    <div class="container">
+    <div class="container"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
         <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p>
         <br/><br/><br/>
@@ -203,11 +190,9 @@
             </div>
         </div>
     </div>
-    </section>
-
     <!-- ================================================ END VIDEO YOUTUBE ====================================================== -->
 
- 
+</section>
 <!-- ================================================  /NEWS SLIDER =========================================================== -->
 
 
@@ -215,7 +200,7 @@
 
 <!-- ================================================ WHY US ================================================================= -->
 <section id="content">
-      <div class="container">
+      <div class="container" data-aos="fade-right" data-aos-delay="300" data-aos-duration="4000">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <h1><span>{{ __('admin.mengapa_memilih_bank_mandiri_taspen') }}</span></h1>
@@ -280,7 +265,7 @@
         </div>
 
 
-        
+        <p><a class="btn btn-lg btn-more" href="{{url('article/'. $navbar["TENTANG KAMI"][0][$bahasa. '_slug'] .'/'. $bahasa)}}" role="button"> {{__('admin.selengkapnya_tentang_bank_mantap')}}</a></p>
     </div>
 
 </section>

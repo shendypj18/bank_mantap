@@ -22,8 +22,6 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
-	margin:0px;
-	padding:0px;
 }
 
 
@@ -134,59 +132,13 @@ a:hover{
 	background: #bbb;
   }
 
-.profile {
-	margin-top:-3rem;
-	height: 800px;
-	background: linear-gradient(to bottom, rgba(234, 243, 255, 0.357), rgba(34, 22, 121, 0.611)), url('../asset/profile.png') no-repeat;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
 
-.bisnis{
-	background:url('../asset/ws.png') no-repeat center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	height: 750px;
-}
-
-.video{
-	background-color: #faf3d6;
-	height: 850px;
-}
-
-
-.karir {
-	height: 800px;
-	background: linear-gradient(to bottom, rgba(234, 243, 255, 0.357), rgba(34, 22, 121, 0.611)), url('../asset/karir.png') no-repeat;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.simulasi{
+#simulasi{
 	margin-top:-5%;
-	height: 870px;
-	background: #FFF 0% 0% no-repeat padding-box;
+	height: 750px;
+	background: #F2F7FF 0% 0% no-repeat padding-box;
+	opacity: 1;
 }
-
-
-
-.profile-text {
-	text-align: center;
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-
-
-
-
 
 
 .card.branch{
@@ -223,98 +175,11 @@ a:hover{
 	font-weight: bold;
 }
 
-.card-danger{
-	background-color: #FFC1C1;
-    border: none;
-	border-radius: 16px;
-	font-size: 18px;
-	font-style: bold;
-	font-family: 'Roboto', sans-serif;
-	line-height: 100%;
-	text-align: left;
-	color: #DE2E2E;
-	width: 100%;
-	height: 65px;
-    padding-top:15px;
-	padding-left:6%;
-	top: 0px;
-	left: 0px;
-}
-
- 
-
-.card-pinjaman{
-	background: url('../asset/pensiun.png') repeat-x padding-box;
-	background-repeat: repeat-x;
-	background-color: #fff;
-	box-shadow: 0px 10px 30px #00000014;
-	border-radius: 24px;
-	font-size: 18px;
-	font-style: bold;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: 0.5px;
-	text-align: left;
-	color: #0F2B5B;
-	top: 15px;
-	width: 538px;
-	height: 240px;
-	padding-top:35px;
-	padding-left:10px;
-	padding-right:10px;
-	padding-bottom:0px;
-}
-
-
-.card-simpanan{
-	background: url('../asset/simpanan.png') repeat-x padding-box;
-	background-repeat: repeat-x;
-	background-color: #fff;
-	box-shadow: 0px 10px 30px #00000014;
-	border-radius: 24px;
-	font-size: 18px;
-	font-style: bold;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: 0.5px;
-	text-align: left;
-	color: #0F2B5B;
-	top: 15px;
-	width: 538px;
-	height: 240px;
-	padding-top:35px;
-	padding-left:10px;
-	padding-right:10px;
-	padding-bottom:0px;
-}
-
-
-.card-jasabank{
-	background: linear-gradient(to bottom, rgba(54, 79, 116, 0.529), rgba(77, 110, 160, 0.213)),  url('../asset/jasabank.png') repeat-x padding-box;
-	background-repeat: repeat-x;
-	background-color: #fff;
- 	border-radius: 24px;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: 1px;
-	text-align: center;
-	color: #fff;
-	top: 15px;
-	width: 90%;
-	height: 250px;
-	padding-left:35px;
-	padding-right:10px;
-	padding-bottom:0px;
-}
-
-
-.extended{
-background-color: #d1cecec1;
-height: 530px;
-}
- 
 
 .card-one{
-	background: linear-gradient(to bottom, rgba(250, 214, 9, 0.748), rgba(255, 220, 22, 0.946)), url('../asset/simulasi.png') no-repeat padding-box; 
+	background: linear-gradient(to bottom, rgba(122, 151, 194, 0.748), rgba(7, 1, 56, 0.73)), url('../asset/ws.png') no-repeat padding-box; 
 	box-shadow: 0px 10px 30px #00000014;
-	border-radius: 15px;
+	border-radius: 24px;
 	opacity: 50;
 	font-size: 14px;
 	font-family: 'Roboto', sans-serif;
@@ -322,12 +187,11 @@ height: 530px;
 	text-align: center;
 	color: #FFFFFF;
 	top: 15px;
-	width: 100%;
-	height: 350px;
-	padding-left:50%;
-	padding-right:5%;
+	width: 538px;
+	height: 320px;
+	padding-left:35px;
+	padding-right:10px;
 	padding-bottom:0px;
- 
 }
 
 .card-two{
@@ -375,27 +239,7 @@ height: 530px;
 	line-height: 0.1;
 }
 
-.btn-profile-light{
-    background-color:#FFF;
-	color: #0F2B5B;
-	opacity: 1;
- 	font-size: 13px;
- 	border-radius: 25px;
-	width: 200px;
-	margin-bottom:11%;
-	padding:14px;
-}
 
-.btn-profile-light:hover{
-	background-color: #FCD116;
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
-	font-weight: 900;
-	border-radius: 25px;
-	width: 205px;
-	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
-}
 
 .btn-simulasi-light{
 	background: #fff 0% 0% no-repeat padding-box;
@@ -508,15 +352,13 @@ height: 530px;
  }
 
 .btn-more{
-	background-color: #FCD116;
-	color: #0F2B5B;
-	opacity: 1;
+ 	background-color: #0F2B5B;
+	color:#FFF;
  	font-size: 13px;
  	border-radius: 25px;
-	width: 200px;
-	margin-bottom:11%;
-	padding:14px;
-	margin-left:-2rem;
+	width: 250px;
+	padding: 12px;
+	border:1px solid #FFF;
 }
 
 .btn-more:hover{
@@ -526,72 +368,7 @@ height: 530px;
 	font-size: 13px;
 	font-weight: 900;
 	border-radius: 25px;
-	width: 205px;
-	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
-}
-
-.btn-primary{
-	background-color: #0F2B5B;
-	color: #FFF;
-	opacity: 1;
- 	font-size: 13px;
- 	border-radius: 25px;
-	width: 200px;
-	padding:14px;
-	border:none;
-}
-
-.btn-primary:hover{
-	background-color: #FCD116;
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
-	font-weight: 900;
-	border-radius: 25px;
-	width: 205px;
-	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
-}
-
-.btn-yellow-sm{
-	background-color: #FCD116;
-	color:black;
-	opacity: 1;
- 	font-size: 13px;
- 	border-radius: 25px;
-	width: 180px;
-	padding:14px;
-	border:none;
-}
-.btn-yellow-sm:hover{
-	background-color: #FFF;
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
-	font-weight: 900;
-	border-radius: 25px;
-	width: 180px;
-	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
-}
-
-.btn-primary-sm{
-	background-color: #0F2B5B;
-	color: #FFF;
-	opacity: 1;
- 	font-size: 13px;
- 	border-radius: 25px;
-	width: 150px;
-	padding:10px;
-	border:none;
-}
-
-.btn-primary-sm:hover{
-	background-color: #FCD116;
-	color:black;
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
-	font-weight: 900;
-	border-radius: 25px;
-	width: 152px;
+	width: 251px;
 	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
 }
 
