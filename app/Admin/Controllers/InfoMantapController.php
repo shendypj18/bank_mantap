@@ -94,8 +94,8 @@ class InfoMantapController extends AdminController
         $form->select('kategori', __('Kategori Info'))
             ->options(KategoriInfoMantap::all()->pluck('nama', 'nama'))->default('Berita Mantap');
         $form->text('id_judul', __('Judul Indonesia'))
-             ->creationRules('max:150|required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('max:150|required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
+             ->creationRules('max:500|required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('max:500|required|unique:info_mantap,id_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
              ->rules(//[
                'required',
                // function($attribute, $value, $fail) {
@@ -107,8 +107,8 @@ class InfoMantapController extends AdminController
              // ]
              );
         $form->text('en_judul', __('Judul Inggris'))
-             ->creationRules('max:65|required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
-             ->updateRules('max:65|required|unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
+             ->creationRules('max:500|required|unique:info_mantap', ['unique' => "Kami menemukan judul yang sama di database"])
+             ->updateRules('max:500|required|unique:info_mantap,en_judul,{{id}}', ['unique'=> "Kami menemukan judul yang sama di database"])
              ->rules('required');
         $form->image('gambar', __('Gambar'))->move(function(Form $form){
             return 'images/info-mantap/'. Str::slug($form->kategori, '-');
