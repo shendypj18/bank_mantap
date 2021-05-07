@@ -120,27 +120,30 @@
 
 <script>
 
-$(document).ready(function(){
+ /* $(document).ready(function(){
 
- $(document).on('click', '.pagination a', function(event){
-  event.preventDefault();
-  var page = $(this).attr('href').split('page=')[1];
-  fetch_data(page);
- });
+  *     function fetch_data(page)
+  *     {
+  *         $.ajax({
+  *             url:"/pagination/fetch_data?page="+page,
+  *             success:function(data)
+  *             {
+  *                 alert(data);
+  *                 $('#info_data').html(data);
+  *             }
+  *         });
+  *     }
 
- function fetch_data(page)
- {
-  $.ajax({
-   url:"/pagination/fetch_data?page="+page,
-   success:function(data)
-   {
-    $('#info_data').html(data);
-   }
-  });
- }
+  *     $(document).on('click', '.pagination a', function(event){
+  *         event.preventDefault();
+  *         var page = $(this).attr('href').split('page=')[1];
+  *         fetch_data(page);
+  *     });
 
-});
 
+
+    });
+  */
 
 
  // Add active class to the current button (highlight it)
@@ -154,6 +157,8 @@ $(document).ready(function(){
      });
  }
 </script>
+
+
 @if($berita)
     @include('layout.footer')
 @endif
