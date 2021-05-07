@@ -119,9 +119,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 1 start -->
                         <input class="ac-input" id="ac-1"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-1">1. Apa yang dimaksud dengan Produk KMP?<i></i></label>
+                        <label class="ac-label" for="ac-1">{{ __('kredit-mantap-pensiun.1') }}<i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;">Produk Kredit Bank Mantap yang di berikan khusus kepada para Pensiunan dari PNS, TNI, POLRI, BUMN & BUMD.</small>
+                            <small style="font-style: italic;">{!!  __('kredit-mantap-pensiun.d1') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 1 end -->
@@ -129,9 +129,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 2 start -->
                         <input class="ac-input" id="ac-2" name="accordion-1" type="radio"/>
-                        <label class="ac-label" for="ac-2">2. Apa keuntungan yang didapatkan dari produk KMP ini?<i></i></label>
+                        <label class="ac-label" for="ac-2"> {{ __('kredit-mantap-pensiun.2') }}<i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d2') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 2 end -->
@@ -139,9 +139,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 3 start -->
                         <input class="ac-input" id="ac-3"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-3">3. Apakah produk ini merupakan produk berhadiah? <i></i></label>
+                        <label class="ac-label" for="ac-3"> {{ __('kredit-mantap-pensiun.3') }}<i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d3') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 3 end -->
@@ -149,9 +149,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-4"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-4">4. Pajak hadiah atas produk KMP menjadi tanggungan siapa ?<i></i></label>
+                        <label class="ac-label" for="ac-4"> {{ __('kredit-mantap-pensiun.4') }}<i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d4') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -159,9 +159,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-5"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-5">5. Bagaimana cara mengikuti produk ini?<i></i></label>
+                        <label class="ac-label" for="ac-5"> {{ __('kredit-mantap-pensiun.5') }}<i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d5') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -169,9 +169,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-6"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-6">6. Apa syarat dan ketentuan produk KMP ini?<i></i></label>
+                        <label class="ac-label" for="ac-6"> {{ __('kredit-mantap-pensiun.6') }}<i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d6') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -179,9 +179,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-7"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-7">7. Kapan Produk ini berlaku sejak dimulai dan berakhir?<i></i></label>
+                        <label class="ac-label" for="ac-7"> {{ __('kredit-mantap-pensiun.7') }}<i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d7') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -189,9 +189,9 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-8"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-8">8. Apakah terdapat biaya yang dipungut atas produk KMP?<i></i></label>
+                        <label class="ac-label" for="ac-8"> {{ __('kredit-mantap-pensiun.8') }}<i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!! __('kredit-mantap-pensiun.d8') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -199,23 +199,40 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-9"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-9">9. Apakah promo ini berlaku untuk seluruh nasabah Bank Mantap?<i></i></label>
+                        <label class="ac-label" for="ac-9"> {{ __('kredit-mantap-pensiun.9') }}<i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
+                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d9') !!}</small>
 				                </div>
 			              </div>
 			              <!-- accordion item 4 end -->
 
 
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-			                  <!-- accordion item 4 start -->
-				                <input class="ac-input" id="ac-10"  name="accordion-1" type="radio" checked/>
-				                <label class="ac-label" for="ac-10">10. Apakah risiko yang akan diterima oleh nasabah atas produk ini?<i></i></label>
-				                <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit sunt praesentium perspiciatis? Incidunt consectetur ducimus eius quod soluta labore blanditiis harum sit perspiciatis, ratione tempora, obcaecati voluptatem eaque, corrupti esse.</small>
-				                </div>
-			              </div>
-			              <!-- accordion item 4 end -->
+                          <div class="col-sm-12 col-md-12 col-lg-12">
+                              <!-- accordion item 4 start -->
+                              <input class="ac-input" id="ac-10"  name="accordion-1" type="radio" checked/>
+                              <label class="ac-label" for="ac-10"> {{ __('kredit-mantap-pensiun.10') }}<i></i></label>
+                              <div class="article ac-content col-sm-11">
+                                  <small style="font-style: italic;"> {!! __('kredit-mantap-pensiun.d10') !!}</small>
+                              </div>
+                          </div>
+                          <div class="col-sm-12 col-md-12 col-lg-12">
+                              <!-- accordion item 4 start -->
+                              <input class="ac-input" id="ac-11"  name="accordion-1" type="radio" checked/>
+                              <label class="ac-label" for="ac-11"> {{ __('kredit-mantap-pensiun.11') }}<i></i></label>
+                              <div class="article ac-content col-sm-11">
+                                  <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d11') !!}</small>
+                              </div>
+                          </div>
+                          <div class="col-sm-12 col-md-12 col-lg-12">
+                              <!-- accordion item 4 start -->
+                              <input class="ac-input" id="ac-12"  name="accordion-1" type="radio" checked/>
+                              <label class="ac-label" for="ac-12"> {{ __('kredit-mantap-pensiun.12') }}<i></i></label>
+                              <div class="article ac-content col-sm-11">
+                                  <small style="font-style: italic;"> {!! __('kredit-mantap-pensiun.d12') !!}</small>
+                              </div>
+                          </div>
+
+                          <!-- accordion item 4 end -->
                 </div>
 
 
