@@ -3,10 +3,10 @@
 <section id="footer">
     <div class="container">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-7 col-md-5"  data-aos="fade-up" data-aos-delay="300" data-aos-duration="3500">
+        <div class="col-xs-12 col-sm-7 col-md-5">
          <h1>Bank Mantap, tiada kata pensiun untuk berkarya</h1>
        </div>
-        <div class="col-xs-12 col-sm-7 col-md-6"  data-aos="fade-left" data-aos-delay="300" data-aos-duration="4500">
+        <div class="col-xs-12 col-sm-7 col-md-6">
          <img class="small-logo" src="{{ asset('asset/map-dot.png') }}" width="90%" alt="Logo Corp" />
        </div>
      </div>
@@ -53,30 +53,24 @@
             <a>Graha Mantap</a> <br/>
             <a>Jl. Cikini Raya No.42 Menteng Jakarta Pusat 10330</a>
             <a>Indonesia</a>
-            <br/></small>
+            <br/></small><br/>
             <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
             <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram"></a>
             <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" target="_blank" class="fa fa-youtube-play"></a>
           </div>
-
-
-
          </div>
       </div>
 </div>
       <!-- Right Coloum -->
-      <div class="col-sm">
-
-        <div class="cell text-center">
-          <img src="{{ asset('asset/mantapcall.png') }}" alt="Partner2"/>
-          <img src="{{ asset('asset/milea.png') }}" width="30%" alt="Partner3"  style="padding-left: 7%;"/>
-
-          </div>
-      <div class="cell text-center">
-        <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk"/>
-        <img src="{{ asset('asset/logo-lps.png') }}" alt="Lps"/>
-        <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank">
+      <div class="col-sm mt-5">
+        <br/>
+      <div class="cell text-center mt-5">
+        <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk" width="12%"/>
+        <img src="{{ asset('asset/logo-lps.png') }}" alt="Lps" width="12%"/>
+        <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank" width="12%">
+        <img src="{{ asset('asset/mantapcall.png') }}" alt="Partner2" width="12%"/>
+        <img src="{{ asset('asset/milea.png') }}" alt="Partner3" width="12%"/>
       </div>
       </div>
       <!-- End Right Coloum -->
@@ -289,12 +283,12 @@
 <!-- Start Scrolling -->
 <button onclick="topFunction()" id="onTop" title="Go to top" class="fa fa-angle-double-up"></button>
 <!-- End Scrolling -->
-<script src="{{asset('js/aos.js')}}"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script> -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script> AOS.init(); </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
 
 </body>
 </html>

@@ -52,7 +52,9 @@
   
     <br><br><br>
     <div class="container text-center">
+        <div class="col-sm-8" style="float:none;margin:auto;">
         <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
+        </div>
         <p><br/></p>
         @php $t = 1; @endphp
         <p>
@@ -183,8 +185,9 @@
     <br/><br/>
     <div class="container">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
-        <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p>
-        <br/><br/><br/>
+        <p align="center"><a>Bank Mantap memahami Anda untuk tetap produktif demi keluarga yang selalu bahagia.</a></p>
+        <!-- <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p> -->
+        <br/><br/>
         <div align="center">
             <iframe width="750" height="400" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src=@if($video_1)"{{url($video_1->link_video)}}"@endif></iframe>
         </div>
@@ -192,10 +195,10 @@
 
         <div class="row text-left text-xs-center text-sm-left text-md-left">
             <div class="col-xs-2 col-sm-3 col-md-4 text-right">
-                <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook" style="background-color:transparent;"></a>
-                <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter" style="background-color:transparent;"></a>
-                <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram" style="background-color:transparent;"></a>
-                <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" target="_blank" class="fa fa-youtube-play" style="background-color:transparent;"></a>
+                <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" target="_blank" class="fa fa-youtube-play"></a>
             </div>
 
             <div class="col-xs-12 col-sm-6 col-md-6">
@@ -208,7 +211,18 @@
     <!-- ================================================ END VIDEO YOUTUBE ====================================================== -->
 
  
-<!-- ================================================  /NEWS SLIDER =========================================================== -->
+
+
+<!-- ============================================ SECTION KARIR ============================================================-->
+<section id="karir" class="karir">
+<div class="profile-text">
+<h3><strong>Karir</strong></h3>
+    <p>Dapatkan Pengalaman Kerja Bersama Bank Mantap</p>
+    <br/>  
+    <a class="btn btn-profile-light" role="button" href="#">Lihat Lowongan</a> 
+</div>
+</section>
+<!-- ========================================================================================================================-->
 
 
 
