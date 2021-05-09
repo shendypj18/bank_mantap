@@ -144,6 +144,8 @@ Mandiri Taspen',
     'dapatkan_informasi_berita' => 'Dapatkan informasi berita, promosi, program terbaru serta
 laporan keuangan dari',
     'download_sekilas_perusahaan' => 'Download Profil Lengkap Tentang Bank Mantap',
+    'BISNIS' => 'BISNIS',
+    'karir' => 'KARIR',
 
 
 

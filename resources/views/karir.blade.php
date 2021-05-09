@@ -1,4 +1,15 @@
 @include('layout.header');
+
+<section id="img-header" class="img-header">
+<img src="{{asset('asset/slider22.png')}}">
+<ul class="breadcrumb">
+<div class="container">
+  <li><a href="#">Home</a></li>
+  <li>Karir</li>
+</div>
+</ul>
+</section>
+
  
 <section>
 <!-- Content Start Here -->

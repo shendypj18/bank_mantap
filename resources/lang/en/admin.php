@@ -143,5 +143,7 @@ Mandiri Taspen',
     'dapatkan_informasi_berita' => 'Get information on news, promotion,
 new programs and financial statements of',
     'download_sekilas_perusahaan' => 'Download Complete Profil Of Bank Mantap',
+    'BISNIS' => 'BUSINESS',
+    'karir' => 'CAREER'
 
 ];

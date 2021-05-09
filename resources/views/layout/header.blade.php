@@ -44,7 +44,7 @@
 
         <li class="nav-item"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.CABANG')}}</a></li>
     <!--<li class="nav-item"><a class="nav-link mr-3" href="{{url('simulasi/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.SIMULASI')}}</a></li>-->
-        <li class="nav-item"><a class="nav-link mr-3" href="{{url('karir/'. $bahasa)}}" tabindex="-1" aria-disabled="true">KARIR</a></li>
+        <li class="nav-item"><a class="nav-link mr-3" href="{{url('karir/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.karir')}}</a></li>
     </ul>
 
     <!-- Search Botton Here -->

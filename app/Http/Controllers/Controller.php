@@ -239,6 +239,14 @@ class Controller extends BaseController
         return $this->templateData2($data_kantor_cabang, $locale, 'kantor-cabang');
     }
 
+    public function karir($locale = null)
+    {
+
+        $data_kantor_cabang = [
+        ];
+        return $this->templateData2($data_kantor_cabang, $locale, 'karir');
+    }
+
     public function reqCabang(Request $request)
     {
         $cabang = [

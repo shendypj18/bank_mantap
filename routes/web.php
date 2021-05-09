@@ -23,6 +23,7 @@ Route::get('/article/{navbarslug}/{locale?}', [Controller::class, 'navigasi']);
 Route::get('simulasi/{locale}', [Controller::class, 'simulasi']);
 Route::get('kantor-cabang/{locale}', [Controller::class, 'kantorcabang']);
 Route::get('cabang/kantor', [Controller::class, 'reqCabang']);
+Route::get('karir/{locale}', [Controller::class, 'karir']);
 
 
 //simulasi
