@@ -1,15 +1,15 @@
 @include('layout.header')
-<section id="img-header" class="img-header">
-<img src="{{ asset('asset/slider_simulasi.png') }}">
-<ul class="breadcrumb">
+<!-- <section id="img-header" class="img-header">
+     <img src="{{ asset('asset/slider_simulasi.png') }}">
+     <ul class="breadcrumb">
 
-<div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Simulasi</li>
-</div>
+     <div class="container">
+     <li><a href="#">Home</a></li>
+     <li>Simulasi</li>
+     </div>
 
-</ul>
-</section>
+     </ul>
+     </section> -->
 
 <div class="container">
 <h4 style="color:#0F2B5B;">Simulasi</h4>
