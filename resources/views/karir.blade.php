@@ -1,15 +1,4 @@
-<?php include 'layout/header.php';?>
- 
-<section id="img-header" class="img-header">
-<img src="asset/slider22.png">
-<ul class="breadcrumb">
-<div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Karir</li>
-</div>
-</ul>
-</section>
-
+@include('layout.header');
  
 <section>
 <!-- Content Start Here -->
@@ -36,14 +25,14 @@
     <br/><br/>
     <div class="container-fluid mt-5">
     <div class="row">
-      <div class="col-sm-2"><img src="asset/icon/user.png"></div>
+      <div class="col-sm-2"><img src="{{asset('asset/icon/user.png')}}"></div>
       <div class="col-sm-7 mt-4" style="color:#0F2B5B; font-weight:bold;">Officer Development Program (ODP) - General</div>
       <div class="col text-center mt-4"><a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a></div>
     </div>
     <hr/>
   
     <div class="row">
-    <div class="col-sm-2"><img src="asset/icon/folder.png"></div>
+    <div class="col-sm-2"><img src="{{asset('asset/icon/folder.png')}}"></div>
       <div class="col-sm-7 mt-4" style="color:#0F2B5B;  font-weight:bold;">Officer Development Program (ODP) - IT</div>
       <div class="col text-center mt-4"><a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a></div>
     </div>
@@ -55,4 +44,5 @@
 </div>
 </section>
 <br/><br/><br/><br/>
-<?php include 'layout/footer.php';?>
+
+@include('layout.footer')

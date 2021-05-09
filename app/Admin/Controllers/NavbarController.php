@@ -101,7 +101,7 @@ class NavbarController extends AdminController
              ->updateRules('min:3|max:30|required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->tmeditor('id_text_content', __('Konten Indonesia'))
              ->rules([
-                 'required',
+                 //'required',
                  function ($attribute, $value, $fail) {
                      $len = strlen(strip_tags($value));
                      if ($len > 1000000) {
@@ -111,7 +111,7 @@ class NavbarController extends AdminController
              ]);
         $form->tmeditor('en_text_content', __('Konten Inggris'))
              ->rules([
-                 'required',
+                 //'required',
                  function ($attribute, $value, $fail) {
                      $len = strlen(strip_tags($value));
                      if ($len > 1000000) {
