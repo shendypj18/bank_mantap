@@ -94,11 +94,11 @@ class NavbarController extends AdminController
         $form->select('kategori_navbar', __('Kategori Navbar'))->rules('required')
              ->options(KategoriNavbar::all()->pluck('nama','nama'))->default("TENTANG KAMI");
         $form->text('id_navigasi', __('Navigasi Indonesia'))
-             ->creationRules('min:3|max:30|required|unique:navbar', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
-             ->updateRules('min:3|max:30|required|unique:navbar,id_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+             ->creationRules('min:3|max:150|required|unique:navbar', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('min:3|max:150|required|unique:navbar,id_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->text('en_navigasi', __('Navigasi Inggris'))
-             ->creationRules('min:3|max:30|required|unique:navbar', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
-             ->updateRules('min:3|max:30|required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
+             ->creationRules('min:3|max:150|required|unique:navbar', ['unique' => "Kami menemukan nama navigasi yang sama di database"])
+             ->updateRules('min:3|max:150|required|unique:navbar,en_navigasi,{{id}}', ['unique'=> "Kami menemukan nama navigasi yang sama di database"]);
         $form->tmeditor('id_text_content', __('Konten Indonesia'))
              ->rules([
                  //'required',
