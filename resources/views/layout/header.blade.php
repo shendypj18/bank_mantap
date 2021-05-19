@@ -22,7 +22,6 @@
 <span class="navbar-toggler-icon"></span>
 </button>
 
-
 <div class="collapse navbar-collapse" style="margin-left:30%;" id="navbarSupportedContent">
 
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
@@ -31,6 +30,7 @@
         </li>
 
         @foreach($kategorinavbar as $nv)
+            @if($nv->nama != "NONE")
             <li class="nav-item dropdown">
                 <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
@@ -40,6 +40,7 @@
                     @endforeach
                 </div>
             </li>
+            @endif
         @endforeach
 
         <li class="nav-item"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.CABANG')}}</a></li>
