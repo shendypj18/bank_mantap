@@ -40,7 +40,7 @@
 @endif
 
     <!-- Content Start Here -->
-<div class="container text-center" id="news">
+<div class="container @if(!@berita) text-center @endif" id="news">
     @if($berita)
         <img class="img-responsive" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
