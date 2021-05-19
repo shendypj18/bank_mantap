@@ -7,7 +7,7 @@
     <h4 class="mt-5">Tarif Layanan</h4>
     <small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</small>
     <br/> <br/>
-    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
+    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['NONE'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
     </div>
 
     <div class="col-sm-5">
@@ -28,7 +28,7 @@
     <h4 class="mt-5">Bank Garansi</h4>
     <small>Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya.</small>
     <br/> <br/>
-    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">Berita Mantap</a></p>
+    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['NONE'][3][$bahasa . '_slug'] . '/' .$bahasa)}}">Berita Mantap</a></p>
     </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
     <h4 class="mt-5">Referensi Bank</h4>
     <small>Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung oleh pihak ketiga yang dapat dipercaya.</small>
     <br/> <br/>
-    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
+    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['NONE'][4][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
     </div>
 
     <div class="col-sm-5">
@@ -62,7 +62,7 @@
     <h4 class="mt-5">Transfer</h4>
     <small>Jasa pengiriman uang yang dilaksanakan atas permintaan dan untuk kepentingan nasabah.</small>
     <br/> <br/>
-    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/transfer/'.$bahasa)}}">Selengkapnya</a></p>
+    <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['NONE'][5][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
     </div>
     </div>
   </div>
