@@ -6,10 +6,10 @@
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="{{url('/')}}">Home</a></li>
-  <li>@if($navbardata->kategori_navbar != 'NONE')
+  @if($navbardata->kategori_navbar != 'NONE')<li>
       {{__('admin.' . strtoupper(Str::slug($navbardata->kategori_navbar, '_')))}}
-      @endif
   </li>
+  @endif
   <li>{{$navbardata[$bahasa. '_navigasi']}}</li>
 </div>
 </ul>
