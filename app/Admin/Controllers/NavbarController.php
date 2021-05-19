@@ -127,9 +127,9 @@ class NavbarController extends AdminController
             $id = $form->model()->id;
             // update slug
             Navbar::where('id', $id)
-            ->update(['id_slug' => Str::slug($form->model()->id_navigasi, '-')]);
+            ->update(['id_slug' => Str::slug($form->model()->id_navigasi, '-id')]);
             Navbar::where('id', $id)
-            ->update(['en_slug' => Str::slug($form->model()->en_navigasi, '-')]);
+            ->update(['en_slug' => Str::slug($form->model()->en_navigasi, '-en')]);
         });
         return $form;
     }
