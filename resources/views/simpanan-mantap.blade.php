@@ -1,4 +1,4 @@
- @include('layout.header')
+@include('layout.header')
 
 <section class="section">
   <div class="container">
@@ -92,4 +92,5 @@
 
  
 </div>
- @include('layout.footer')
+
+@include('layout.footer')

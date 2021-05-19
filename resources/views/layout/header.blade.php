@@ -23,7 +23,7 @@
 </button>
 
 
-<div class="collapse navbar-collapse" style="margin-left:10%;" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" style="margin-left:30%;" id="navbarSupportedContent">
 
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
         <li class="nav-item" >
