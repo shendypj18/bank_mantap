@@ -11,10 +11,10 @@
         @php $j = 1 @endphp
         @foreach($banner as $banner)
             <div class="carousel-item @if($j == 1) active @endif w-100">
-                <img class="d-block w-100" src="{{ asset('asset/slider-one.png') }}"  alt="First slide">
+                <img class="d-block w-100" src="{{ url('storage/'. $banner->id_nama) }}"  alt="First slide">
                 <div class="carousel-caption text-left">
                 <div class="container">
-                <a class="btn btn-lg btn-more" href="#" role="button">Selengkapnya</a>
+                <a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}" role="button">{{__('admin.selengkapnya')}}</a>
                 </div>
                 </div>
             </div>
