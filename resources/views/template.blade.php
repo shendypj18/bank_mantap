@@ -3,11 +3,10 @@
 <section id="img-header" class="img-header">
 <img src="{{ url('storage/'. $navbardata[$bahasa .'_banner'])}}">
 
- 
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="{{url('/')}}">Home</a></li>
-  <li>@if($navbardata[$bahasa. '_navigasi'] != 'NONE')
+  <li>@if($navbardata->kategori_navbar != 'NONE')
       {{__('admin.' . strtoupper(Str::slug($navbardata->kategori_navbar, '_')))}}
       @endif
   </li>
