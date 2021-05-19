@@ -59,8 +59,11 @@
         @php $t = 1; @endphp
         <p>
         @foreach($navbar["INFO MANTAP"] as $nv)
+            @if($nv->id_slug == 'berita-mantap' || $nv->id_slug == 'promosi-mantap' ||
+                $nv->id_slug == 'program-mantap' || $nv->id_slug == 'laporan-keuangan')
         <a class="btn btn-lg  btn-wr @if($t == 1) active @endif" href="{{url('article/'. $nv[$bahasa. '_slug'] . '/'. $bahasa)}}" role="button">{{$nv[$bahasa. '_navigasi']}}</a>
             @php $t++; @endphp
+        @endif
         @endforeach
         </p>
  
@@ -143,7 +146,7 @@
           <a class="card-title"><strong>Pinjaman Mantap</strong></a>
           <p class="card-text"><small>Apapun kebutuhan anda,</small><br/>
       <small><b>Wujudkan dengan kredit mantap pensiun</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a> 
+          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.Selengkapnya')}}</a>
           </div>
         </div>
         </div>
@@ -155,7 +158,7 @@
           <a class="card-title"><strong>Simpanan Mantap</strong></a>
           <p class="card-text"><small>Dengan tabungan siMantap Gold</small><br/>
       <small><b>Nimati kemudahan transaksi</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a> 
+          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.Selengkapnya')}}</a>
           </div>
         </div>
         </div>
@@ -168,7 +171,7 @@
           <br/>
           <h3 class="card-title">Jasa Bank</h3>
           <p class="card-text"><small>Kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada<br/>pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya</small></p>
-          <a class="btn btn-profile-light" role="button" href="#">Selengkapnya</a> 
+          <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['BISNIS'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.Selengkapnya')}}</a>
           </div>
         </div>
     </div>
@@ -219,7 +222,7 @@
 <h3><strong>Karir</strong></h3>
     <p>Dapatkan Pengalaman Kerja Bersama Bank Mantap</p>
     <br/>  
-    <a class="btn btn-profile-light" role="button" href="#">Lihat Lowongan</a> 
+    <a class="btn btn-profile-light" role="button" href="{{url('karir/'. $bahasa)}}">Lihat Lowongan</a>
 </div>
 </section>
 <!-- ========================================================================================================================-->

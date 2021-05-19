@@ -59,9 +59,12 @@
         <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
         <p><br/></p>
         @foreach($navbar["INFO MANTAP"] as $nv)
+            @if($nv->id_slug == 'berita-mantap' || $nv->id_slug == 'promosi-mantap' ||
+                       $nv->id_slug == 'program-mantap' || $nv->id_slug == 'laporan-keuangan')
             <a class="btn btn-lg btn-wr
                       @if($nv['id_slug'] == 'laporan-keuangan') active @endif "
                href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
+            @endif
         @endforeach
     </div> <!-- container -->
     <div class="container mt-5 mb-5">

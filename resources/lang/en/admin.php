@@ -144,6 +144,8 @@ Mandiri Taspen',
 new programs and financial statements of',
     'download_sekilas_perusahaan' => 'Download Complete Profil Of Bank Mantap',
     'BISNIS' => 'BUSINESS',
-    'karir' => 'CAREER'
+    'karir' => 'CAREER',
+    'karir2' => 'Karir',
+    'lainnya' => 'OTHERS',
 
 ];

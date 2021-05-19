@@ -21,6 +21,14 @@
                   </ul>
               </div>
           @endforeach
+          <div class="col-xs-12 col-sm-2 col-sm-2">
+              <h5>{{trans('admin.lainnya') }}</h5>
+              <ul class="list-unstyled quick-links">
+                  <li><a href="{{url('kantor-cabang/'. $bahasa)}}">{{trans('admin.kantor_cabang')}}</a></li>
+                  <li><a href="{{url('karir/'. $bahasa)}}">{{trans('admin.karir2')}}</a></li>
+              </ul>
+          </div>
+
     </div>
 </section>
 <!--  ================================================ /FIRST FOOTER ========================================================= -->

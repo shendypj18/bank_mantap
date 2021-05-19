@@ -146,7 +146,8 @@ laporan keuangan dari',
     'download_sekilas_perusahaan' => 'Download Profil Lengkap Tentang Bank Mantap',
     'BISNIS' => 'BISNIS',
     'karir' => 'KARIR',
-
+    'karir2' => 'Karir',
+    'lainnya' => 'LAINNYA',
 
 
 ];

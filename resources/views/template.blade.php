@@ -25,8 +25,12 @@
         {!!  $navbardata[$bahasa. '_text_content']!!}
     </div>
     @if($navbardata->id_slug == substr($id_route, 8, strlen($id_route) -1) or $navbardata->en_slug == substr($en_route, 8, strlen($en_route) -1))
-        @if(View::exists(substr($navbardata->id_slug, 3)))
-            @include(substr($navbardata->id_slug, 3))
+        @php $n = 0 @endphp
+        @if(substr($navbardata->id_slug, 0, 3) == 'id-')
+            @php $n = 3 @endphp
+        @endif
+        @if(View::exists(substr($navbardata->id_slug, $n)))
+            @include(substr($navbardata->id_slug, $n))
         @endif
     @endif
 </section>
