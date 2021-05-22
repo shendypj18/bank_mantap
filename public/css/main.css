@@ -272,6 +272,7 @@ a:hover{
 }
 
 
+
 .card-simpanan{
 	background: url('../asset/simpanan.png') repeat-x padding-box;
 	background-repeat: repeat-x;
@@ -311,6 +312,41 @@ a:hover{
 	padding-bottom:0px;
 }
 
+@media  (max-width: 768px)  {
+	.card-pinjaman{
+		background-repeat:no-repeat;
+		background-size:contain;
+		background-position:center;
+		font-size: 4vw;
+		width: auto;
+	}
+
+	.card-simpanan{
+		background-repeat:no-repeat;
+		background-size:contain;
+		background-position:center;
+		font-size: 4vw;
+		top: 40px;
+		padding-top: 35px;
+		width: auto;
+	}
+
+	.card-jasabank{
+		background-repeat:no-repeat;
+		background-position:center;
+		font-size: 2vw;
+		text-align: center;
+		top: 40px;
+		padding-top: 35px;
+		padding-left: 0px;
+		padding-bottom: 0px;
+		width: auto;
+	}
+
+	.bisnis{
+		height: 1000px;
+	}
+}
 
 .extended{
 background-color: #d1cecec1;
@@ -687,9 +723,9 @@ height: 530px;
 	color:#FCD116;
 }
 
-#search {
+/* #search {
 
-}
+} */
 #search select{
 	background: #FFFFFF 0% 0% no-repeat padding-box;
 	border: 1px solid #D0D8E6;
@@ -1141,3 +1177,4 @@ section .section-title {
 	.float-menu ul li:hover a .text {
 		display: none
 	}
+}

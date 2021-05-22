@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
+    
 
 </head>
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
-<nav class="navbar navbar-expand-lg p-3 fixed-top navbar-light bg-white border-bottom">
+<nav class="navbar navbar-expand-lg p-3 navbar-light bg-white border-bottom">
 <a class="navbar-brand ml-4 mr-5" href="{{url('/'. $bahasa)}}"><img src="{{asset('asset/logo_mantap.png')}}"  alt="Logo" width="80%"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
