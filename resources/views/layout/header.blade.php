@@ -4,6 +4,7 @@
     <title>www.bankmantap.co.id</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta name=”description” content="description">
     <link rel="shortcut icon" type="image/png" href="{{asset('asset/logo_mantap.png')}}" sizes="16x16">
     <!-- CSS Bootsrap ver.4.0 -->

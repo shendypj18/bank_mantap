@@ -172,6 +172,13 @@ a:hover{
 	background: #FFF 0% 0% no-repeat padding-box;
 }
 
+@media (max-width: 768px) {
+    .simulasi{
+        margin-bottom: 1300px;
+    }
+}
+
+
 
 
 .profile-text {
@@ -1134,6 +1141,3 @@ section .section-title {
 	.float-menu ul li:hover a .text {
 		display: none
 	}
-	
-
- 
