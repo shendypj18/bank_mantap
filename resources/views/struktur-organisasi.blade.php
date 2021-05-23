@@ -13,13 +13,13 @@
 </section>
 
 <div class="container">
-<h4 style="color:#0F2B5B;">Struktur Organisasi</h4>
+<h4 id="img-struktur-organisasi" style="color:#0F2B5B;">Struktur Organisasi</h4>
 <p  class="mb-5"><small>Berikut adalah struktur organisasi per tanggal 6 Mei 2020</small></p>
 </div>
 
 <div class="container mb-5 text-center">
     <h3 style="color:#0F2B5B; font-weight:bold; padding-bottom:45px;">Struktur Organisasi PT Bank Mandiri Taspen</h3>
-    <img src="{{ asset('asset/strukturorganisasi.png') }}" width="100%">
+    <img id="img-struktur-organisasi" src="{{ asset('asset/strukturorganisasi.png') }}" class="responsive">
 </div>
 <br/> 
 <div class="container mb-5">

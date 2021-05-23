@@ -168,6 +168,10 @@ a:hover{
 
 
 @media (max-width: 768px) {
+#img-struktur-organisasi {
+		width: 110%;
+		height: 100%;
+	}
     .simulasi{
        margin-bottom: 300px;
     }
@@ -357,7 +361,10 @@ a:hover{
 	background: #FFF 0% 0% no-repeat padding-box;
 }
 @media (max-width: 480px)  {
-	
+	#img-struktur-organisasi {
+		width: 110%;
+		height: 100%;
+	}
 	.simulasi {
 		margin-bottom: 1300px;
 	}
