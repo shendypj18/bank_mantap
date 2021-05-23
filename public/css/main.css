@@ -165,15 +165,11 @@ a:hover{
 	position: relative;
 }
 
-.simulasi{
-	margin-top:-5%;
-	height: 870px;
-	background: #FFF 0% 0% no-repeat padding-box;
-}
+
 
 @media (max-width: 768px) {
     .simulasi{
-        margin-bottom: 1300px;
+       margin-bottom: 300px;
     }
     .ml-13 {
         margin-right: -10rem;
@@ -344,9 +340,27 @@ a:hover{
 .display{
 	display: flex;
 }
-
+.btn-more{
+	background-color: #FCD116;
+	color: #0F2B5B;
+	opacity: 1;
+ 	font-size: 13px;
+ 	border-radius: 25px;
+	width: 200px;
+	margin-bottom:11%;
+	padding:14px;
+	margin-left:-2rem;
+}
+.simulasi{
+	margin-top:-5%;
+	height: 870px;
+	background: #FFF 0% 0% no-repeat padding-box;
+}
 @media (max-width: 480px)  {
 	
+	.simulasi {
+		margin-bottom: 1300px;
+	}
 	#content h1{
 		margin-top: 20px;
 		margin-bottom: 18px;
@@ -428,6 +442,18 @@ a:hover{
 		margin-left: 50%; 
 		margin-right: 50%; 
 		overflow: visible; 
+	}
+
+	.btn-more{
+		background-color: #FCD116;
+		color: #0F2B5B;
+		opacity: 1;
+		font-size: 8px;
+		padding: 1px 3px;
+		border-radius: 25px;
+		width: 100px;
+		margin-bottom:1%;
+		margin-left:-4rem;
 	}
 
 	
@@ -512,6 +538,18 @@ a:hover{
 		height: 1000px;
 	}
 
+	.btn-more{
+		background-color: #FCD116;
+		color: #0F2B5B;
+		opacity: 1;
+		font-size: 8px;
+		padding: 1px 3px;
+		border-radius: 25px;
+		width: 100px;
+		margin-bottom:1%;
+		margin-left:-4rem;
+	}
+
 	
 }
 
@@ -577,6 +615,18 @@ a:hover{
 
 	.bisnis{
 		height: 1000px;
+	}
+
+	.btn-more{
+		background-color: #FCD116;
+		color: #0F2B5B;
+		opacity: 1;
+		font-size: 8px;
+		padding: 1px 3px;
+		border-radius: 25px;
+		width: 100px;
+		margin-bottom:1%;
+		margin-left:-4rem;
 	}
 
 	
@@ -785,17 +835,7 @@ height: 530px;
 	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
  }
 
-.btn-more{
-	background-color: #FCD116;
-	color: #0F2B5B;
-	opacity: 1;
- 	font-size: 13px;
- 	border-radius: 25px;
-	width: 200px;
-	margin-bottom:11%;
-	padding:14px;
-	margin-left:-2rem;
-}
+
 
 .btn-more:hover{
 	background-color: #FFF;
