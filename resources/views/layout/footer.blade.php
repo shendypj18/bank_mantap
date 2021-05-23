@@ -249,32 +249,32 @@
     bottom: 40%;" >
           <div class="col-xs-1 col-md-3"></div>
           <div class="col-xs-10 col-md-6">
-            <div class="row">
+            <div class="row-share">
               <div class="col-xs-1 col-md-1">
               </div>
               <div class="col-xs-2 col-md-2">
                 <a href="https://www.facebook.com/BankMandiriTaspen" >
-                  <img id="f-s" src="{{asset('asset/icon/fb_yellow.png')}}" style="width: 100%;" >
+                  <img class="display-share" id="f-s" src="{{asset('asset/icon/fb_yellow.png')}}">
                 </a>
               </div>
               <div class="col-xs-2 col-md-2">
                 <a href="https://twitter.com/BankMantap_id" >
-                  <img id="t-s" src="{{asset('asset/icon/tw_yellow.png')}}" style="width: 100%;" >
+                  <img class="display-share" id="t-s" src="{{asset('asset/icon/tw_yellow.png')}}">
                 </a>
               </div>
               <div class="col-xs-2 col-md-2">
                 <a href="https://www.instagram.com/bankmantap_id/" >
-                  <img id="i-s" src="{{asset('asset/icon/insta_yellow.png')}}" style="width: 100%;" >
+                  <img class="display-share" id="i-s" src="{{asset('asset/icon/insta_yellow.png')}}">
                 </a>
               </div>
               <div class="col-xs-2 col-md-2">
                 <a href="https://plus.google.com/u/0/112849376688825884019" >
-                  <img id="g-s" src="{{asset('asset/icon/gplus_yellow.png')}}" style="width: 100%;" >
+                  <img class="display-share" id="g-s" src="{{asset('asset/icon/gplus_yellow.png')}}">
                 </a>
               </div>
               <div class="col-xs-2 col-md-2">
                 <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" >
-                  <img id="y-s" src="{{asset('asset/icon/yt_yellow.png')}}" style="width: 100%;" >
+                  <img class="display-share" id="y-s" src="{{asset('asset/icon/yt_yellow.png')}}">
                 </a>
               </div>
               
