@@ -552,9 +552,13 @@ a:hover{
 
 	
 }
-
 @media (min-width: 768px) and (max-width: 1024px)  {
 
+	#navbar-upper-text {
+		-webkit-box-flex: 0;
+		flex: 0 0 80%;
+		max-width: 80%
+	}
 	body{
 		font-size: 25px;
 	}
