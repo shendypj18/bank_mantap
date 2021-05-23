@@ -1,4 +1,3 @@
-@include('layout.header')
 <!-- <section id="img-header" class="img-header">
      <img src="{{ asset('asset/slider_simulasi.png') }}">
      <ul class="breadcrumb">
