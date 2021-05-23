@@ -48,11 +48,11 @@
 
 <div class="col-sm">
       <!-- Left Coloum -->
-      <div class="cell text-left">
+      <div class="text-footer">
         <div class="row">
 
           <div class="col-sm-4">
-              <img class="small-logo" src="https://www.bankmantap.co.id/assets/images/mantap.png" width="85%" alt="Logo Corp" />
+              <img class="logo-footer" src="https://www.bankmantap.co.id/assets/images/mantap.png" alt="Logo Corp" />
             </div>
 
           <div class="col-sm-8">
@@ -73,9 +73,9 @@
       </div>
 </div>
       <!-- Right Coloum -->
-      <div class="col-sm mt-5">
+      <div class="col-sm">
         <br/>
-      <div class="cell text-center mt-5">
+      <div class="cell text-center">
         <img src="{{ asset('asset/logo-OJK.png') }}" alt="Ojk" width="12%"/>
         <img src="{{ asset('asset/logo-lps.png') }}" alt="Lps" width="12%"/>
         <img src="{{ asset('asset/logo-kebank.png') }}" alt="AyoKebank" width="12%">
