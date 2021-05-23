@@ -1,6 +1,8 @@
 
 <style type="text/css" media="screen">
-
+.mc {
+     margin-bottom: 150px;
+ }
  @media (min-width: 1025px) {
      .btn-pos {
          margin-top: -250px;
@@ -76,6 +78,9 @@
      }
  }
  @media (max-width: 480px) {
+     .mc-rr {
+         margin-bottom: 30px;
+     }
      .btn-pos {
          margin-top: -20%;
      }
@@ -100,7 +105,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mc-rr">
         <div class="row mc-r">
             <div class="col-sm-6 right-img" >
                 <img id="img-navbar-temp" src="{{asset('asset/bank-garansi.png')}}" alt="Logo" style="margin-left: -50px;" width="600px" class="img-responsive" />
@@ -134,7 +139,7 @@
         </div>
     </div>
 
-  <div class="container">
+  <div class="container mc-rr"">
         <div class="row mc-r">
             <div class="col-sm-6 right-img" >
                 <img id="img-navbar-temp" src="{{asset('asset/pic-transfer.png')}}" alt="Logo" style="margin-left: -50px;" width="600px" class="img-responsive" />
