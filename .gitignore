@@ -6,7 +6,7 @@
 !/vendor/spatie
 !/vendor/encore
 !/vendor/biscolab
-!/public/storage
+!/public/storage/
 .env
 .env.backup
 .phpunit.result.cache

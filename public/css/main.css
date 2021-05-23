@@ -460,7 +460,24 @@ a:hover{
 }
 
 
+.text-footer{
+	text-align: left;
+}
+.logo-footer{
+	width: 85%;
+}
+
+
 @media (max-width: 480px)  {
+	.logo-footer{
+		width: 40%;
+	}
+	.text-footer{
+		text-align: center;
+	}
+ 	/* .btn-unduh {
+	 } */
+
 #tbl-pemegang-saham {
 	width: 500px;
 }
@@ -687,9 +704,13 @@ a:hover{
 }
 
 @media (min-width: 480px) and (max-width: 768px)  {
-
+	.logo-footer{
+		width: 40%;
+	}
 	
-	
+	.text-footer{
+		text-align: center;
+	}
 	#content h1{
 		margin-top: 20px;
 		margin-bottom: 18px;
