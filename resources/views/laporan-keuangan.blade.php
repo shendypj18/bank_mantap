@@ -123,8 +123,8 @@
             <!--/.Slides-->
 
             <!-- Indicator Slider -->
-            <a style="" class="carousel-control-prev" href="#report" role="button" data-slide="prev"><img src="{{asset('asset/left.svg')}}" style="margin-left: -10rem;"></a>
-            <a style="" class="carousel-control-next" href="#report" role="button" data-slide="next"><img src="{{asset('asset/right.svg')}}" style="margin-right: -10rem;"></a>
+            <a style="" class="carousel-control-prev display-carousel" href="#report" role="button" data-slide="prev"><img src="{{asset('asset/left.svg')}}" style="margin-left: -10rem;"></a>
+            <a style="" class="carousel-control-next display-carousel" href="#report" role="button" data-slide="next"><img src="{{asset('asset/right.svg')}}" style="margin-right: -10rem;"></a>
             <!-- End Indicator Slider -->
 
         </div>

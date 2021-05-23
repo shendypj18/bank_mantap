@@ -113,7 +113,7 @@
           </div>
 
           <input type="hidden" name="_token" value="{{csrf_token()}}">
-          <button type="submit" class="btn btn-lg btn-more">Kirim </button> 
+          <button type="submit" class="btn btn-lg btn-whistle">Kirim </button> 
         </form>
         </div>
         </div>

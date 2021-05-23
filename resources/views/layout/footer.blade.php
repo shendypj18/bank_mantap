@@ -164,7 +164,7 @@
 </div>
 <!--  ================================================ END MILEA ============================================================== -->
 
-<!-- Modal email -->>
+<!-- Modal email -->
 <div class="modal fade bs-example-modal-lg" id="ModalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div style="text-align: right;    width: 103%;">
