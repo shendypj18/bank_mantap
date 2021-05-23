@@ -191,6 +191,20 @@ a:hover{
 	width: 1110px;
 }
 
+.row-share {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.display-share {
+	width: 100%;
+}
+
 @media (max-width: 768px) {
 #tbl-pemegang-saham {
 	width: 700px;
@@ -467,6 +481,20 @@ a:hover{
 	width: 85%;
 }
 
+.row-share {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* .display-share {
+	width: 10px;
+} */
+
 
 @media (max-width: 480px)  {
 	.logo-footer{
@@ -546,7 +574,7 @@ a:hover{
 	.card-jasabank{
 		background-repeat:no-repeat;
 		background-position:center;
-		font-size: 20px;
+		font-size: 10px;
 		text-align: center;
 		top: 40px;
 		padding-top: 35px;
@@ -700,6 +728,20 @@ a:hover{
 		margin-left: 2rem;
 	}
 
+	.row-share {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: nowrap;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	
+	.display-share {
+		width: 10px;
+	}
+
 	
 }
 
@@ -773,7 +815,7 @@ a:hover{
 	.card-jasabank{
 		background-repeat:no-repeat;
 		background-position:center;
-		font-size: 20px;
+		font-size: 10px;
 		text-align: center;
 		top: 40px;
 		padding-top: 35px;
@@ -893,6 +935,20 @@ a:hover{
 	margin-left: 2rem;
 }
 
+.row-share {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.display-share {
+	width: 10px;
+}
+
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
 
@@ -949,7 +1005,7 @@ a:hover{
 	.card-jasabank{
 		background-repeat:no-repeat;
 		background-position:center;
-		font-size: 20px;
+		font-size: 10px;
 		text-align: center;
 		top: 40px;
 		padding-top: 35px;
@@ -1070,6 +1126,20 @@ a:hover{
 		margin-bottom: 11%;
 		padding: 14px;
 		margin-left: 2rem;
+	}
+
+	.row-share {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: nowrap;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	
+	.display-share {
+		width: 100%;
 	}
 }
 

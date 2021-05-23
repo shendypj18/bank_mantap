@@ -93,8 +93,8 @@
 
 
               <!-- Indicator Slider -->
-            <a class="carousel-control-prev" href="#news" role="button" data-slide="prev"><img class="responsive ml-13" src="{{ url('asset/left.svg') }}" ></a>
-            <a class="carousel-control-next" href="#news" role="button" data-slide="next"><img class="responsive mr-13" src="{{ url('asset/right.svg') }}" ></a>
+            <a class="carousel-control-prev display-carousel" href="#news" role="button" data-slide="prev"><img class="responsive ml-13" src="{{ url('asset/left.svg') }}" ></a>
+            <a class="carousel-control-next display-carousel" href="#news" role="button" data-slide="next"><img class="responsive mr-13" src="{{ url('asset/right.svg') }}" ></a>
             <!-- End Indicator Slider -->
 
             
