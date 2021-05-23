@@ -175,6 +175,23 @@ a:hover{
     .simulasi{
         margin-bottom: 1300px;
     }
+    .ml-13 {
+        margin-right: -8rem;
+    }
+    .mr-13 {
+        margin-left: -8rem;
+    }
+}
+.responsive {
+    width: 80%;
+    height: auto;
+}
+
+.ml-13 {
+    margin-left: -13rem;
+}
+.mr-13 {
+    margin-right: -13rem;
 }
 
 
