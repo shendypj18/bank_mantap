@@ -104,12 +104,7 @@
                                 <div class="card-body">
                                     <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
                                     <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
-                                        @if(strlen($b[$bahasa . '_judul']) > 55)
-                                            {{ substr($b[$bahasa. '_judul'], 55) . '.....' }}
-                                        @else
-                                            {{ $b[$bahasa. '_judul'] }}
-                                        @endif
-
+                                        {{ $b[$bahasa. '_judul']}}
                                     </p>
                                 </div>
                             </div>
@@ -196,8 +191,8 @@
         <p align="center"><a>Bank Mantap memahami Anda untuk tetap produktif demi keluarga yang selalu bahagia.</a></p>
         <!-- <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p> -->
         <br/><br/>
-        <div align="center">
-            <iframe width="750" height="400" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src=@if($video_1)"{{url($video_1->link_video)}}"@endif></iframe>
+        <div class="container-videos" align="center">
+            <iframe class="container-video" allowfullscreen src=@if($video_1)"{{url($video_1->link_video)}}"@endif></iframe>
         </div>
         <br/><br/>
 
@@ -255,7 +250,7 @@
             <div class="col-xs-12 col-sm-3 col-sm-3">
 
                 <div class="row">
-                    <div class="col-sm2"><a class="fa fa-globe"></a></div>
+                    <div class="col-sm2 center-icon"><a class="fa fa-globe"></a></div>
                     <div class="col-sm-10">
                         <h3>{{ __('admin.kantor_cabang') }}</h3>
                         <p>{{ __('admin.text_kantor_cabang')  }}</p>
@@ -263,7 +258,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm2"><a class="fa fa-thumbs-up"></a></div>
+                    <div class="col-sm2 center-icon"><a class="fa fa-thumbs-up"></a></div>
                     <div class="col-sm-10">
                         <h3>{{ __('admin.budaya_kerja') }}</h3>
                         <p>{{  __('admin.text_budaya_kerja') }}</p>
@@ -274,7 +269,7 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
 
                 <div class="row">
-                    <div class="col-sm2"><a class="fa fa-trophy"></a></div>
+                    <div class="col-sm2 center-icon"><a class="fa fa-trophy"></a></div>
                     <div class="col-sm-10">
                         <h3>{{__('admin.penghargaan2')}}</h3>
                         <p>{{__('admin.text_penghargaan2')}}</p>
@@ -282,7 +277,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm2">
+                    <div class="col-sm2 center-icon">
                         <a class="fa fa-lightbulb-o"></a>
                     </div>
                     <div class="col-sm-10">
@@ -295,7 +290,9 @@
 
             <!-- Video Youtube -->
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <iframe width="420" height="285" border="0" style="border-radius: 20px;" frameborder="0" allowfullscreen src="@if($video_2){{$video_2->link_video}}"@endif></iframe>
+                <div class="container-videos">
+                    <iframe class="container-video"  allowfullscreen src="@if($video_2){{$video_2->link_video}}"@endif></iframe>
+                </div>
             </div>
             <!-- / Video Youtube -->
 
