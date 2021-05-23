@@ -176,10 +176,10 @@ a:hover{
         margin-bottom: 1300px;
     }
     .ml-13 {
-        margin-right: -8rem;
+        margin-right: -10rem;
     }
     .mr-13 {
-        margin-left: -8rem;
+        margin-left: -10rem;
     }
 }
 .responsive {
@@ -331,20 +331,36 @@ a:hover{
 .container-videos{
 	position: relative;
 	width: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .container-video{
-	width:750px;
-	height:400px;
+	width:580px;
+	height:280px;
 	border:0px;
 	border-radius: 20px;
 }
 
+.display{
+	display: flex;
+}
+
 @media (max-width: 480px)  {
+	
+	#content h1{
+		margin-top: 20px;
+		margin-bottom: 18px;
+		font-size:30px;
+		font-weight: bold;
+		text-align: left;
+	}
 
 	body{
 		font-size: 14px;
+	}
+
+	.col-sm-12{
+		text-align: left;
 	}
 
 	h1{
@@ -386,16 +402,18 @@ a:hover{
 		padding-bottom: 0px;
 		width: auto;
 	}
+
 	.container-videos{
 		position: relative;
 		width: 100%;
-		overflow: hidden;
+		padding: 50px;
+		/* overflow: hidden; */
 		
 	}
 
 	.container-video{
-		width:340px;
-		height:200px;
+		width:280px;
+		height:160px;
 		border:0px;
 		border-radius: 20px;
 	}
@@ -416,11 +434,25 @@ a:hover{
 }
 
 @media (min-width: 480px) and (max-width: 768px)  {
+
 	
+	
+	#content h1{
+		margin-top: 20px;
+		margin-bottom: 18px;
+		font-size:40px;
+		font-weight: bold;
+	}
 
 	body{
 		font-size: 20px;
 	}
+
+	.col-sm-12{
+		text-align: left;
+		font-size: 20px;
+	}
+
 	h1{
 		font-size: 35px;
 		font-weight: bold;
@@ -506,7 +538,6 @@ a:hover{
 		height:400px;
 		border:0px;
 		border-radius: 20px;
-		frameborder:0px;
 	}
 
 	.card-pinjaman{
@@ -1010,7 +1041,7 @@ section .section-title {
 #content h1{
     margin-top: 20px;
     margin-bottom: 18px;
-    font-size:30px;
+    /* font-size:30px; */
     font-weight: bold;
 }
 
@@ -1103,8 +1134,8 @@ section .section-title {
 #onTop{
   display: none;
   position: fixed;
-  bottom: 75px;
-  right: 110px;
+  bottom: 60px;
+  right: 5px;
   z-index: 99;
   font-size: 30px;
   border: none;
@@ -1159,12 +1190,13 @@ section .section-title {
   display: block;
   position: fixed;
   z-index: 100;
-  bottom: 140px;
-  right: 112px;
+  bottom: 120px;
+  right: 8px;
 }
 
 .chat-float img {
   width: 50px;
+  ;
 }
 
 

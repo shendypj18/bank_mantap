@@ -27,8 +27,8 @@
     </div>
     </div>
   
-    <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img src="{{ asset('asset/left.svg') }}"></a>
-    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img src="{{ url('asset/right.svg') }}"></a>
+    {{-- <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img class="responsive ml-13" src="{{ asset('asset/left.svg') }}"></a>
+    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img class="responsive mr-13" src="{{ url('asset/right.svg') }}"></a> --}}
 
 </section>
 <!-- ====================================================== /CAROUSEL  ==================================================== -->
@@ -196,15 +196,17 @@
         </div>
         <br/><br/>
 
-        <div class="row text-left text-xs-center text-sm-left text-md-left">
-            <div class="col-xs-2 col-sm-3 col-md-4 text-right">
+        <div class="row text-center text-left text-xs-center text-sm-left text-md-left">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
                 <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
                 <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter"></a>
                 <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram"></a>
                 <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" target="_blank" class="fa fa-youtube-play"></a>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="col-md-5">
                 <a>Like, subscribe dan follow untuk mendapatkan informasi terbaru dari Bank Mantap di media sosial</a>
             </div>
         </div>
@@ -234,31 +236,31 @@
 <section id="content">
       <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
-            <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="col-sm-12">
                 <h1><span>{{ __('admin.mengapa_memilih_bank_mandiri_taspen') }}</span></h1>
             </div>
         </div>
 
-        <div class="row text-center text-xs-center text-sm-left text-md-left">
-            <div class="col-xs-12 col-sm-8">
+        <div class="row text-xs-center text-sm-left text-md-left">
+            <div class="col-sm-12">
                 <p>{{ __('admin.text_mengapa_memilih_bank_mandiri_taspen')}}</p>
                 <br/>
             </div>
         </div>
 
-        <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="row text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-3 col-sm-3">
 
-                <div class="row">
-                    <div class="col-sm2 center-icon"><a class="fa fa-globe"></a></div>
+                <div class="display">
+                    <div class="col-sm2"><a class="fa fa-globe"></a></div>
                     <div class="col-sm-10">
                         <h3>{{ __('admin.kantor_cabang') }}</h3>
                         <p>{{ __('admin.text_kantor_cabang')  }}</p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm2 center-icon"><a class="fa fa-thumbs-up"></a></div>
+                <div class="display">
+                    <div class="col-sm2"><a class="fa fa-thumbs-up"></a></div>
                     <div class="col-sm-10">
                         <h3>{{ __('admin.budaya_kerja') }}</h3>
                         <p>{{  __('admin.text_budaya_kerja') }}</p>
@@ -268,16 +270,16 @@
 
             <div class="col-xs-12 col-sm-4 col-md-4">
 
-                <div class="row">
-                    <div class="col-sm2 center-icon"><a class="fa fa-trophy"></a></div>
+                <div class="display">
+                    <div class="col-sm2"><a class="fa fa-trophy"></a></div>
                     <div class="col-sm-10">
                         <h3>{{__('admin.penghargaan2')}}</h3>
                         <p>{{__('admin.text_penghargaan2')}}</p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm2 center-icon">
+                <div class="display">
+                    <div class="col-sm2">
                         <a class="fa fa-lightbulb-o"></a>
                     </div>
                     <div class="col-sm-10">
@@ -287,7 +289,7 @@
                 </div>
 
             </div>
-
+            
             <!-- Video Youtube -->
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="container-videos">
