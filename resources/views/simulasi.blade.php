@@ -81,5 +81,3 @@
 <br/>
 <br/>
 <br/>
-  
-@include('layout.footer')
