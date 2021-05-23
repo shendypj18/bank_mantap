@@ -1,5 +1,3 @@
-@include('layout.header')
-
 <section class="section">
   <div class="container">
     <div class="row">
@@ -92,5 +90,3 @@
 
  
 </div>
-
-@include('layout.footer')
