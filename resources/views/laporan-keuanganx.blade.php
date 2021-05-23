@@ -1,17 +1,18 @@
 @if($laporanTahunan)
     <style>
      .active,.btn-wr:hover{
-         background-color: #FCD116;
-         color:black;
-         color: #121212;
-         opacity: 1;
-         font-size: 13px;
-         border-radius: 25px;
-         font-family: 'Roboto', sans-serif;
-         font-weight: 900;
-         border:none;
-         transition-duration: 0.7s;
-         box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
+        background-color: #FCD116;
+		color:black;
+		color: #121212;
+		opacity: 1;
+		font-size: 13px;
+		border-radius: 25px;
+		width: 82px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		border:none;
+		transition-duration: 0.7s;
+		box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
      }
     </style>
 
@@ -58,7 +59,7 @@
         <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
         <p><br/></p>
         @foreach($navbar["INFO MANTAP"] as $nv)
-            <a class="btn btn-lg btn-wr active" href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
+            <a class="btn-wr active" href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
         @endforeach
     </div> <!-- container -->
 

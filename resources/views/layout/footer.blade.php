@@ -12,6 +12,7 @@
      </div>
       <div class="row text-left text-xs-center text-sm-left text-md-left">
           @foreach($kategorinavbar as $nv)
+              @if($nv->nama != 'NONE')
               <div class="col-xs-12 col-sm-2 col-sm-2">
                   <h5>{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</h5>
                   <ul class="list-unstyled quick-links">
@@ -20,6 +21,7 @@
                       @endforeach
                   </ul>
               </div>
+              @endif
           @endforeach
           <div class="col-xs-12 col-sm-2 col-sm-2">
               <h5>{{trans('admin.lainnya') }}</h5>

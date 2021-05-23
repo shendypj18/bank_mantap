@@ -1,5 +1,5 @@
 <!-- ====================================================== CAROUSEL  ======================================================= -->
-<section id="hero" class="carousel slide  mt-4" data-ride="carousel">
+<section id="hero" class="carousel slide  carousel-res" data-ride="carousel">
 
     <ol class="carousel-indicators" style="margin-left:-43rem; margin-bottom:10rem;">
         <li data-target="#hero" data-slide-to="0" class="active" style="height: 10px; width: 50px; padding-box; border-radius: 6px;"></li>
@@ -58,13 +58,17 @@
         <p><br/></p>
         @php $t = 1; @endphp
         <p>
+        <div class="display-button">
         @foreach($navbar["INFO MANTAP"] as $nv)
             @if($nv->id_slug == 'berita-mantap' || $nv->id_slug == 'promosi-mantap' ||
                 $nv->id_slug == 'program-mantap' || $nv->id_slug == 'laporan-keuangan')
-        <a class="btn btn-lg  btn-wr @if($t == 1) active @endif" href="{{url('article/'. $nv[$bahasa. '_slug'] . '/'. $bahasa)}}" role="button">{{$nv[$bahasa. '_navigasi']}}</a>
+        
+             <a class="btn-wr @if($t == 1) active @endif" href="{{url('article/'. $nv[$bahasa. '_slug'] . '/'. $bahasa)}}" role="button">{{$nv[$bahasa. '_navigasi']}}</a>
+        
             @php $t++; @endphp
         @endif
         @endforeach
+        </div>
         </p>
  
 <!-- ==================================================  /SIMULATION ====================================================== -->
@@ -98,7 +102,7 @@
                  <div class="carousel-item active">
                     @php $i = 1; @endphp
                     @foreach($berita as $b)
-                        <div class="col-md-3" style="float:left;">
+                        <div class="col-md-3 card-size" style="float:left;">
                             <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A; border-radius: 15px 15px 15px 15px; opacity: 1;">
                                 <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem; border-radius: 15px 15px 0px 0px;">
                                 <div class="card-body">

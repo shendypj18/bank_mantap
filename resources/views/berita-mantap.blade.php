@@ -4,17 +4,17 @@
 <style>
 .active,.btn-wr:hover{
 	background-color: #FCD116;
-	color:black;
-	color: #121212;
-	opacity: 1;
-	font-size: 13px;
-	border-radius: 25px;
-	width: 179px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 900;
-	border:none;
-	transition-duration: 0.7s;
-	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
+		color:black;
+		color: #121212;
+		opacity: 1;
+		font-size: 13px;
+		border-radius: 25px;
+		width: 82px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		border:none;
+		transition-duration: 0.7s;
+		box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
  }
  .img-responsive {
      width: 100%;
@@ -56,14 +56,16 @@
     @endif
     <p><br/></p>
     <p>
+        <div class="display-button">
         @foreach($navbar["INFO MANTAP"] as $nv)
             @if($nv->id_slug == 'berita-mantap' || $nv->id_slug == 'promosi-mantap' ||
                        $nv->id_slug == 'program-mantap' || $nv->id_slug == 'laporan-keuangan')
-            <a class="btn btn-lg btn-wr
+            <a class="btn-wr
                       @if($nv['id_slug'] == 'berita-mantap') active @endif "
                href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
             @endif
         @endforeach
+        </div>
     </p>
 </div>
     <div class="container text-center mt-5">
