@@ -187,9 +187,14 @@ a:hover{
 	box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
 }
 
-
+#tbl-pemegang-saham {
+	width: 1110px;
+}
 
 @media (max-width: 768px) {
+#tbl-pemegang-saham {
+	width: 700px;
+}
 #img-struktur-organisasi {
 		width: 110%;
 		height: 100%;
@@ -456,6 +461,9 @@ a:hover{
 
 
 @media (max-width: 480px)  {
+#tbl-pemegang-saham {
+	width: 500px;
+}
  .btn-unduh {
 		width:310px;
 		background-size: 0%;

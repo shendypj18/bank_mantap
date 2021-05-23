@@ -1,4 +1,3 @@
-@include('layout.header')
 
 
 <section class="section">
@@ -90,4 +89,3 @@
 </div>
 </div>
 
-@include('layout.footer')
