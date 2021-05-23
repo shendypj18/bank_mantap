@@ -589,6 +589,10 @@ a:hover{
 		text-align: center;
 	}
 
+	.display-carousel {
+		display: none;
+	}
+
 	
 }
 
@@ -732,7 +736,9 @@ a:hover{
 		flex-grow: 1;
 		text-align: center;
 	}
-
+	.display-carousel {
+		display: none;
+	}
 	
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
@@ -865,6 +871,10 @@ a:hover{
 		text-decoration: none;
 		flex-grow: 1;
 		text-align: center;
+	}
+
+	.display-carousel {
+		display: none;
 	}
 	
 }

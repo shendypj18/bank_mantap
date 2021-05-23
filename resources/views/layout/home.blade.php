@@ -27,8 +27,8 @@
     </div>
     </div>
   
-    {{-- <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev"><img class="responsive ml-13" src="{{ asset('asset/left.svg') }}"></a>
-    <a class="carousel-control-next" href="#hero" role="button" data-slide="next"><img class="responsive mr-13" src="{{ url('asset/right.svg') }}"></a> --}}
+    <a class="carousel-control-prev display-carousel" href="#hero" role="button" data-slide="prev"><img  src="{{ asset('asset/left.svg') }}"></a>
+    <a class="carousel-control-next display-carousel" href="#hero" role="button" data-slide="next"><img  src="{{ url('asset/right.svg') }}"></a>
 
 </section>
 <!-- ====================================================== /CAROUSEL  ==================================================== -->
