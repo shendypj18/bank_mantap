@@ -61,7 +61,7 @@
         <div class="display-button">
         @foreach($navbar["INFO MANTAP"] as $nv)
             @if(in_array($nv->id_slug, ['berita-mantap', 'id-berita-mantap', 'promosi-mantap', 'id-promosi-mantap', 'program-mantap', 'id-program-mantap',
-                       'laporan-keuangan', 'id-laporan-laporan-keuangan']))
+                       'laporan-keuangan', 'id-laporan-keuangan']))
             <a class="btn-wr
                       @if($nv['id_slug'] == 'program-mantap') active @endif "
                href="{{url('article/'. $nv[$bahasa. '_slug'] .'/'. $bahasa)}}" role="button">{{$nv[$bahasa . '_navigasi']}}</a>
