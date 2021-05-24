@@ -4,8 +4,8 @@
 <img src="{{asset('asset/slider22.png')}}">
 <ul class="breadcrumb">
 <div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Karir</li>
+  <li><a href="{{url('/')}}">Home</a></li>
+  <li>{{__('admin.KARIR')}}</li>
 </div>
 </ul>
 </section>
@@ -27,7 +27,7 @@
     <div class="row mt-3">
     <div class="col-sm"></div>
     <div class="text-center col-sm-8">
-    <h4 class="text-center"><strong>Karir</strong></h4>
+    <h4 class="text-center"><strong>Karier</strong></h4>
     <small style="color:#0F2B5B;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata</small>
     </div>
     <div class="col-sm"></div>
