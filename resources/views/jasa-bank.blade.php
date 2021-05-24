@@ -85,6 +85,13 @@
          margin-left: 0px;
        }
  }
+
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .right-text {
+        margin-left: 0px;
+    }
+ }
  @media (max-width: 480px) {
      .mc-rr {
          margin-bottom: 30px;
