@@ -327,7 +327,7 @@ class Controller extends BaseController
 
         $info_mantap = InfoMantap::where($this->bahasa. '_slug', $slug)->first();
         $kategori_slug = Str::slug($info_mantap->kategori, '-');
-        $navbar_data = Navbar::where('id_slug', $kategori_slug)->first();
+        $navbar_data = Navbar::where('id_slug', 'id-'. $kategori_slug)->first();
         $data_info = [
             "navbardata" => $navbar_data,
             "berita" => $info_mantap,
