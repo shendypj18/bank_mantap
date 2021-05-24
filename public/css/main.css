@@ -1911,3 +1911,11 @@ section .section-title {
 		border: solid 3px #ffd10a;
 	}
 }
+
+@media (min-width: 576px) and (max-width: 768px)  {
+	#navbar-upper-text {
+		-webkit-box-flex: 0;
+		flex: 0 0 90%;
+		max-width: 90%
+	}
+}
