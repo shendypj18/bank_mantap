@@ -156,7 +156,7 @@
   </div>
   <div class="row btn-pos">
       <div class="col-sm-12 mt-5">
-          <p><a class="btn btn-sm btn-yellow-sm" role="button" hhref="{{url('article/pinjaman-ritel/'.$bahasa)}}">Selengkapnya</a></p>
+          <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/pinjaman-ritel/'.$bahasa)}}">Selengkapnya</a></p>
       </div>
   </div>
 </div>
