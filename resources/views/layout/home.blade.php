@@ -53,7 +53,7 @@
     <br><br><br>
     <div class="container text-center">
         <div class="col-sm-8" style="float:none;margin:auto;">
-        <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
+        <h3 class="text-center" style="padding-top: 30px">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
         </div>
         <p><br/></p>
         @php $t = 1; @endphp
@@ -139,7 +139,7 @@
 <br/>
 <section id="bisnis" class="bisnis">
 <div class="container text-center">
-<h3 class="text-center" style="color:#0F2B5B;">Bisnis</h3>
+<h3 class="text-center " style="color:#0F2B5B; padding-top:30px">Bisnis</h3>
 
  
  <div class="row">

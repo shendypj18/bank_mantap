@@ -54,6 +54,9 @@
             {!!  $berita[$bahasa. '_isi'] !!}
         </div>
     @endif
+    <div class="col-sm-8" style="float:none;margin:auto;">
+        <h3 class="text-center" >{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
+        </div>
     <p><br/></p>
     <p>
         <div class="display-button">

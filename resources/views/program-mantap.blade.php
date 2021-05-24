@@ -56,6 +56,7 @@
             {!!  $berita[$bahasa. '_isi'] !!}
         </div>
     @endif
+    <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
     <p><br/></p>
     <p>
         <div class="display-button">
