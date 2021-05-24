@@ -20,10 +20,10 @@
 
 <div class="row mb-5">
     <div class="col-sm">
-      <div class="card simulasi">
+      <div class="card simulasi simulasi-bottom">
         <div class="card-body">
         <br/>
-        <img src="{{ asset('asset/img-simulasi01.png') }}" style="width: auto" class="card-img-top mb-4" alt="Image Simulasi"/>
+        <img class="width-img-simulasi" src="{{ asset('asset/img-simulasi01.png') }}" class="card-img-top mb-4" alt="Image Simulasi"/>
         <h4><img src="{{ asset('asset/icon/calculator.png') }}" alt="Icon" width="10%">&nbsp;&nbsp;Simulasi Tabungan Berjangka</h4>
 
         <p class="card-text">Tabungan Samantap Berjangka (TSB) adalah<br/>tabungan setoran wajid bulanan</p>
@@ -34,10 +34,10 @@
 
 
 		<div class="col-sm">
-    <div class="card simulasi">
+    <div class="card simulasi simulasi-bottom">
 		  <div class="card-body">
 		  <br/>
-      <img src="{{ asset('asset/img-simulasi02.png') }}" style="width: auto" class="card-img-top mb-4" alt="Image Simulasi"/>
+      <img src="{{ asset('asset/img-simulasi02.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
 		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%">&nbsp;&nbsp;Simulasi Deposito</h4>
 		  <p class="card-text">Untuk memastikan hang Anda diinvestasikan ditempat<br/>yang aman dan terpercaya sekaligus menguntungkan</p>
 		  <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-deposito/'.$bahasa)}}">HITUNG SIMULASI</a> 
@@ -49,10 +49,10 @@
 
     <div class="row mb-5">
     <div class="col-sm">
-		<div class="card simulasi">
+		<div class="card simulasi simulasi-bottom">
     <div class="card-body">
 		  <br/>
-      <img src="{{ asset('asset/img-simulasi03.png') }}" style="width: auto" class="card-img-top mb-4" alt="Image Simulasi"/>
+      <img src="{{ asset('asset/img-simulasi03.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
 		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi kredit Serbaguna Mikro</h4>
 		  <p class="card-text">Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha</p>
 		  <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-tabungan-serbaguna-mikro/'.$bahasa)}}">HITUNG SIMULASI</a> 
@@ -62,10 +62,10 @@
 
 
     <div class="col-sm">
-        <div class="card simulasi">
+        <div class="card simulasi simulasi-bottom">
             <div class="card-body">
                 <br/>
-                <img src="{{ asset('asset/img-simulasi04.png') }}" style="width: 98%;" class="card-img-top mb-4" alt="Image Simulasi"/>
+                <img src="{{ asset('asset/img-simulasi04.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
                 <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Kredit Pensiun</h4>
                 <p class="card-text">Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana Anda setelah pension</p>
                 <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">HITUNG SIMULASI</a>

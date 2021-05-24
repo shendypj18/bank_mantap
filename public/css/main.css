@@ -496,6 +496,10 @@ a:hover{
 	width: 10px;
 } */
 
+.width-img-simulasi {
+	width: auto;
+}
+
 
 @media (max-width: 480px)  {
 	.logo-footer{
@@ -528,6 +532,11 @@ a:hover{
 	.simulasi {
 		margin-bottom: 1300px;
 	}
+
+	.simulasi-bottom {
+		margin-bottom: 50px;
+	}
+	
 	#content h1{
 		margin-top: 20px;
 		margin-bottom: 18px;
@@ -741,6 +750,15 @@ a:hover{
 		width: 10px;
 	}
 
+	.card.simulasi {
+		width: 344px;
+		height: 465px;
+	}
+
+	.width-img-simulasi {
+		width: 250px;
+	}
+
 	
 }
 
@@ -946,6 +964,14 @@ a:hover{
 
 .display-share {
 	width: 10px;
+}
+
+.card.simulasi {
+	width: 344px;
+	height: 465px;
+}
+.width-img-simulasi{
+	width: 250px;
 }
 
 }
