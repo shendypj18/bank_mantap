@@ -18,15 +18,14 @@
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
-<nav class="navbar navbar-expand-lg p-3 navbar-light bg-white border-bottom">
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg padding-header navbar-light bg-white border-bottom">
+<button class="btn-header icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="fa fa-bars display-icon-header"></span>
 </button>
-<a class="navbar-brand ml-4 mr-5" href="{{url('/'. $bahasa)}}"><img src="{{asset('asset/logo_mantap.png')}}"  alt="Logo" width="80%"></a>
+<a class="navbar-brand ml-4 mr-5" href="{{url('/'. $bahasa)}}"><img class="display-img-header" src="{{asset('asset/logo_mantap.png')}}"  alt="Logo"></a>
 
 
 <div class="collapse navbar-collapse" style="margin-left:30%;" id="navbarSupportedContent">
-
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
         <li class="nav-item" >
             <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">{{__('admin.BERANDA')}} <span class="sr-only">(current)</span></a>
@@ -35,8 +34,8 @@
         @foreach($kategorinavbar as $nv)
             @if($nv->nama != "NONE" and $nv->nama != 'JASA BANK')
             <li class="nav-item dropdown">
-                <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
+                <a class="nav-link mr-3" href="" id="navbarDropdown" role="button"
+                   data-toggle="dropdown"  aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach($navbar[$nv->nama] as $subnavbar)
                         <a class="dropdown-item" href="{{url('article/' .$subnavbar[$bahasa. "_slug"].'/'. $bahasa) }}">{{$subnavbar[$bahasa. "_navigasi"]}}</a>

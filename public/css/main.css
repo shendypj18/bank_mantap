@@ -56,6 +56,7 @@ a:hover{
 	margin-bottom:4px;
 	padding: 8px 25px;
 	border: 5px groove #f9f9f9;
+	border-radius: 7px;
 	box-shadow: 0px 0.9px 0px #0F2B5B33;
 }
 
@@ -503,6 +504,40 @@ a:hover{
 	width: auto;
 }
 
+.padding-header {
+	padding: 1rem!important;
+}
+
+.display-icon-header {
+	display: none;
+}
+
+.display-img-header {
+	width: 80%;
+}
+
+.btn-header {
+	display: none;
+	height: 48px;
+}
+
+.fa {
+	padding: 8px;
+	font-size: 20px;
+	width: 38px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%;
+	opacity: 1;
+}
+	
+.fa:hover {
+	  opacity: 0.7;
+	  text-decoration: none;
+	  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
+}
+
 
 @media (max-width: 480px)  {
 	.logo-footer{
@@ -611,6 +646,14 @@ a:hover{
 
 	.bisnis{
 		height: 1000px;
+	}
+
+	.padding-header {
+		padding: 0rem!important;
+	}
+
+	.display-icon-header {
+		display: inline-block;
 	}
 
 	.center-icon {
@@ -760,6 +803,31 @@ a:hover{
 
 	.width-img-simulasi {
 		width: 250px;
+	}
+
+	.display-img-header {
+		width: 60%;
+	}
+
+	.ml-4 {
+		margin-left: 9.5rem!important;
+	}
+
+	/* [id^=btn]:checked + ul{
+		display: block;
+	  } */
+
+	  .btn-header {
+		display: inline-block;
+		height: 48px;
+	}
+
+	.navbar {
+		align-items: flex-start;
+	}
+
+	.fa {
+		margin: 4px -2px;
 	}
 
 	
@@ -916,6 +984,10 @@ a:hover{
 	.card-danger {
 		height: 105px;
 	}
+
+	.padding-header {
+		padding: 0rem!important;
+	}
 	
 	.carousel-indicators {
     top: 100px;
@@ -976,6 +1048,31 @@ a:hover{
 .width-img-simulasi{
 	width: 250px;
 }
+
+.display-icon-header {
+	display: inline-block;
+}
+
+.ml-4 {
+	margin-left: 9.5rem!important;
+}
+
+.btn-header {
+	display: inline-block;
+	height: 48px;
+}
+
+.navbar {
+	align-items: flex-start;
+}
+
+.fa {
+	margin: 4px -2px;
+}
+
+/* [id^=btn]:checked + ul{
+    display: block;
+  } */
 
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
@@ -1658,22 +1755,7 @@ section .section-title {
 }
 /* ======================================================== */
 
-.fa {
-	padding: 8px;
-	font-size: 20px;
-	width: 38px;
-	text-align: center;
-	text-decoration: none;
-	margin: 5px 2px;
-	border-radius: 50%;
-	opacity: 1;
-}
-	
-.fa:hover {
-	  opacity: 0.7;
-	  text-decoration: none;
-	  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
-}
+
 	
 .fa-facebook, .fa-twitter, .fa-instagram, .fa-youtube-play {
 	background: #FCD116;
@@ -1787,7 +1869,7 @@ section .section-title {
 		color: #FCD116;
 		background-color: #0F2B5B;
 		position: absolute;
-		line-height: 60px;
+		line-height: 0px;
 		cursor: pointer;
 		font-size: 25px;
 		width: 13%;

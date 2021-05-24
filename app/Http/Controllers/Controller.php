@@ -288,7 +288,8 @@ class Controller extends BaseController
             'id_route' => 'term-condition',
             'en_route' => 'term-condition',
         ];
-        return view('term-condition', $this->data() + $data_term_condition);
+        return $this->templateData2($this->data(), $locale, 'term-condition');
+        // return view('term-condition', $this->data() + $data_term_condition);
     }
 
     public function searchResault(Request $request, $locale = null)
