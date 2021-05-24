@@ -765,6 +765,14 @@ a:hover{
 	
 }
 
+@media (min-width: 576px) and (max-width: 768px)  {
+	#navbar-upper-text {
+		-webkit-box-flex: 0;
+		flex: 0 0 90%;
+		max-width: 90%
+	}
+}
+
 @media (min-width: 480px) and (max-width: 768px)  {
 	.logo-footer{
 		width: 40%;
@@ -1912,10 +1920,3 @@ section .section-title {
 	}
 }
 
-@media (min-width: 576px) and (max-width: 768px)  {
-	#navbar-upper-text {
-		-webkit-box-flex: 0;
-		flex: 0 0 90%;
-		max-width: 90%
-	}
-}
