@@ -3,6 +3,10 @@
 .mc {
      margin-bottom: 150px;
  }
+
+ .margin-img-left {
+     margin-left: -50px;
+   }
  @media (min-width: 1025px) {
      .btn-pos {
          margin-top: -250px;
@@ -76,6 +80,10 @@
          -webkit-order: 1;
          order: 1;
      }
+
+     .margin-img-left{
+         margin-left: 0px;
+       }
  }
  @media (max-width: 480px) {
      .mc-rr {
@@ -84,6 +92,10 @@
      .btn-pos {
          margin-top: -20%;
      }
+
+     .margin-img-left{
+         margin-left: 0px;
+       }
  }
 
 </style>
@@ -108,7 +120,7 @@
     <div class="container mc-rr">
         <div class="row mc-r">
             <div class="col-sm-6 right-img" >
-                <img id="img-navbar-temp" src="{{asset('asset/bank-garansi.png')}}" alt="Logo" style="margin-left: -50px;" width="600px" class="img-responsive" />
+                <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/bank-garansi.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
                 <h4 class="mt-5">Bank Garansi</h4>
@@ -142,7 +154,7 @@
   <div class="container mc-rr"">
         <div class="row mc-r">
             <div class="col-sm-6 right-img" >
-                <img id="img-navbar-temp" src="{{asset('asset/pic-transfer.png')}}" alt="Logo" style="margin-left: -50px;" width="600px" class="img-responsive" />
+                <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pic-transfer.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
                 <h4 class="mt-5">Transfer</h4>
