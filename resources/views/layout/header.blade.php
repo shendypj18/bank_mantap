@@ -22,8 +22,24 @@
 <button class="btn-header icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="fa fa-bars display-icon-header"></span>
 </button>
-<a class="navbar-brand ml-4 mr-5" href="{{url('/'. $bahasa)}}"><img class="display-img-header" src="{{asset('asset/logo_mantap.png')}}"  alt="Logo"></a>
+<a class="navbar-brand ml-4" href="{{url('/'. $bahasa)}}"><img class="display-img-header" src="{{asset('asset/logo_mantap.png')}}"  alt="Logo"></a>
+  <!-- Search Botton Here -->
+  <div id="myOverlay" class="overlay">
+    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+    <div class="overlay-content">
+        <form action="{{url('search-resault/'.$bahasa)}}">
+            <input type="text" placeholder="Search.." name="search">
+            <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
 
+<a class="text-muted padding-search" onclick="openSearch()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3">
+        <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+</a>
+<!-- End Bottom Here -->
 
 <div class="collapse navbar-collapse" style="margin-left:30%;" id="navbarSupportedContent">
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
@@ -61,7 +77,7 @@
         </div>
     </div>
 
-    <a class="text-muted" onclick="openSearch()">
+    <a class="text-muted display-search" onclick="openSearch()">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3">
             <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>

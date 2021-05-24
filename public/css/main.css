@@ -538,6 +538,15 @@ a:hover{
 	  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
 }
 
+.padding-search {
+	display: none;
+	padding-top: 11px;
+}
+
+.display-search {
+	display: inline-block;
+}
+
 
 @media (max-width: 480px)  {
 	.logo-footer{
@@ -830,6 +839,14 @@ a:hover{
 		margin: 4px -2px;
 	}
 
+	.padding-search {
+		display: inline-block;
+		padding-top: 11px;
+	}
+	
+	.display-search {
+		display: none;
+	}
 	
 }
 
@@ -841,6 +858,15 @@ a:hover{
 	}
 	.simulasi {
 		margin-bottom: 1300px;
+	}
+
+	.padding-search {
+		display: inline-block;
+		padding-top: 11px;
+	}
+
+	.display-search {
+		display: none;
 	}
 
 }
@@ -1080,6 +1106,15 @@ a:hover{
 
 .fa {
 	margin: 4px -2px;
+}
+
+.padding-search {
+	display: inline-block;
+	padding-top: 11px;
+}
+
+.display-search {
+	display: none;
 }
 
 /* [id^=btn]:checked + ul{
