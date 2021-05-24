@@ -13,6 +13,7 @@ class KategoriNavbar extends Model
     protected $table = "kategori_navbar";
     protected $fillable = [
         'nama',
+        'hide_or_show',
     ];
 
 

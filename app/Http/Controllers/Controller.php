@@ -28,7 +28,7 @@ class Controller extends BaseController
     public function __construct()
     {
         $this->bahasa = 'id';
-        $this->kategorinavbar = KategoriNavbar::all();
+        $this->kategorinavbar = KategoriNavbar::where('hide_or_show', 1)->get();
         $this->navbar = $this->setNavigasi();
     }
 

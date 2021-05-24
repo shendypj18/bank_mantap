@@ -28,6 +28,7 @@ class KategoriNavbarController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('nama', __('Nama'));
+        $grid->column('hide_or_show', __('Hide/Show'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -46,6 +47,7 @@ class KategoriNavbarController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('nama', __('Nama'));
+        $show->field('hide_or_show', __('Hide/Show'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -62,6 +64,7 @@ class KategoriNavbarController extends AdminController
         $form = new Form(new KategoriNavbar());
 
         $form->text('nama', __('Nama'))->rules('required');
+        $form->select('hide_or_show', __('Hide/Show'))->options(['0' => 'Hide', '1' => 'Show'])->default('Hide');
 
         return $form;
     }
