@@ -33,7 +33,7 @@
         </li>
 
         @foreach($kategorinavbar as $nv)
-            @if($nv->nama != "NONE")
+            @if($nv->nama != "NONE" and $nv->nama != 'JASA BANK')
             <li class="nav-item dropdown">
                 <a class="nav-link mr-3 dropdown-toggle" href="" id="navbarDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>

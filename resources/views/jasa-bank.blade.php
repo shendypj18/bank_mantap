@@ -112,7 +112,9 @@
         </div>
         <div class="row btn-pos">
             <div class="col-sm-12 mt-5">
-                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['NONE'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
+                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['JASA BANK'][0])
+                             {{url('article/' . $navbar['JASA BANK'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset"> Selengkapnya</a></p>
             </div>
         </div>
     </div>
@@ -129,7 +131,9 @@
         </div>
         <div class="row r-btn" style="">
             <div class="col-sm-12">
-                <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="{{url('article/' . $navbar['NONE'][3][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
+                <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['JASA BANK'][1])
+                             {{url('article/' . $navbar['JASA BANK'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
             </div>
         </div>
     </div>
@@ -146,7 +150,9 @@
         </div>
         <div class="row btn-pos">
             <div class="col-sm-12 mt-5">
-                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/' . $navbar['NONE'][4][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
+                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['JASA BANK'][2])
+                             {{url('article/' . $navbar['JASA BANK'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
             </div>
         </div>
     </div>
@@ -163,7 +169,9 @@
         </div>
         <div class="row r-btn" style="">
             <div class="col-sm-12">
-                <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="{{url('article/' . $navbar['NONE'][5][$bahasa . '_slug'] . '/' .$bahasa)}}">Selengkapnya</a></p>
+                <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['JASA BANK'][3])
+                             {{url('article/' . $navbar['JASA BANK'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
             </div>
         </div>
     </div>
@@ -180,7 +188,9 @@
         </div>
         <div class="row btn-pos">
             <div class="col-sm-12 mt-5">
-                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/inkaso/'.$bahasa)}}">Selengkapnya</a></p>
+                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['JASA BANK'][4])
+                             {{url('article/' . $navbar['JASA BANK'][4][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
             </div>
         </div>
     </div>

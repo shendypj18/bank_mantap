@@ -114,14 +114,16 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-              <h4 class="mt-5">Tarif Layanan</h4>
-              <small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</small>
+              <h4 class="mt-5">Simpanan TabunganKu</h4>
+              <small>TabunganKu adalah tabungan untuk perorangan Warga Negara Indonesia dengan persyaratan mudah dan ringan yang diterbitkan secara bersama oleh perbankan di Indonesia</small>
             </div>
-            <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/tarif-layanan.png')}}"  alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
+            <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/img-tabunganku.png')}}"  alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
         </div>
         <div class="row btn-pos">
             <div class="col-sm-12 mt-5">
-                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/tarif-layanan/'.$bahasa)}}">Selengkapnya</a></p>
+                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['SIMPANAN MANTAP'][0])
+                             {{url('article/' . $navbar['SIMPANAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
             </div>
         </div>
     </div>
@@ -130,16 +132,18 @@
   <div class="container mc-rr">
     <div class="row mc-r">
         <div class="col-sm-6 right-img" >
-            <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/bank-garansi.png')}}" alt="Logo"  width="600px" class="img-responsive" />
+            <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/img-simulasi01.png')}}" alt="Logo"  width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">Bank Garansi</h4>
-          <small>Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya.</small>
+          <h4 class="mt-5">Tabungan Simantap Berjangka</h4>
+          <small>Tabungan Simantap Berjangka (TSB) adalah tabungan dengan setoran wajib bulanan yang memberikan kesempatan kepada anda untuk mempersiapkan masa depan yang lebih baik.</small>
         </div>
     </div>
     <div class="row r-btn" style="">
         <div class="col-sm-12">
-            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="{{url('article/bank-garansi/'.$bahasa)}}">Selengkapnya</a></p>
+            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['SIMPANAN MANTAP'][1])
+                             {{url('article/' . $navbar['SIMPANAN MANTAP'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
         </div>
     </div>
 </div>
@@ -150,14 +154,16 @@
   <div class="container mc">
     <div class="row">
         <div class="col-sm-6" id="navbar-upper-text">
-          <h4 class="mt-5">Referensi Bank</h4>
-          <small>Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung oleh pihak ketiga yang dapat dipercaya.</small>
+          <h4 class="mt-5">Tabungan siMantap</h4>
+          <small>Tabungan SiMantap Gold adalah tabungan untuk perorangan Warga Negara Indonesia dengan persyaratan mudah dan ringan.</small>
         </div>
-        <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/referensi-bank.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
+        <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/img-tabungan-simantap.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
     </div>
     <div class="row btn-pos">
         <div class="col-sm-12 mt-5">
-            <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/referensi-bank/'.$bahasa)}}">Selengkapnya</a></p>
+            <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['SIMPANAN MANTAP'][2])
+                             {{url('article/' . $navbar['SIMPANAN MANTAP'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
         </div>
     </div>
   </div>
@@ -166,16 +172,18 @@
   <div class="container mc-rr"">
     <div class="row mc-r">
         <div class="col-sm-6 right-img" >
-            <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pic-transfer.png')}}" alt="Logo" width="600px" class="img-responsive" />
+            <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pic-pinjaman-ritel.png')}}" alt="Logo" width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">Transfer</h4>
-    <small>Jasa pengiriman uang yang dilaksanakan atas permintaan dan untuk kepentingan nasabah.</small>
+          <h4 class="mt-5">Tabungan siMantap Pensiun</h4>
+    <small>Tabungan SiMantap Pensiun adalah tabungan untuk nasabah pensiun sebagai sarana untuk menampung uang pensiun dan gaji pensiun setiap bulannya atas penunjukan Bank Mantap sebagai Bank juru bayar gaji pensiun.</small>
         </div>
     </div>
     <div class="row r-btn" style="">
         <div class="col-sm-12">
-            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="{{url('article/transfer/'.$bahasa)}}">Selengkapnya</a></p>
+            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['SIMPANAN MANTAP'][3])
+                             {{url('article/' . $navbar['SIMPANAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
         </div>
     </div>
 </div>
@@ -186,19 +194,43 @@
   <div class="container mc">
     <div class="row">
         <div class="col-sm-6" id="navbar-upper-text">
-          <h4 class="mt-5">Inkaso</h4>
-    <small>Layanan Bank Mantap dalam rangka penagihan warkat-warkat valuta rupiah yang Bank tertariknya berada diluar wilayah Kliring.</small>
+          <h4 class="mt-5">Deposito Mantap</h4>
+    <small>Deposito Bank Mantap Nikmati kemudahan bertransaksi dengan persyaratan mudah dan ringan</small>
         </div>
-        <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pic-inkaso.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
+        <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/img-simulasi02.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
     </div>
     <div class="row btn-pos">
         <div class="col-sm-12 mt-5">
-            <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/inkaso/'.$bahasa)}}">Selengkapnya</a></p>
+            <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['SIMPANAN MANTAP'][4])
+                             {{url('article/' . $navbar['SIMPANAN MANTAP'][4][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
         </div>
     </div>
   </div>
  
- 
+
+  <div class="container mc-rr"">
+    <div class="row mc-r">
+        <div class="col-sm-6 right-img" >
+            <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/img-giro.png')}}" alt="Logo" width="600px" class="img-responsive" />
+        </div>
+        <div class="col-sm-5 right-text" id="navbar-upper-text">
+          <h4 class="mt-5">Giro</h4>
+    <small>Deposito Bank Mantap Nikmati kemudahan bertransaksi dengan persyaratan mudah dan ringan</small>
+        </div>
+    </div>
+    <div class="row r-btn" style="">
+        <div class="col-sm-12">
+            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['SIMPANAN MANTAP'][5])
+                             {{url('article/' . $navbar['SIMPANAN MANTAP'][5][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br/>
+
 
 
 </section>

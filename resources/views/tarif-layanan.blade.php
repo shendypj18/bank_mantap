@@ -1,4 +1,4 @@
-@include('layout.header')
+
 <style>
 table {
   margin-bottom:8%;
@@ -480,5 +480,3 @@ th {
 
 
 </section>
-
-@include('layout.footer')

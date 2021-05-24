@@ -121,7 +121,9 @@
         </div>
         <div class="row btn-pos">
             <div class="col-sm-12 mt-5">
-                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/kredit-mantap-pensiun/'.$bahasa)}}">Selengkapnya</a></p>
+                <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['PINJAMAN MANTAP'][0])
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
             </div>
         </div>
     </div>
@@ -138,7 +140,9 @@
     </div>
     <div class="row r-btn" style="">
         <div class="col-sm-12">
-            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="#">Selengkapnya</a></p>
+            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['PINJAMAN MANTAP'][1])
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
         </div>
     </div>
 </div>
@@ -156,7 +160,9 @@
   </div>
   <div class="row btn-pos">
       <div class="col-sm-12 mt-5">
-          <p><a class="btn btn-sm btn-yellow-sm" role="button" href="{{url('article/pinjaman-ritel/'.$bahasa)}}">Selengkapnya</a></p>
+          <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                             @isset($navbar['PINJAMAN MANTAP'][2])
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
       </div>
   </div>
 </div>
@@ -174,7 +180,9 @@
     </div>
     <div class="row r-btn" style="">
         <div class="col-sm-12">
-            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="{{url('article/pinjaman-mikro/'.$bahasa)}}">Selengkapnya</a></p>
+            <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                             @isset($navbar['PINJAMAN MANTAP'][3])
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
         </div>
     </div>
 </div>
@@ -197,7 +205,9 @@
        
 		  <h4><img src="{{asset('asset/icon/calculator.png')}}"  alt="Logo" width="10%"><strong> Simulasi Tabungan dan Pinjaman</strong></h4>
 		  <p class="card-text text-left text-dark">Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.</p>
-		  <a class="btn btn-primary-sm" role="button" href="{{url('article/simulasi/'.$bahasa)}}">HITUNG SIMULASI</a> 
+		  <a class="btn btn-primary-sm" role="button" href="
+                             @isset($navbar['PINJAMAN MANTAP'][4])
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][4][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">HITUNG SIMULASI</a>
 		  </div>
 		</div>
  

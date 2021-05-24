@@ -12,7 +12,7 @@
      </div>
       <div class="row text-left text-xs-center text-sm-left text-md-left">
           @foreach($kategorinavbar as $nv)
-              @if($nv->nama != 'NONE')
+              @if($nv->nama != 'NONE' and $nv->nama != 'JASA BANK')
               <div class="col-xs-12 col-sm-2 col-sm-2">
                   <h5>{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</h5>
                   <ul class="list-unstyled quick-links">
