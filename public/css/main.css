@@ -523,9 +523,10 @@ a:hover{
 		margin-left: 20px;
 	}
 	#img-navbar-temp{
-	-webkit-box-flex: 0;
+		-webkit-box-flex: 0;
 		flex: 0 0 90%;
 		max-width: 90%;
+		max-height: 80%;
 
 	}
 	#img-struktur-organisasi {
