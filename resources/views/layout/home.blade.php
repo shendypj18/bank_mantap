@@ -39,7 +39,7 @@
 <section id="profile" class="profile" >
  
 <div class="profile-text">
-    <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank) didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagua Alit Sudiatmika, S.H, Notrasi di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
+    <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank") didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagus Alit Sudiatmika, S.H, Notaris di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
     <br/> <br/> 
     <a class="btn btn-profile-light" role="button" href="{{url('article/sekilas-perusahaan/'.$bahasa)}}">Profil Perusahaan</a> 
   </div>
@@ -150,7 +150,7 @@
           <a class="card-title"><strong>Pinjaman Mantap</strong></a>
           <p class="card-text"><small>Apapun kebutuhan anda,</small><br/>
       <small><b>Wujudkan dengan kredit mantap pensiun</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.Selengkapnya')}}</a>
+          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
         </div>
@@ -211,7 +211,7 @@
             </div>
 
             <div class="col-md-5">
-                <a>Like, subscribe dan follow untuk mendapatkan informasi terbaru dari Bank Mantap di media sosial</a>
+                <a>Like, subscribe, dan follow untuk mendapatkan informasi terbaru dari Bank Mantap di media sosial</a>
             </div>
         </div>
     </div>
@@ -223,9 +223,9 @@
 
 
 <!-- ============================================ SECTION KARIR ============================================================-->
-<section id="karir" class="karir">
+<section id="karier" class="karir">
 <div class="profile-text">
-<h3><strong>Karir</strong></h3>
+<h3><strong>Karier</strong></h3>
     <p>Dapatkan Pengalaman Kerja Bersama Bank Mantap</p>
     <br/>  
     <a class="btn btn-profile-light" role="button" href="{{url('karir/'. $bahasa)}}">Lihat Lowongan</a>

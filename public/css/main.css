@@ -558,9 +558,9 @@ a:hover{
 		margin-left: 20px;
 	}
 	#img-navbar-temp{
-	-webkit-box-flex: 0;
-		flex: 0 0 90%;
-		max-width: 90%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
 
 	}
 	#img-struktur-organisasi {
@@ -831,6 +831,18 @@ a:hover{
 	}
 
 	
+}
+
+@media (min-width: 576px) and (max-width: 768px)  {
+	#navbar-upper-text {
+		-webkit-box-flex: 0;
+		flex: 0 0 90%;
+		max-width: 90%
+	}
+	.simulasi {
+		margin-bottom: 1300px;
+	}
+
 }
 
 @media (min-width: 480px) and (max-width: 768px)  {
@@ -1993,3 +2005,4 @@ section .section-title {
 		border: solid 3px #ffd10a;
 	}
 }
+
