@@ -771,6 +771,10 @@ a:hover{
 		flex: 0 0 90%;
 		max-width: 90%
 	}
+	.simulasi {
+		margin-bottom: 1300px;
+	}
+
 }
 
 @media (min-width: 480px) and (max-width: 768px)  {
