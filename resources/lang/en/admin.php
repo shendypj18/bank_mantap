@@ -147,5 +147,5 @@ new programs and financial statements of',
     'karir' => 'CAREER',
     'karir2' => 'Karir',
     'lainnya' => 'OTHERS',
-
+    'SIMPANAN_MANTAP' => 'Simpanan Mantap',
 ];

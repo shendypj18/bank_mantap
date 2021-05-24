@@ -148,6 +148,7 @@ laporan keuangan dari',
     'karir' => 'KARIR',
     'karir2' => 'Karir',
     'lainnya' => 'LAINNYA',
+    'SIMPANAN_MANTAP' => 'Simpanan Mantap',
 
 
 ];
