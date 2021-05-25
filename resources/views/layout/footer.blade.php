@@ -31,7 +31,7 @@
               </ul>
         </div>
     </div>
-    
+
     <div class="row text-left text-xs-center text-sm-left text-md-left display-footer-mobile">
   
       @foreach($kategorinavbar as $nv)
@@ -53,11 +53,15 @@
       @endforeach
        
       <div class="col-xs-12 col-sm-2 col-sm-2">
-          <h5 class=>{{trans('admin.lainnyaa') }}</h5>
-          <ul class="list-unstyled quick-links">
-              <li><a href="{{url('kantor-cabang/'. $bahasa)}}">{{trans('admin.kantor_cabang')}}</a></li>
-              <li><a href="{{url('karir/'. $bahasa)}}">{{trans('admin.karir2')}}</a></li>
-          </ul>
+        <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
+          <li class="nav-item dropdown">
+            <a class="nav-link mr-3 dropdown-toggle dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
+               data-toggle="dropdown"  aria-expanded="false">{{trans('admin.lainnya') }}</a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item " href="{{url('kantor-cabang/'. $bahasa)}}">{{trans('admin.kantor_cabang')}}</a>
+                    <a class="dropdown-item " href="{{url('karir/'. $bahasa)}}">{{trans('admin.karir2')}}</a>
+        </div>
+      </li>
     </div>
 
 </section>
