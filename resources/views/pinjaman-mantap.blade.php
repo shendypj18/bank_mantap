@@ -16,7 +16,7 @@
            margin-top: -250px;
        }
    }
-  
+
    .right-text{
        margin-left: 90px;
    }
@@ -68,7 +68,7 @@
            -webkit-align-items: flex-start;
            align-items: flex-start;
        }
-  
+
        .mc-r .right-img {
            -webkit-box-ordinal-group: 2;
            -moz-box-ordinal-group: 2;
@@ -76,7 +76,7 @@
            -webkit-order: 2;
            order: 2;
        }
-  
+
        .mc-r .right-text {
            -webkit-box-ordinal-group: 1;
            -moz-box-ordinal-group: 1;
@@ -108,7 +108,91 @@
          margin-left: 0px;
        }
    }
-  
+  @media (min-width:769px) and (max-width:1024px){
+    .mc {
+         margin-bottom: 0px;
+
+     }
+     .right-text{
+         margin-left: 0px;
+     }
+     .btn-right {
+         margin-left: 0px;
+     }
+     .r-btn {
+         margin-top: 0px;
+         float:left;
+     }
+     .btn-pos {
+         margin-top: -7%;
+     }
+     .mc-r  {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -moz-box-orient: vertical;
+         -webkit-flex-direction: column;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         /* optional */
+         -webkit-box-align: start;
+         -moz-box-align: start;
+         -ms-flex-align: start;
+         -webkit-align-items: flex-start;
+         align-items: flex-start;
+     }
+
+     .mc-r .right-img {
+         -webkit-box-ordinal-group: 2;
+         -moz-box-ordinal-group: 2;
+         -ms-flex-order: 2;
+         -webkit-order: 2;
+         order: 2;
+     }
+
+     .mc-r .right-text {
+         -webkit-box-ordinal-group: 1;
+         -moz-box-ordinal-group: 1;
+         -ms-flex-order: 1;
+         -webkit-order: 1;
+         order: 1;
+     }
+
+     .margin-img-left{
+         margin-left: 0px;
+       }
+  }
+  @media (max-width:575px){
+      #img-navbar-temp{
+          width: 100%;
+          height: auto;
+      }
+  }
+  @media (min-width:576px) and (max-width:768px){
+      #img-navbar-temp{
+          width: 500px;
+          height: auto;
+      }
+  }
+  @media (min-width:1024px) and (max-width:1365px){
+     #img-navbar-temp{
+         width: 500px;
+     }
+     .right-text{
+         margin-left: 0px;
+     }
+     .mt-4, .my-4 {
+        margin-top: 5rem!important;
+    }
+
+
+
+
+ }
+
   </style>
   <section class="section">
     <div class="container mc">
@@ -127,7 +211,7 @@
             </div>
         </div>
     </div>
- 
+
    <div class="container mc-rr">
     <div class="row mc-r">
         <div class="col-sm-6 right-img" >
@@ -167,7 +251,7 @@
   </div>
 </div>
 
- 
+
    <div class="container mc-rr"">
     <div class="row mc-r">
         <div class="col-sm-6 right-img" >
@@ -190,8 +274,8 @@
 </br>
 </br>
 
- 
-    
+
+
 </section>
 
 <!-- <div class="extended">
@@ -199,13 +283,13 @@
 
      <div class="container mt-5">
      <div class="col-sm">
-     <div class="card card-one">
-     <div class="card-body text-left">
-     <br/> <br/> <br/>
+	 <div class="card card-one">
+	 <div class="card-body text-left">
+	 <br/> <br/> <br/>
 
-     <h4><img src="{{asset('asset/icon/calculator.png')}}"  alt="Logo" width="10%"><strong> Simulasi Tabungan dan Pinjaman</strong></h4>
-     <p class="card-text text-left text-dark">Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.</p>
-     <a class="btn btn-primary-sm" role="button" href="
+	 <h4><img src="{{asset('asset/icon/calculator.png')}}"  alt="Logo" width="10%"><strong> Simulasi Tabungan dan Pinjaman</strong></h4>
+	 <p class="card-text text-left text-dark">Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.</p>
+	 <a class="btn btn-primary-sm" role="button" href="
      @isset($navbar['PINJAMAN MANTAP'][3])
      {{url('article/' . $navbar['PINJAMAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">HITUNG SIMULASI</a>
 	 </div>

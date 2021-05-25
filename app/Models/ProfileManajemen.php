@@ -23,6 +23,11 @@ class ProfileManajemen extends Model
         'kategori_jabatan',
         'gambar',
         'id_deskripsi',
-        'en_deskripsi'
+        'en_deskripsi',
+        'pengalaman_kerja',
+        'posisi_saat_ini',
+        'dasar_hukum_penunjukan',
+        'hubungan_afiliasi',
+        'masa_jabatan',
     ];
 }
