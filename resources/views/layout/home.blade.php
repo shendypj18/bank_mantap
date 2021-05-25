@@ -41,7 +41,7 @@
 <div class="profile-text">
     <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank") didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagus Alit Sudiatmika, S.H, Notaris di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
     <br/> <br/> 
-    <a class="btn btn-profile-light" role="button" href="{{url('article/id-sekilas-perusahaan/'.$bahasa)}}">Profil Perusahaan</a> 
+    <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['TENTANG KAMI'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">Profil Perusahaan</a>
   </div>
 </section>
 
@@ -101,12 +101,12 @@
                  <div class="carousel-item active">
                     @php $i = 1; @endphp
                     @foreach($berita as $b)
-                        <div class="col-md-3 card-size" style="float:left">
+                        <div class="col-md-3 card-size pad-sz" style="float:left">
                             <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A; border-radius: 15px 15px 15px 15px; opacity: 1;">
                                 <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem; border-radius: 15px 15px 0px 0px;">
                                 <div class="card-body">
-                                    <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
-                                    <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
+                                    <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
+                                    <p class="card-text text-left fz" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
                                         @if(strlen($b[$bahasa. '_judul']) > 55)
                                             {{ substr($b[$bahasa. '_judul'], 0, 55) . '....'}}
                                         @else
@@ -132,7 +132,7 @@
 
         </div>
         <br/><br/><br/>
-        <p class="text-center"><a class="btn btn-lg btn-primary" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
+        <p class="text-center"><a class="btn btn-lg btn-primary" href="{{url('article/' . $navbar['INFO MANTAP'][3][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
     </div>
     </div>
 </section>

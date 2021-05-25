@@ -55,7 +55,7 @@
       <img src="{{ asset('asset/img-simulasi03.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
 		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi kredit Serbaguna Mikro</h4>
 		  <p class="card-text">Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha</p>
-		  <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-tabungan-serbaguna-mikro/'.$bahasa)}}">HITUNG SIMULASI</a> 
+		  <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">HITUNG SIMULASI</a> 
 		  </div>
 		</div>
 		</div>

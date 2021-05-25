@@ -77,12 +77,12 @@
             @isset($pages["Promosi Mantap"])
             @foreach ($pages["Promosi Mantap"] as $page)
                 @if(!empty($page[$bahasa. '_judul']))
-                <div class="col-sm-3 mb-5">
+                <div class="col-sm-3 mb-5 pad-sz">
                     <div class="card mb-2" style="height: 23rem; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar)}}" alt="Card image cap"  style="height: 12rem;">
                         <div class="card-body">
-                            <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
-                            <p class="card-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/' .$page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
+                            <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
+                            <p class="card-text text-left fz" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/' .$page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
                                 {{ $page[$bahasa. '_judul']}}
                             </p>
                         </div>
