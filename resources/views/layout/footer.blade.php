@@ -96,10 +96,12 @@
             <a>Jl. Cikini Raya No.42 Menteng Jakarta Pusat 10330</a>
             <a>Indonesia</a>
             <br/></small><br/>
+   
             <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
             <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram"></a>
             <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" target="_blank" class="fa fa-youtube-play"></a>
+    
           </div>
          </div>
       </div>

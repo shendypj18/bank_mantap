@@ -571,6 +571,10 @@ a:hover{
     -webkit-text-decoration-skip: objects;
 }
 
+.icon-medsos {
+	padding: 0px;
+}
+
 @media (max-width: 480px)  {
 	.footer-nav{
 		font-family: 'Roboto', sans-serif;
@@ -588,7 +592,7 @@ a:hover{
 		border: 0px groove #f9f9f9;
 		border-radius: 0px;
 		box-shadow: 0px 0.9px 0px #0F2B5B33;
-		
+
 	}
 
 	.dropdown-menu {
@@ -887,7 +891,7 @@ a:hover{
 	}
 
 	.fa {
-		margin: 4px -2px;
+		margin: 4px 2px;
 	}
 
 	.padding-search {
@@ -905,6 +909,10 @@ a:hover{
 
 	.display-footer-mobile {
 		display: flex;
+	}
+
+	.icon-medsos {
+		padding: 2px;
 	}
 
 }
@@ -933,6 +941,10 @@ a:hover{
 
 	.display-search {
 		display: none;
+	}
+
+	.icon-medsos {
+		padding: 2px;
 	}
 
 }
@@ -1175,7 +1187,7 @@ a:hover{
 }
 
 .fa {
-	margin: 4px -2px;
+	margin: 4px 2px;
 }
 
 .padding-search {
