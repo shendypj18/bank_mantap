@@ -1384,9 +1384,6 @@ a:hover{
 	.display-share {
 		width: 100%;
 	}
-	.simulasi {
-		margin-bottom: 420px;
-	}
 	.fz {
 		font-size: 80%;
 	}
@@ -1397,9 +1394,6 @@ a:hover{
 	}
 	.simulasi {
 		margin-bottom: 800px;
-	}
-	.card-body{
-		height: 10px;
 	}
 }
 
