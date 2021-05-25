@@ -41,7 +41,7 @@
 <div class="profile-text">
     <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank") didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagus Alit Sudiatmika, S.H, Notaris di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
     <br/> <br/> 
-    <a class="btn btn-profile-light" role="button" href="{{url('article/sekilas-perusahaan/'.$bahasa)}}">Profil Perusahaan</a> 
+    <a class="btn btn-profile-light" role="button" href="{{url('article/id-sekilas-perusahaan/'.$bahasa)}}">Profil Perusahaan</a> 
   </div>
 </section>
 
