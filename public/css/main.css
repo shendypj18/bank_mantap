@@ -1387,6 +1387,20 @@ a:hover{
 	.simulasi {
 		margin-bottom: 420px;
 	}
+	.fz {
+		font-size: 80%;
+	}
+	.pad-sz {
+		-webkit-box-flex: 0;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.simulasi {
+		margin-bottom: 800px;
+	}
+	.card-body{
+		height: 10px;
+	}
 }
 
 
