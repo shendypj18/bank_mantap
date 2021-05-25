@@ -49,14 +49,15 @@ a:hover{
 	  padding: 0px;
 	  border: hidden;
 	  font-size:12px;
+	 
 }
 
 .dropdown-menu a{
 	margin-top:-9px;
 	margin-bottom:4px;
 	padding: 8px 25px;
-	border: 5px groove #f9f9f9;
-	border-radius: 7px;
+	border: 0px groove #f9f9f9;
+	border-radius: 0px;
 	box-shadow: 0px 0.9px 0px #0F2B5B33;
 }
 
@@ -70,6 +71,7 @@ a:hover{
 	background-color: #0F2B5B;
 	color:#FCD116;
 	padding: 8px 25px;
+
 }
  
 /* Overlay Seacrh Button */
@@ -548,8 +550,55 @@ a:hover{
 	display: inline-block;
 }
 
+.display-footer {
+	display: flex;
+}
+
+.display-footer-mobile {
+	display: none;
+}
+
+.display-header{
+	margin-left: 30%;
+}
+
+.footer-nav{
+	font-family: 'Roboto', sans-serif;
+    font-size:12px;
+    color: #FCD116;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
 
 @media (max-width: 480px)  {
+	.footer-nav{
+		font-family: 'Roboto', sans-serif;
+		font-size:12px;
+		color: #FCD116;
+		text-decoration: none !important;
+		background-color: transparent;
+		-webkit-text-decoration-skip: objects;
+	}
+
+	.dropdown-menu a{
+		margin-top: 0px;
+		margin-bottom:4px;
+		padding: 8px 25px;
+		border: 0px groove #f9f9f9;
+		border-radius: 0px;
+		box-shadow: 0px 0.9px 0px #0F2B5B33;
+		
+	}
+
+	.dropdown-menu {
+		min-width: 23rem;
+	}
+
+	.display-header{
+		margin-left: 5%;
+	}
+
 	.logo-footer{
 		width: 40%;
 	}
@@ -830,6 +879,7 @@ a:hover{
 	  .btn-header {
 		display: inline-block;
 		height: 48px;
+		border-width: 0px;
 	}
 
 	.navbar {
@@ -849,9 +899,24 @@ a:hover{
 		display: none;
 	}
 
+	.display-footer {
+		display: none;
+	}
+
+	.display-footer-mobile {
+		display: flex;
+	}
+
 }
 
 @media (min-width: 576px) and (max-width: 768px)  {
+	.display-header{
+		margin-left: 5%;
+	}
+
+	.dropdown-menu {
+		min-width: 23rem;
+	}
 	#navbar-upper-text {
 		-webkit-box-flex: 0;
 		flex: 0 0 90%;
@@ -873,6 +938,9 @@ a:hover{
 }
 
 @media (min-width: 480px) and (max-width: 768px)  {
+	.display-header{
+		margin-left: 5%;
+	}
 	.logo-footer{
 		width: 40%;
 	}
@@ -1099,6 +1167,7 @@ a:hover{
 .btn-header {
 	display: inline-block;
 	height: 48px;
+	border-width: 0px;
 }
 
 .navbar {
@@ -1124,6 +1193,7 @@ a:hover{
 
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
+	
 
 	#navbar-upper-text {
 		-webkit-box-flex: 0;
@@ -1720,13 +1790,19 @@ section .section-title {
     color:#FCD116;
 }
 
-#footer a{
+#footer .dropdown-footer {
+	padding-right: 69%;
+	border-bottom: 1px solid;
+}
+
+/* #footer a{
+	font-family: 'Roboto', sans-serif;
     font-size:12px;
     color: #FCD116;
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
-}
+} */
 
 #footer ul.social li{
   padding: 1px 0;

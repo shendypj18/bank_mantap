@@ -40,8 +40,8 @@
         <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
 </a>
 <!-- End Bottom Here -->
-
-<div class="collapse navbar-collapse" style="margin-left:30%;" id="navbarSupportedContent">
+<div class="display-header">
+<div class="collapse navbar-collapse"  id="navbarSupportedContent">
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
         <li class="nav-item" >
             <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">{{__('admin.BERANDA')}} <span class="sr-only">(current)</span></a>
@@ -100,7 +100,7 @@
     </div>
 
 </div>
-
+</div>
 </nav>
 </header>
 <!-- ====================================================== /NAVBAR  ===================================================== -->

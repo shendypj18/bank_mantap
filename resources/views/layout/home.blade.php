@@ -41,7 +41,7 @@
 <div class="profile-text">
     <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank") didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagus Alit Sudiatmika, S.H, Notaris di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
     <br/> <br/> 
-    <a class="btn btn-profile-light" role="button" href="{{url('article/sekilas-perusahaan/'.$bahasa)}}">Profil Perusahaan</a> 
+    <a class="btn btn-profile-light" role="button" href="{{url('article/id-sekilas-perusahaan/'.$bahasa)}}">Profil Perusahaan</a> 
   </div>
 </section>
 
@@ -107,7 +107,11 @@
                                 <div class="card-body">
                                     <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
                                     <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
-                                        {{ $b[$bahasa. '_judul']}}
+                                        @if(strlen($b[$bahasa. '_judul']) > 55)
+                                            {{ substr($b[$bahasa. '_judul'], 0, 55) . '....'}}
+                                        @else
+                                            {{$b[$bahasa. '_judul']}}
+                                        @endif
                                     </p>
                                 </div>
                             </div>

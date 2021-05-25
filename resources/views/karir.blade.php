@@ -38,14 +38,14 @@
     <div class="row">
       <div class="col-sm-2"><img src="{{asset('asset/icon/user.png')}}"></div>
       <div class="col-sm-7 mt-4" style="color:#0F2B5B; font-weight:bold;">Officer Development Program (ODP) - General</div>
-      <div class="col text-center mt-4"><a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a></div>
+      <div class="col text-center mt-4"><a class="btn btn-sm btn-primary-sm" role="button" href="https://rekrutmen.bankmantap.co.id/">Selengkapnya</a></div>
     </div>
     <hr/>
   
     <div class="row">
     <div class="col-sm-2"><img src="{{asset('asset/icon/folder.png')}}"></div>
       <div class="col-sm-7 mt-4" style="color:#0F2B5B;  font-weight:bold;">Officer Development Program (ODP) - IT</div>
-      <div class="col text-center mt-4"><a class="btn btn-sm btn-primary-sm" role="button" href="#">Selengkapnya</a></div>
+      <div class="col text-center mt-4"><a class="btn btn-sm btn-primary-sm" role="button" href="https://rekrutmen.bankmantap.co.id/">Selengkapnya</a></div>
     </div>
   </div>
   <hr/>
