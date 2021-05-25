@@ -194,24 +194,24 @@
     
 </section>
 
-<div class="extended">
-<br/>
+<!-- <div class="extended">
+     <br/>
 
-<div class="container mt-5">
-    <div class="col-sm">
-		<div class="card card-one">
-		  <div class="card-body text-left">
-		  <br/> <br/> <br/>  
-       
-		  <h4><img src="{{asset('asset/icon/calculator.png')}}"  alt="Logo" width="10%"><strong> Simulasi Tabungan dan Pinjaman</strong></h4>
-		  <p class="card-text text-left text-dark">Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.</p>
-		  <a class="btn btn-primary-sm" role="button" href="
-                             @isset($navbar['PINJAMAN MANTAP'][3])
-                             {{url('article/' . $navbar['PINJAMAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">HITUNG SIMULASI</a>
-		  </div>
-		</div>
- 
-</div>
+     <div class="container mt-5">
+     <div class="col-sm">
+     <div class="card card-one">
+     <div class="card-body text-left">
+     <br/> <br/> <br/>
 
-</div>
-</div>
+     <h4><img src="{{asset('asset/icon/calculator.png')}}"  alt="Logo" width="10%"><strong> Simulasi Tabungan dan Pinjaman</strong></h4>
+     <p class="card-text text-left text-dark">Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.</p>
+     <a class="btn btn-primary-sm" role="button" href="
+     @isset($navbar['PINJAMAN MANTAP'][3])
+     {{url('article/' . $navbar['PINJAMAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">HITUNG SIMULASI</a>
+	 </div>
+	 </div>
+
+     </div>
+
+     </div>
+     </div> -->
