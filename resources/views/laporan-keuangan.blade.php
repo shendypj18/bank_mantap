@@ -100,8 +100,8 @@
                                 <div class="card-body">
                                     <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
                                     <p class="card-text text-left fz" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('storage/'. '/' .$b->nama_file)}}'">
-                                        @if(strlen($b->nama) > 55)
-                                            {{ substr($b->nama, 0, 55) . '....'}}
+                                        @if(strlen($b->nama) > 64)
+                                            {{ substr($b->nama, 0, 64) . '....'}}
                                         @else
                                             {{$b->nama}}
                                         @endif

@@ -922,7 +922,10 @@ a:hover{
 	.chat-float img {
 		width: 70px;
 		margin-right: -8px;
-	  }
+	}
+	.fz {
+		font-size: 16px;
+	}
 
 }
 
