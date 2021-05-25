@@ -33,10 +33,19 @@
 
 @media (min-width:420px) and (max-width:991px){
   .card.simulasi {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     padding-bottom: 0px;
     margin-bottom: 100px;
+  }
+  .btn-simulasi-flat{
+    margin-top: 110px;
+  }
+  .btn-simulasi-flat.out{
+    margin-top: 40px;
+  }
+  .width-img-simulasi{
+    height: 188px;
   }
 }
 @media(min-width:992px) and (max-width: 1335px){

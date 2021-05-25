@@ -64,8 +64,8 @@
                 @endphp
                 @foreach($laporan as $l)
                     <tr>
-                        <td class="text-right" style="width:4%">{{$i.'. '}}</td>
-                        <td>{{$l->tahun}}</td>
+                        <td class="text-right" style="width:4%">{{$i}} <span>.  </span></td>
+                        <td>@if($l->jenis_laporan == "7") {{$l->nama. ' '}} @endif {{$l->tahun}}</td>
                         <td>{{$l->deskripsi}}</td>
                         @if($l->nama_file)
                         <td><a href="{{url('storage/'. $l->nama_file)}}">lihat file</a> <img class="ml-2" src="{{ asset('asset/download.svg') }}"></td>
