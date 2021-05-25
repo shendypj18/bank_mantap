@@ -107,7 +107,11 @@
                                 <div class="card-body">
                                     <p class="card-text text-left"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
                                     <p class="card-text text-left" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
-                                        {{ $b[$bahasa. '_judul']}}
+                                        @if(strlen($b[$bahasa. '_judul']) > 55)
+                                            {{ substr($b[$bahasa. '_judul'], 0, 55) . '....'}}
+                                        @else
+                                            {{$b[$bahasa. '_judul']}}
+                                        @endif
                                     </p>
                                 </div>
                             </div>
