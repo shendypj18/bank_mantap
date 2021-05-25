@@ -450,9 +450,9 @@ return [
                  ['title' =>  'template navigasi', 'description' =>  '', 'url' => '/template/navigasi-content.html'],
                  ['title' =>  'template info mantap', 'description' =>  '', 'url' => '/template/info-mantap.blade.php'],
                  ['title' =>  'Template kredit mantap pensiun', 'description' =>  '', 'url' => '/template/kredit-mantap-pensiun.html'],
-                 ['title' =>  'Template kredit mantap pensiun', 'description' =>  '', 'url' => '/template/budaya-kerja.html'],
-                 ['title' =>  'Template kredit mantap pensiun', 'description' =>  '', 'url' => '/template/pemegang-saham.html'],
-                 ['title' =>  'Template kredit mantap pensiun', 'description' =>  '', 'url' => '/template/struktur-organisasi.html']
+                 ['title' =>  'Template Budaya Kerja', 'description' =>  '', 'url' => '/template/budaya-kerja.html'],
+                 ['title' =>  'Template Pemegang Saham', 'description' =>  '', 'url' => '/template/pemegang-saham.html'],
+                 ['title' =>  'Template Struktur Organisasi', 'description' =>  '', 'url' => '/template/struktur-organisasi.html']
 
             ],
             //'content_css' => "/css/editor.css",
