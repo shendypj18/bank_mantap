@@ -17,7 +17,7 @@
                   <h5>{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</h5>
                   <ul class="list-unstyled quick-links">
                       @foreach($navbar[$nv->nama] as $subnavbar)
-                          <li><a href="{{url('article/' .$subnavbar[$bahasa. "_slug"] .'/'. $bahasa)}}">{{$subnavbar[$bahasa. "_navigasi"]}}</a></li>
+                          <li><a  href="{{url('article/' .$subnavbar[$bahasa. "_slug"] .'/'. $bahasa)}}">{{$subnavbar[$bahasa. "_navigasi"]}}</a></li>
                       @endforeach
                   </ul>
               </div>
@@ -31,6 +31,7 @@
               </ul>
         </div>
     </div>
+    
     <div class="row text-left text-xs-center text-sm-left text-md-left display-footer-mobile">
   
       @foreach($kategorinavbar as $nv)
@@ -38,11 +39,11 @@
           <div class="col-xs-12 col-sm-3 col-sm-2">
             <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
             <li class="nav-item dropdown">
-              <a class="nav-link mr-3 dropdown-toggle dropdown-footer" href="" id="navbarDropdown" role="button"
+              <a class="nav-link mr-3 dropdown-toggle dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
                  data-toggle="dropdown"  aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   @foreach($navbar[$nv->nama] as $subnavbar)
-                      <a class="dropdown-item" href="{{url('article/' .$subnavbar[$bahasa. "_slug"].'/'. $bahasa) }}">{{$subnavbar[$bahasa. "_navigasi"]}}</a>
+                      <a class="dropdown-item " href="{{url('article/' .$subnavbar[$bahasa. "_slug"].'/'. $bahasa) }}">{{$subnavbar[$bahasa. "_navigasi"]}}</a>
                   @endforeach
           </div>
           </li>
