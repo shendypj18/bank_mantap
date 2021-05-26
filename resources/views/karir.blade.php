@@ -43,7 +43,7 @@
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="{{url('/')}}">Home</a></li>
-  <li>{{__('admin.KARIR')}}</li>
+  <li>{{__('admin.karir')}}</li>
 </div>
 </ul>
 </section>
