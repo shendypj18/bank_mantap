@@ -68,7 +68,7 @@ td {
 <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
 
 <form>
-    <div class="form-group row mt-4 ml-4">
+    <div class="form-group row mt-4 ">
     <label class="col-sm-4 col-form-label" for="setor">Jumlah Pinjaman</label> 
         <div class="col-sm-5 input-group">
           <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
@@ -80,7 +80,7 @@ td {
           </div>
         </div>
 
-    <div class="form-group row  ml-4">
+    <div class="form-group row  ">
     <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label> 
         <div class="col-sm-5 input-group">
           <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
@@ -92,7 +92,7 @@ td {
           </div>
     </div>
 
-    <div class="form-group row  ml-4">
+    <div class="form-group row  ">
     <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label> 
         <div class="col-sm-5 input-group">
         <input type="text" class="form-control" id="bunga" disabled value="9" style="background-color:#FFF;">
@@ -102,13 +102,13 @@ td {
         </div>
     </div>
 
-    <div class="form-group row  ml-4">
+    <div class="form-group row  ">
     <div class="col-sm-3 col-form-label"></div> 
-    <div class="col-sm-5 input-group ml-4">
+    <div class="col-sm-5 input-group ">
     
     
     
-    <button class="btn btn-simulasi-flat ml-5" type="button" id="btnHitung" onclick="hitung()">HITUNG SIMULASI</button>
+    <button class="btn btn-simulasi-flat " type="button" id="btnHitung" onclick="hitung()">HITUNG SIMULASI</button>
     </div>
     </div>
 </form>
@@ -124,7 +124,7 @@ td {
  
 <div class="col-sm-11 mt-5">
 <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
-<div class="container ml-5 mt-3">
+<div class="container  mt-3">
 
 <table style="width:70%">
 <tbody>
@@ -161,8 +161,8 @@ td {
 
 <div class="form-group row">
     <div class="col-sm-3 col-form-label"></div> 
-    <div class="col-sm-5 input-group ml-4">
-    <a class="btn btn-simulasi-flat ml-5 mt-5" role="button" href="">KEMBALI KE SIMULASI</a>
+    <div class="col-sm-5 input-group ">
+    <a class="btn btn-simulasi-flat  mt-5" role="button" href="">KEMBALI KE SIMULASI</a>
     </div>
 </div>
  </div>

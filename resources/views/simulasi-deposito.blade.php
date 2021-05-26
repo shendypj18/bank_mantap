@@ -26,11 +26,12 @@ td {
 <img src="{{asset('asset/slider_simulasi.png')}}">
 <ul class="breadcrumb">
 
-<div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Simulasi</li>
-  <li>Deposito</li>
-</div>
+    <div class="container">
+
+        <li><a href="#">Home</a></li>
+        <li>Simulasi</li>
+        <li>Deposito</li>
+    </div>
 
 </ul>
 </section>
@@ -38,82 +39,79 @@ td {
  
  
 <div class="container" id="input">
-<div class="row">
-  <div class="col-sm-6 text-left">
-  <h4><strong>Simulasi Deposito</strong></h4>
-  </div>
-  
-  <div class="col-sm-5 text-center">
- 
-  <select name="cars" style="background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #D0D8E6;
-        border-radius: 8px;
-        opacity: 1; width: 260px;
-        height: 40px;" onchange="document.location.href=this.value">
-    <option value="volvo" selected>Pilih simulasi produk lain</option>
-    <option value="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">Simulasi Tabungan Berjangka</option>
-    <option value="{{url('simulasi-deposito/'.$bahasa)}}">Simulasi Deposito</option>
-    <option value="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">Simulasi kredit Serbaguna Mikro</option>
-    <option value="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">Simulasi Kredit Pensiun</option>
-  </select>
- 
-  </div> <!-- col-sm-5-->
-</div><!-- row -->
-
-<div class="mt-5">
-<p><small>Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.</small></p>
-</div><!-- mt-5 ml-4 -->
- 
- 
-<div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
-
-<form>
-    <div class="form-group row mt-4 ml-4">
-    <label class="col-sm-4 col-form-label" for="setor">Jumlah Setoran (perbulan)</label> 
-        <div class="col-sm-5 input-group">
-          <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
-          <input type="text" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
-        </div>
-          <div class="col-sm-3">
-             <span id="lesss" style="color: red;">*Kurang dari Rp 5.000.000</span>
-            <span id="moree" style="color: red;">*Lebih dari Rp 5.000.000</span>
-          </div>
+    <div class="row">
+        <div class="col-sm-6 text-left">
+            <h4><strong>Simulasi Deposito</strong></h4>
         </div>
 
-    <div class="form-group row  ml-4">
-    <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label> 
-        <div class="col-sm-5 input-group">
-          <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
-          <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
-        </div>
-        <div class="col-sm-3">
-             <span id="less" style="color: red;">*Kurang dari 6 bulan</span>
-            <span id="more" style="color: red;">*Lebih dari 12 bulan</span>
-          </div>
-    </div>
+        <div class="col-sm-5 text-center">
 
-    <div class="form-group row  ml-4">
-    <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label> 
-        <div class="col-sm-5 input-group">
-        <input type="text" class="form-control" id="bunga" disabled value="7" style="background-color:#FFF;">
-        <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
-        <input type="text" class="form-control"  id="bungaa" disabled value="2"  style="background-color:#FFF;">
-        <span class="input-group-text"  style="border-radius: 0px 12px 12px 0px;"><b style="">% Pertahun</b></span>
-        </div>
-    </div>
+            <select name="cars" style="background: #FFFFFF 0% 0% no-repeat padding-box;
+                          border: 1px solid #D0D8E6;
+                          border-radius: 8px;
+                          opacity: 1; width: 260px;
+                          height: 40px;" onchange="document.location.href=this.value">
+                <option value="volvo" selected>Pilih simulasi produk lain</option>
+                <option value="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">Simulasi Tabungan Berjangka</option>
+                <option value="{{url('simulasi-deposito/'.$bahasa)}}">Simulasi Deposito</option>
+                <option value="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">Simulasi kredit Serbaguna Mikro</option>
+                <option value="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">Simulasi Kredit Pensiun</option>
+            </select>
 
-    <div class="form-group row  ml-4">
-    <div class="col-sm-3 col-form-label"></div> 
-    <div class="col-sm-5 input-group ml-4">
-    
-    
-    
-    <button class="btn btn-simulasi-flat ml-5" type="button" id="btnHitung" onclick="hitung()">HITUNG SIMULASI</button>
-    </div>
-    </div>
-</form>
+        </div> <!-- col-sm-5-->
+    </div><!-- row -->
 
-</div> <!-- card -->
+    <div class="mt-5">
+        <p><small>Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.</small></p>
+    </div><!-- mt-5 ml-4 -->
+
+
+    <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
+
+        <form>
+            <div class="form-group row mt-4 ">
+                <label class="col-sm-4 col-form-label" for="setor">Jumlah Setoran (perbulan)</label>
+                <div class="col-sm-5 input-group">
+                    <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
+                    <input type="text" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
+                </div>
+                <div class="col-sm-3">
+                    <span id="lesss" style="color: red;">*Kurang dari Rp 5.000.000</span>
+                    <span id="moree" style="color: red;">*Lebih dari Rp 5.000.000</span>
+                </div>
+            </div>
+
+            <div class="form-group row  ">
+                <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label>
+                <div class="col-sm-5 input-group">
+                    <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
+                    <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
+                </div>
+                <div class="col-sm-3">
+                    <span id="less" style="color: red;">*Kurang dari 6 bulan</span>
+                    <span id="more" style="color: red;">*Lebih dari 12 bulan</span>
+                </div>
+            </div>
+
+            <div class="form-group row  ">
+                <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label>
+                <div class="col-sm-5 input-group">
+                    <input type="text" class="form-control" id="bunga" disabled value="7" style="background-color:#FFF;">
+                    <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
+                    <input type="text" class="form-control"  id="bungaa" disabled value="2"  style="background-color:#FFF;">
+                    <span class="input-group-text"  style="border-radius: 0px 12px 12px 0px;"><b style="">% Pertahun</b></span>
+                </div>
+            </div>
+
+            <div class="form-group row  ">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-5 input-group ">
+                    <button class="btn btn-simulasi-flat" type="button" id="btnHitung" onclick="hitung()">HITUNG SIMULASI</button>
+                </div>
+            </div>
+        </form>
+
+    </div> <!-- card -->
 </div> <!-- container -->
 
 
@@ -124,7 +122,7 @@ td {
  
 <div class="col-sm-11 mt-5">
 <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
-<div class="container ml-5 mt-3">
+<div class="container mt-3">
 
 <table style="width:70%">
 <tbody>
@@ -160,9 +158,9 @@ td {
 </div>
 
 <div class="form-group row">
-    <div class="col-sm-3 col-form-label"></div> 
-    <div class="col-sm-5 input-group ml-4">
-    <a class="btn btn-simulasi-flat ml-5 mt-5" role="button" href="">KEMBALI KE SIMULASI</a>
+    <div class="col-sm-3 col-form-label"></div>
+    <div class="col-sm-5 input-group ">
+    <a class="btn btn-simulasi-flat mt-5" role="button" href="">KEMBALI KE SIMULASI</a>
     </div>
 </div>
  </div>

@@ -24,7 +24,7 @@ td {
 </style>
  
 <div class="container">
-<h4><strong>Hasil Perhitungan Simulasi Tabungan Berjangka</strong></h4>
+<h4><strong>Hasil Perhitungan Simulasi Tabungan Berjangka test</strong></h4>
  
 <div class="col-sm-10">
 <div class="card card-body mb-5 mt-5">
@@ -71,7 +71,7 @@ td {
 <div class="form-group row">
     <div class="col-sm-3 col-form-label"></div> 
     <div class="col-sm-5 input-group ml-4">
-    <a class="btn btn-simulasi-flat ml-5 mt-5" role="button" href="{{url('simulasi/'.$bahasa)}}">KEMBALI KE SIMULASI</a>
+    <a class="btn btn-simulasi-flat ml-5 mt-5" role="button" href="{{url('id-simulasi/'.$bahasa)}}">KEMBALI KE SIMULASI</a>
     </div>
 </div>
  
