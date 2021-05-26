@@ -228,7 +228,7 @@
         font-size: 14px;
     }
     .txt{
-        margin-left: -250px;
+        margin-left: -150px;
     }
     .col{
         font-size: 14px;
@@ -260,7 +260,7 @@
         font-size: 14px;
     }
     .txt{
-        margin-left: -20px;
+        margin-left: -10px;
     }
     .col{
         font-size: 14px;
@@ -311,7 +311,7 @@
     }
 
  }
- @media (max-width:345px){
+ @media (max-width:375px){
     .modal-dialog{
     align-items: center;
      width: 100%;
@@ -371,7 +371,7 @@
                             <div class="col-sm">
                                 <img class="card-img-top mx-auto" src="{{url('storage/'.$p->gambar)}}">
                             </div>
-                            <div class="col-sm mt-5 txt">
+                            <div class="col-sm mt-5 txt " style="border: 2px solid red">
                                 <h3 class="nme">{{$p->nama}}</h3>
                                 <p class="ttle">{{$p->jabatan}}</p>
                             </div>
