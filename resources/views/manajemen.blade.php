@@ -371,7 +371,7 @@
                             <div class="col-sm">
                                 <img class="card-img-top mx-auto" src="{{url('storage/'.$p->gambar)}}">
                             </div>
-                            <div class="col-sm mt-5 txt " style="border: 2px solid red">
+                            <div class="col-sm mt-5 txt">
                                 <h3 class="nme">{{$p->nama}}</h3>
                                 <p class="ttle">{{$p->jabatan}}</p>
                             </div>
