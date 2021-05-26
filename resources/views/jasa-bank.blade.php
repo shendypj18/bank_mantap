@@ -219,7 +219,7 @@
             <div class="col-sm-12 mt-5">
                 <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
                              @isset($navbar['JASA BANK'][0])
-                             {{url('article/' . $navbar['JASA BANK'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset"> Selengkapnya</a></p>
+                             {{url('article/' . $navbar['JASA BANK'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
             </div>
         </div>
     </div>
@@ -230,15 +230,15 @@
                 <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/bank-garansi.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
-                <h4 class="mt-5">Bank Garansi</h4>
-                <small>Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya.</small>
+                <h4 class="mt-5">{{__('bisnis.bank_garansi')}}</h4>
+                <small>{{__('bisnis.bank_garansi_deskripsi')}}</small>
             </div>
         </div>
         <div class="row r-btn" style="">
             <div class="col-sm-12">
                 <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
                              @isset($navbar['JASA BANK'][1])
-                             {{url('article/' . $navbar['JASA BANK'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['JASA BANK'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
             </div>
         </div>
     </div>
@@ -248,8 +248,8 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-                <h4 class="mt-5">Referensi Bank</h4>
-                <small>Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung oleh pihak ketiga yang dapat dipercaya.</small>
+                <h4 class="mt-5">{{__('bisnis.referensi_bank')}}</h4>
+                <small>{{__('bisnis.referensi_bank_deskripsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/referensi-bank.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
         </div>
@@ -257,7 +257,7 @@
             <div class="col-sm-12 mt-5">
                 <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
                              @isset($navbar['JASA BANK'][2])
-                             {{url('article/' . $navbar['JASA BANK'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['JASA BANK'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
             </div>
         </div>
     </div>
@@ -268,15 +268,15 @@
                 <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pic-transfer.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
-                <h4 class="mt-5">Transfer</h4>
-                <small>Jasa pengiriman uang yang dilaksanakan atas permintaan dan untuk kepentingan nasabah.</small>
+                <h4 class="mt-5">{{__('bisnis.transfer')}}</h4>
+                <small>{{__('bisnis.transfer_deskripsi')}}</small>
             </div>
         </div>
         <div class="row r-btn" style="">
             <div class="col-sm-12">
                 <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
                              @isset($navbar['JASA BANK'][3])
-                             {{url('article/' . $navbar['JASA BANK'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['JASA BANK'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
             </div>
         </div>
     </div>
@@ -286,8 +286,8 @@
  <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-                <h4 class="mt-5">Inkaso</h4>
-                <small>Layanan Bank Mantap dalam rangka penagihan warkat-warkat valuta rupiah yang Bank tertariknya berada diluar wilayah Kliring.</small>
+                <h4 class="mt-5">{{__('bisnis.inkaso')}}</h4>
+                <small>{{__('bisnis.inkaso_deskripsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pic-inkaso.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
         </div>
@@ -295,7 +295,7 @@
             <div class="col-sm-12 mt-5">
                 <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
                              @isset($navbar['JASA BANK'][4])
-                             {{url('article/' . $navbar['JASA BANK'][4][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['JASA BANK'][4][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
             </div>
         </div>
     </div>

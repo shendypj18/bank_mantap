@@ -24,7 +24,7 @@ td {
 </style>
  
 <div class="container">
-<h4><strong>Hasil Perhitungan Simulasi Tabungan Berjangka test</strong></h4>
+<h4><strong>Hasil Perhitungan Simulasi Tabungan Berjangka</strong></h4>
  
 <div class="col-sm-10">
 <div class="card card-body mb-5 mt-5">

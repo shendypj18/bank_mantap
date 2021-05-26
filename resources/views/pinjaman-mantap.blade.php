@@ -198,8 +198,8 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-              <h4 class="mt-5">Kredit Mantap Pensiun</h4>
-              <small>Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana anda kedepan melalui kredit pensiun Bank Mantap. Kami memberikan fasilitas kredit dengan bunga kompetitif.</small>
+              <h4 class="mt-5">{{__('bisnis.kredit_mantap_pensiun') }}</h4>
+              <small>{{__('bisnis.kredit_mantap_pensiun_deskripsi') }}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pinjaman1.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
         </div>
@@ -207,7 +207,7 @@
             <div class="col-sm-12 mt-5">
                 <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
                              @isset($navbar['PINJAMAN MANTAP'][0])
-                             {{url('article/' . $navbar['PINJAMAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
             </div>
         </div>
     </div>
@@ -218,15 +218,15 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman2.png')}}" alt="Logo"  width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">Kredit Mantap Pra Pensiun</h4>
-          <small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea.</small>
+          <h4 class="mt-5">{{__('bisnis.kredit_mantap_pra_pensiun')}}</h4>
+          <small>{{__('bisnis.kredit_mantap_pra_pensiun_deskripsi')}}</small>
         </div>
     </div>
     <div class="row r-btn" style="">
         <div class="col-sm-12">
             <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
                              @isset($navbar['PINJAMAN MANTAP'][0])
-                             {{url('article/' . $navbar['PINJAMAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
         </div>
     </div>
 </div>
@@ -237,8 +237,8 @@
 <div class="container mc">
   <div class="row">
       <div class="col-sm-6" id="navbar-upper-text">
-        <h4 class="mt-5">Pinjaman Retail</h4>
-        <small>Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha untuk membiayai berbagai macam kebutuhan baik untuk kebutuhan investasi, kebutuhan modal kerja</small>
+        <h4 class="mt-5">{{__('bisnis.pinjaman_retail')}}</h4>
+        <small>{{__('bisnis.pinjaman_retail_deskripsi')}}</small>
       </div>
       <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pinjaman3.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
   </div>
@@ -246,7 +246,7 @@
       <div class="col-sm-12 mt-5">
           <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
                              @isset($navbar['PINJAMAN MANTAP'][1])
-                             {{url('article/' . $navbar['PINJAMAN MANTAP'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
       </div>
   </div>
 </div>
@@ -258,15 +258,15 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman4.png')}}" alt="Logo" width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">Pinjaman Mikro</h4>
-          <small>Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha untuk membiayai berbagai macam kebutuhan baik untuk kebutuhan investasi, kebutuhan modal kerja</small>
+          <h4 class="mt-5">{{__('bisnis.pinjaman_mikro')}}</h4>
+          <small>{{__('bisnis.pinjaman_mikro_deskripsi')}}</small>
         </div>
     </div>
     <div class="row r-btn" style="">
         <div class="col-sm-12">
             <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
                              @isset($navbar['PINJAMAN MANTAP'][2])
-                             {{url('article/' . $navbar['PINJAMAN MANTAP'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">Selengkapnya</a></p>
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
         </div>
     </div>
 </div>
