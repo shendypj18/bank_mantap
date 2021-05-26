@@ -1,12 +1,13 @@
 <style>
- ul {
+ .mt-n1 {
+     margin-top: -0.55rem !important;
+ }
+ .tu ul {
      -webkit-padding-start: 0;
      padding-left: 4%;
+     padding-top: -4%;
  }
- li {
-     -webkit-padding-start: 0;
-     padding: 0;
- }
+
  .manage{
      border: none;
      width: 300px;
@@ -36,7 +37,7 @@
      border-bottom: 3px solid #0F2B5B;
  }
 
- .nav-item{
+ .nv-item{
      width: 32.5%;
 
 }
@@ -121,7 +122,7 @@
             @foreach($kategori_jabatan as $k)
                 @php $check = isset($profil_manajemen[$k->nama]); @endphp
                 @if($check)
-                    <li class="nav-item">
+                    <li class="nav-item nv-item">
                         <a class="nav-link manage @if($c == 1) active @endif" data-toggle="tab" href="{{'#' .$k->nama}}">{{$k->nama}}</a>
                     </li>
                 @endif
@@ -417,7 +418,7 @@
                                 <div class="col on">
                                     <p>Pengalaman Kerja</p>
                                 </div>
-                                <div class="col tu">
+                                <div class="mt-n1 col tu mt-n1">
                                     <p>
                                       {!! $p->pengalaman_kerja !!}
                                     </p>
