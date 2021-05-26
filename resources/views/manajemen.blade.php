@@ -7,14 +7,12 @@
      padding-left: 4%;
      padding-top: -4%;
  }
-
  .manage{
      border: none;
      width: 300px;
      height: 50px;
      text-align:center;
      margin-top:15px;
-
      letter-spacing: var(--unnamed-character-spacing-0);
      color: var(--darkblue-0f2b5b);
      font-size:24px;
@@ -23,23 +21,18 @@
      letter-spacing: 0px;
      color: #0F2B5B;
  }
-
  .nav-link.manage:hover{
      border: none;
      color: #FFF;
      border-bottom: 3px solid #0F2B5B;
      background-color:#0F2B5B;
-
  }
-
  .nav-link.manage.active {
      border: none;
      border-bottom: 3px solid #0F2B5B;
  }
-
  .nv-item{
      width: 32.5%;
-
 }
 .col.tu{
     margin-left: -150px;
@@ -79,7 +72,6 @@
         margin-left: 10px;
     }
     .bg-white{
-
         background-color: transparent;
     }
     .card{
@@ -104,7 +96,6 @@
         margin-bottom: 20px;
     }
     .bg-white{
-
         background-color: transparent;
     }
     .card{
@@ -174,19 +165,15 @@
      border-radius: 16px 30px 16px 16px;
      opacity: 1;
  }
-
  .modal-content{
      background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
      background: #0f2b5b 0% 0% no-repeat padding-box;
      border-radius: 0px 30px 0px 16px;
      opacity: 1;
  }
-
  .txt{
      color: #fcd116;
-
  }
-
  .ttle{
      font-size: 14px;
  }
@@ -204,9 +191,7 @@
 .col{
     margin-top: 5px;
 }
-
 @media (max-width:1366px){
-
     .modal-dialog{
      width: 729px;
      height: auto;
@@ -234,9 +219,6 @@
     .col{
         font-size: 14px;
     }
-
-
-
 }
  @media (min-width:576px) and (max-width:990px){
     .modal-dialog{
@@ -264,16 +246,9 @@
         margin-left: -10px;
     }
     .col{
-        margin-top: 0;
         font-size: 14px;
-        line-height: 1;
     }
-    .cnt-txt{
-        margin-top: 10px;
-    }
-
  }
-
  @media (max-width:576px){
     .modal-dialog{
     align-items: center;
@@ -283,15 +258,12 @@
      border-radius: 16px 30px 16px 16px;
      opacity: 1;
     }
-
-
     .modal-content{
         background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
         background: #0f2b5b 0% 0% no-repeat padding-box;
         border-radius: 0px 30px 0px 16px;
         opacity: 1;
     }
-
     .card-img-top{
         width: auto;
         max-height: 200px;
@@ -310,17 +282,11 @@
         width: auto;
     }
     .col {
-        margin-top: 0;
         font-size: 8px;
-        line-height: 0.5;
     }
     .col.tu{
         margin-left: -100px;
     }
-    .cnt-txt{
-        margin-top: 10px;
-    }
-
  }
  @media (max-width:375px){
     .modal-dialog{
@@ -331,15 +297,12 @@
      border-radius: 16px 30px 16px 16px;
      opacity: 1;
     }
-
-
     .modal-content{
         background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
         background: #0f2b5b 0% 0% no-repeat padding-box;
         border-radius: 0px 30px 0px 16px;
         opacity: 1;
     }
-
     .card-img-top{
         width: auto;
         height: 166px;
@@ -358,16 +321,9 @@
         width: auto;
     }
     .col {
-        margin-top: 0;
         font-size: 6px;
-        line-height: 0.25;
-    }
-    .cnt-txt{
-        margin-top: 10px;
     }
  }
-
-
 </style>
 
 
@@ -393,7 +349,7 @@
                         </div>
                     </div>
 
-                    <div class="container cnt-txt">
+                    <div class="container">
                         <div class="row">
                           <div class="col bio-cnt">
                               <div class="row">
@@ -473,6 +429,33 @@
                             </div>
                         </div>
                     </div>
+                    {{-- <div class="row mt-5" sytle="font-size:10px;">
+                        <div class="col text-left" style="color: #0F2B5B;">
+                                <p>Umur</p>
+                                <p>Warga Negara</p>
+                                <p>Domisili</p>
+                                <p>Pendidikan</p>
+                                <p>Pengalaman Kerja</p>
+                                <p>Posisi Saat Ini</p>
+                                <p>Dasar Hukum Penunjukan</p>
+                                <p>Hubungan Afiliasi</p>
+                                <p>Masa Jabatan</p>
+                        </div>
+                        <div class="col txt-right" style="width:70%;">
+                            <p>52 Tahun</p>
+                            <p>Indonesia</p>
+                            <p>Jakarta</p>
+                            <p>Sarjana Keuangan dan Akutansi</p>
+                            <p>
+                                <li>Chief Country Officer Citi Indonesia <sub>(2011-2015)</sub></li>
+                                <li>Country Head - Institutional Clients <sub>(2015-2016)</sub></li>
+                            </p>
+                            <p>Tidak Merangkap Jabatan, baik sebagai...</p>
+                            <p>Diangkat pertama kali sebagai Komisaris Utama Bank Mantap berdasarkan...</p>
+                            <p>Tidak ada hubungan afiliasi</p>
+                            <p>2019-2020</p>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
             @php $i++; @endphp
