@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'tarif_layanan' => 'Tarif Layanan',
+    'tarif_layanan_deskripsi' => 'belum ada',
     'bank_garansi' => 'Bank Guarantee',
     'bank_garansi_deskripsi' => 'One of the important things in business is trust. However, Trust usually only comes when the track records of the parties involved in the transaction are noticeable or when there is a party who is supported or guaranteed by a trusted third party.',
     'referensi_bank' => 'Bank Reference',

@@ -210,8 +210,8 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-                <h4 class="mt-5">Tarif Layanan</h4>
-                <small>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet</small>
+                <h4 class="mt-5">{{__('bisnis.tarif_layanan')}}</h4>
+                <small>{{__('bisnis.tarif_layanan_deskirpsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/tarif-layanan.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
         </div>
