@@ -23,7 +23,7 @@ td {
 </style>
 
 <section id="img-header" class="img-header">
-<img src="asset/slider_simulasi.png">
+<img src="{{asset('asset/slider_simulasi.png')}}">
 <ul class="breadcrumb">
 
 <div class="container">
