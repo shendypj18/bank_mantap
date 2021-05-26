@@ -105,8 +105,8 @@ class LaporanController extends AdminController
         $form->file('nama_file', __('File Laporan'))->move(function(Form $form){
             $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
             return 'laporan/dokumen/'. Str::slug($x->jenis, '-');
-        }) //->removable()
-             ->rules('required');
+        }); //->removable()
+             //->rules('required');
         return $form;
     }
 }
