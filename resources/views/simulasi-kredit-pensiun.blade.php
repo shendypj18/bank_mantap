@@ -162,7 +162,7 @@ td {
 <div class="form-group row">
     <div class="col-sm-3 col-form-label"></div> 
     <div class="col-sm-5 input-group ">
-    <a class="btn btn-simulasi-flat  mt-5" role="button" href="">KEMBALI KE SIMULASI</a>
+    <a class="btn btn-simulasi-flat  mt-5" role="button" href="{{url('simulasi-kredit-pensiun/' . $bahasa)}}">KEMBALI KE SIMULASI</a>
     </div>
 </div>
  </div>
