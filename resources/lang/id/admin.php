@@ -130,8 +130,7 @@ return [
     'simulasi_tahapan_berjangka' => 'Simulasi Tahapan Berjangka',
     'text_simulasi_tahapan_berjangka' => 'Lakukan simulasi perhitungan besar dana yang terkumpul dengan rentang bulan yang Anda pilih.',
     'button_simulasi_tahapan_berjangka' => 'Hitung Simulasi',
-    'mengapa_memilih_bank_mandiri_taspen' => 'Mengapa Memilih Bank
-Mandiri Taspen',
+    'mengapa_memilih_bank_mandiri_taspen' => 'Mengapa Memilih Bank Mantap',
     'text_mengapa_memilih_bank_mandiri_taspen' => 'Melayani selama 6 tahun, Bank Mandiri Taspen senantiasa memberikan kemudahan dan kecepatan dalam merespon berbagai kebutuhan nasabah dengan didukung oleh layanan perbankan yang prima.',
     'kantor_cabang' => 'Kantor Cabang',
     'text_kantor_cabang' => '274 jaringan kantor bank mantap di 34 Provinsi.',
