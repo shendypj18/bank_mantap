@@ -18,7 +18,128 @@
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
-<nav class="navbar navbar-expand-lg padding-header navbar-light bg-white border-bottom">
+<style>
+.tgl-mbl{
+    visibility: hidden;
+}
+
+
+    @media (min-width:769px) and (max-width:991px){
+        .navbar-brand{
+            position: inherit;
+            
+        }
+        .icon {
+            position: relative;
+        }
+        .padding-search {
+            display: block;
+            position: inherit;
+            right: 5%;
+            padding-top: 10px;
+        }
+        .display-icon-header {
+           display: block;
+           
+        }
+        .display-img-header{
+            width: 68% !important;
+        }
+        .icon{
+            width: auto;
+            height: 100%;
+        }
+        .navbar.bg-white{
+            width: auto;
+        }
+        .cls-itm{
+            border-top: 1px solid #dee2e6!important;
+        }
+        .tgl-mbl{
+            visibility: visible;
+            direction: rtl;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .tgl-wb{
+            display: none;
+        }
+        
+        .display-search{
+            display: none;
+        }
+       .padding-header{
+           padding: 0 !important;
+       }
+       .navbar{
+           padding: 0 !important;
+       }
+    }
+    @media (max-width:768px){
+        .navbar-brand{
+            position: relative;
+            left: 50%;
+            margin-left: -30px !important;
+            display: fixed;
+        }
+        .padding-search {
+            display: block;
+            position: absolute;
+            right: 5%;
+            margin-right: 5% !important;
+            padding-top: 10px;
+        }
+        .display-icon-header {
+           display: block;
+        }
+        .display-img-header{
+            width: 58% !important;
+        }
+        .icon{
+            width: auto;
+            height: auto;
+        }
+        .navbar.bg-white{
+            width: auto;
+        }
+        .cls-itm{
+            border-top: 1px solid #dee2e6!important;
+            margin-left: 10px;
+        }
+        
+        .tgl-mbl{
+            visibility: visible;
+            direction: rtl;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .tgl-wb{
+            display: none;
+        }
+        .display-search{
+            display: none;
+        }
+        
+    }
+    @media (min-width:993px){
+        .cls-itm{
+            margin-left: 30%;
+        }
+        
+        .tgl-mbl{
+            display: none;
+        }
+        .tgl-wb{
+            display: visible;
+        }
+        .nav-item.border-bottom{
+            border-bottom: 0 !important;
+        }
+        
+        
+    }
+</style>
+<nav class="navbar sticky-top navbar-expand-lg padding-header navbar-light bg-white border-bottom nav-postt">
 <button class="btn-header icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="fa fa-bars display-icon-header"></span>
 </button>
@@ -40,16 +161,31 @@
         <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
 </a>
 <!-- End Bottom Here -->
-<div class="display-header">
-<div class="collapse navbar-collapse"  id="navbarSupportedContent">
+{{-- <div class="display-header"> --}}
+<div class="collapse navbar-collapse cls-itm"  id="navbarSupportedContent">
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
-        <li class="nav-item" >
+        <div class="btn-group btn-group-toggle tgl-mbl">
+            
+            <label id="bahasa-inggris" class="
+                       @if($bahasa=="id") btn-outline-warning text-dark
+                       @else btn-warning @endif
+                       btn btn-sm">
+                <input type="radio" name="options" id="option2" onclick="window.location='{{url($en_route .'/en' )}}'">ENG
+            </label>
+            <label id="bahasa-indonesia" class="
+                       @if($bahasa=="en") btn-outline-warning text-dark
+                       @else btn-warning @endif
+                       btn btn-sm ">
+                <input type="radio" name="options" id="option1" onclick="window.location='{{url($id_route .'/id' )}}'">IDN
+            </label>
+        </div>
+        <li class="nav-item border-bottom" >
             <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">{{__('admin.BERANDA')}} <span class="sr-only">(current)</span></a>
         </li>
 
         @foreach($kategorinavbar as $nv)
             @if($nv->nama != "NONE" and $nv->nama != 'JASA BANK')
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown border-bottom">
                 <a class="nav-link mr-3" href="" id="navbarDropdown" role="button"
                    data-toggle="dropdown"  aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -61,9 +197,9 @@
             @endif
         @endforeach
 
-        <li class="nav-item"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.CABANG')}}</a></li>
+        <li class="nav-item border-bottom"><a class="nav-link mr-3" href="{{url('kantor-cabang/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.CABANG')}}</a></li>
     <!--<li class="nav-item"><a class="nav-link mr-3" href="{{url('simulasi/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.SIMULASI')}}</a></li>-->
-        <li class="nav-item"><a class="nav-link mr-3" href="{{url('karir/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.karir')}}</a></li>
+        <li class="nav-item border-bottom"><a class="nav-link mr-3" href="{{url('karir/'. $bahasa)}}" tabindex="-1" aria-disabled="true">{{__('admin.karir')}}</a></li>
     </ul>
 
     <!-- Search Botton Here -->
@@ -84,7 +220,7 @@
     </a>
     <!-- End Bottom Here -->
 
-    <div class="btn-group btn-group-toggle">
+    <div class="btn-group btn-group-toggle tgl-wb">
         <label id="bahasa-indonesia" class="
                    @if($bahasa=="en") btn-outline-warning text-dark
                    @else btn-warning @endif
@@ -100,7 +236,8 @@
     </div>
 
 </div>
-</div>
+
 </nav>
 </header>
+
 <!-- ====================================================== /NAVBAR  ===================================================== -->

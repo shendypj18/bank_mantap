@@ -1,5 +1,24 @@
 {!! htmlScriptTagJsApi() !!}
 <!--  ================================================ FIRST FOOTER ========================================================== -->
+
+<style>
+  @media (min-width:480px) and (max-width:1024px){
+    .display-footer-mobile{
+      display: flex;
+      flex-direction: column;
+    }
+    .display-footer{
+      display: none;
+    }
+  }
+  @media screen and (max-width:1024px){
+    #footer .dropdown-footer {
+        padding-right: 0;
+        border-bottom: 1px solid;
+    }
+  }
+</style>
+
 <section id="footer">
     <div class="container">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
@@ -36,7 +55,7 @@
   
       @foreach($kategorinavbar as $nv)
           @if($nv->nama != 'NONE' and $nv->nama != 'JASA BANK')
-          <div class="col-xs-12 col-sm-3 col-sm-2">
+          <div class="col-12">
             <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
             <li class="nav-item dropdown">
               <a class="nav-link mr-3 dropdown-toggle dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
@@ -52,7 +71,7 @@
           @endif
       @endforeach
        
-      <div class="col-xs-12 col-sm-2 col-sm-2">
+      <div class="col-12">
         <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
           <li class="nav-item dropdown">
             <a class="nav-link mr-3 dropdown-toggle dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
