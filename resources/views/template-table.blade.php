@@ -69,7 +69,7 @@
          .btn-tgl{
              border: 2px solid #0F2B5B
          }
-         .th-btn{
+         .btn-tbl{
              display: none;
          }
          .desc-txt{
@@ -80,6 +80,11 @@
          .thn-txt{
              width: 40%;
          }
+     }
+     thead,
+     tfoot {
+         background-color: #3f87a6; !important
+         color: #fff;
      }
     </style>
     <div class="container">
@@ -93,7 +98,7 @@
                 </button>
                 <button type="button" class="btn btn-sm btn-primary dropdown-toggle text-right btn-tgl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 20%;">
                 </button>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-right bg-warning">
                     @foreach($tahun as $tt)
                         <a href="{{url('article/'. $navbardata[$bahasa . '_slug'] .'/?tahun=' . $tt->tahun)}}" class="dropdown-item" type="button">{{$tt->tahun}}</a>
                     @endforeach
@@ -115,7 +120,7 @@
                             <button type="button" class="btn btn-sm btn-primary dropdown-toggle text-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 20%;">
 
                             </button>
-                            <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-menu dropdown-menu-right bg-warning">
                                 @foreach($tahun as $cc)
                                     <a href="{{url('article/'. $navbardata[$bahasa . '_slug'] .'/?tahun=' . $cc->tahun)}}" class="dropdown-item" type="button">{{$cc->tahun}}</a>
                                 @endforeach
