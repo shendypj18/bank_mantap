@@ -98,7 +98,7 @@
                 </button>
                 <button type="button" class="btn btn-sm btn-primary dropdown-toggle text-right btn-tgl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 20%;">
                 </button>
-                <div class="dropdown-menu bg-warning">
+                <div class="dropdown-menu dropdown-menu-right col-xs-5 bg-warning">
                     @foreach($tahun as $tt)
                         <a href="{{url('article/'. $navbardata[$bahasa . '_slug'] .'/?tahun=' . $tt->tahun)}}" class="dropdown-item" type="button">{{$tt->tahun}}</a>
                     @endforeach
