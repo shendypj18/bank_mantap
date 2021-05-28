@@ -72,7 +72,7 @@ td {
     <label class="col-sm-4 col-form-label" for="setor">Jumlah Pinjaman</label> 
         <div class="col-sm-5 input-group">
           <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
-          <input type="text" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
+          <input type="number" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
         </div>
           <div class="col-sm-3">
              <span id="lesss" style="color: red;">*Kurang dari Rp 5.000.000</span>

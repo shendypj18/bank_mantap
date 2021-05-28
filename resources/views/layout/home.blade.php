@@ -154,7 +154,7 @@
           <a class="card-title"><strong>Pinjaman Mantap</strong></a>
           <p class="card-text"><small>Apapun kebutuhan anda,</small><br/>
       <small><b>Wujudkan dengan kredit mantap pensiun</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
+          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
         </div>
@@ -166,7 +166,7 @@
           <a class="card-title"><strong>Simpanan Mantap</strong></a>
           <p class="card-text"><small>Dengan tabungan siMantap Gold</small><br/>
       <small><b>Nimati kemudahan transaksi</b></small></p>
-          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
+          <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
         </div>
@@ -179,7 +179,7 @@
           <br/>
           <h3 class="card-title">Jasa Bank</h3>
           <p class="card-text"><small>Kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada<br/>pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya</small></p>
-          <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['BISNIS'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
+          <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['BISNIS'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
     </div>

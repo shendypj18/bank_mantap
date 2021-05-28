@@ -1,8 +1,7 @@
-@include('layout.header');
+@include('layout.header')
 <section id="img-header" class="img-header">
 <div>
     <div class="row">
-        &nbsp
         <div id="googlemap"  style="width: 100%; height: 470px;"></div>
     </div>
 </div>

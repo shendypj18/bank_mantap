@@ -333,6 +333,7 @@ a:hover{
 	padding-left:10px;
 	padding-right:10px;
 	padding-bottom:0px;
+	background-size: 600px 260px;
 }
 
 
@@ -356,6 +357,7 @@ a:hover{
 	padding-left:10px;
 	padding-right:10px;
 	padding-bottom:0px;
+	background-size: 538px 230px;
 }
 
 
@@ -383,7 +385,7 @@ a:hover{
 }
 
 .container-video{
-	width:580px;
+	width:500px;
 	height:280px;
 	border:0px;
 	border-radius: 20px;
@@ -499,9 +501,7 @@ a:hover{
     margin-left: -15px;
 }
 
-/* .display-share {
-	width: 10px;
-} */
+ 
 
 .width-img-simulasi {
 	width: auto;
@@ -860,7 +860,7 @@ a:hover{
 	}
 	
 	.display-share {
-		width: 10px;
+		width: 100px;
 	}
 
 	.card.simulasi {
@@ -1175,7 +1175,7 @@ a:hover{
 }
 
 .display-share {
-	width: 10px;
+	width: 100px;
 }
 
 .card.simulasi {
@@ -2178,5 +2178,10 @@ section .section-title {
 		width: 50%;
 		height: 320px;
 		margin-left: 20%;
+	}
+
+	.display-share{
+		width: 50%;
+		background-color: red;
 	}
 }
