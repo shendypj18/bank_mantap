@@ -2,19 +2,46 @@
 <!--  ================================================ FIRST FOOTER ========================================================== -->
 
 <style>
-  @media (min-width:480px) and (max-width:1024px){
+  @media (min-width:480px) and (max-width:992px){
     .display-footer-mobile{
-      display: flex;
-      flex-direction: column;
+      display: block;
+      
+      
+     
+    /* top: 0px; */
+    /* left: 0px; */
+      /* will-change: transform; */
+    }
+    .display-footer-mobile .navbar-nav .nav-item .dropdown-menu.show{
+      position: relative !important;
+      transform: inherit !important;
+    }
+    .dropdown-menu.show a{
+      margin-left: 10px;
     }
     .display-footer{
       display: none;
     }
+    .dropdown.show .rgt{
+            display: none;
+        }
+        .dropdown:not(.show) .dwn{
+            display: none;
+        }
   }
-  @media screen and (max-width:1024px){
+  @media screen and (max-width:992px){
     #footer .dropdown-footer {
         padding-right: 0;
         border-bottom: 1px solid;
+    }
+  }
+  @media (min-width:993px){
+    .display-footer-mobile{
+      display: none;
+    }
+    .display-footer{
+      display: flex;
+      font-size: 1rem;
     }
   }
 </style>
@@ -58,8 +85,15 @@
           <div class="col-12">
             <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
             <li class="nav-item dropdown">
-              <a class="nav-link mr-3 dropdown-toggle dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
-                 data-toggle="dropdown"  aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}</a>
+              <a class="nav-link mr-3 dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
+                 data-toggle="dropdown"  aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}
+                 <i class="rgt">
+                  <span class="fa fa-angle-right fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
+               </i> 
+               <i class="dwn">
+                   <span class="fa fa-angle-down fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
+               </i>  
+              </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   @foreach($navbar[$nv->nama] as $subnavbar)
                       <a class="dropdown-item " href="{{url('article/' .$subnavbar[$bahasa. "_slug"].'/'. $bahasa) }}">{{$subnavbar[$bahasa. "_navigasi"]}}</a>
@@ -74,8 +108,15 @@
       <div class="col-12">
         <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
           <li class="nav-item dropdown">
-            <a class="nav-link mr-3 dropdown-toggle dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
-               data-toggle="dropdown"  aria-expanded="false">{{trans('admin.lainnya') }}</a>
+            <a class="nav-link mr-3 dropdown-footer footer-nav" href="" id="navbarDropdown" role="button"
+               data-toggle="dropdown"  aria-expanded="false">{{trans('admin.lainnya') }}
+               <i class="rgt">
+                <span class="fa fa-angle-right fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
+             </i> 
+             <i class="dwn">
+                 <span class="fa fa-angle-down fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
+             </i>
+              </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item " href="{{url('kantor-cabang/'. $bahasa)}}">{{trans('admin.kantor_cabang')}}</a>
                     <a class="dropdown-item " href="{{url('karir/'. $bahasa)}}">{{trans('admin.karir2')}}</a>
