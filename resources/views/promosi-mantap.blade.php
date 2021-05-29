@@ -10,9 +10,9 @@
 		max-width: 50%;
 	}
  }
-@media(max-width: 7680px) {
+@media(max-width: 480px) {
      .fz-berita {
-         font-size: 94%;
+         font-size: 17px;
      }
  }
 .active,.btn-wr:hover{
@@ -71,11 +71,11 @@
     @if($berita)
         <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
-            <div class="col-sm-7 mt-5 fz-berita">
+            <div class="col-md-10 mt-5 fz-berita">
                 <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
-            <div class="col-sm-12 mt-5 ml-5">
+            <div class="col-md-2 mt-5 ml-5">
                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
             </div>
         </div>

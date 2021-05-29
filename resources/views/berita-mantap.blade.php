@@ -2,9 +2,9 @@
     @include('layout.header')
 @endif
 <style>
- @media(max-width: 7680px) {
+ @media(max-width: 480px) {
      .fz-berita {
-         font-size: 94%;
+         font-size: 17px;
      }
  }
  @media(min-width: 576px) and (max-width: 767px) {
@@ -68,11 +68,11 @@
     @if($berita)
         <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
-            <div class="col-sm-8 mt-5">
+            <div class="col-md-10 mt-5" style="width: 500px; border: 2px solid red">
                 <h4 class="fz-berita"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
-            <div class="col-sm-4 mt-5">
+            <div class="col-md-2 mt-5">
                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
             </div>
         </div>
