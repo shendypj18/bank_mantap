@@ -22,6 +22,21 @@
      height: auto;
      max-height: 70%;
  }
+.img-responsive-2 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 70%;
+ }
+ @media (min-width: 768px) {
+     .img-responsive-2 {
+         width: 100%;
+         max-width: 70%;
+         height: auto;
+         max-height: 70%;
+     }
+ }
+
 </style>
 @if($berita)
     <section id="img-header" class="img-header">
@@ -39,7 +54,7 @@
 <div class="container @if(!$berita) text-center @endif mt-5" id="news">
 
     @if($berita)
-        <img class="img-responsive" src="{{ url('storage/'. $berita->gambar)}}">
+        <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
             <div class="col-sm-7 mt-5">
                 <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
