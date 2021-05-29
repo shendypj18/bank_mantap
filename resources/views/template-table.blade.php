@@ -37,6 +37,19 @@
 
      }
 
+    .desc-txt{
+             width: 60%;
+             margin-left: 10px;
+
+    }
+    .thn-txt{
+             width: 40%;
+    }
+
+    .thn-btn {
+             width: 12%;
+    }
+
      @media (min-width:1025px){
         .btn-o-tbl{
              visibility: hidden;
@@ -80,6 +93,60 @@
          .thn-txt{
              width: 40%;
          }
+
+         .thn-btn {
+             width: 12%;
+         }
+
+       
+         @media (max-width: 480px)  {
+            .desc-txt{
+                 width: 50%;
+                 margin-left: 10px;
+             }
+             .thn-txt{
+                 width: 30%;
+             }
+
+             .thn-btn {
+                  width: 20%;
+            }
+
+            .img-table {
+                 margin-left: 17px;
+                 width: 22px;
+             }
+
+             .txt-unduh {
+                font-size: 9px;
+                margin-left: 7px;
+            }
+         }
+
+         @media (max-width: 720px) {
+            .desc-txt{
+                 width: 50%;
+                 margin-left: 10px;
+             }
+             .thn-txt{
+                 width: 30%;
+             }
+
+             .thn-btn {
+                  width: 20%;
+            }
+
+            .img-table {
+                 margin-left: 17px;
+                 width: 22px;
+             }
+
+             .txt-unduh {
+                font-size: 9px;
+                margin-left: 7px;
+            }
+
+         }
      }
      thead,
      tfoot {
@@ -112,7 +179,7 @@
                     <th class="pl-4 thn-txt" style="border-radius: 16px 0px 0px 0px;" colspan="2">Tahun</th>
                     <th class="desc-txt">Diskripsi</th>
 
-                    <th class="th-btn" style="border-radius: 0px 16px 0px 0px; width:12%;">
+                    <th class="thn-btn" style="border-radius: 0px 16px 0px 0px;">
                         <div class="btn-group btn-tbl">
                             <button class="btn btn-sm btn-primary bg-white " type="button" style="color:#121212;">
                                Pilih Tahun
@@ -139,7 +206,7 @@
                         <td>@if($l->jenis_laporan == "7") {{$l->nama. ' '}} @endif {{$l->tahun}}</td>
                         <td>{{$l->deskripsi}}</td>
                         @if($l->jenis_laporan != "7")
-                            <td><a href="{{url('storage/'. $l->nama_file)}}">lihat file</a> <img class="ml-2" src="{{ asset('asset/download.svg') }}"></td>
+                            <td> <img class="img-table" src="{{ asset('asset/download.svg') }}"> <a class="txt-unduh" href="{{url('storage/'. $l->nama_file)}}">Unduh File</a></td>
                         @endif
                     </tr>
                     @php
