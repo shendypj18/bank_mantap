@@ -23,8 +23,7 @@
     <div class="card-margin" >
         <div class="card branch">
             <div class="card-body">
-                <br/>
-                <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+                <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2 mt-2" alt="Image Simulasi"/>
                 <br/>
                 <small class="kantor-cabang-fz">
                 @if(strlen($c->alamat) > 87)
