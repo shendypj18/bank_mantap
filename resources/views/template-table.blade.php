@@ -202,7 +202,7 @@
                 @endphp
                 @foreach($laporan as $l)
                     <tr>
-                        <td class="text-left font-weight-bold text-primary" style="width:5%">{{$i }} <span>. </span></td>
+                        <td class="text-center font-weight-bold text-primary" style="width:5%">{{$i }} <span>. </span></td>
                         <td class="font-weight-bold text-primary">@if($l->jenis_laporan == "7") {{$l->nama. ' '}} @endif {{$l->tahun}}</td>
                         <td >{{$l->deskripsi}}</td>
                         @if($l->jenis_laporan != "7")
