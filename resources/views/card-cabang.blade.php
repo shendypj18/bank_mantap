@@ -33,7 +33,7 @@
                     {{$c->alamat}}
                 @endif
                 </small>
-                <small class="kantor-cabang-fz mt-2">{{$c->telp}}</small></p>
+                <p><small class="kantor-cabang-fz mt-2">{{$c->telp}}</small></p>
                 <h3 data-toggle="modal" data-target="#aceh" onclick="gmap({{$c}})"><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 15%"> &nbsp;<a>Lihat Map</a></h3>
             </div>
         </div>
