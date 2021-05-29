@@ -68,7 +68,7 @@
     @if($berita)
         <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
-            <div class="col-md-10 mt-5" style="width: 500px; border: 2px solid red">
+            <div class="col-md-10 mt-5">
                 <h4 class="fz-berita"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
