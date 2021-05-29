@@ -2,6 +2,18 @@
     @include('layout.header')
 @endif
 <style>
+ @media(max-width: 480px) {
+     .fz-berita {
+         font-size: 94%;
+     }
+ }
+ @media(min-width: 576px) and (max-width: 767px) {
+     .pad-sz {
+		-webkit-box-flex: 0;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+ }
 .active,.btn-wr:hover{
 	background-color: #FCD116;
 		color:black;
@@ -57,7 +69,7 @@
         <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
             <div class="col-sm-8 mt-5">
-                <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
+                <h4 class="fz-berita"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
             <div class="col-sm-4 mt-5">
@@ -91,7 +103,7 @@
             @isset($pages["Berita Mantap"])
             @foreach ($pages["Berita Mantap"] as $page)
                 @if(!empty($page[$bahasa. '_judul']))
-                <div class="col-sm-3 mb-5 pad-sz">
+                <div class="col-sm-3 pad-sz" style="float:left">
                     <div class="card mb-2" style="height: fit-content; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar)}}" alt="Card image cap"  style="height: 12rem;">
                         <div class="card-body">

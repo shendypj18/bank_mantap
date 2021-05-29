@@ -1,5 +1,12 @@
 @if($laporanTahunan)
     <style>
+     @media(min-width: 576px) and (max-width: 767px) {
+         .pad-sz {
+             -webkit-box-flex: 0;
+             flex: 0 0 50%;
+             max-width: 50%;
+	     }
+     }
      .active,.btn-wr:hover{
          background-color: #FCD116;
          color:black;
