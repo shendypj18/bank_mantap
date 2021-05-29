@@ -1,22 +1,40 @@
-<style>
-    .card-text-1 {
-        margin: 10px 15px;
-    }
+<style type="text/css">
+.card-margin {
+     margin: 1%;
+ }
+ @media (max-width: 520px) {
+     .card-margin {
+         margin-left: 20%;
+     }
+ }
+ @media (min-width: 768px) and (max-width: 1024px) {
+     .kantor-cabang-fz {
+         font-size: 50%;
+         display: block;
+         line-height: 1.5em;
+     }
+ }
 </style>
+
 <div class="mt-5">
 <div class="row mb-5">
     @php $i = 1; @endphp
 @foreach($cabang as $c)
-    <div class="col-sm"  data-toggle="modal" data-target="#aceh">
-        <div class="card branch" onclick="gmap({{$c}})">
+    <div class="card-margin" >
+        <div class="card branch">
             <div class="card-body">
                 <br/>
-                <img class="card-text-1" src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
-                <div class="card-text card-text-1">
-                <small>{{$c->alamat}}</small><br/>
-                <small>{{$c->telp}}</small></p>
-                </div>
-                <h3 class="card-link card-text-1"><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 5%"> &nbsp;<a>Lihat Map</a></h3>
+                <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2" alt="Image Simulasi"/>
+                <br/>
+                <small class="kantor-cabang-fz">
+                @if(strlen($c->alamat) > 87)
+                    {{ substr($c->alamat, 0, 87) . '....'}}
+                @else
+                    {{$c->alamat}}
+                @endif
+                </small>
+                <small class="kantor-cabang-fz mt-2">{{$c->telp}}</small></p>
+                <h3 data-toggle="modal" data-target="#aceh" onclick="gmap({{$c}})"><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 15%"> &nbsp;<a>Lihat Map</a></h3>
             </div>
         </div>
     </div>
