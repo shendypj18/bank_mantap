@@ -2,7 +2,7 @@
     @include('layout.header')
 @endif
 <style>
- @media(max-width: 480px) {
+ @media(max-width: 7680px) {
      .fz-berita {
          font-size: 94%;
      }

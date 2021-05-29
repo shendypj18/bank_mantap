@@ -9,6 +9,11 @@
 		max-width: 50%;
 	}
  }
+@media(max-width: 7680px) {
+     .fz-berita {
+         font-size: 94%;
+     }
+ }
 .active,.btn-wr:hover{
 	background-color: #FCD116;
 		color:black;
@@ -66,7 +71,7 @@
     @if($berita)
         <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
-            <div class="col-sm-7 mt-5">
+            <div class="col-sm-7 mt-5 fz-berita">
                 <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
