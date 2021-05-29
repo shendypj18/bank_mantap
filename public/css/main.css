@@ -926,6 +926,9 @@ a:hover{
 	.fz {
 		font-size: 16px;
 	}
+	.fz-navbar {
+		font-size: 20px;
+	}
 
 }
 
@@ -2183,5 +2186,16 @@ section .section-title {
 	.display-share{
 		width: 50%;
 		background-color: red;
+	}
+}
+@media (min-width: 481px) and (max-width: 577px) {
+	.simulasi {
+		height: 1700px;
+	}
+}
+
+@media (max-width: 767px) {
+	.carousel-indicators {
+		display: none;
 	}
 }
