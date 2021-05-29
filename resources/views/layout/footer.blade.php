@@ -2,6 +2,7 @@
 <!--  ================================================ FIRST FOOTER ========================================================== -->
 
 <style>
+
  .mmm {
      margin-left: 10%;
  }
@@ -63,6 +64,11 @@
  @media (min-width: 768px) and (max-width: 1023px) {
      .mmm{
          margin-left: 10%;
+     }
+ }
+@media(max-width: 991px) {
+     .l-sz {
+         margin-left: -150px;
      }
  }
 </style>
@@ -358,8 +364,8 @@
     </div>
     <div class="modal-content" style="background-color: transparent; box-shadow: none; border: none;" >
       <div class="modal-body">
-        <div class="row" style="position: absolute; bottom: 40%;" >
-          <div class="col-xs-1 col-md-3"></div>
+        <div class="row" style="position: absolute; bottom: 30%;" >
+          <div class="col-xs-1 col-md-3 l-sz"></div>
           <div class="col-xs-10 col-md-6">
             <div class="row-share">
               <div class="col-xs-2 col-md-2 ml-3">
