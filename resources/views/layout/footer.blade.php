@@ -2,6 +2,11 @@
 <!--  ================================================ FIRST FOOTER ========================================================== -->
 
 <style>
+ @media (max-width: 768px) {
+     .icon-sz {
+         width: 30px;
+     }
+ }
   @media (min-width:480px) and (max-width:992px){
     .display-footer-mobile{
       display: block;
@@ -44,6 +49,11 @@
       font-size: 1rem;
     }
   }
+ @media (min-width: 768px) and (max-width: 1023px) {
+     .mmm{
+         margin-left: 10%;
+     }
+ }
 </style>
 
 <section id="footer">
@@ -337,36 +347,33 @@
     </div>
     <div class="modal-content" style="background-color: transparent; box-shadow: none; border: none;" >
       <div class="modal-body">
-        <div class="row" style="    position: absolute;
-    bottom: 40%;" >
+        <div class="row" style="position: absolute; bottom: 40%;" >
           <div class="col-xs-1 col-md-3"></div>
           <div class="col-xs-10 col-md-6">
             <div class="row-share">
-              <div class="col-xs-1 col-md-1">
-              </div>
-              <div class="col-xs-2 col-md-2">
+              <div class="col-xs-2 col-md-2 ml-3">
                 <a href="https://www.facebook.com/BankMandiriTaspen" >
-                  <img class="display-share" id="f-s" src="{{asset('asset/icon/fb_yellow.png')}}">
+                  <img class="display-share icon-sz" id="f-s" src="{{asset('asset/icon/fb_yellow.png')}}">
                 </a>
               </div>
-              <div class="col-xs-2 col-md-2">
+              <div class="col-xs-2 col-md-2 mmm">
                 <a href="https://twitter.com/BankMantap_id" >
-                  <img class="display-share" id="t-s" src="{{asset('asset/icon/tw_yellow.png')}}">
+                  <img class="display-share icon-sz" id="t-s" src="{{asset('asset/icon/tw_yellow.png')}}">
                 </a>
               </div>
-              <div class="col-xs-2 col-md-2">
+              <div class="col-xs-2 col-md-2 mmm">
                 <a href="https://www.instagram.com/bankmantap_id/" >
-                  <img class="display-share" id="i-s" src="{{asset('asset/icon/insta_yellow.png')}}">
+                  <img class="display-share icon-sz" id="i-s" src="{{asset('asset/icon/insta_yellow.png')}}">
                 </a>
               </div>
-              <div class="col-xs-2 col-md-2">
+              <div class="col-xs-2 col-md-2 mmm">
                 <a href="https://plus.google.com/u/0/112849376688825884019" >
-                  <img class="display-share" id="g-s" src="{{asset('asset/icon/gplus_yellow.png')}}">
+                  <img class="display-share icon-sz" id="g-s" src="{{asset('asset/icon/gplus_yellow.png')}}">
                 </a>
               </div>
-              <div class="col-xs-2 col-md-2">
+              <div class="col-xs-2 col-md-2 mr-3 mmm">
                 <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" >
-                  <img class="display-share" id="y-s" src="{{asset('asset/icon/yt_yellow.png')}}">
+                  <img class="display-share icon-sz" id="y-s" src="{{asset('asset/icon/yt_yellow.png')}}">
                 </a>
               </div>
               

@@ -26,14 +26,14 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 70%;
+    max-height: 60%;
  }
- @media (min-width: 768px) {
+ @media (min-width: 1337px) {
      .img-responsive-2 {
          width: 100%;
          max-width: 70%;
          height: auto;
-         max-height: 70%;
+         max-height: 60%;
      }
  }
 
@@ -56,11 +56,11 @@
     @if($berita)
         <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row">
-            <div class="col-sm-7 mt-5">
+            <div class="col-sm-8 mt-5">
                 <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
-            <div class="col-sm-12 mt-5 ml-5">
+            <div class="col-sm-4 mt-5">
                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
             </div>
         </div>
