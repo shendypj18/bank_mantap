@@ -14,7 +14,7 @@ return [
     'selengkapnya' => 'More',
     'kredit_mantap_pensiun' => 'Mantap Pension Credit',
     'kredit_mantap_pensiun_deskripsi' => 'Enjoy various benefits of being a customer of Bank Mantap and get Mantap Pension Credit for the ease and convenience of your business.',
-    'kredit_mantap_pra_pensiun' => 'Kredit Mantap Pra Pensiun',
+    'kredit_mantap_pra_pensiun' => 'Mantap Pra Pension Credit',
     'kredit_mantap_pra_pensiun_deskripsi' => 'Enjoy various benefits of being a customer of Bank Mantap and get Mantap Pension Credit for the ease and convenience of your business.',
     'pinjaman_retail' => 'Retail Loans',
     'pinjaman_retail_deskripsi' => 'Provision of funds for individual entrepreneurs/business entities to finance various kinds of needs either for investment, working capital and consumption with the collateral in the form of financed objects and plus material collateral with a credit limit of more than Rp200 million.',

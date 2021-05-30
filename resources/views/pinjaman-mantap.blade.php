@@ -225,8 +225,8 @@
     <div class="row r-btn" style="">
         <div class="col-sm-12">
             <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
-                             @isset($navbar['PINJAMAN MANTAP'][0])
-                             {{url('article/' . $navbar['PINJAMAN MANTAP'][0][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
+                             @isset($navbar['PINJAMAN MANTAP'][3])
+                             {{url('article/' . $navbar['PINJAMAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
         </div>
     </div>
 </div>
