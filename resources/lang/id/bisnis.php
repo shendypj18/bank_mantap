@@ -13,7 +13,7 @@ return [
     'kredit_mantap_pensiun' => 'Kredit Mantap Pensiun',
     'kredit_mantap_pensiun_deskripsi' => 'Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana anda kedepan melalui kredit pensiun Bank Mantap. Kami memberikan fasilitas kredit dengan bunga kompetitif.',
     'kredit_mantap_pra_pensiun' => 'Kredit Mantap Pra Pensiun',
-    'kredit_mantap_pra_pensiun_deskripsi' => 'masih kosong',
+    'kredit_mantap_pra_pensiun_deskripsi' => 'Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana anda kedepan melalui kredit pensiun Bank Mantap. Kami memberikan fasilitas kredit dengan bunga kompetitif.',
     'pinjaman_retail' => 'Pinjaman Retail',
     'pinjaman_retail_deskripsi' => 'Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha untuk membiayai berbagai macam kebutuhan baik untuk kebutuhan investasi, kebutuhan modal kerja',
     'pinjaman_mikro' => 'Pinjaman Mikro',

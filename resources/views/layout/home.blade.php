@@ -90,7 +90,7 @@
            @include('layout.card-mobile')
        </div>
        <br/><br/><br/>
-       <p class="text-center"><a class="btn btn-lg btn-primary" href="{{url('article/' . $navbar['INFO MANTAP'][3][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
+       <p class="text-center"><a class="btn btn-lg btn-primary" href="{{url('article/' . $navbar['INFO MANTAP'][0][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
    </div>
 </section>
 
