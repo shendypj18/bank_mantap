@@ -1,12 +1,14 @@
 <?php
 
 return [
+    'tarif_layanan' => 'Tarif Layanan',
+    'tarif_layanan_deskripsi' => 'belum ada',
     'bank_garansi' => 'Bank Garansi',
     'bank_garansi_deskripsi' => 'Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya.',
     'referensi_bank' => 'Referensi Bank',
     'referensi_bank_deskripsi' => 'Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung oleh pihak ketiga yang dapat dipercaya.',
     'transfer' => 'Transfer',
-    'transfer_deskrpisi' => 'Jasa pengiriman uang yang dilaksanakan atas permintaan dan untuk kepentingan nasabah.',
+    'transfer_deskripsi' => 'Jasa pengiriman uang yang dilaksanakan atas permintaan dan untuk kepentingan nasabah.',
     'inkaso' => 'Inkaso',
     'inkaso_deskripsi' => 'Layanan Bank Mantap dalam rangka penagihan warkat-warkat valuta rupiah yang Bank tertariknya berada diluar wilayah Kliring.',
     'selanjutnya' => 'Selanjutnya',
