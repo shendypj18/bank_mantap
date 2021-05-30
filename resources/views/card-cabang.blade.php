@@ -29,10 +29,6 @@
         flex: 0 0 45%;
         max-width: 50%;
     }
-    .card.branch{
-        width: auto !important;
-        height: auto !important;
-    }
 }
 </style>
 
@@ -40,7 +36,7 @@
 <div class="row mb-5">
     @php $i = 1; @endphp
 @foreach($cabang as $c)
-    <div class="crd-itm crd-cbg col-6 col-md-6 col-lg-3 card-margin" >
+    <div class="crd-itm crd-cbg col-6 col-md-6 col-lg-3" >
         <div class="card branch">
             <div class="card-body">
                 <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2 mt-2" alt="Image Simulasi"/>
