@@ -24,7 +24,7 @@
                         <div class="carousel-item">
                     @endif
                 @endif
-                @if($i == count($berita) and $i % 4 != 0) </div> @endif
+                @if($i == count($berita) and $i % 1 != 0) </div> @endif
                 @php $i++; @endphp
             @endforeach
 

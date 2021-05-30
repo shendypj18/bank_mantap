@@ -83,6 +83,9 @@
        <div  class="" id="berita-desktop">
            @include('layout.card-desktop')
        </div>
+       <div  class="" id="berita-ipad">
+           @include('layout.card-ipad')
+       </div>
        <div  class="" id="berita-mobile">
            @include('layout.card-mobile')
        </div>
