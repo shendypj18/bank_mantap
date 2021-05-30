@@ -73,7 +73,7 @@
         <img class="img-responsive-2 h justify-content-md-center"  src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row justify-content-md-center">
             <div class="col-md-12 mt-5">
-                <h4 class="fz-berita"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
+                <h4 class="fz-berita text-justify"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
             <!-- <div class="col-md-2 mt-5">
@@ -81,7 +81,7 @@
                  </div> -->
         </div>
 
-        <div class="row justify-content-md-center" style="text-align: justify;">
+        <div class="row justify-content-md-center text-justify">
             <div class="col-md-10">
             {!!  $berita[$bahasa. '_isi'] !!}
             </div>

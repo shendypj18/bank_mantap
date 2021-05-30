@@ -75,14 +75,14 @@
         <img class="img-responsive-2 h justify-content-md-center" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row justify-content-md-center">
             <div class="col-md-12 mt-5 fz-berita">
-                <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
+                <h4 class="fz-berita text-justify" ><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
             <!-- <div class="col-md-2 mt-5 ml-5">
                  <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
                  </div> -->
         </div>
-        <div class="row justify-content-md-center" style="text-align: justify;">
+        <div class="row justify-content-md-center text-justify">
             <div class="col-md-10" >
                 {!!  $berita[$bahasa. '_isi'] !!}
             </div>
