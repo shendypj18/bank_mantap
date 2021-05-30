@@ -44,3 +44,4 @@
                     @endforeach
             </div>
             <!--/.Slides-->
+        </div>
