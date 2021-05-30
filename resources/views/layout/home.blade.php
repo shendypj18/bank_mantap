@@ -78,14 +78,13 @@
 
  
 <!-- ================================================  NEWS SLIDER ============================================================ -->
- 
     <!-- MENU CARD SLIDER -->
    <div class="container my-3">
-       <div id="berita-mobile">
-           @include('layout.card-mobile')
-       </div>
-       <div id="berita-desktop">
+       <div  class="" id="berita-desktop">
            @include('layout.card-desktop')
+       </div>
+       <div  class="" id="berita-mobile">
+           @include('layout.card-mobile')
        </div>
        <br/><br/><br/>
        <p class="text-center"><a class="btn btn-lg btn-primary" href="{{url('article/' . $navbar['INFO MANTAP'][3][$bahasa .'_slug'] .'/'. $bahasa)}}" role="button">  {{__('admin.lihat_semua_info')}}</a></p>
