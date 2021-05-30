@@ -18,7 +18,7 @@
                  <div class="carousel-item active">
                     @php $i = 1; @endphp
                     @foreach($berita as $b)
-                        <div class="col-md-3 card-size pad-sz" style="float:left">
+                        <div class="col-md-3 card-size pad-sz" style="float:left;">
                             <div class="card mb-2" style="height: fit-content; box-shadow: 0px 20px 40px #75B2DD1A; border-radius: 15px 15px 15px 15px; opacity: 1;">
                                 <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem; border-radius: 15px 15px 0px 0px;">
                                 <div class="card-body" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">

@@ -2214,3 +2214,9 @@ section .section-title {
 		height: 40px;
 	}
 }
+@media (min-width: 1025px) {
+	.pad-sz {
+		width: 1100px;
+	}
+
+}
