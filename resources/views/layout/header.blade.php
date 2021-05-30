@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
-    
+
 
 </head>
 
@@ -98,7 +98,7 @@
     @media (min-width:769px) and (max-width:991px){
         .navbar-brand{
             position: inherit;
-            
+
         }
         .icon {
             position: relative;
@@ -111,7 +111,7 @@
         }
         .display-icon-header {
            display: block;
-           
+
         }
         .display-img-header{
             width: 68% !important;
@@ -154,7 +154,7 @@
         .cg-icn:not(.collapsed) .barss{
             display: none;
         }
-        
+
         .dropdown.show .rgt{
             display: none;
         }
@@ -166,13 +166,13 @@
             padding: 15px 8px 8px 0px !important;
         }
         .btn-group.tgl-mbl .btn-outline-warning.btn-sm{
-            
+
             border-radius: 0px 10px 10px 0px !important;
         }
         .btn-group.tgl-mbl .btn-warning.btn-sm{
             border-radius: 10px 0px 0px 10px !important;
         }
-      
+
     }
     @media (max-width:768px){
         .dropdown-menu{
@@ -209,16 +209,16 @@
             border-top: 1px solid #dee2e6!important;
             margin-left: 10px;
         }
-        
+
         .tgl-mbl{
             visibility: visible;
             margin-left: auto !important;
             margin-right: 5px;
             margin-top: 15px;
-            
+
         }
         .btn-group.tgl-mbl .btn-outline-warning.btn-sm{
-            
+
             border-radius: 0px 10px 10px 0px !important;
         }
         .btn-group.tgl-mbl .btn-warning.btn-sm{
@@ -246,13 +246,13 @@
             margin-bottom: 0px;
             padding: 15px 8px 8px 0px !important;
         }
-        
+
 }
     @media (min-width:992px){
         .cls-itm{
             margin-left: 30%;
         }
-        
+
         .tgl-mbl{
             display: none;
         }
@@ -265,7 +265,7 @@
         .icon{
             display: none !important;
         }
-        
+
         .dropdown:hover .dropdown-menu{
             display: block;
         }
@@ -273,15 +273,15 @@
             visibility: hidden !important;
         }
         .btn-group.tgl-wb .btn-outline-warning.btn-sm{
-            
+
             border-radius: 0px 10px 10px 0px !important;
         }
         .btn-group.tgl-wb .btn-warning.btn-sm{
             border-radius: 10px 0px 0px 10px !important;
         }
 
-        
-        
+
+
     }
 </style>
 <nav class="navbar sticky-top navbar-expand-lg padding-header navbar-light bg-white border-bottom nav-postt">
@@ -316,8 +316,8 @@
 <div class="collapse navbar-collapse cls-itm"  id="navbarSupportedContent">
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
         <div class="btn-group btn-group-toggle tgl-mbl">
-                
-           
+
+
             <label id="bahasa-indonesia" class="
                        @if($bahasa=="en") btn-outline-warning text-dark
                        @else btn-warning @endif
@@ -342,7 +342,7 @@
                    data-toggle="dropdown"  aria-expanded="false"><span>{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }} </span>
                    <i class="rgt">
                        <span class="fa fa-angle-right fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
-                    </i> 
+                    </i>
                     <i class="dwn">
                         <span class="fa fa-angle-down fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
                     </i>

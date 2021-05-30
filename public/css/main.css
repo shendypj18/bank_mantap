@@ -1,6 +1,6 @@
 /*-------------------------------------------*\
    variables.less
- 
+
    Index
    - Color Palette
    - Body
@@ -18,7 +18,7 @@
 \*-------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
- 
+
 
 body{
 	font-family: 'Roboto', sans-serif;
@@ -49,7 +49,7 @@ a:hover{
 	  padding: 0px;
 	  border: hidden;
 	  font-size:12px;
-	 
+
 }
 
 .dropdown-menu a{
@@ -61,9 +61,9 @@ a:hover{
 	box-shadow: 0px 0.9px 0px #0F2B5B33;
 }
 
-.dropdown:hover .dropdown-menu{
+/* .dropdown:hover .dropdown-menu{
 	display: block;
-}
+} */
 
 .dropdown-menu a:hover{
 	margin-top:-9px;
@@ -73,12 +73,12 @@ a:hover{
 	padding: 8px 25px;
 
 }
- 
+
 /* Overlay Seacrh Button */
 * {
 	box-sizing: border-box;
   }
-  
+
   .overlay {
 	height: 25%;
 	width: 100%;
@@ -90,7 +90,7 @@ a:hover{
 	background-color: rgb(255, 255, 255);
 	background-color: rgba(255, 255, 255, 0.9);
   }
-  
+
   .overlay-content {
 	position: relative;
 	top: 40%;
@@ -99,7 +99,7 @@ a:hover{
 	margin-top: 30px;
 	margin: auto;
   }
-  
+
   .overlay .closebtn {
 	position: absolute;
 	top: 20px;
@@ -108,11 +108,11 @@ a:hover{
 	cursor: pointer;
 	color: rgb(15, 8, 67);
   }
-  
+
   .overlay .closebtn:hover {
 	color: #ccc;
   }
-  
+
   .overlay input[type=text] {
 	padding: 15px;
 	font-size: 17px;
@@ -121,11 +121,11 @@ a:hover{
 	width: 80%;
 	background: white;
   }
-  
+
   .overlay input[type=text]:hover {
 	background: #f1f1f1;
   }
-  
+
   .overlay button {
 	float: left;
 	width: 10%;
@@ -135,7 +135,7 @@ a:hover{
 	cursor: pointer;
 	color:white;
   }
-  
+
   .overlay button:hover {
 	background: #bbb;
   }
@@ -150,7 +150,7 @@ a:hover{
 }
 
 .bisnis{
-	background:url('../asset/ws.png') no-repeat center; 
+	background:url('../asset/ws.png') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -274,7 +274,7 @@ a:hover{
 	color:#0F2B5B;
 	font-family: 'Roboto', sans-serif;
 	font-size: 13px;
-	
+
 }
 
 .card.simulasi{
@@ -312,7 +312,7 @@ a:hover{
 	left: 0px;
 }
 
- 
+
 
 .card-pinjaman{
 	background: url('../asset/pensiun.png') repeat-x padding-box;
@@ -501,7 +501,7 @@ a:hover{
     margin-left: -15px;
 }
 
- 
+
 
 .width-img-simulasi {
 	width: auto;
@@ -534,7 +534,7 @@ a:hover{
 	border-radius: 50%;
 	opacity: 1;
 }
-	
+
 .fa:hover {
 	  opacity: 0.7;
 	  text-decoration: none;
@@ -641,7 +641,7 @@ a:hover{
 	.simulasi-bottom {
 		margin-bottom: 50px;
 	}
-	
+
 	#content h1{
 		margin-top: 20px;
 		margin-bottom: 18px;
@@ -701,7 +701,7 @@ a:hover{
 		width: 100%;
 		padding: 35px;
 		/* overflow: hidden; */
-		
+
 	}
 
 	.container-video{
@@ -725,10 +725,10 @@ a:hover{
 
 	.center-icon {
 		display: inline-block;
-		text-align: center; 
-		margin-left: 50%; 
-		margin-right: 50%; 
-		overflow: visible; 
+		text-align: center;
+		margin-left: 50%;
+		margin-right: 50%;
+		overflow: visible;
 	}
 
 	.btn-more{
@@ -774,7 +774,7 @@ a:hover{
 		transition-duration: 0.7s;
 		box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
 	 }
-	 
+
 	.display-button {
 	margin: 10px auto;
   	display: flex;
@@ -858,7 +858,7 @@ a:hover{
 		margin-right: -15px;
 		margin-left: -15px;
 	}
-	
+
 	.display-share {
 		width: 100px;
 	}
@@ -902,7 +902,7 @@ a:hover{
 		display: inline-block;
 		padding-top: 11px;
 	}
-	
+
 	.display-search {
 		display: none;
 	}
@@ -977,7 +977,7 @@ a:hover{
 	.logo-footer{
 		width: 40%;
 	}
-	
+
 	.text-footer{
 		text-align: center;
 	}
@@ -1007,7 +1007,7 @@ a:hover{
 		width: 100%;
 		overflow: hidden;
 	}
-	
+
 	.container-video{
 		width:750px;
 		height:400px;
@@ -1095,7 +1095,7 @@ a:hover{
 		transition-duration: 0.7s;
 		box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
 	 }
-	 
+
 	.display-button {
 	margin: 10px auto;
   	display: flex;
@@ -1128,7 +1128,7 @@ a:hover{
 	.padding-header {
 		padding: 0rem!important;
 	}
-	
+
 	.carousel-indicators {
     top: 100px;
     position: absolute;
@@ -1232,7 +1232,7 @@ a:hover{
 
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
-	
+
 
 	#navbar-upper-text {
 		-webkit-box-flex: 0;
@@ -1340,7 +1340,7 @@ a:hover{
 		transition-duration: 0.7s;
 		box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 14px 40px 0 rgba(0,0,0,0.15);
 	 }
-	 
+
 	.display-button {
 	margin: 10px auto;
   	display: flex;
@@ -1397,7 +1397,7 @@ a:hover{
 	.btn-primary {
 		width: 120px;
 	}
-	
+
 	.btn-whistle {
 		background-color: #FCD116;
 		color: #0F2B5B;
@@ -1419,7 +1419,7 @@ a:hover{
 		margin-right: 0px;
 		margin-left: 0px;
 	}
-	
+
 	.display-share {
 		width: 100%;
 	}
@@ -1441,10 +1441,10 @@ a:hover{
 background-color: #d1cecec1;
 height: 530px;
 }
- 
+
 
 .card-one{
-	background: linear-gradient(to bottom, rgba(250, 214, 9, 0.748), rgba(255, 220, 22, 0.946)), url('../asset/simulasi.png') no-repeat padding-box; 
+	background: linear-gradient(to bottom, rgba(250, 214, 9, 0.748), rgba(255, 220, 22, 0.946)), url('../asset/simulasi.png') no-repeat padding-box;
 	box-shadow: 0px 10px 30px #00000014;
 	border-radius: 15px;
 	opacity: 50;
@@ -1459,7 +1459,7 @@ height: 530px;
 	padding-left: 50%;
 	padding-right:5%;
 	padding-bottom:0px;
- 
+
 }
 
 .card-two{
@@ -1496,7 +1496,7 @@ height: 530px;
 	height: 320px;
 }
 
- 
+
 .card-simulation h4{
 	padding: 0% 20% 0% 0%;
 	line-height: 0.1;
@@ -1715,7 +1715,7 @@ height: 530px;
 
 
 
- 
+
 .h5{
 	font-size: 2px;
 	color:#FCD116;
@@ -1741,7 +1741,7 @@ height: 530px;
 }
 
 
- 
+
 
 #img-header{
 	margin-top:0%;
@@ -1784,10 +1784,10 @@ height: 530px;
 .sectionOne{
 	background-color: #007b5e;
 }
- 
+
 section{
 	padding-bottom: 50px;
-	 
+
 }
 
 section .section-title {
@@ -1867,7 +1867,7 @@ section .section-title {
 
 #footer ul.social li:hover a i {
   font-size:10px;
-  
+
 }
 #footer ul.social li a,
 #footer ul.quick-links li a{
@@ -1897,8 +1897,8 @@ section .section-title {
 #footer ul.quick-links li:hover a i {
   font-weight: 700;
 }
- 
- 
+
+
 /* --------------- this for css on top ------------------- */
 #onTop{
   display: none;
@@ -1925,7 +1925,7 @@ section .section-title {
 /* ======================================================== */
 
 
-	
+
 .fa-facebook, .fa-twitter, .fa-instagram, .fa-youtube-play {
 	background: #FCD116;
 	color: #0F2B5B;
@@ -1939,7 +1939,7 @@ section .section-title {
 	margin-top:10px;
 	color: #0F2B5B;
 }
-  
+
 .chat-float {
   display: block;
   position: fixed;
@@ -1952,7 +1952,7 @@ section .section-title {
 
 
 /* FLOAT MENU CSS */
- 
+
 .float-menu {
 	display: block;
 	position: fixed;
@@ -2048,7 +2048,7 @@ section .section-title {
 		padding-left: 6px;
 	}
 	.card-one{
-		background: linear-gradient(to bottom, rgba(250, 214, 9, 0.748), rgba(255, 220, 22, 0.946)), url('../asset/simulasi.png') no-repeat padding-box; 
+		background: linear-gradient(to bottom, rgba(250, 214, 9, 0.748), rgba(255, 220, 22, 0.946)), url('../asset/simulasi.png') no-repeat padding-box;
 		box-shadow: 0px 10px 30px #00000014;
 		border-radius: 15px;
 		opacity: 50;
@@ -2061,7 +2061,7 @@ section .section-title {
 		top: 15px;
 		height: 350px;
 		padding-bottom:0px;
-	 
+
 	}
 	.card-body{
 		padding: 0px;

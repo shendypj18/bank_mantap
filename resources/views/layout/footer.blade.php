@@ -19,12 +19,10 @@
          margin-left: 0;
      }
  }
-  @media (min-width:480px) and (max-width:992px){
+  @media (max-width:992px){
     .display-footer-mobile{
       display: block;
-      
-      
-     
+
     /* top: 0px; */
     /* left: 0px; */
       /* will-change: transform; */
@@ -71,6 +69,26 @@
          margin-left: -150px;
      }
  }
+ @media (max-width:1024px){
+
+   .text-footer .col-sm-8{
+     flex: auto !important;
+     max-width: inherit !important;
+   }
+   .text-footer .col-sm-4{
+     flex: auto !important;
+     max-width: inherit !important;
+   }
+   .row.icn-logo .col-sm{
+     flex-basis: auto;
+   }
+   .text-footer a.fa{
+     font-size: initial;
+   }
+  .row.small-footer{
+    display: block;
+  }
+ }
 </style>
 
 <section id="footer">
@@ -106,7 +124,7 @@
     </div>
 
     <div class="row text-left text-xs-center text-sm-left text-md-left display-footer-mobile">
-  
+
       @foreach($kategorinavbar as $nv)
           @if($nv->nama != 'NONE' and $nv->nama != 'JASA BANK')
           <div class="col-12">
@@ -116,10 +134,10 @@
                  data-toggle="dropdown"  aria-expanded="false">{{  trans('admin.'. str_replace(' ', '_', $nv->nama)) }}
                  <i class="rgt">
                   <span class="fa fa-angle-right fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
-               </i> 
+               </i>
                <i class="dwn">
                    <span class="fa fa-angle-down fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
-               </i>  
+               </i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   @foreach($navbar[$nv->nama] as $subnavbar)
@@ -131,7 +149,7 @@
           </div>
           @endif
       @endforeach
-       
+
       <div class="col-12">
         <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
           <li class="nav-item dropdown">
@@ -139,7 +157,7 @@
                data-toggle="dropdown"  aria-expanded="false">{{trans('admin.lainnya') }}
                <i class="rgt">
                 <span class="fa fa-angle-right fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
-             </i> 
+             </i>
              <i class="dwn">
                  <span class="fa fa-angle-down fa-icn" style="margin: 0 !important; padding:0 !important; right:0; position: absolute;"></span>
              </i>
@@ -163,11 +181,11 @@
 
 
 <div class="table">
-<div class="row">
+<div class="row icn-logo">
 
-<div class="col-sm">
+<div class="col-sm txt-ctr">
       <!-- Left Coloum -->
-      <div class="text-footer">
+      <div class="text-footer text-center">
         <div class="row">
 
           <div class="col-sm-4">
@@ -183,12 +201,12 @@
             <a>Jl. Cikini Raya No.42 Menteng Jakarta Pusat 10330</a>
             <a>Indonesia</a>
             <br/></small><br/>
-   
+
             <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
             <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram"></a>
             <a href="https://www.youtube.com/channel/UCtV1KsHbxe2bbP3MA-eYfJA/featured?view_as=subscriber" target="_blank" class="fa fa-youtube-play"></a>
-    
+
           </div>
          </div>
       </div>
@@ -393,12 +411,12 @@
                   <img class=" icon-sz" id="y-s" src="{{asset('asset/icon/yt_yellow.png')}}">
                 </a>
               </div>
-              
+
             </div>
           </div>
           <div class="col-xs-1 col-md-3"></div>
         </div>
-        
+
         <img style="width: 100%" src="{{asset('asset/sosmed.png')}}">
       </div>
     </div>
@@ -522,6 +540,19 @@
      document.body.scrollTop = 0;
      document.documentElement.scrollTop = 0;
  }
+</script>
+
+
+<script>
+// footer remove class text-center
+$(window).resize(function(){
+  var viewSize = $(window).width();
+  if (viewSize > 1024){
+    $(".text-footer").removeClass("text-center");
+  } else{
+    $(".text-footer").addClass("text-center");
+  }
+})
 </script>
 
 
@@ -665,5 +696,3 @@
     document.getElementById("myOverlay").style.display = "none";
   }
 </script>
-
-
