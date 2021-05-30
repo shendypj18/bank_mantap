@@ -2197,6 +2197,9 @@ section .section-title {
 #berita-mobile {
 	display: none;
 }
+#berita-desktop {
+	display: inline-block;
+}
 @media (max-width: 767px) {
 	.carousel-indicators {
 		display: none;
