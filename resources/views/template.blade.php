@@ -1,4 +1,11 @@
 @include('layout.header')
+<style type="text/css">
+
+ .fit-parent{
+     box-sizing: border-box;
+     width: 100%;
+}
+</style>
 
 <section id="img-header" class="img-header">
 <img src="{{ url('storage/'. $navbardata[$bahasa .'_banner'])}}">
@@ -19,8 +26,8 @@
 
 
 
-<section class="section">
-    <div class="container ">
+<section class="section" style="position:relative">
+    <div class="container fit-parent" >
         {!!  $navbardata[$bahasa. '_text_content']!!}
     </div>
     @if($navbardata->id_slug == substr($id_route, 8, strlen($id_route) -1) or $navbardata->en_slug == substr($en_route, 8, strlen($en_route) -1))

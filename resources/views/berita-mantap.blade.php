@@ -75,10 +75,6 @@
             <div class="col-md-10 mt-5">
                 <h4 class="fz-berita text-justify"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
-
-            <!-- <div class="col-md-2 mt-5">
-                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
-                 </div> -->
         </div>
 
         <div class="row justify-content-md-center text-justify">
@@ -88,8 +84,9 @@
         </div>
     @endif
     <div class="col-sm-8 mt-3" style="float:none;margin:auto;">
+        <p class="text-center"><a class="btn btn-sm btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
         <h3 class="text-center" >{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
-        </div>
+    </div>
     <p><br/></p>
     <p>
         <div class="display-button">
