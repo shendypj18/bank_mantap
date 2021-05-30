@@ -2194,8 +2194,20 @@ section .section-title {
 	}
 }
 
+#berita-mobile {
+	display: none;
+}
 @media (max-width: 767px) {
 	.carousel-indicators {
 		display: none;
+	}
+	#berita-mobile {
+		display: inline-block;
+	}
+	#berita-desktop {
+		display: none;
+	}
+	.simulasi {
+		height: 40px;
 	}
 }
