@@ -47,7 +47,11 @@
          height: auto;
          max-height: 60%;
      }
+     .h {
+         height: 400px;
+     }
  }
+ 
 
 </style>
 @if($berita)
@@ -63,25 +67,27 @@
     </section>
 @endif
 
-<div class="container @if(!$berita) text-center @endif mt-5" id="news">
+<div class="container text-center mt-5" id="news">
 
     @if($berita)
-        <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
-        <div class="row">
-            <div class="col-md-10 mt-5">
+        <img class="img-responsive-2 h justify-content-md-center"  src="{{ url('storage/'. $berita->gambar)}}">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 mt-5">
                 <h4 class="fz-berita"><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
-            <div class="col-md-2 mt-5">
-                <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
-            </div>
+            <!-- <div class="col-md-2 mt-5">
+                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
+                 </div> -->
         </div>
 
-        <div style="text-align: justify;">
+        <div class="row justify-content-md-center" style="text-align: justify;">
+            <div class="col-md-10">
             {!!  $berita[$bahasa. '_isi'] !!}
+            </div>
         </div>
     @endif
-    <div class="col-sm-8" style="float:none;margin:auto;">
+    <div class="col-sm-8 mt-3" style="float:none;margin:auto;">
         <h3 class="text-center" >{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
         </div>
     <p><br/></p>

@@ -49,6 +49,9 @@
          height: auto;
          max-height: 70%;
      }
+     .h {
+         height: 400px;
+     }
  }
 
 </style>
@@ -69,19 +72,20 @@
     <!-- Content Start Here -->
 <div class="container @if(!$berita) text-center @endif" id="news">
     @if($berita)
-        <img class="img-responsive-2" src="{{ url('storage/'. $berita->gambar)}}">
-        <div class="row">
-            <div class="col-md-10 mt-5 fz-berita">
+        <img class="img-responsive-2 h justify-content-md-center" src="{{ url('storage/'. $berita->gambar)}}">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 mt-5 fz-berita">
                 <h4><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
-            <div class="col-md-2 mt-5 ml-5">
-                <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
-            </div>
+            <!-- <div class="col-md-2 mt-5 ml-5">
+                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
+                 </div> -->
         </div>
-
-        <div style="text-align: justify;">
-            {!!  $berita[$bahasa. '_isi'] !!}
+        <div class="row justify-content-md-center" style="text-align: justify;">
+            <div class="col-md-10" >
+                {!!  $berita[$bahasa. '_isi'] !!}
+            </div>
         </div>
     @endif
     <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
