@@ -696,3 +696,15 @@ $(window).resize(function(){
     document.getElementById("myOverlay").style.display = "none";
   }
 </script>
+
+<script>
+  // footer remove class text-center
+  $(window).resize(function(){
+    var viewSize = $(window).width();
+    if (viewSize < 1200){
+      $(".crd-itm").addClass("crd-cbg col-6 col-md-6 col-lg-3").removeClass("card-margin");
+    } else{
+      $(".crd-itm").removeClass("crd-cbg col-6 col-md-6 col-lg-3").addClass("card-margin");
+    }
+  })
+  </script>
