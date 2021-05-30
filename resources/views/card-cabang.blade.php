@@ -46,8 +46,8 @@
                 <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2 mt-2" alt="Image Simulasi"/>
                 <br/>
                 <small class="kantor-cabang-fz">
-                @if(strlen($c->alamat) > 87)
-                    {{ substr($c->alamat, 0, 87) . '....'}}
+                @if(strlen($c->alamat) > 81)
+                    {{ substr($c->alamat, 0, 81) . '....'}}
                 @else
                     {{$c->alamat}}
                 @endif
