@@ -7,7 +7,7 @@
     }
 
  }
- @media(min-width: 679px) {
+ @media(min-width: 679px) and (max-width: 883px) {
      .btn-unduh {
          margin-left: 15%;
      }
@@ -15,4 +15,4 @@
 
 </style>
 
-<div class="mx-auto mt-5"><p><a class="btn btn-unduh"  href="{{url('storage/' .$profil_lengkap->nama_file)}}" target="_blank">{{__('admin.download_sekilas_perusahaan')}}</a></p></div>
+<div class="mx-auto mt-5 mt-5"><p><a class="btn btn-unduh"  href="{{url('storage/' .$profil_lengkap->nama_file)}}" target="_blank">{{__('admin.download_sekilas_perusahaan')}}</a></p></div>
