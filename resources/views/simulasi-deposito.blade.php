@@ -1,5 +1,5 @@
 @include('layout.header')
- 
+
 <style>
 input[type=text] {
 background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -18,7 +18,17 @@ width: 110px;
 td {
   height: 40px;
   width:65%;
-  
+
+}
+
+@media (min-width:575px) and (max-width:1024px){
+    .card.card-body{
+        padding: 5%;
+    }
+    .col-sm-8.col-md-8.input-group{
+        align-content: flex-start;
+        height: auto;
+    }
 }
 </style>
 
@@ -36,8 +46,8 @@ td {
 </ul>
 </section>
 
- 
- 
+
+
 <div class="container" id="input">
     <div class="row">
         <div class="col-sm-6 text-left">
@@ -71,7 +81,7 @@ td {
         <form>
             <div class="form-group row mt-4 ">
                 <label class="col-sm-4 col-form-label" for="setor">Jumlah Setoran (perbulan)</label>
-                <div class="col-sm-5 input-group">
+                <div class="col-md-8 col-sm-8 input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
                     <input type="number" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
                 </div>
@@ -83,7 +93,7 @@ td {
 
             <div class="form-group row  ">
                 <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label>
-                <div class="col-sm-5 input-group">
+                <div class="col-sm-8 col-md-8 input-group">
                     <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
                     <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
                 </div>
@@ -95,7 +105,7 @@ td {
 
             <div class="form-group row  ">
                 <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label>
-                <div class="col-sm-5 input-group">
+                <div class="col-sm-8 col-md-8 input-group">
                     <input type="text" class="form-control" id="bunga" disabled value="7" style="background-color:#FFF;">
                     <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
                     <input type="text" class="form-control"  id="bungaa" disabled value="2"  style="background-color:#FFF;">
@@ -117,9 +127,9 @@ td {
 
 
 <div class="container" id="hasil">
- 
+
 <h4><strong>Hasil Perhitungan Simulasi Deposito</strong></h4>
- 
+
 <div class="col-sm-11 mt-5">
 <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
 <div class="container mt-3">
@@ -130,7 +140,7 @@ td {
     <td style="padding-left:18px;">Jumlah Setoran (perbulan)</td>
     <td style="color:#0F2B5B;">: <strong id="hasil_setor"></strong></td>
   </tr>
- 
+
   <tr style="background-color: #FCD1161A;">
     <td style="padding-left:18px;">Bunga</td>
     <td style=" color:#0F2B5B;">: <strong id="hasil_bunga"></strong></td>
@@ -145,7 +155,7 @@ td {
     <td style="padding-left:18px;">Total Dana</td>
     <td  style="color:#0F2B5B;">: <strong id="hasil_total"></strong></td>
   </tr>
-   
+
  </tbody>
 
  </table>
@@ -168,7 +178,7 @@ td {
  </div>
 </div> <!-- container -->
 
- 
+
 
 @include('layout.footer')
 
@@ -187,12 +197,12 @@ td {
       $('#btnHitung').prop('disabled', true);
   });
 
-  function findAndReplace(string, target, replacement) { 
-   var i = 0, length = string.length;   
-   for (i; i < length; i++) {   
-     string = string.replace(target, replacement);   
-   }   
-   return string;  
+  function findAndReplace(string, target, replacement) {
+   var i = 0, length = string.length;
+   for (i; i < length; i++) {
+     string = string.replace(target, replacement);
+   }
+   return string;
   }
 
   function updateSetor(input) {
@@ -200,9 +210,9 @@ td {
     var strr=findAndReplace(str,".","");
 
     if (parseInt(strr) <5000000) {
-        $('#lesss').show(); 
-        $('#moree').hide();  
-        window.bSetor = false;     
+        $('#lesss').show();
+        $('#moree').hide();
+        window.bSetor = false;
     } else if(parseInt(strr) > 5000000000){
         $('#moree').show();
         $('#lesss').hide();
@@ -243,7 +253,7 @@ td {
   }
 
   function checkInput(){
-    var bln=findAndReplace($('#setor').val(),".","");    
+    var bln=findAndReplace($('#setor').val(),".","");
     var setoran_bulanan = parseInt(bln);
     var jangka_waktu = $('#waktu').val();
 
@@ -255,7 +265,7 @@ td {
   }
 
   function hitung(){
-    var bln=findAndReplace($('#setor').val(),".","");    
+    var bln=findAndReplace($('#setor').val(),".","");
     var setoran_bulanan = parseInt(bln);
     var jangka_waktu = $('#waktu').val();
     var bunga_thn = ($('#bunga').val()+"."+$('#bungaa').val())/100;
@@ -274,7 +284,7 @@ td {
       console.log("bunga = "+bunga);
       console.log("total = " + total_dana);
     }
-    
+
 
     $('#input').hide();
     $('#hasil').show();

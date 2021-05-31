@@ -1,5 +1,5 @@
 @include('layout.header')
- 
+
 <style>
 input[type=text] {
 background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -18,7 +18,16 @@ width: 110px;
 td {
   height: 40px;
   width:65%;
-  
+
+}
+@media (min-width:575px) and (max-width:1024px){
+    .card.card-body{
+        padding: 5%;
+    }
+    .col-sm-8.col-md-8.input-group{
+        align-content: flex-start;
+        height: auto;
+    }
 }
 </style>
 
@@ -35,8 +44,8 @@ td {
 </ul>
 </section>
 
- 
- 
+
+
 <div class="container" id="input">
     <div class="row">
         <div class="col-sm-6 text-left">
@@ -71,7 +80,7 @@ td {
         <form>
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label fz" for="setor">Jumlah Setoran (perbulan)</label>
-                <div class="col-sm-5 input-group">
+                <div class="col-sm-8 col-md-8 input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
                     <input type="number" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
                 </div>
@@ -83,7 +92,7 @@ td {
 
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label fz" for="waktu">Jangka Waktu</label>
-                <div class="col-sm-5 input-group">
+                <div class="col-md-8 col-sm-8 input-group">
                     <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
                     <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
                 </div>
@@ -95,7 +104,7 @@ td {
 
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label fz" for="bunga">Suku Bunga</label>
-                <div class="col-sm-5 input-group">
+                <div class="col-md-8 col-sm-8 input-group">
                     <input type="text" class="form-control" id="bunga" disabled value="7" style=" width: 20%; background-color:#FFF;">
                     <span class="input-group-text" style="width: 10%; border-radius: 0px 0px 0px 0px; width:10%; background-color:#FFF;">,</span>
                     <input type="text" class="form-control"  id="bungaa" disabled value="0"  style=" width: 20%; background-color:#FFF;">
@@ -293,4 +302,3 @@ td {
      $('#hasil_total').text(toRp(Math.round(total_dana)));
  }
 </script>
-

@@ -1,5 +1,5 @@
 @include('layout.header')
- 
+
 <style>
 input[type=text] {
 background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -18,7 +18,16 @@ width: 110px;
 td {
   height: 40px;
   width:65%;
-  
+
+}
+@media (min-width:575px) and (max-width:1024px){
+    .card.card-body{
+        padding: 5%;
+    }
+    .col-sm-8.col-md-8.input-group{
+        align-content: flex-start;
+        height: auto;
+    }
 }
 </style>
 
@@ -35,16 +44,16 @@ td {
 </ul>
 </section>
 
- 
- 
+
+
 <div class="container" id="input">
 <div class="row">
   <div class="col-sm-6 text-left">
   <h4><strong>Simulasi Kredit Pensiun</strong></h4>
   </div>
-  
+
   <div class="col-sm-5 text-center">
- 
+
   <select name="cars" style="background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 1px solid #D0D8E6;
         border-radius: 8px;
@@ -56,21 +65,21 @@ td {
     <option value="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">Simulasi kredit Serbaguna Mikro</option>
     <option value="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">Simulasi Kredit Pensiun</option>
   </select>
- 
+
   </div> <!-- col-sm-5-->
 </div><!-- row -->
 
 <div class="mt-5">
 <p><small>Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.</small></p>
 </div><!-- mt-5 ml-4 -->
- 
- 
+
+
 <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
 
 <form>
     <div class="form-group row mt-4">
-    <label class="col-sm-4 col-form-label" for="setor">Jumlah Pinjaman</label> 
-        <div class="col-sm-5 input-group">
+    <label class="col-sm-4 col-form-label" for="setor">Jumlah Pinjaman</label>
+        <div class="col-sm-8 col-md-8 input-group">
           <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
           <input type="number" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
         </div>
@@ -81,8 +90,8 @@ td {
         </div>
 
     <div class="form-group row  ">
-    <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label> 
-        <div class="col-sm-5 input-group">
+    <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label>
+        <div class="col-sm-8 col-md-8 input-group">
           <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
           <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
         </div>
@@ -93,8 +102,8 @@ td {
     </div>
 
     <div class="form-group row  ">
-    <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label> 
-        <div class="col-sm-5 input-group">
+    <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label>
+        <div class="col-sm-8 col-md-8 input-group">
         <input type="text" class="form-control" id="bunga" disabled value="9" style="background-color:#FFF;">
         <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
         <input type="text" class="form-control"  id="bungaa" disabled value="6"  style="background-color:#FFF;">
@@ -105,9 +114,9 @@ td {
     <div class="form-group row  ">
     <div class="col-sm-4 col-form-label"></div>
     <div class="col-sm-5 input-group ">
-    
-    
-    
+
+
+
     <button class="btn btn-simulasi-flat " type="button" id="btnHitung" onclick="hitung()">HITUNG SIMULASI</button>
     </div>
     </div>
@@ -119,9 +128,9 @@ td {
 
 
 <div class="container" id="hasil">
- 
+
 <h4><strong>Hasil Perhitungan Simulasi Kredit Pensiun</strong></h4>
- 
+
 <div class="col-sm-11 mt-5">
 <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
 <div class="container  mt-3">
@@ -132,7 +141,7 @@ td {
     <td style="padding-left:18px;">Angsuran Pokok Perbulan</td>
     <td style="color:#0F2B5B;">: <strong id="hasil_angsuran_pokok"></strong></td>
   </tr>
- 
+
   <tr style="background-color: #FCD1161A;">
     <td style="padding-left:18px;">Angsuran Bunga Perbulan</td>
     <td style=" color:#0F2B5B;">: <strong id="hasil_angsuran_bunga"></strong></td>
@@ -147,7 +156,7 @@ td {
     <td style="padding-left:18px;">Total Angsuran</td>
     <td  style="color:#0F2B5B;">: <strong id="hasil_total_angsuran"></strong></td>
   </tr>
-   
+
  </tbody>
 
  </table>
@@ -160,7 +169,7 @@ td {
 </div>
 
 <div class="form-group row">
-    <div class="col-sm-3 col-form-label"></div> 
+    <div class="col-sm-3 col-form-label"></div>
     <div class="col-sm-5 input-group ">
     <a class="btn btn-simulasi-flat  mt-5" role="button" href="{{url('simulasi-kredit-pensiun/' . $bahasa)}}">KEMBALI KE SIMULASI</a>
     </div>
@@ -170,7 +179,7 @@ td {
  </div>
 </div> <!-- container -->
 
- 
+
 
 @include('layout.footer')
 
@@ -189,12 +198,12 @@ td {
       $('#btnHitung').prop('disabled', true);
   });
 
-  function findAndReplace(string, target, replacement) { 
-   var i = 0, length = string.length;   
-   for (i; i < length; i++) {   
-     string = string.replace(target, replacement);   
-   }   
-   return string;  
+  function findAndReplace(string, target, replacement) {
+   var i = 0, length = string.length;
+   for (i; i < length; i++) {
+     string = string.replace(target, replacement);
+   }
+   return string;
   }
 
   function updateSetor(input) {
@@ -203,7 +212,7 @@ td {
 
     if (parseInt(strr) <5000000) {
         $('#lesss').show();
-        window.bSetor = false;    
+        window.bSetor = false;
     } else if(parseInt(strr) > 350000000){
         $('#moree').show();
         window.bSetor = false;
@@ -252,7 +261,7 @@ td {
   }
 
   function checkInput(){
-    var bln=findAndReplace($('#setor').val(),".","");    
+    var bln=findAndReplace($('#setor').val(),".","");
     var setoran_bulanan = parseInt(bln);
     var jangka_waktu = $('#waktu').val();
 
@@ -263,16 +272,16 @@ td {
     }
   }
 
-  function hitung(){        
-    var bln=findAndReplace($('#setor').val(),".","");    
+  function hitung(){
+    var bln=findAndReplace($('#setor').val(),".","");
     var setoran_bulanan = parseInt(bln);
     var jangka_waktu = $('#waktu').val();
     var bunga_thn = ($('#bunga').val()+"."+$('#bungaa').val())/100;
     var bunga_bln = bunga_thn/12;
-    var bunga = setoran_bulanan * bunga_bln;    
+    var bunga = setoran_bulanan * bunga_bln;
     var angsuran_pokok = setoran_bulanan/jangka_waktu;
     var total_angsuran_bulan = angsuran_pokok + bunga;
-    
+
     // for (var i = 1; i < jangka_waktu; i++) {
     //   var ul = total_dana + setoran_bulanan;
     //   bunga = ul * bunga_bln;
@@ -284,7 +293,7 @@ td {
     //   console.log("bunga = "+bunga);
     //   console.log("total = " + total_dana);
     // }
-    
+
 
     $('#input').hide();
     $('#hasil').show();
@@ -295,4 +304,3 @@ td {
     $('#hasil_total_angsuran').text(toRp(Math.round(total_angsuran_bulan * jangka_waktu)));
   }
 </script>
-

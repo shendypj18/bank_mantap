@@ -86,8 +86,8 @@
 
 </style>
 <div class="container">
-<h4 style="color:#0F2B5B;">Simulasi</h4>
-<p  class="mb-5"><small>Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.</small></p>
+<h4 style="color:#0F2B5B;">{{ __('bisnis.simulasi') }}</h4>
+<p  class="mb-5"><small>{{ __('bisnis.simulasi_deskripsi') }}</small></p>
 </div>
 
 
@@ -99,10 +99,10 @@
         <div class="card-body">
         <br/>
         <img class="width-img-simulasi" src="{{ asset('asset/img-simulasi01.png') }}" class="card-img-top mb-4" alt="Image Simulasi"/>
-        <h4><img src="{{ asset('asset/icon/calculator.png') }}" alt="Icon" width="10%">&nbsp;&nbsp;Simulasi Tabungan Berjangka</h4>
+        <h4><img src="{{ asset('asset/icon/calculator.png') }}" alt="Icon" width="10%">&nbsp;&nbsp;{{ __('bisnis.simulasi_tabungan_berjangka_judul') }}</h4>
 
-        <p class="card-text">Tabungan Samantap Berjangka (TSB) adalah<br/>tabungan setoran wajid bulanan</p>
-        <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">HITUNG SIMULASI</a>
+        <p class="card-text">{{ __('bisnis.simulasi_tabungan_berjangka_detail_atas') }}<br>{{ __('bisnis.simulasi_tabungan_berjangka_detail_bawah') }}</p>
+        <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">{{ __('bisnis.hitung_simulasi') }}</a>
         </div>
       </div>
 		</div>
@@ -113,9 +113,9 @@
 		  <div class="card-body out">
 		  <br/>
       <img src="{{ asset('asset/img-simulasi02.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
-		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%">&nbsp;&nbsp;Simulasi Deposito</h4>
-		  <p class="card-text">Untuk memastikan hang Anda diinvestasikan ditempat<br/>yang aman dan terpercaya sekaligus menguntungkan</p>
-		  <a class="btn btn-simulasi-flat out" role="button" href="{{url('simulasi-deposito/'.$bahasa)}}">HITUNG SIMULASI</a>
+		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%">&nbsp;&nbsp;{{ __('bisnis.simulasi_deposito') }}</h4>
+		  <p class="card-text">{{ __('bisnis.simulasi_deposito_detail_atas') }}<br/>{{ __('bisnis.simulasi_deposito_detail_bawah') }}</p>
+		  <a class="btn btn-simulasi-flat out" role="button" href="{{url('simulasi-deposito/'.$bahasa)}}">{{ __('bisnis.hitung_simulasi') }}</a>
 		  </div>
 		</div>
     </div>
@@ -128,9 +128,9 @@
     <div class="card-body">
 		  <br/>
       <img src="{{ asset('asset/img-simulasi03.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
-		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi kredit Serbaguna Mikro</h4>
-		  <p class="card-text">Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha</p>
-		  <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">HITUNG SIMULASI</a>
+		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> {{ __('bisnis.simulasi_kredit_serbaguna_mikro') }}</h4>
+		  <p class="card-text">{{ __('bisnis.simulasi_kredit_serbaguna_mikro_detail') }}</p>
+		  <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">{{ __('bisnis.hitung_simulasi') }}</a>
 		  </div>
 		</div>
 		</div>
@@ -141,9 +141,9 @@
             <div class="card-body">
                 <br/>
                 <img src="{{ asset('asset/img-simulasi04.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
-                <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> Simulasi Kredit Pensiun</h4>
-                <p class="card-text">Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana Anda setelah pension</p>
-                <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">HITUNG SIMULASI</a>
+                <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%"> {{ __('bisnis.simulasi_kredit_pensiuan') }}</h4>
+                <p class="card-text">{{ __('bisnis.simulasi_kredit_pensiuan_detail') }}</p>
+                <a class="btn btn-simulasi-flat" role="button" href="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">{{ __('bisnis.hitung_simulasi') }}</a>
 		        </div>
 		    </div>
     </div>
