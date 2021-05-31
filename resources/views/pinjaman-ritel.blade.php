@@ -1,4 +1,4 @@
-<div class="container">
+{{-- <div class="container">
     <div class="card card-simulation">
         <div class="card-body">
             <br/>
@@ -7,4 +7,4 @@
             <a class="btn btn-outline-light btn-simulasi-flat" href="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
         </div>
 		</div>
-</div>
+</div> --}}

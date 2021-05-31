@@ -244,7 +244,7 @@
 
 
 
-    <div class="container mt-5">
+    {{-- <div class="container mt-5">
 		    <div class="card card-simulation">
 		        <div class="card-body">
 		            <br/>
@@ -253,5 +253,5 @@
                 <a class="btn btn-outline-light btn-simulasi-flat" href="{{url('simulasi-kredit-pensiun/'.$bahasa)}}" role="button">HITUNG SIMULASI</a>
 		        </div>
 		    </div>
-    </div>
+    </div> --}}
 </section>
