@@ -1,4 +1,4 @@
-<div class="container">
+{{-- <div class="container">
 
     <div class="container mt-5">
         <div class="card card-simulation">
@@ -11,4 +11,4 @@
 		    </div>
     </div>
 
-</div>
+</div> --}}
