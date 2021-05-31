@@ -32,6 +32,19 @@ return [
     'deposito_mantap_deskripsi' => 'Deposito Bank Mantap Nikmati kemudahan bertransaksi dengan persyaratan mudah dan ringan',
     'giro' => 'Giro',
     'giro_deskripsi' => 'Deposito Bank Mantap Nikmati kemudahan bertransaksi dengan persyaratan mudah dan ringan',
+    'simulasi' => 'Simulasi',
+    'simulasi_deskripsi' => 'Lakukan simulasi perhitungan dana sesuai dengan produk dan kebutuhan yang Anda pilih.',
+    'simulasi_tabungan_berjangka_judul' => 'Simulasi Tabungan Berjangka',
+    'simulasi_tabungan_berjangka_detail_atas'=> 'Tabungan Simantap Berjangka (TSB) adalah ',
+    'simulasi_tabungan_berjangka_detail_bawah' => 'tabungan setoran wajid bulanan',
+    'simulasi_deposito' => 'Simulasi Deposito',
+    'simulasi_deposito_detail_atas' => 'Untuk memastikan hang Anda diinvestasikan ditempat',
+    'simulasi_deposito_detail_bawah' => 'yang aman dan terpercaya sekaligus menguntungkan',
+    'simulasi_kredit_serbaguna_mikro' => 'Simulasi kredit Serbaguna Mikro',
+    'simulasi_kredit_serbaguna_mikro_detail' => 'Penyediaan dana yang diberikan kepada pengusaha perorangan/badan usaha',
+    'simulasi_kredit_pensiuan' => 'Simulasi Kredit Pensiun',
+    'simulasi_kredit_pensiuan_detail' => 'Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana Anda setelah pension',
+    'hitung_simulasi' => 'HITUNG SIMULASI',
 
 
 

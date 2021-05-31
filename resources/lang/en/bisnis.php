@@ -32,5 +32,18 @@ return [
     'deposito_mantap_deskripsi' => 'To ensure your money is invested in a place that is safe and reliable as well as profitable, Bank Mantap’s Time Deposit is the right and reliable choice. Bank Mantap Time Deposit is in Rupiah currency with attractive interest rates and various other benefits.',
     'giro' => 'Giro',
     'giro_deskripsi' => 'In the midst of today\'s business challenges, you certainly need a variety of reliable supporting facilities. For this reason, Bank Mantap offers profitable banking transactions through Bank Mantap Giro/Current Accounts.',
+    'simulasi_deskripsi' => 'Simulate the calculation of funds according to the product and needs you choose.',
+    'simulasi_tabungan_berjangka_judul' => 'Term Savings Account Simulation',
+    'simulasi_tabungan_berjangka_detail_atas' => 'siMantap Berjangka (TSB) is',
+    'simulasi_tabungan_berjangka_detail_bawah' => 'mandatory monthly deposit savings account',
+    'simulasi_deposito' => 'Time Deposit Simulation',
+    'simulasi_deposito_detail_atas' => 'To make sure your money is invested in place',
+    'simulasi_deposito_detail_bawah' => 'which is safe and reliable as well as profitable',
+    'simulasi_kredit_serbaguna_mikro' => 'Micro Multipurpose Credit Simulation',
+    'simulasi_kredit_serbaguna_mikro_detail' => 'Provision of funds for individual entrepreneurs/business entities',
+    'simulasi_kredit_pensiuan' => 'Pension Credit Simulation',
+    'simulasi_kredit_pensiuan_detail' => 'Benefit from the opportunity to continue working and put your plans into actions after retirement',
+    'hitung_simulasi' => 'CALCULATE SIMULASI',
+
 
 ];
