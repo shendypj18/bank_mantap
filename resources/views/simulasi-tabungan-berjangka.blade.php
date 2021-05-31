@@ -195,7 +195,7 @@ td {
  var bSetor = false;
  var bWaktu = false;
  $(document).ready(function(){
-     $('#setor').maskMoney({thousands:'.', decimal:',', precision:0});
+     //$('#setor').maskMoney({thousands:'.', decimal:',', precision:0});
      $('#less').hide();
      $('#more').hide();
      $('#lesss').hide();
