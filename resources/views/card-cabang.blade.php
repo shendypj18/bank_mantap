@@ -41,6 +41,10 @@
             <div class="card-body">
                 <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2 mt-2" alt="Image Simulasi"/>
                 <br/>
+                <small class="nama-kantor-cabang">
+                    {{ $c->nama }}
+                </small>
+                <br>
                 <small class="kantor-cabang-fz">
                 @if(strlen($c->alamat) > 81)
                     {{ substr($c->alamat, 0, 81) . '....'}}
@@ -48,6 +52,7 @@
                     {{$c->alamat}}
                 @endif
                 </small>
+                <br>
                 <p><small class="kantor-cabang-fz mt-2">{{$c->telp}}</small></p>
                 <h3 class="text-bold" data-toggle="modal" data-target="#aceh" onclick="gmap({{$c}})"><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 15%"> &nbsp;<a>Lihat Map</a></h3>
             </div>

@@ -78,9 +78,11 @@
                 <h4 class="fz-berita text-justify" ><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
 
-            <!-- <div class="col-md-2 mt-5 ml-5">
-                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
-                 </div> -->
+            <div class="col-md-2 mt-5 ml-5">
+                @if($berita)
+                    <p class="text-center"><a class="btn btn-sm btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> {{ __('bisnis.bagikan_konten') }}</a></p>
+                @endif
+                 </div>
         </div>
         <div class="row justify-content-md-center text-justify">
             <div class="col-md-10" >

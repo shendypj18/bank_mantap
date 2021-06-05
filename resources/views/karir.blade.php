@@ -56,7 +56,7 @@
 
     <div class="card-danger">
 		  <a class="card-title"><strong>Hati-hati Penipuan!</strong></a>
-      <p><small>Bank Mandiri Taspen TIDAK memungut biaya apapun dan/atau menggunakan jasa travel agent dalam proses rekrutmen</small></p>
+      <p><small>Mandiri Taspen TIDAK memungut biaya apapun dan/atau menggunakan jasa travel agent dalam proses rekrutmen</small></p>
 		</div>
 
     <br/><br/>
