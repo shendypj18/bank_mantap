@@ -40,14 +40,14 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 70%;
+    max-height: 60%;
  }
  @media (min-width: 1337px) {
      .img-responsive-2 {
          width: 100%;
          max-width: 70%;
          height: auto;
-         max-height: 70%;
+         max-height: 60%;
      }
      .h {
          height: 400px;
@@ -70,7 +70,7 @@
 @endif
 
     <!-- Content Start Here -->
-<div class="container @if(!$berita) text-center @endif" id="news">
+<div class="container text-center" id="news">
     @if($berita)
         <img class="img-responsive-2 h justify-content-md-center" src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row justify-content-md-center">
