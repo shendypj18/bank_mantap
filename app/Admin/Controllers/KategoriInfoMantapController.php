@@ -28,6 +28,9 @@ class KategoriInfoMantapController extends AdminController
         $grid->disableCreateButton();
         $grid->disableExport();
         $grid->disableFilter();
+        $grid->actions(function ($actions) {
+            $actions->disableDelete();
+        });
         $grid->column('nama', __('Nama'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
