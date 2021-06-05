@@ -1,3 +1,4 @@
+<p>Laporan whistle blowing oleh {{$nama_pelapor}}</p>
 <p>Nama Pelapor :{{ $nama_pelapor}}</p>
 <p>nomer telepon :{{ $nomer_telepon }}</p>
 <p>Email :{{ $email }}</p>
