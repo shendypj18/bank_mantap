@@ -14,11 +14,43 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
 
 
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+    <title>www.bankmantap.co.id</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name=”description” content="description">
+    <link rel="shortcut icon" type="image/png" href="{{asset('asset/logo_mantap.png')}}" sizes="16x16">
+    <!-- CSS Bootsrap ver.4.0 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
+
+
 </head>
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
 <style>
+#bahasa-indonesia.btn-outline-warning{
+
+    border-radius: 10px 0px 0px 10px !important;
+
+}
+#bahasa-indonesia.btn-warning{
+    border-radius: 10px 0px 0px 10px !important;
+}
+#bahasa-inggris.btn-outline-warning{
+
+    border-radius: 0px 10px 10px 0px !important;
+
+}
+#bahasa-inggris.btn-warning{
+    border-radius: 0px 10px 10px 0px !important;
+}
 .tgl-mbl{
     visibility: hidden;
 }
@@ -165,13 +197,13 @@
             margin-bottom: 0px;
             padding: 15px 8px 8px 0px !important;
         }
-        .btn-group.tgl-mbl .btn-outline-warning.btn-sm{
+        /* .btn-group.tgl-mbl .btn-outline-warning.btn-sm{
 
             border-radius: 0px 10px 10px 0px !important;
         }
         .btn-group.tgl-mbl .btn-warning.btn-sm{
             border-radius: 10px 0px 0px 10px !important;
-        }
+        } */
 
     }
     @media (max-width:768px){
@@ -217,13 +249,13 @@
             margin-top: 15px;
 
         }
-        .btn-group.tgl-mbl .btn-outline-warning.btn-sm{
+        /* .btn-group.tgl-mbl .btn-outline-warning.btn-sm{
 
             border-radius: 0px 10px 10px 0px !important;
         }
         .btn-group.tgl-mbl .btn-warning.btn-sm{
             border-radius: 10px 0px 0px 10px !important;
-        }
+        } */
         .tgl-wb{
             display: none;
         }
@@ -272,13 +304,13 @@
         .fa-icn{
             visibility: hidden !important;
         }
-        .btn-group.tgl-wb .btn-outline-warning.btn-sm{
+        /* .btn-group.tgl-wb .btn-outline-warning.btn-sm{
 
             border-radius: 0px 10px 10px 0px !important;
         }
         .btn-group.tgl-wb .btn-warning.btn-sm{
             border-radius: 10px 0px 0px 10px !important;
-        }
+        } */
 
 
 
@@ -316,8 +348,6 @@
 <div class="collapse navbar-collapse cls-itm"  id="navbarSupportedContent">
     <ul class="navbar-nav" style="font-size:12px; font-weight: bold;">
         <div class="btn-group btn-group-toggle tgl-mbl">
-
-
             <label id="bahasa-indonesia" class="
                        @if($bahasa=="en") btn-outline-warning text-dark
                        @else btn-warning @endif
@@ -331,6 +361,8 @@
                 <input type="radio" name="options" id="option2" onclick="window.location='{{url($en_route .'/en' )}}'">ENG
             </label>
         </div>
+        {{-- btn translate --}}
+
         <li class="nav-item border-bottom" >
             <a class="nav-link mr-3" href="{{url('/'. $bahasa)}}">{{__('admin.BERANDA')}} <span class="sr-only">(current)</span></a>
         </li>

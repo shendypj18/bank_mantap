@@ -44,6 +44,6 @@ return [
     'simulasi_kredit_pensiuan' => 'Pension Credit Simulation',
     'simulasi_kredit_pensiuan_detail' => 'Benefit from the opportunity to continue working and put your plans into actions after retirement',
     'hitung_simulasi' => 'CALCULATE SIMULASI',
-
+    'bagikan_konten' => 'Share',
 
 ];

@@ -9,7 +9,7 @@
       box-shadow: 0px 20px 40px #00000014;
       border-color:red;
     }
-    
+
     th {
       height: 60px;
       color: #121212;
@@ -23,14 +23,16 @@
     tr:nth-child(even){
         background-color: #FCD1161A;
     }
-    
+
     th {
       background-color: #FCD116;
       color: #0F2B5B;
     }
-    
+    .mt-5, .my-5 {
+    margin-top: 25px!important;
+}
     </style>
-    
+
 <div class="container">
 
     <div class="card card-body mb-5 mt-5">
@@ -52,7 +54,7 @@
           <div class="mb-3">
             <label class="form-label">Tindakan/Perbuatan yang dilaporkan</label>
             <br>
-            
+
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="tindakan" id="inlineRadio1" value="Fraud" selected>
               <label class="form-check-label" for="inlineRadio1">Fraud</label>
@@ -113,7 +115,7 @@
           </div>
 
           <input type="hidden" name="_token" value="{{csrf_token()}}">
-          <button type="submit" class="btn btn-lg btn-whistle">Kirim </button> 
+          <button type="submit" class="btn btn-lg btn-whistle">Kirim </button>
         </form>
         </div>
         </div>

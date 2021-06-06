@@ -62,41 +62,64 @@ class PublicSmptController extends Controller
     }
     public function keluhan(Request $request)
     {
+        try {
+            $this->loginValidator($request->all())->validate();
+            $data = Smtp::all()->last();
+            $this->setEnv();
+            //$nama = "Wildan Fuady";
+            //$email = "wildanfuady@gmail.com";
+            $kirim = Mail::to($data['username'])
+                   ->send(new SendMailKeluhan(
+                $request->nama,
+                $request->email,
+                $request->telp,
+                $request->pesan,
+            ));
+        } catch (\Exception $e) {
+            return abort(500, 'custom error');
+        }
+        $data = [
+            'nama' => $request->nama,
+        ];
 
-        $this->loginValidator($request->all())->validate();
-        $data = Smtp::all()->last();
-        $this->setEnv();
-        //$nama = "Wildan Fuady";
-        //$email = "wildanfuady@gmail.com";
-        $kirim = Mail::to($data['username'])->send(new SendMailKeluhan(
-            $request->nama,
-            $request->email,
-            $request->telp,
-            $request->pesan,
-        ));
+        return view('whistleblowing-system-respond', $data);
         return redirect()->intended('/');
     }
 
     public function whistle(Request $request)
     {
 
-        $this->loginValidator($request->all())->validate();
+        try {
+            $this->loginValidator($request->all())->validate();
 
-        $data = Smtp::all()->last();
-        $this->setEnv();
-        $kirim = Mail::to($data['username'])->send(new SendMail(
-            $request->nama_pelapor,
-            $request->nomer_telepon,
-            $request->email,
-            $request->tindakan,
-            $request->nama_terlapor,
-            $request->jabatan_terlapor,
-            $request->waktu_kejadian,
-            $request->lokasi_kejadian,
-            $request->kronologis_kejadian,
-            $request->nominal,
-        ));
-        return redirect()->intended('article/whistleblowing-system/id');
+            $data = Smtp::all()->last();
+            $this->setEnv();
+            $tujuan = 'upg@bankmantap.co.id';
+            if ($request->tindakan == 'Gratifikasi') {
+                $tujuan = 'upg@bankmantap.co.id';
+            }
+            //$data['username']
+            $kirim = Mail::to($tujuan)
+                   ->send(new SendMail(
+                $request->nama_pelapor,
+                $request->nomer_telepon,
+                $request->email,
+                $request->tindakan,
+                $request->nama_terlapor,
+                $request->jabatan_terlapor,
+                $request->waktu_kejadian,
+                $request->lokasi_kejadian,
+                $request->kronologis_kejadian,
+                $request->nominal,
+            ));
+        } catch (\Exception $e) {
+            return abort(500, 'custom error');
+        }
+        $data = [
+            'nama' => $request->nama_pelapor,
+        ];
+        return view('whistleblowing-system-respond', $data);
+        return redirect()->intended('article/id-whistleblowing-system/id')->with('succes', 'teling');
     }
 
 

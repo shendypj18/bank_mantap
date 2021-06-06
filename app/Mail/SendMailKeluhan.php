@@ -34,6 +34,7 @@ class SendMailKeluhan extends Mailable
     {
         $data = Smtp::all()->last();
         return $this->from($data['username'])
+                    ->subject('Pesan Keluhan oleh '. $this->nama)
                     ->view('email-keluhan')
                     ->with(
                         [ 'nama' => $this->nama,

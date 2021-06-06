@@ -167,8 +167,8 @@
   }
   @media (max-width:575px){
       #img-navbar-temp{
-          width: 100%;
-          height: auto;
+          width: auto !important;
+          height: auto !important;
       }
   }
   @media (min-width:576px) and (max-width:768px){

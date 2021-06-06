@@ -1,6 +1,16 @@
 <style>
  /* -----------------> can start accordion style copy from here ------------------------*/
+ .mt-5, .my-5 {
+    margin-top: 25px!important;
+}
 
+.mt-4, .my-4 {
+    margin-top: 24px!important;
+}
+img.img-responsive{
+    width: inherit !important;
+    height: auto !important;
+}
  .accordion-started.accordion-bral {
      min-height: 0;
      min-width: 220px;

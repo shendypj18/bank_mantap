@@ -39,20 +39,19 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 70%;
+    max-height: 60%;
  }
  @media (min-width: 1337px) {
      .img-responsive-2 {
          width: 100%;
          max-width: 70%;
          height: auto;
-         max-height: 70%;
+         max-height: 60%;
      }
      .h {
          height: 400px;
      }
  }
-
 </style>
 
 @if($berita)
@@ -72,15 +71,11 @@
 <div class="container text-center" id="news">
 
     @if($berita)
-        <img class="img-responsive-2 h justify-content-md-center" src="{{ url('storage/'. $berita->gambar)}}">
+        <img class="img-responsive-2 h justify-content-md-center"  src="{{ url('storage/'. $berita->gambar)}}">
         <div class="row justify-content-md-center">
             <div class="col-md-10 mt-5 fz-berita">
                 <h4 class="fz-berita text-justify" ><strong>{{$berita[$bahasa .'_judul']}}<strong></h4>
             </div>
-
-            <!-- <div class="col-md-4 mt-5 ml-5">
-                 <p class="text-center"><a class="btn btn-lg btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
-                 </div> -->
         </div>
         <div class="row justify-content-md-center text-justify">
             <div class="col-md-10 ">
@@ -90,7 +85,7 @@
     @endif
     <div class="col-sm-8 mt-3" style="float:none;margin:auto;">
         @if($berita)
-            <p class="text-center"><a class="btn btn-sm btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> Bagikan</a></p>
+            <p class="text-center"><a class="btn btn-sm btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> {{ __('bisnis.bagikan_konten') }}</a></p>
         @endif
         <h3 class="text-center" >{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
     </div>

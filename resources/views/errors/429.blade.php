@@ -1,3 +1,4 @@
+<!-- purple x moss 2020 -->
 <style type="text/css" media="screen">
 
 
@@ -11,7 +12,6 @@ body {
   height: 600px;
   width: 600px;
   position: relative;
-    margin-top: 3%;
 }
 
   .err {
@@ -58,23 +58,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.img-responsive-2 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 60%;
- }
- @media (min-width: 1337px) {
-     .img-responsive-2 {
-         width: 100%;
-         max-width: 100%;
-         height: auto;
-         max-height: 60%;
-     }
-     .h {
-         height: 400px;
-     }
- }
 
 </style>
 
@@ -85,8 +68,10 @@ a:hover {
   <script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="mainbox" style="">
-      <img class="img-responsive-2"  src="{{asset('asset/amplop.png')}}">
-      <div style="margin-top: 20%;" class="msg">Terimakasih {{$nama}}. Laporan anda telah kami terima dan akan kami tindak lanjuti<p>klik <a href="{{url('/')}}">tombol ini</a> untuk kembali ke beranda</p></div>
-  </div>
+  <div class="mainbox">
+    <div class="err">4</div>
+    <i class="far fa-spin">2</i>
+    <div class="err2">9</div>
+    <div class="msg">Sorry request not available yet, please try again later or <p>click this <a href="{{url('/')}}">bottom</a> to go to the home page.</p></div>
+      </div>
 </body>
