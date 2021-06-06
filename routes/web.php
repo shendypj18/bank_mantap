@@ -47,5 +47,7 @@ Route::get('/info/{slug}/{locale}', [Controller::class, 'getInfoMantapBySlug']);
 
 //Route::get('/email', [PublicSmptController::class, 'index']);
 //Route::post('/kirim-aduan', [PublicSmptController::class, 'postSendEmail']);
-Route::post('/send/whistle', [PublicSmptController::class, 'whistle']);
-Route::post('/send/keluhan', [PublicSmptController::class, 'keluhan']);
+//5 request every 60 minutes
+Route::post('/send/whistle', [PublicSmptController::class, 'whistle'])->middleware('throttle:6,60');
+//5 request every 60 minutes
+Route::post('/send/keluhan', [PublicSmptController::class, 'keluhan'])->middleware('throttle:6,60');
