@@ -10,6 +10,10 @@
    .margin-img-left {
      margin-left: -50px;
    }
+   .col-sm-5 #img-navbar-temp{
+    /* width: inherit !important; */
+    height: inherit !important;
+   }
    @media (min-width: 1025px) {
        .btn-pos {
            margin-top: -250px;
