@@ -106,7 +106,7 @@ class LaporanController extends AdminController
             $x = KategoriLaporan::select('id', 'jenis')->where('id', $form->jenis_laporan)->first();
             return 'laporan/dokumen/'. Str::slug($x->jenis, '-');
         }) //->removable()
-             ->rules('max:15');
+             ->rules('max:150000');
         return $form;
     }
 }
