@@ -72,6 +72,6 @@ a:hover {
     <div class="err">5</div>
     <i class="far fa-question-circle fa-spin"></i>
     <div class="err2">0</div>
-    <div class="msg">Internal Server Error server error<p></p></div>
+    <div class="msg">Internal Server Erorr<p> click this <a href="{{url('/')}}">bottom</a> to go to home page</p></div>
       </div>
 </body>
