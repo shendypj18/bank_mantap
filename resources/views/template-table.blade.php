@@ -57,6 +57,10 @@
         .btn-o-tbl{
              display: none;
          }
+
+         .col-12{
+             display: none;
+         }
      }
 
      @media (max-width:1025px){
