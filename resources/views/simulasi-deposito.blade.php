@@ -94,7 +94,7 @@ td {
             <div class="form-group row  ">
                 <label class="col-sm-4 col-form-label" for="waktu">Jangka Waktu</label>
                 <div class="col-sm-8 col-md-8 input-group">
-                    <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
+                    <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput(); updateBunga(this);" required>
                     <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
                 </div>
                 <div class="col-sm-3">
@@ -106,9 +106,9 @@ td {
             <div class="form-group row  ">
                 <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label>
                 <div class="col-sm-8 col-md-8 input-group">
-                    <input type="text" class="form-control" id="bunga" disabled value="7" style="background-color:#FFF;">
+                    <input type="text" class="form-control" id="bunga" disabled value="" style="background-color:#FFF;">
                     <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
-                    <input type="text" class="form-control"  id="bungaa" disabled value="2"  style="background-color:#FFF;">
+                    <input type="text" class="form-control"  id="bungaa" disabled value=""  style="background-color:#FFF;">
                     <span class="input-group-text"  style="border-radius: 0px 12px 12px 0px;"><b style="">% Pertahun</b></span>
                 </div>
             </div>
@@ -225,7 +225,7 @@ td {
   }
 
   function updateWaktu(input) {
-    if (input.value <6) {
+    if (input.value <0) {
         $('#less').show();
         $('#more').hide();
         window.bWaktu = false;
@@ -238,6 +238,16 @@ td {
         $('#more').hide();
         window.bWaktu = true;
     }
+  }
+
+  function updateBunga(input) {
+      if (input.value>=1 && input.value <=3){
+          document.getElementById("bunga").value = 2;
+          document.getElementById("bungaa").value = 85;
+      } else if (input.value>=6 && input.value<=24){
+        document.getElementById("bunga").value = 3;
+        document.getElementById("bungaa").value = 0;
+      }
   }
 
   function toRp(angka){

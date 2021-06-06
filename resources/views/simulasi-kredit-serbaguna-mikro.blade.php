@@ -104,9 +104,9 @@ td {
     <div class="form-group row  ">
     <label class="col-sm-4 col-form-label" for="bunga">Suku Bunga</label>
         <div class="col-sm-8 col-md-8 input-group">
-        <input type="text" class="form-control" id="bunga" disabled value="9" style="background-color:#FFF;">
+        <input type="text" class="form-control" id="bunga" disabled value="14" style="background-color:#FFF;">
         <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
-        <input type="text" class="form-control"  id="bungaa" disabled value="0"  style="background-color:#FFF;">
+        <input type="text" class="form-control"  id="bungaa" disabled value="46"  style="background-color:#FFF;">
         <span class="input-group-text"  style="border-radius: 0px 12px 12px 0px;"><b style="">% Pertahun</b></span>
         </div>
     </div>
