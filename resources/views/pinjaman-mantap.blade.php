@@ -212,7 +212,7 @@
         </div>
     </div>
 
-   <div class="container mc-rr">
+   {{-- <div class="container mc-rr">
     <div class="row mc-r">
         <div class="col-sm-6 right-img" >
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman2.png')}}" alt="Logo"  width="600px" class="img-responsive" />
@@ -228,13 +228,31 @@
                              @isset($navbar['PINJAMAN MANTAP'][3])
                              {{url('article/' . $navbar['PINJAMAN MANTAP'][3][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
         </div>
-    </div>
+    </div> --}}
+    
+    <div class="container mc-rr">
+        <div class="row mc-r">
+            <div class="col-sm-6 right-img" >
+                <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman3.png')}}" alt="Logo"  width="600px" class="img-responsive" />
+            </div>
+            <div class="col-sm-5 right-text" id="navbar-upper-text">
+              <h4 class="mt-5">{{__('bisnis.pinjaman_retail')}}</h4>
+              <small>{{__('bisnis.pinjaman_retail_deskripsi')}}</small>
+            </div>
+        </div>
+        <div class="row r-btn" style="">
+            <div class="col-sm-12">
+                <p><a  class="btn btn-sm btn-yellow-sm mt-4 btn-right"  role="button" href="
+                    @isset($navbar['PINJAMAN MANTAP'][1])
+                    {{url('article/' . $navbar['PINJAMAN MANTAP'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
+            </div>
+        </div>
 </div>
 </br>
 </br>
 </br>
 
-<div class="container mc">
+{{-- <div class="container mc">
   <div class="row">
       <div class="col-sm-6" id="navbar-upper-text">
         <h4 class="mt-5">{{__('bisnis.pinjaman_retail')}}</h4>
@@ -249,10 +267,27 @@
                              {{url('article/' . $navbar['PINJAMAN MANTAP'][1][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
       </div>
   </div>
-</div>
+</div> --}}
+
+<div class="container mc">
+    <div class="row">
+        <div class="col-sm-6" id="navbar-upper-text">
+          <h4 class="mt-5">{{__('bisnis.pinjaman_mikro')}}</h4>
+          <small>{{__('bisnis.pinjaman_mikro_deskripsi')}}</small>
+        </div>
+        <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pinjaman4.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
+    </div>
+    <div class="row btn-pos">
+        <div class="col-sm-12 mt-5">
+            <p><a class="btn btn-sm btn-yellow-sm" role="button" href="
+                @isset($navbar['PINJAMAN MANTAP'][2])
+                {{url('article/' . $navbar['PINJAMAN MANTAP'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
+        </div>
+    </div>
+  </div>
 
 
-   <div class="container mc-rr"">
+   {{-- <div class="container mc-rr"">
     <div class="row mc-r">
         <div class="col-sm-6 right-img" >
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman4.png')}}" alt="Logo" width="600px" class="img-responsive" />
@@ -268,7 +303,7 @@
                              @isset($navbar['PINJAMAN MANTAP'][2])
                              {{url('article/' . $navbar['PINJAMAN MANTAP'][2][$bahasa . '_slug'] . '/' .$bahasa)}} @endisset">{{__('bisnis.selengkapnya')}}</a></p>
         </div>
-    </div>
+    </div> --}}
 </div>
 </br>
 </br>

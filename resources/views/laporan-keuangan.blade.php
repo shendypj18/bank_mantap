@@ -63,7 +63,9 @@
     </style>
 
     <div class="container text-center" id="report">
-        <h3 class="text-center">Dapatkan informasi berita, promosi, program terbaru serta<br/> laporan keuangan dari <strong>Bank Mantap</strong></h3>
+        <div class="col-sm-8 mt-3" style="float:none;margin:auto;">
+        <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }}<strong> Bank Mandiri Taspen</strong></h3>
+        </div>
         <p><br/></p>
         <div class="display-button">
         @foreach($navbar["INFO MANTAP"] as $nv)

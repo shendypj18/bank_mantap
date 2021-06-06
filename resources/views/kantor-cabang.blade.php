@@ -9,7 +9,7 @@
 
 <div class="container">
   <li><a href="#">Home</a></li>
-  <li>Kantor Cabang</li>
+  <li>{{__("admin.txt_kacab_breadcumb")}}</li>
 </div>
 
 </ul>
@@ -42,7 +42,7 @@
      });
     </script>
 
-    <h4><b>Lokasi Kantor Cabang Mandiri Taspen</b></h4>
+    <h4><b>{{__("admin.txt_kacab_title")}}</b></h4>
     <div class="row mt-5">
         <div class="col-md-5 text-left">
             <form action="">

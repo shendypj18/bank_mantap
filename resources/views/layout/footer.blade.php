@@ -95,7 +95,7 @@
     <div class="container">
       <div class="row text-center text-xs-center text-sm-left text-md-left">
         <div class="col-xs-12 col-sm-7 col-md-5">
-         <h1 style="padding-top: 30px">Bank Mantap, tiada kata pensiun untuk berkarya</h1>
+         <h1 style="padding-top: 30px">{{__("admin.txt_section_footer")}}</h1>
        </div>
         <div class="col-xs-12 col-sm-7 col-md-6">
          <img class="small-logo" src="{{ asset('asset/map-dot.png') }}" width="90%" alt="Logo Corp" />

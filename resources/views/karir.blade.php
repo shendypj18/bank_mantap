@@ -55,8 +55,8 @@
 <div class="container">
 
     <div class="card-danger">
-		  <a class="card-title"><strong>Hati-hati Penipuan!</strong></a>
-      <p><small>Mandiri Taspen TIDAK memungut biaya apapun dan/atau menggunakan jasa travel agent dalam proses rekrutmen</small></p>
+		  <a class="card-title"><strong>{{__("admin.txt_title_karir")}}</strong></a>
+      <p><small>{{__("admin.txt_section_karir")}}</small></p>
 		</div>
 
     <br/><br/>
@@ -65,7 +65,7 @@
     <div class="row mt-3">
     <div class="col-sm"></div>
     <div class="text-center col-sm-8">
-    <h4 class="text-center"><strong>Karier</strong></h4>
+    <h4 class="text-center"><strong>{{__("admin.karir2")}}</strong></h4>
     <small style="color:#0F2B5B;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata</small>
     </div>
     <div class="col-sm"></div>

@@ -39,9 +39,9 @@
 <section id="profile" class="profile" >
  
 <div class="profile-text">
-    <p>PT Bank Mandiri Taspen (selanjutnya disebut "Bank") didirikan di Denpasar pada tanggal 3 November 1992 berdasarkan Akta Pendirian No.4, yang dibuat di hadapan Ida Bagus Alit Sudiatmika, S.H, Notaris di Denpasar dengan nama PT Bank Sinar Harapan Bali. </p>
+    <p>{{__('admin.txt_profile_perusahaan')}}</p>
     <br/> <br/> 
-    <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['TENTANG KAMI'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">Profil Perusahaan</a>
+    <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['TENTANG KAMI'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.txt_btn_profile')}}</a>
   </div>
 </section>
 
@@ -100,7 +100,7 @@
 <br/>
 <section id="bisnis" class="bisnis">
 <div class="container text-center">
-<h3 class="text-center " style="color:#0F2B5B; padding-top:30px">Bisnis</h3>
+<h3 class="text-center " style="color:#0F2B5B; padding-top:30px">{{__('admin.txt_slide_judul')}}</h3>
 
  
  <div class="row">
@@ -108,9 +108,9 @@
         <div class="card card-pinjaman">
           <div class="card-body">
           <br/>
-          <a class="card-title"><strong>Pinjaman Mantap</strong></a>
-          <p class="card-text"><small>Apapun kebutuhan anda,</small><br/>
-      <small><b>Wujudkan dengan kredit mantap pensiun</b></small></p>
+          <a class="card-title"><strong>{{__('admin.txt_slide_pinjaman_mantap')}}</strong></a>
+          <p class="card-text"><small>{{__('admin.txt_slide_pinjaman_mantap_txt2')}}</small><br/>
+      <small><b>{{__('admin.txt_slide_pinjaman_mantap_txt3')}}</b></small></p>
           <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][0][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
@@ -120,9 +120,9 @@
         <div class="card card-simpanan">
           <div class="card-body">
           <br/>
-          <a class="card-title"><strong>Simpanan Mantap</strong></a>
-          <p class="card-text"><small>Dengan tabungan siMantap Gold</small><br/>
-      <small><b>Nimati kemudahan transaksi</b></small></p>
+          <a class="card-title"><strong>{{__('admin.txt_slide_simpanan_mantap')}}</strong></a>
+          <p class="card-text"><small>{{__('admin.txt_slide_simpanan_mantap_txt2')}}</small><br/>
+      <small><b>{{__('admin.txt_slide_simpanan_mantap_txt3')}}</b></small></p>
           <a class="btn btn-sm btn-primary-sm" role="button" href="{{url('article/' . $navbar['BISNIS'][1][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
@@ -134,8 +134,8 @@
 <div class="card card-jasabank">
           <div class="card-body">
           <br/>
-          <h3 class="card-title">Jasa Bank</h3>
-          <p class="card-text"><small>Kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada<br/>pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya</small></p>
+          <h3 class="card-title">{{__('admin.txt_slide_jasa_bank')}}</h3>
+          <p class="card-text"><small>{{__('admin.txt_slide_jasa_bank_txt2')}}<br/>{{__('admin.txt_slide_jasa_bank_txt3')}}</small></p>
           <a class="btn btn-profile-light" role="button" href="{{url('article/' . $navbar['BISNIS'][2][$bahasa . '_slug'] . '/' .$bahasa)}}">{{__('admin.selengkapnya')}}</a>
           </div>
         </div>
@@ -153,7 +153,7 @@
     <br/><br/>
     <div class="container">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
-        <p align="center"><a>Bank Mantap memahami Anda untuk tetap produktif demi keluarga yang selalu bahagia.</a></p>
+        <p align="center"><a>{{__("admin.txt_section_youtube")}}</a></p>
         <!-- <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p> -->
         <br/><br/>
         <div class="container-videos" align="center">
@@ -172,7 +172,7 @@
             </div>
 
             <div class="col-md-5">
-                <a>Like, subscribe, dan follow untuk mendapatkan informasi terbaru dari Bank Mantap di media sosial</a>
+                <a>{{__("admin.txt_section_youtube_footer")}}</a>
             </div>
         </div>
     </div>
@@ -186,8 +186,8 @@
 <!-- ============================================ SECTION KARIR ============================================================-->
 <section id="karier" class="karir">
 <div class="profile-text">
-<h3><strong>Karier</strong></h3>
-    <p>Dapatkan Pengalaman Kerja Bersama Bank Mantap</p>
+<h3><strong>{{__("admin.karir2")}}</strong></h3>
+    <p>{{__("admin.txt_karir")}}</p>
     <br/>  
     <a class="btn btn-profile-light" role="button" href="{{url('karir/'. $bahasa)}}">Lihat Lowongan</a>
 </div>
