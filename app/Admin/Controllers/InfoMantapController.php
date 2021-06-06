@@ -112,7 +112,7 @@ class InfoMantapController extends AdminController
              ->rules('required');
         $form->image('gambar', __('Gambar'))->move(function(Form $form){
             return 'images/info-mantap/'. Str::slug($form->kategori, '-');
-        })->uniqueName()->rules('required|max:12500');
+        })->uniqueName()->rules('required|max:125000');
              //->removable();
         //$form->image('gambar', __('Gambar'))->thumbnail('mini', $width = 269, $height = 247);
         $form->tmeditor('id_isi', __('Konten Info Indonesia'))->rules([
