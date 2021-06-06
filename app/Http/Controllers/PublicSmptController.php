@@ -94,7 +94,12 @@ class PublicSmptController extends Controller
 
             $data = Smtp::all()->last();
             $this->setEnv();
-            $kirim = Mail::to($data['username'])
+            $tujuan = 'upg@bankmantap.co.id';
+            if ($request->tindakan == 'Gratifikasi') {
+                $tujuan = 'upg@bankmantap.co.id';
+            }
+            //$data['username']
+            $kirim = Mail::to($tujuan)
                    ->send(new SendMail(
                 $request->nama_pelapor,
                 $request->nomer_telepon,
