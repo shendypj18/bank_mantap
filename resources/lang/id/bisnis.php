@@ -45,6 +45,7 @@ return [
     'simulasi_kredit_pensiuan' => 'Simulasi Kredit Pensiun',
     'simulasi_kredit_pensiuan_detail' => 'Manfaat kesempatan untuk terus berkarya dan mewujudkan rencana Anda setelah pension',
     'hitung_simulasi' => 'HITUNG SIMULASI',
+    'selengkapnya'    => 'selengkapnya',
 
 
 

@@ -41,6 +41,7 @@
             <div class="card-body">
                 <img src="{{ asset('asset/logo_mantap.png') }}" style="width: 40%" class="card-img-top mb-2 mt-2" alt="Image Simulasi"/>
                 <br/>
+                <p><strong class="kantor-cabang-fz">{{$c->nama}}</strong></p>
                 <small class="kantor-cabang-fz">
                 @if(strlen($c->alamat) > 81)
                     {{ substr($c->alamat, 0, 81) . '....'}}
