@@ -209,6 +209,6 @@ new programs and financial statements of',
     'txt_kacab_title' => 'Mandiri Taspen branch office location',
     'txt_karir_btn' => 'Career Areas',
     'txt_laporan_title' => 'Annual Reports',
-    'txt_footer_alamat' => 'Proklamasi street 31, RT.11/RW.2, Pegangsaan, Menteng District, Central Jakarta City, Special Capital Region of Jakarta 10320',
+    'txt_footer_alamat' => 'Proklamasi street, No.31, Pegangsaan, Menteng district, Central Jakarta, The Capital city of Jakarta 10320',
     'txt_footer_kantor' => 'Head Office Bank Mandiri Taspen',
 ];
