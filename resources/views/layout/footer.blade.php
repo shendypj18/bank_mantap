@@ -194,11 +194,11 @@
 
           <div class="col-sm-8">
             <b>PT Bank Mandiri Taspen</b><br/>
-            <b>Kantor Pusat Bank Mantap</b>
+            <b>{{__("admin.txt_footer_kantor")}}</b>
             <br/>
             <small class="small">
             <a>Graha Mantap</a> <br/>
-            <a>Jl. Cikini Raya No.42 Menteng Jakarta Pusat 10330</a>
+            <a>{{__("admin.txt_footer_alamat")}}</a>
             <a>Indonesia</a>
             <br/></small><br/>
 

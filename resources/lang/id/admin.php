@@ -210,4 +210,6 @@ laporan keuangan dari',
     'txt_kacab_title' => 'Lokasi Kantor Cabang Mandiri Taspen',
     'txt_karir_btn' => 'Lihat lowongan',
     'txt_laporan_title' => 'Laporan Tahunan',
+    'txt_footer_alamat' => 'Jl. Proklamasi No.31, RT.11/RW.2, Pegangsaan, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10320',
+    'txt_footer_kantor' => 'Kantor Pusat Bank Mandiri Taspen',
 ];

@@ -83,7 +83,7 @@ td {
                 <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
                 <div class="col-md-8 col-sm-8 input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
-                    <input type="number" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
+                    <input type="text" pattern="\d*" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
                 </div>
                 <div class="col-sm-3">
                     <span id="lesss" style="color: red;">*{{__("bisnis.simulasi_kurang_jk")}}</span>
@@ -128,50 +128,49 @@ td {
 
 <div class="container" id="hasil">
 
-<h4><strong>Hasil Perhitungan Simulasi Deposito</strong></h4>
-
-<div class="col-sm-11 mt-5">
-<div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
-<div class="container mt-3">
-
-<table style="width:70%">
+    <h4><strong>{{__("bisnis.hasil_kredit_depo_title")}}</strong></h4>
+    
+    <div class="col-sm-11 mt-5">
+    <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
+    <div class="container  mt-3">
+    
+    <table style="width:70%">
 <tbody>
   <tr>
-    <td style="padding-left:18px;">Jumlah Setoran (perbulan)</td>
+    <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_setoran")}}</td>
     <td style="color:#0F2B5B;">: <strong id="hasil_setor"></strong></td>
   </tr>
 
   <tr style="background-color: #FCD1161A;">
-    <td style="padding-left:18px;">Bunga</td>
+    <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_bunga")}}</td>
     <td style=" color:#0F2B5B;">: <strong id="hasil_bunga"></strong></td>
   </tr>
 
   <tr>
-    <td style="padding-left:18px;">Jangka Waktu</td>
+    <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_jk")}}</td>
     <td style="color:#0F2B5B;">: <strong id="hasil_waktu"></strong></td>
   </tr>
 
   <tr style="background-color: #FCD1161A;">
-    <td style="padding-left:18px;">Total Dana</td>
+    <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_td")}}</td>
     <td  style="color:#0F2B5B;">: <strong id="hasil_total"></strong></td>
   </tr>
 
  </tbody>
 
  </table>
-
  <div class="col-sm-12">
-      <h4 class="mt-4"><small>Catatan</small></h4>
-        <small>1.&nbsp;&nbsp;&nbsp;Perhitungan di atas belum termasuk pajak bunga.</small><br>
-        <small>2.&nbsp;&nbsp;&nbsp;Suku bunga dapat berubah sewaktu-waktu mengikuti ketentuan yang berlaku.</small><br>
-        <small>2.&nbsp;&nbsp;&nbsp;Simulasi ini merupakan ilustrasi, perhitungan sebenarnya mengikuti perhitungan di sistem Bank Mantap</small><br>
+    <h4 class="mt-4"><small>{{__("bisnis.hasil_catatan")}}</small></h4>
+      <small>1.&nbsp;&nbsp;&nbsp;{{__("bisnis.hasil_catatan_1")}}</small><br>
+      <small>2.&nbsp;&nbsp;&nbsp;{{__("bisnis.hasil_catatan_2")}}</small><br>
+      <small>2.&nbsp;&nbsp;&nbsp;{{__("bisnis.hasil_catatan_3")}}</small><br>
 </div>
 
 <div class="form-group row">
-    <div class="col-sm-3 col-form-label"></div>
-    <div class="col-sm-5 input-group ">
-    <a class="btn btn-simulasi-flat mt-5" role="button" href="{{url('simulasi-deposito/' .$bahasa)}}">KEMBALI KE SIMULASI</a>
-    </div>
+  <div class="col-sm-3 col-form-label"></div>
+  <div class="col-sm-5 input-group ">
+  <a class="btn btn-simulasi-flat  mt-5" role="button" href="{{url('simulasi-kredit-pensiun/' . $bahasa)}}">{{__("bisnis.hasil_kembali")}}</a>
+  </div>
 </div>
  </div>
  </div>
@@ -303,6 +302,31 @@ td {
     $('#hasil_bunga').text(toRp(Math.round(bunga)));
     $('#hasil_waktu').text(jangka_waktu + " Bulan");
     $('#hasil_total').text(toRp(Math.round(total_dana)));
+
+    var rupiah = document.getElementById("setor");
+rupiah.addEventListener("keyup", function(e) {
+  // tambahkan 'Rp.' pada saat form di ketik
+  // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+  rupiah.value = formatRupiah(this.value);
+});
+
+/* Fungsi formatRupiah */
+function formatRupiah(angka) {
+  var number_string = angka.replace(/[^,\d]/g, "").toString(),
+    split = number_string.split(","),
+    sisa = split[0].length % 3,
+    rupiah = split[0].substr(0, sisa),
+    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+  // tambahkan titik jika yang di input sudah menjadi angka ribuan
+  if (ribuan) {
+    separator = sisa ? "." : "";
+    rupiah += separator + ribuan.join(".");
+  }
+
+  rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+  return rupiah == undefined ? rupiah : rupiah;
+}
   }
 </script>
 
