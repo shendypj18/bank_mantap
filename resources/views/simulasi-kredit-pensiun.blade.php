@@ -70,7 +70,7 @@ td {
 </div><!-- row -->
 
 <div class="mt-5">
-<p><small>Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.</small></p>
+<p><small>{{__("bisnis.simulasi_section")}}.</small></p>
 </div><!-- mt-5 ml-4 -->
 
 

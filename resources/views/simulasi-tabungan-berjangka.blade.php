@@ -49,7 +49,7 @@ td {
 <div class="container" id="input">
     <div class="row">
         <div class="col-sm-6 text-left">
-            <h4><strong>Simulasi Tabungan Berjangka</strong></h4>
+            <h4><strong>{{__("bisnis.simulasi_tabungan_berjangka_judul")}}</strong></h4>
         </div>
 
         <div class="col-sm-5 text-center">
@@ -59,69 +59,69 @@ td {
                           border-radius: 8px;
                           opacity: 1; width: 260px;
                           height: 40px;" onchange="document.location.href=this.value">
-                <option value="volvo" selected>Pilih simulasi produk lain</option>
-                <option value="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">Simulasi Tabungan Berjangka</option>
-                <option value="{{url('simulasi-deposito/'.$bahasa)}}">Simulasi Deposito</option>
-                <option value="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">Simulasi kredit Serbaguna Mikro</option>
-                <option value="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">Simulasi Kredit Pensiun</option>
+                <option value="volvo" selected>{{__("bisnis.pilih_simulasi")}}</option>
+                <option value="{{url('simulasi-tabungan-berjangka/'.$bahasa)}}">{{__("bisnis.simulasi_tabungan_berjangka_judul")}}</option>
+                <option value="{{url('simulasi-deposito/'.$bahasa)}}">{{__("bisnis.simulasi_deposito")}}</option>
+                <option value="{{url('simulasi-kredit-serbaguna-mikro/'.$bahasa)}}">{{__("bisnis.simulasi_kredit_serbaguna_mikro")}}</option>
+                <option value="{{url('simulasi-kredit-pensiun/'.$bahasa)}}">{{__("bisnis.simulasi_kredit_pensiuan")}}</option>
             </select>
-
 
         </div> <!-- col-sm-5-->
     </div><!-- row -->
 
     <div class="mt-5">
-        <p><small>Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.</small></p>
+        <p><small>{{__("bisnis.simulasi_section")}}</small></p>
     </div><!-- mt-5 ml-4 -->
 
 
     <div class="card card-body mb-5 col-sm-10" style="box-shadow: 0px 20px 40px #75B2DD1A; border: 1px solid #D0D8E6; border-radius: 12px;">
 
         <form>
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label fz" for="setor">Jumlah Setoran (perbulan)</label>
-                <div class="col-sm-8 col-md-8 input-group">
+            <div class="form-group row mt-4 ">
+                <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
+                <div class="col-md-8 col-sm-8 input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
                     <input type="number" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
                 </div>
                 <div class="col-sm-3">
-                    <span id="lesss" style="color: red;">*Kurang dari Rp 100.000</span>
-                    <span id="moree" style="color: red;">*Lebih dari Rp 5.000.000</span>
+                    <span id="lesss" style="color: red;">*{{__("bisnis.simulasijk_kurang_jk")}}</span>
+                    <span id="moree" style="color: red;">*{{__("bisnis.simulasijk_lebih_jk")}}</span>
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label fz" for="waktu">Jangka Waktu</label>
-                <div class="col-md-8 col-sm-8 input-group">
-                    <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput();" required>
-                    <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>Bulan</b></span></div>
+            <div class="form-group row  ">
+                <label class="col-sm-4 col-form-label" for="waktu">{{__("bisnis.simulasi_jangka_waktu")}}</label>
+                <div class="col-sm-8 col-md-8 input-group">
+                    <input type="number" class="form-control text-right" id="waktu" oninput="updateWaktu(this); checkInput(); updateBunga(this);" required>
+                    <div class="input-group-prepend"><span class="input-group-text" style="border-radius: 0px 12px 12px 0px;"><b>{{__("bisnis.simulasi_bulan")}}</b></span></div>
                 </div>
                 <div class="col-sm-3">
-                    <span id="less" style="color: red;">*Kurang dari 12 bulan</span>
-                    <span id="more" style="color: red;">*Lebih dari 240 bulan</span>
+                    <span id="less" style="color: red;">*{{__("bisnis.simulasijk_kurang_bln")}}</span>
+                    <span id="more" style="color: red;">*{{__("bisnis.simulasijk_lebih_bln")}}</span>
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label fz" for="bunga">Suku Bunga</label>
-                <div class="col-md-8 col-sm-8 input-group">
-                    <input type="text" class="form-control" id="bunga" disabled value="5" style=" width: 20%; background-color:#FFF;">
-                    <span class="input-group-text" style="width: 10%; border-radius: 0px 0px 0px 0px; width:10%; background-color:#FFF;">,</span>
-                    <input type="text" class="form-control"  id="bungaa" disabled value="0"  style=" width: 20%; background-color:#FFF;">
-                    <span class="input-group-text"  style=" border-radius: 0px 12px 12px 0px;"><b style="">% Pertahun</b></span>
+            <div class="form-group row  ">
+                <label class="col-sm-4 col-form-label" for="bunga">{{__("bisnis.simulasi_suku_bunga")}}</label>
+                <div class="col-sm-8 col-md-8 input-group">
+                    <input type="text" class="form-control" id="bunga" disabled value="5" style="background-color:#FFF;">
+                    <span class="input-group-text" style="border-radius: 0px 0px 0px 0px; width:50px; background-color:#FFF;">,</span>
+                    <input type="text" class="form-control"  id="bungaa" disabled value="0"  style="background-color:#FFF;">
+                    <span class="input-group-text"  style="border-radius: 0px 12px 12px 0px;"><b style="">{{__("bisnis.simulasi_per_tahun")}}</b></span>
                 </div>
             </div>
 
-            <div class="form-group row">
-                <div class="col-sm-4 col-form-label fz"></div>
-                <div class="col-sm-5 input-group">
-                    <button class="btn btn-simulasi-flat" type="button" id="btnHitung" onclick="hitung()">HITUNG SIMULASI</button>
+            <div class="form-group row  ">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-5 input-group ">
+                    <button class="btn btn-simulasi-flat" type="button" id="btnHitung" onclick="hitung()">{{__("bisnis.hitung_simulasi")}}</button>
                 </div>
             </div>
         </form>
 
     </div> <!-- card -->
 </div> <!-- container -->
+
 
 
 

@@ -47,7 +47,17 @@ return [
     'hitung_simulasi' => 'HITUNG SIMULASI',
     'selengkapnya'    => 'selengkapnya',
     'bagikan_konten' => 'Bagikan',
-
+    'pilih_simulasi' => 'Pilih simulasi produk lain',
+    'simulasi_section' => 'Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.',
+    'simulasi_setoran' => 'Jumlah Setoran (perbulan)',
+    'simulasi_jangka_waktu' => 'Jangka Waktu',
+    'simulasi_suku_bunga' => 'Suku Bunga',
+    'simulasi_bulan' => 'Bulan',
+    'simulasi_lebih_jk' => 'Lebih dari Rp 5.000.000',
+    'simulasi_kurang_jk' => 'Kurang dari Rp 5.000.000',
+    'simulasi_lebih_bln' => 'Lebih dari 12 bulan',
+    'simulasi_kurang_bln' => 'Kurang daari 6 bulan',
+    'simulasi_per_tahun' => '% Pertahun',
 
 
 ];
