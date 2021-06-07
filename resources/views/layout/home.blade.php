@@ -53,7 +53,7 @@
     <br><br><br>
     <div class="container text-center">
         <div class="col-sm-8" style="float:none;margin:auto;">
-        <h3 class="text-center" style="padding-top: 30px">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
+        <h3 class="text-center" style="padding-top: 30px">{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mandiri Taspen</strong></h3>
         </div>
         <p><br/></p>
         @php $t = 1; @endphp
