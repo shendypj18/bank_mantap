@@ -1,10 +1,11 @@
 @include('layout.header')
 <section id="img-header" class="img-header">
-<div>
+<div id="googlemap"  style="width: 100%; height: 470px;"></div>
+{{-- <div>
     <div class="row">
-        <div id="googlemap"  style="width: 100%; height: 470px;"></div>
+
     </div>
-</div>
+</div> --}}
 <ul class="breadcrumb">
 
 <div class="container">
@@ -72,9 +73,9 @@
 
 
 <style>
- 
+
 </style>
-<!-- MODAL MAPS -->  
+<!-- MODAL MAPS -->
 <div class="modal fade" id="aceh" role="dialog">
     <div class="modal-dialog modal-lg">
         <div style="text-align: right;">
@@ -90,7 +91,7 @@
 </div>
 <!-- MODAL END --->
 
- 
+
 
 <!-- MAPS 1 -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIZgjTse1wQSgjfHDf-a3DIJQNH570C_U"></script>
