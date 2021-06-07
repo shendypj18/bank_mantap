@@ -189,7 +189,7 @@
 <h3><strong>{{__("admin.karir2")}}</strong></h3>
     <p>{{__("admin.txt_karir")}}</p>
     <br/>  
-    <a class="btn btn-profile-light" role="button" href="{{url('karir/'. $bahasa)}}">Lihat Lowongan</a>
+    <a class="btn btn-profile-light" role="button" href="{{url('karir/'. $bahasa)}}">{{__("admin.txt_karir_btn")}}</a>
 </div>
 </section>
 <!-- ========================================================================================================================-->

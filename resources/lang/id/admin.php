@@ -208,5 +208,6 @@ laporan keuangan dari',
     'txt_table_pilih_tahun' => 'Pilih Tahun',
     'txt_kacab_breadcumb' => 'Kantor Cabang',
     'txt_kacab_title' => 'Lokasi Kantor Cabang Mandiri Taspen',
-
+    'txt_karir_btn' => 'Lihat lowongan',
+    'txt_laporan_title' => 'Laporan Tahunan',
 ];

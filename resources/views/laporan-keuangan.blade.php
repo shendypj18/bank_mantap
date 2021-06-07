@@ -79,7 +79,7 @@
         </div>
     </div> <!-- container -->
     <div class="container mt-5 mb-5">
-        <h4><strong>Laporan Tahunan</strong></h4>
+        <h4><strong>{{__("admin.txt_laporan_title")}}</strong></h4>
     </div>
 
     <div class="container mt-5" >
