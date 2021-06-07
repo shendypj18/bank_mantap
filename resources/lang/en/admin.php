@@ -208,4 +208,5 @@ new programs and financial statements of',
     'txt_kacab_breadcumb' => 'Branch Office',
     'txt_kacab_title' => 'Mandiri Taspen branch office location',
     'txt_karir_btn' => 'Career Areas',
+    'txt_laporan_title' => 'Annual Reports',
 ];
