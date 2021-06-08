@@ -6,7 +6,6 @@
         <li data-target="#hero" data-slide-to="1" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="2" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
     </ol>
-
     <div class="carousel-inner">
         @php $j = 1 @endphp
         @foreach($banner as $banner)
@@ -14,7 +13,9 @@
                 <img class="d-block w-100" src="{{ url('storage/'. $banner->id_nama) }}"  alt="First slide">
                 <div class="carousel-caption text-left">
                     <div class="container">
+                        @if($banner->link_button_to != "0")
                         <a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}" role="button">{{__('admin.selengkapnya')}}</a>
+                        @endif
                     </div>
                 </div>
             </div>
