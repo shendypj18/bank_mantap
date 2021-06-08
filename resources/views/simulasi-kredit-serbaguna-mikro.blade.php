@@ -244,16 +244,16 @@ td {
         window.bWaktu = true;
     }
 
-    if(input.value > 24 && input.value <=120){
-      $('#bunga').attr('value',10);
-      $('#bungaa').attr('value',2);
-    }else if(input.value > 120 && input.value <=180){
-      $('#bunga').attr('value',10);
-      $('#bungaa').attr('value',56);
-    }else{
-      $('#bunga').attr('value',9);
-      $('#bungaa').attr('value',0);
-    }
+    // if(input.value > 24 && input.value <=120){
+    //   $('#bunga').attr('value',10);
+    //   $('#bungaa').attr('value',2);
+    // }else if(input.value > 120 && input.value <=180){
+    //   $('#bunga').attr('value',10);
+    //   $('#bungaa').attr('value',56);
+    // }else{
+    //   $('#bunga').attr('value',9);
+    //   $('#bungaa').attr('value',0);
+    // }
   }
 
   var rupiah = document.getElementById("setor");
