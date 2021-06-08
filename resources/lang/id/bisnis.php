@@ -2,7 +2,7 @@
 
 return [
     'tarif_layanan' => 'Tarif Layanan',
-    'tarif_layanan_deskripsi' => 'belum ada',
+    'tarif_layanan_deskripsi' => 'Tarif Layanan PT Bank Mandiri Taspen.',
     'bank_garansi' => 'Bank Garansi',
     'bank_garansi_deskripsi' => 'Salah satu hal penting dalam bisnis adalah kepercayaan. Namun, kepercayaan biasanya baru datang bila rekam jejak para pihak yang bertransaksi dapat diketahui atau bila ada pihak yang didukung atau dijamin oleh pihak ketiga yang dapat dipercaya.',
     'referensi_bank' => 'Referensi Bank',

@@ -10,26 +10,7 @@
     <!-- CSS Bootsrap ver.4.0 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
-
-
-<!DOCTYPE html>
-<html lang="id-ID">
-<head>
-    <title>www.bankmantap.co.id</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name=”description” content="description">
-    <link rel="shortcut icon" type="image/png" href="{{asset('asset/logo_mantap.png')}}" sizes="16x16">
-    <!-- CSS Bootsrap ver.4.0 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="{{asset('css/main.css')}}" type="text/css" media="all"/>
-
-
 </head>
 
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
@@ -316,6 +297,17 @@
 
     }
 </style>
+<body>
+
+
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+<!-- end preloader-->
+
+
 <nav class="navbar sticky-top navbar-expand-lg padding-header navbar-light bg-white border-bottom nav-postt">
 <button class="cg-icn collapsed btn-header icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <div class="barss" >

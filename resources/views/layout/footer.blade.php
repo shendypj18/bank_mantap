@@ -429,8 +429,7 @@
 <!-- Start Scrolling -->
 <button onclick="topFunction()" id="onTop" title="Go to top" class="fa fa-angle-double-up"></button>
 <!-- End Scrolling -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script> AOS.init(); </script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -438,6 +437,14 @@
 
 </body>
 </html>
+
+
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#preloader").fadeOut();
+})
+</script> 
 
 
 <script type="text/javascript">
