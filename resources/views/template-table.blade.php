@@ -82,7 +82,7 @@
              margin-left: 50px;
          }
          .btn-group.btn-o-tbl{
-             margin-top: -30px;
+             margin-top: -10px;
              margin-bottom: 30px;
              width: 100%;
          }
@@ -105,7 +105,7 @@
              width: 12%;
          }
 
-       
+
          @media (max-width: 480px)  {
             .desc-txt{
                  width: 50%;

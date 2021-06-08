@@ -88,7 +88,7 @@
         @if($berita)
             <p class="text-center"><a class="btn btn-sm btn-share" data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#" role="button"><span class="fa fa-share-alt"></span> {{ __('bisnis.bagikan_konten') }}</a></p>
         @endif
-        <h3 class="text-center" >{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mantap</strong></h3>
+        <h3 class="text-center" >{{ __('admin.dapatkan_informasi_berita') }} <strong>Bank Mandiri Taspen</strong></h3>
     </div>
     <p><br/></p>
     <p>
