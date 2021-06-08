@@ -40,7 +40,7 @@
     .dropdown.show .rgt{
             display: none;
         }
-        .dropdown:not(.show) .dwn{
+    .dropdown:not(.show) .dwn{
             display: none;
         }
   }
