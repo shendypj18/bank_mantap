@@ -102,7 +102,7 @@ class BannerController extends AdminController
         $form->textarea('en_text_bawah', __('Teks Bawah Inggris'))
              ->rules('required');
         $form->select('link_button_to', __('Link To'))
-             ->options(Navbar::all()->pluck('id_navigasi','id_navigasi')->merge(new Collection(['NONE'])))->default("NONE");
+             ->options(Navbar::all()->pluck('id_navigasi','id_navigasi')->merge(new Collection(['NONE'])));
 
         $form->saved(function (Form $form) {
             $id = $form->model()->id;
