@@ -251,12 +251,18 @@ td {
   }
 
   function updateBunga(input) {
-      if (input.value>=1 && input.value <=3){
-          document.getElementById("bunga").value = 2;
-          document.getElementById("bungaa").value = 85;
-      } else if (input.value>=6 && input.value<=24){
-        document.getElementById("bunga").value = 3;
+      if (input.value>=1 && input.value <=2){
+          document.getElementById("bunga").value = 4;
+          document.getElementById("bungaa").value = 0;
+      } else if (input.value>=3 && input.value<=6){
+        document.getElementById("bunga").value = 4;
+        document.getElementById("bungaa").value = 25;
+      } else if (input.value>=7 && input.value<=24){
+        document.getElementById("bunga").value = 4;
         document.getElementById("bungaa").value = 0;
+      } else {
+        document.getElementById("bunga").value = '';
+        document.getElementById("bungaa").value = '';
       }
   }
 
@@ -315,10 +321,9 @@ td {
     $('#hasil_total').text(toRp(Math.round(total_dana)));
 
     var rupiah = document.getElementById("setor");
-rupiah.addEventListener("keyup", function(e) {
-  // tambahkan 'Rp.' pada saat form di ketik
-  // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
-  rupiah.value = formatRupiah(this.value);
+    rupiah.addEventListener("keyup", function(e) {
+ 
+    rupiah.value = formatRupiah(this.value);
 });
 
 /* Fungsi formatRupiah */
