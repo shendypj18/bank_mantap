@@ -140,7 +140,6 @@ class Controller extends BaseController
                     ->orderBy('tahun', 'DESC')
                     ->paginate(10);
             }
-
             $tahunan = KategoriLaporan::where('jenis', 'tahunan')->first();
             $data_laporan = [
                 "laporan" => $laporan,
@@ -150,6 +149,7 @@ class Controller extends BaseController
                                     ->orderBy('tahun', 'DESC')
                                     ->distinct()
                                     ->get(),
+                "kategori_laporan" => $kategori_laporan->jenis,
 
             ];
             $data_for_navigasi += $data_laporan;
