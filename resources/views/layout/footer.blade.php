@@ -371,7 +371,7 @@
         <a data-dismiss="modal" href="#" id="x"><i class="fa fa-times-circle-o fa-3x" aria-hidden="true" style="color: #1a3562;"></i></a>
       </div>
     <div class="modal-content" style="background-color: transparent; box-shadow: none; border: none;" >
-      <a href="tel:14024"><img src="{{asset('asset/call_po.png')}}" style="width: 100%;" ></a>
+      <a href="tel:14024"><img src="{{asset('asset/'. __('home.call_po'))}}" style="width: 100%;" ></a>
     </div>
   </div>
 </div>
