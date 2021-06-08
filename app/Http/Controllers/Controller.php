@@ -136,9 +136,9 @@ class Controller extends BaseController
             if(request()->has('tahun')) {
                 $laporan = Laporan::where('jenis_laporan', $kategori_laporan->id)
                     ->where('tahun', request('tahun'))
-                    ->appends('tahun', request('tahun'))
                     ->orderBy('tahun', 'DESC')
-                    ->paginate(10);
+                    ->paginate(10)
+                    ->appends('tahun', request('tahun'));
             }
             $tahunan = KategoriLaporan::where('jenis', 'tahunan')->first();
             $data_laporan = [
