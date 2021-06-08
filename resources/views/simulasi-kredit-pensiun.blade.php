@@ -1,6 +1,17 @@
 @include('layout.header')
 
 <style>
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 input[type=text] {
 background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 2px solid #D0D8E6;
@@ -81,7 +92,7 @@ td {
               <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
               <div class="col-md-8 col-sm-8 input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
-                  <input type="text" pattern="\d*" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
+                  <input type="number" pattern="\d*" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
               </div>
               <div class="col-sm-3">
                   <span id="lesss" style="color: red;">*{{__("bisnis.simulasi_kurang_jk")}}</span>
