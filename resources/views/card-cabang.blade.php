@@ -54,7 +54,7 @@
                 </small>
                 <br>
                 <p><small class="kantor-cabang-fz mt-2">{{$c->telp}}</small></p>
-                <h3 class="text-bold" data-toggle="modal" data-target="#aceh" onclick="gmap({{$c}})"><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 15%"> &nbsp;<a>{{__("admin.lihat_map")}}</a></h3>
+                <h3 class="text-bold" data-toggle="modal" data-target="#aceh" onclick="gmap({{$c}})"><img src="{{ asset('asset/icon/maps.png') }}"  alt="Maps"  style="width: 15%"> &nbsp;<a>{{__("admin.lihat_maps")}}</a></h3>
             </div>
         </div>
     </div>

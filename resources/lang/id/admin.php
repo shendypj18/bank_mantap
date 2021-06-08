@@ -125,7 +125,7 @@ return [
     'JASA_BANK'       => 'JASA BANK',
     'CABANG'          => 'CABANG',
     'SIMULASI'        => 'SIMULASI',
-    'lihat_map'       => 'Lihat Map',
+    'lihat_maps'       => 'Lihat Map',
     'selengkapnya'    => 'selengkapnya',
     'lihat_semua_info' => 'Lihat Semua Info',
     'selengkapnya_tentang_bank_mantap' => 'Selengkapnya Tentang Bank Mandiri Taspen',

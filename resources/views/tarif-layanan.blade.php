@@ -53,14 +53,14 @@ th {
 <!-- Content Start Here -->
 
 <div class="container">
-<h4><strong>Layanan Tarif</strong></h4>
+<h4><strong>{{__("bisnis.tarif_layanan_judul")}}</strong></h4>
 <table>
 
 <thead>
   <tr>
-    <th class="pl-5" style="border-radius: 16px 0px 0px 0px;">Nomor</th>
-    <th>Jenis Layanan</th>
-    <th class="pl-4" style="border-radius: 0px 16px 0px 0px;">Tarif</th>
+    <th class="pl-5" style="border-radius: 16px 0px 0px 0px;">{{__("bisnis.tarif_layanan_no")}}</th>
+    <th>{{__("bisnis.tarif_layanan_jl")}}</th>
+    <th class="pl-4" style="border-radius: 0px 16px 0px 0px;">{{__("bisnis.tarif_layanan_tarif")}}</th>
   </tr>
 </thead>
 <tbody>
@@ -71,399 +71,399 @@ th {
    
   <tr>
     <td class="pl-5"></td>
-    <td>a. Biaya administrasi rekening-perorangan</td>
-    <td>Rp 20,000,-/bulan</td>
+    <td>a. {{__("bisnis.tarif_layanan_giro_a")}}</td>
+    <td>Rp 20,000,-/{{__("bisnis.simulasi_bulan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"></td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"><strong>Biaya Administrasi Badan Usaha</strong></td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"><strong>{{__("bisnis.tarif_layanan_adm")}}</strong></td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Pemerintah</td>
-    <td>Bebas</td>
+    <td>a. {{__("bisnis.tarif_layanan_adm_a")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. BUMN</td>
-    <td>Rp 25,000,-/bulan</td>
+    <td>b. {{__("bisnis.tarif_layanan_adm_b")}}</td>
+    <td>Rp 25,000,-/{{__("bisnis.simulasi_bulan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-4"></td>
-    <td>c. Perusahaan/Institusi Lain (diluar bank)</td>
-    <td>Rp 25,000,-/bulan</td>
+    <td>c. {{__("bisnis.tarif_layanan_adm_c")}}</td>
+    <td>Rp 25,000,-/{{__("bisnis.simulasi_bulan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-4"></td>
-    <td>d. Pembatalan Gilyet Giro</td>
-    <td>Rp 25,000,-/lembar</td>
+    <td>d. {{__("bisnis.tarif_layanan_adm_d")}}</td>
+    <td>Rp 25,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"></td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"><strong>Cek atau Bilyet Giro Hilang</strong></td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"><strong>{{__("bisnis.tarif_layanan_cek")}}</strong></td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Telah diisi</td>
-    <td>Rp 25,000,- per warkat</td>
+    <td>a. {{__("bisnis.tarif_layanan_cek_a")}}</td>
+    <td>Rp 25,000,- per {{__("bisnis.tarif_layanan_warkat")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Belum diisi</td>
-    <td>Rp 25,000,- per laporan</td>
+    <td>b. {{__("bisnis.tarif_layanan_cek_b")}}</td>
+    <td>Rp 25,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>c. Penalti karena saldo dibawah saldo minimum</td>
-    <td>Rp 20,000,- per laporan</td>
+    <td>c. {{__("bisnis.tarif_layanan_cek_c")}}</td>
+    <td>Rp 20,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>d. Biaya administrasi rekening pasif / dormant</td>
-    <td>Rp 2,000,- per laporan</td>
+    <td>d. {{__("bisnis.tarif_layanan_cek_d")}}</td>
+    <td>Rp 2,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"></td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"><strong>Biaya Penutupan</strong></td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;"><strong>{{__("bisnis.tarif_layanan_cf")}}</strong></td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td colspan="2">a. Oleh Nasabah</td>
+    <td colspan="2">a. {{__("bisnis.tarif_layanan_cf_a")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Perorangan</td>
+    <td>- {{__("bisnis.tarif_layanan_cf_a1")}}</td>
     <td>Rp 50,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Institusi</td>
+    <td>- {{__("bisnis.tarif_layanan_cf_a2")}}</td>
     <td>Rp 100,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Oleh Bank</td>
+    <td>b. {{__("bisnis.tarif_layanan_cf_b")}}</td>
     <td>Rp 25,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>c. Biaya permintaan rekening koran diluar R/K bulanan</td>
-    <td>Rp 3,000,-/lembar</td>
+    <td>c. {{__("bisnis.tarif_layanan_cf_c")}}</td>
+    <td>Rp 3,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
 </tr>
   
   <tr>
     <td class="pl-5"></td>
-    <td>d. Biaya pembelian Buku Cek / Bilyet Giro</td>
-    <td>Rp 125,000,-/buku</td>
+    <td>d. {{__("bisnis.tarif_layanan_cf_d")}}</td>
+    <td>Rp 125,000,-/{{__("bisnis.tarif_layanan_buku")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">2</td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">Tabungan siMantap Gold</td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">{{__("bisnis.tarif_layanan_tasimGold")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Biaya Administrasi</td>
-    <td>Rp 6,500,-/bulan</td>
+    <td>a. {{__("bisnis.tarif_layanan_tasimGold_a")}}</td>
+    <td>Rp 6,500,-/{{__("bisnis.simulasi_bulan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Biaya Penutupan Rekening</td>
+    <td>b. {{__("bisnis.tarif_layanan_tasimGold_b")}}</td>
     <td>Rp 25,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>c. Biaya rekening pasif / dormant</td>
-    <td>Rp 2,000,-/bulan</td>
+    <td>c. {{__("bisnis.tarif_layanan_tasimGold_c")}}</td>
+    <td>Rp 2,000,-/{{__("bisnis.simulasi_bulan")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td colspan="2">d. Penggantian buku karena penuh</td>
+    <td colspan="2">d. {{__("bisnis.tarif_layanan_tasimGold_d")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Cabang Pengelola</td>
-    <td>Bebas</td>
+    <td>- {{__("bisnis.tarif_layanan_tasimGold_d1")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Cabang Lain</td>
-    <td>Bebas</td>
+    <td>- {{__("bisnis.tarif_layanan_tasimGold_d2")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Cabang Lain</td>
+    <td>- {{__("bisnis.tarif_layanan_tasimGold_d2")}}</td>
     <td>Rp 5,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>e. Penggantian buku karena rusak</td>
+    <td>e. {{__("bisnis.tarif_layanan_tasimGold_e")}}</td>
     <td>Rp 5,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>f. Penggantian buku karena hilang</td>
+    <td>f. {{__("bisnis.tarif_layanan_tasimGold_f")}}</td>
     <td>Rp 15,000,-</td>
   </tr>
   <tr>
     <td class="pl-5"></td>
-    <td>g. Setoran Beda Cabang (Tujuan Luar Kota)</td>
-    <td>Bebas</td>
+    <td>g. {{__("bisnis.tarif_layanan_tasimGold_g")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">3</td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">Tabungan siMantap Berjangka</td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">{{__("bisnis.tarif_layanan_tasimBer")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Administrasi per bulan</td>
-    <td>Bebas</td>
+    <td>a. {{__("bisnis.tarif_layanan_tasimBer_a")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Biaya penutupan rekening pada saat jatuh tempo</td>
-    <td>Bebas</td>
+    <td>b. {{__("bisnis.tarif_layanan_tasimBer_b")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>C. Biaya penarikan pada masa perjanjian</td>
+    <td>c. {{__("bisnis.tarif_layanan_tasimBer_c")}}</td>
     <td>Rp 100,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>d. Biaya penutupan rekening sebelum jatuh tempo - Adm + penalty</td>
+    <td>d. {{__("bisnis.tarif_layanan_tasimBer_d")}}</td>
     <td>Rp 105,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>e. Biaya penalty menunggak 1 bulan setoran wajib bulanan pada saat jatuh tempo</td>
+    <td>e. {{__("bisnis.tarif_layanan_tasimBer_e")}}</td>
     <td>Rp 10,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>f. Biaya penalty menunggak 2 bulan setoran wajib bulanan pada saat jatuh tempo</td>
+    <td>f. {{__("bisnis.tarif_layanan_tasimBer_f")}}</td>
     <td>Rp 20,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>g. Biaya penutupan rekening apabila klaim ditolak</td>
-    <td>Bebas</td>
+    <td>g. {{__("bisnis.tarif_layanan_tasimBer_g")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>h. Biaya permintaan rekening koran (R/K) di luar (R/K) yang disampaikan Bank secara triwulan</td>
-    <td>Rp 3,000,-/lembar</td>
+    <td>h. {{__("bisnis.tarif_layanan_tasimBer_h")}}</td>
+    <td>Rp 3,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
   </tr>
 
 
 
    <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">4</td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">Tabunganku</td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">{{__("bisnis.tarif_layanan_tasimKu")}}</td>
   </tr>
 
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Biaya administrasi</td>
-    <td>Bebas</td>
+    <td>a. {{__("bisnis.tarif_layanan_tasimKu_a")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Biaya penutupan rekening</td>
+    <td>b. {{__("bisnis.tarif_layanan_tasimKu_b")}}</td>
     <td>Rp 20,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>c. Biaya rekening pasif / dormant</td>
+    <td>c. {{__("bisnis.tarif_layanan_tasimKu_c")}}</td>
     <td>Rp 2,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td colspan="2">d. Penggantian buku karena penuh</td>
+    <td colspan="2">d. {{__("bisnis.tarif_layanan_tasimKu_d")}}</td>
      
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Cabang Pengelola</td>
-    <td>Bebas</td>
+    <td>- {{__("bisnis.tarif_layanan_tasimKu_d1")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>- Cabang Lain</td>
+    <td>- {{__("bisnis.tarif_layanan_tasimKu_d2")}}</td>
     <td>Rp 5,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>e. Penggantian buku karena rusak</td>
+    <td>e. {{__("bisnis.tarif_layanan_tasimKu_e")}}</td>
     <td>Rp 5,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>f. Biaya penarikan tunai dan non tunai di cabang lain</td>
+    <td>f. {{__("bisnis.tarif_layanan_tasimKu_f")}}</td>
     <td>Rp 15,000,-</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>g. Biaya administrasi bulanan kartu Tabungaku</td>
+    <td>g. {{__("bisnis.tarif_layanan_tasimKu_g")}}</td>
     <td>Rp 5,000,-</td>
   </tr>
 
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">5</td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">Deposito</td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">{{__("bisnis.tarif_layanan_tasimDeposito")}}</td>
   </tr>
 
  
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Penerbitan pencairan</td>
-    <td>Bebas</td>
+    <td>a. {{__("bisnis.tarif_layanan_tasimDeposito_a")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Penalty pencairan sebelum jatuh tempo</td>
-    <td>5% dari nominal</td>
+    <td>b. {{__("bisnis.tarif_layanan_tasimDeposito_b")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
   <tr>
     <td class="pl-5" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">6</td>
-    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">Produk Kartu ATM</td>
+    <td colspan="2" style="background-color: #FCD1161A; color:#0F2B5B; font-weight:bold;">{{__("bisnis.tarif_layanan_tasimATM")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>a. Administrasi ATM Plus</td>
-    <td>Bebas</td>
+    <td>a. {{__("bisnis.tarif_layanan_tasimATM_a")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>b. Administrasi ATM Reguler</td>
-    <td>5% dari nominal</td>
+    <td>b. {{__("bisnis.tarif_layanan_tasimATM_b")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>c. Administrasi ATM Tabunganku</td>
-    <td>Bebas</td>
+    <td>c. {{__("bisnis.tarif_layanan_tasimATM_c")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>d. Penggantian kartu karena rusak (akibat kelalaian nasabah)</td>
-    <td>5% dari nominal</td>
+    <td>d. {{__("bisnis.tarif_layanan_tasimATM_d")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
  
   <tr>
     <td class="pl-5"></td>
-    <td>e. Penggantian kartu karena hilang</td>
-    <td>Bebas</td>
+    <td>e. {{__("bisnis.tarif_layanan_tasimATM_e")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>f. Permohonan Reissue PIN ATM</td>
-    <td>5% dari nominal</td>
+    <td>f. {{__("bisnis.tarif_layanan_tasimATM_f")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>g. Biaya informasi saldo melalui ATM Bank Mandiri</td>
-    <td>Bebas</td>
+    <td>g. {{__("bisnis.tarif_layanan_tasimATM_g")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>h. Biaya informasi saldo melalui ATM Bersama & LINK</td>
-    <td>5% dari nominal</td>
+    <td>h. {{__("bisnis.tarif_layanan_tasimATM_h")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>i. Biaya penarikan tunai melalui ATM Bank Mandiri</td>
-    <td>5% dari nominal</td>
+    <td>i. {{__("bisnis.tarif_layanan_tasimATM_i")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>j. Transfer melalui ATM Bank Mandiri - Rek Bank Mantap ke Rek Bank Mantap</td>
-    <td>Bebas</td>
+    <td>j. {{__("bisnis.tarif_layanan_tasimATM_j")}}</td>
+    <td>{{__("bisnis.tarif_layanan_bebas")}}</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>k. Transfer melalui ATM Bank Mandiri - Rek Bank Mantap ke Rek Bank Mandiri</td>
-    <td>5% dari nominal</td>
+    <td>k. {{__("bisnis.tarif_layanan_tasimATM_k")}}</td>
+    <td>5% {{__("bisnis.tarif_layanan_dari")}} nominal</td>
   </tr>
 
   <tr>
     <td class="pl-5"></td>
-    <td>l. Maksimal Penarikan dan Transfer ATM (Plus, Reguler, dan Tabunganku)</td>
-    <td>Maks. Penarikan ATM Plus Rp. 10.000.000,-</td>
+    <td>l. {{__("bisnis.tarif_layanan_tasimATM_l")}}</td>
+    <td>{{__("bisnis.tarif_layanan_tasimATM_k1")}}</td>
   </tr>
 
   <tr>
     <td colspan="2"></td>
-    <td>Maks. Penarikan ATM Plus Rp. 20.000.000,-</td>
+    <td>{{__("bisnis.tarif_layanan_tasimATM_k2")}}</td>
   </tr>
   <tr>
     <td colspan="2"></td>
-    <td>Maks. Penarikan ATM Reguler Rp. 5.000.000,-</td>
+    <td>{{__("bisnis.tarif_layanan_tasimATM_k3")}}</td>
   </tr>
   <tr>
     <td colspan="2"></td>
-    <td>Mak. Penarikan ATM Tabunganku Rp. 3.000.000,-</td>
+    <td>{{__("bisnis.tarif_layanan_tasimATM_k4")}}</td>
   </tr>
   <tr>
     <td colspan="2"></td>
-    <td>Maks. Transfer ATM Tabunganku Rp. 5.000.000,-</td>
+    <td>{{__("bisnis.tarif_layanan_tasimATM_k5")}}</td>
   </tr>
 
   <tr>
