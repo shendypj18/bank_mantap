@@ -62,7 +62,7 @@ class PublicSmptController extends Controller
     }
     public function keluhan(Request $request)
     {
-        try {
+        //try {
             $this->loginValidator($request->all())->validate();
             $data = Smtp::all()->last();
             $this->setEnv();
@@ -75,9 +75,9 @@ class PublicSmptController extends Controller
                 $request->telp,
                 $request->pesan,
             ));
-        } catch (\Exception $e) {
-            return abort(500, 'custom error');
-        }
+        //} catch (\Exception $e) {
+ //           return abort(500, 'custom error');
+  //      }
         $data = [
             'nama' => $request->nama,
         ];
