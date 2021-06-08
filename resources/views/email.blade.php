@@ -78,16 +78,16 @@
      </style> -->
 
 <p>Laporan whistle blowing oleh {{$nama_pelapor}}</p>
-<p>Nama Pelapor :{{ $nama_pelapor}}</p>
-<p>nomer telepon :{{ $nomer_telepon }}</p>
-<p>Email :{{ $email }}</p>
-<p>tindakan :{{ $tindakan }}</p>
-<p>nama terlapor :{{ $nama_terlapor}}</p>
-<p>jabatan terlapor :{{ $jabatan_terlapor }}</p>
-<p>waktu kejadian :{{ $waktu_kejadian}}</p>
-<p>lokasi kejadian :{{ $lokasi_kejadian}}</p>
-<p>kronologis kejadian :{{ $kronologis_kejadian}}</p>
-<p>nominal :{{ $nominal }}</p>
+<p>Nama Pelapor &nbsp; : &nbsp; {{ $nama_pelapor}}</p>
+<p>nomer telepon &nbsp; : &nbsp; {{ $nomer_telepon }}</p>
+<p>Email &nbsp; : &nbsp; {{ $email }}</p>
+<p>tindakan &nbsp; : &nbsp; {{ $tindakan }}</p>
+<p>nama terlapor &nbsp; : &nbsp; {{ $nama_terlapor}}</p>
+<p>jabatan terlapor &nbsp; : &nbsp; {{ $jabatan_terlapor }}</p>
+<p>waktu kejadian &nbsp; : &nbsp; {{ $waktu_kejadian}}</p>
+<p>lokasi kejadian &nbsp; : &nbsp; {{ $lokasi_kejadian}}</p>
+<p>kronologis kejadian &nbsp; : &nbsp; {{ $kronologis_kejadian}}</p>
+<p>nominal &nbsp; : &nbsp; Rp. &nbsp; {{ $nominal }}</p>
 <!-- <table>
      <thead>
      <tr>

@@ -77,10 +77,10 @@
      }
      </style> -->
 <p> Pesan keluhan oleh {{$nama}}</p>
-<p> Nama : {{ $nama  }} </p>
-<p> Email : {{ $email }} </p>
-<p> Telepon : {{ $telp }} </p>
-<p> Pesan : {{ $pesan }} </p>
+<p> Nama &nbsp; : 	&nbsp; {{ $nama  }} </p>
+<p> Email &nbsp; : 	&nbsp; {{ $email }} </p>
+<p> Telepon &nbsp; : &nbsp; {{ $telp }} </p>
+<p> Pesan &nbsp; : &nbsp;  {{ $pesan }} </p>
 
 <!-- <table>
      <thead>
