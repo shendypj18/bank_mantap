@@ -183,7 +183,10 @@
         <table>
             <thead>
                 <tr>
-                    <th class="pl-4 thn-txt" style="border-radius: 16px 0px 0px 0px;" colspan="2">{{__("admin.txt_table_tahun")}}</th>
+                    @php
+                    $i = 1;
+                    @endphp
+                    <th class="pl-4 thn-txt" style="border-radius: 16px 0px 0px 0px;" colspan="2">@foreach($laporan as $l)@if($l->jenis_laporan == "7") {{__("admin.txt_table_penghargaan")}} @else {{__("admin.txt_table_tahun")}} @php break; @endphp @endif @if(++$i == 1) @php break;  @endphp @endif @endforeach</th>
                     <th class="desc-txt">{{__("admin.txt_table_deskripsi")}}</th>
 
                     <th class="thn-btn" style="border-radius: 0px 16px 0px 0px;">

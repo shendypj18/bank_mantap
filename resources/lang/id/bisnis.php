@@ -24,7 +24,7 @@ return [
     'simpanan_tabunganku_deskripsi' => 'TabunganKu adalah tabungan untuk perorangan Warga Negara Indonesia dengan persyaratan mudah dan ringan yang diterbitkan secara bersama oleh perbankan di Indonesia',
     'tabungan_simantap_berjangka' => 'Tabungan Simantap Berjangka',
     'tabungan_simantap_berjangka_deskripsi' => 'Tabungan Simantap Berjangka (TSB) adalah tabungan dengan setoran wajib bulanan yang memberikan kesempatan kepada anda untuk mempersiapkan masa depan yang lebih baik.',
-    'tabungan_simantap' => 'Tabungan siMantap',
+    'tabungan_simantap' => 'Tabungan siMantap Gold',
     'tabungan_simantap_deskripsi' => 'Tabungan SiMantap Gold adalah tabungan untuk perorangan Warga Negara Indonesia dengan persyaratan mudah dan ringan.',
     'tabungan_simantap_pensiun' => 'Tabungan siMantap Pensiun',
     'tabungan_simantap_pensiun_deskripsi' => 'Tabungan SiMantap Pensiun adalah tabungan untuk nasabah pensiun sebagai sarana untuk menampung uang pensiun dan gaji pensiun setiap bulannya atas penunjukan Bank Mantap sebagai Bank juru bayar gaji pensiun.',

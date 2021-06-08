@@ -199,7 +199,9 @@
             <small class="small">
             <a>Graha Mantap</a> <br/>
             <a>{{__("admin.txt_footer_alamat")}}</a>
-            <a>Indonesia</a>
+            <a><br/>{{__("admin.txt_footer_alamat2")}}</a>
+            <a><br/>{{__("admin.txt_footer_alamat3")}}</a>
+            <a><br/>Indonesia</a>
             <br/></small><br/>
 
             <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
