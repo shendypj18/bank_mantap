@@ -198,7 +198,7 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-              <h4 class="mt-5">{{__('bisnis.kredit_mantap_pensiun') }}</h4>
+              <h4 class="mt-5"><strong>{{__('bisnis.kredit_mantap_pensiun') }}</strong></h4>
               <small>{{__('bisnis.kredit_mantap_pensiun_deskripsi') }}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pinjaman1.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -218,7 +218,7 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman2.png')}}" alt="Logo"  width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.kredit_mantap_pra_pensiun')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.kredit_mantap_pra_pensiun')}}</strong></h4>
           <small>{{__('bisnis.kredit_mantap_pra_pensiun_deskripsi')}}</small>
         </div>
     </div>
@@ -236,7 +236,7 @@
                 <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman3.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
-              <h4 class="mt-5">{{__('bisnis.pinjaman_retail')}}</h4>
+              <h4 class="mt-5"><strong>{{__('bisnis.pinjaman_retail')}}</strong></h4>
               <small>{{__('bisnis.pinjaman_retail_deskripsi')}}</small>
             </div>
         </div>
@@ -255,7 +255,7 @@
 {{-- <div class="container mc">
   <div class="row">
       <div class="col-sm-6" id="navbar-upper-text">
-        <h4 class="mt-5">{{__('bisnis.pinjaman_retail')}}</h4>
+        <h4 class="mt-5"><strong>{{__('bisnis.pinjaman_retail')}}</strong></h4>
         <small>{{__('bisnis.pinjaman_retail_deskripsi')}}</small>
       </div>
       <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pinjaman3.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -272,7 +272,7 @@
 <div class="container mc">
     <div class="row">
         <div class="col-sm-6" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.pinjaman_mikro')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.pinjaman_mikro')}}</strong></h4>
           <small>{{__('bisnis.pinjaman_mikro_deskripsi')}}</small>
         </div>
         <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pinjaman4.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -293,7 +293,7 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pinjaman4.png')}}" alt="Logo" width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.pinjaman_mikro')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.pinjaman_mikro')}}</h4>
           <small>{{__('bisnis.pinjaman_mikro_deskripsi')}}</small>
         </div>
     </div>

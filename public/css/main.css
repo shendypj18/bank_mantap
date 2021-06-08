@@ -576,7 +576,7 @@ a:hover{
 }
 
 .chat-float img {
-	width: 50px;
+	width: 70px;
   }
 
 @media (max-width: 480px)  {
@@ -920,7 +920,7 @@ a:hover{
 	}
 
 	.chat-float img {
-		width: 70px;
+		width: 120px;
 		margin-right: -8px;
 	}
 	.fz {
@@ -963,7 +963,7 @@ a:hover{
 	}
 
 	.chat-float img {
-		width: 70px;
+		width: 120px;
 		margin-right: -8px;
 	  }
 
@@ -1221,7 +1221,7 @@ a:hover{
 }
 
 .chat-float img {
-	width: 70px;
+	width: 120px;
 	margin-right: -8px;
   }
 
@@ -2031,7 +2031,7 @@ section .section-title {
 }
 
 .chat-float img {
-	width: 70px;
+	width: 120px;
 	margin-right: -8px;
   }
 

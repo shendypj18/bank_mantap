@@ -30,12 +30,12 @@ img.img-responsive{
      display: block;
      height: auto;
      cursor: pointer;
-     color: #0F2B5B;
+     color: #000;
      border-bottom: 1px solid #e8efff;
      border-bottom-right-radius: 4px;
      border-bottom-left-radius: 4px;
      line-height: 33px;
-     font-size: 15px;
+     font-size: 18px;
      margin-bottom: 8px;
  }
  .accordion-started.accordion-bral .ac-label:hover {
@@ -121,17 +121,17 @@ img.img-responsive{
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="mt-5">Frequently Asked & Question (FAQ) “Produk Kredit Mantap Pensiun (KMP)”</h4>
+                <h1 class="mt-5" style="color:#063462;">Frequently Asked & Question (FAQ) “Produk Kredit Mantap Pensiun (KMP)”</h1>
 
-
+                <br/>
                 <div class="accordion-started accordion-bral row">
 
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 1 start -->
                         <input class="ac-input" id="ac-1"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-1">{{ __('kredit-mantap-pensiun.1') }}<i></i></label>
+                        <label class="ac-label" for="ac-1"><strong>{{ __('kredit-mantap-pensiun.1') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;">{!!  __('kredit-mantap-pensiun.d1') !!}</small>
+                            <small>{!!  __('kredit-mantap-pensiun.d1') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 1 end -->
@@ -139,9 +139,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 2 start -->
                         <input class="ac-input" id="ac-2" name="accordion-1" type="radio"/>
-                        <label class="ac-label" for="ac-2"> {{ __('kredit-mantap-pensiun.2') }}<i></i></label>
+                        <label class="ac-label" for="ac-2"><strong> {{ __('kredit-mantap-pensiun.2') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d2') !!}</small>
+                            <small> {!!  __('kredit-mantap-pensiun.d2') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 2 end -->
@@ -149,9 +149,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 3 start -->
                         <input class="ac-input" id="ac-3"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-3"> {{ __('kredit-mantap-pensiun.3') }}<i></i></label>
+                        <label class="ac-label" for="ac-3"><strong> {{ __('kredit-mantap-pensiun.3') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d3') !!}</small>
+                            <small> {!!  __('kredit-mantap-pensiun.d3') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 3 end -->
@@ -159,9 +159,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-4"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-4"> {{ __('kredit-mantap-pensiun.4') }}<i></i></label>
+                        <label class="ac-label" for="ac-4"><strong> {{ __('kredit-mantap-pensiun.4') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d4') !!}</small>
+                            <small> {!!  __('kredit-mantap-pensiun.d4') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -169,9 +169,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-5"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-5"> {{ __('kredit-mantap-pensiun.5') }}<i></i></label>
+                        <label class="ac-label" for="ac-5"><strong> {{ __('kredit-mantap-pensiun.5') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d5') !!}</small>
+                            <small> {!!  __('kredit-mantap-pensiun.d5') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -179,9 +179,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-6"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-6"> {{ __('kredit-mantap-pensiun.6') }}<i></i></label>
+                        <label class="ac-label" for="ac-6"><strong> {{ __('kredit-mantap-pensiun.6') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d6') !!}</small>
+                           <small> {!!  __('kredit-mantap-pensiun.d6') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -189,9 +189,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-7"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-7"> {{ __('kredit-mantap-pensiun.7') }}<i></i></label>
+                        <label class="ac-label" for="ac-7"><strong> {{ __('kredit-mantap-pensiun.7') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11" style="font-type:italic;">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d7') !!}</small>
+                           <small> {!!  __('kredit-mantap-pensiun.d7') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -199,9 +199,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-8"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-8"> {{ __('kredit-mantap-pensiun.8') }}<i></i></label>
+                        <label class="ac-label" for="ac-8"><strong> {{ __('kredit-mantap-pensiun.8') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;"> {!! __('kredit-mantap-pensiun.d8') !!}</small>
+                           <small>{!! __('kredit-mantap-pensiun.d8') !!}</small>
                         </div>
                     </div>
                     <!-- accordion item 4 end -->
@@ -209,9 +209,9 @@ img.img-responsive{
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <!-- accordion item 4 start -->
                         <input class="ac-input" id="ac-9"  name="accordion-1" type="radio" checked/>
-                        <label class="ac-label" for="ac-9"> {{ __('kredit-mantap-pensiun.9') }}<i></i></label>
+                        <label class="ac-label" for="ac-9"><strong> {{ __('kredit-mantap-pensiun.9') }}</strong><i></i></label>
                         <div class="article ac-content col-sm-11">
-                            <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d9') !!}</small>
+                            <small>{!!  __('kredit-mantap-pensiun.d9') !!}</small>
 				                </div>
 			              </div>
 			              <!-- accordion item 4 end -->
@@ -220,25 +220,25 @@ img.img-responsive{
                           <div class="col-sm-12 col-md-12 col-lg-12">
                               <!-- accordion item 4 start -->
                               <input class="ac-input" id="ac-10"  name="accordion-1" type="radio" checked/>
-                              <label class="ac-label" for="ac-10"> {{ __('kredit-mantap-pensiun.10') }}<i></i></label>
+                              <label class="ac-label" for="ac-10"><strong> {{ __('kredit-mantap-pensiun.10') }}</strong><i></i></label>
                               <div class="article ac-content col-sm-11">
-                                  <small style="font-style: italic;"> {!! __('kredit-mantap-pensiun.d10') !!}</small>
+                                 <small>{!! __('kredit-mantap-pensiun.d10') !!}</small>
                               </div>
                           </div>
                           <div class="col-sm-12 col-md-12 col-lg-12">
                               <!-- accordion item 4 start -->
                               <input class="ac-input" id="ac-11"  name="accordion-1" type="radio" checked/>
-                              <label class="ac-label" for="ac-11"> {{ __('kredit-mantap-pensiun.11') }}<i></i></label>
+                              <label class="ac-label" for="ac-11"><strong> {{ __('kredit-mantap-pensiun.11') }}</strong><i></i></label>
                               <div class="article ac-content col-sm-11">
-                                  <small style="font-style: italic;"> {!!  __('kredit-mantap-pensiun.d11') !!}</small>
+                             <small>{!!  __('kredit-mantap-pensiun.d11') !!}</small>
                               </div>
                           </div>
                           <div class="col-sm-12 col-md-12 col-lg-12">
                               <!-- accordion item 4 start -->
                               <input class="ac-input" id="ac-12"  name="accordion-1" type="radio" checked/>
-                              <label class="ac-label" for="ac-12"> {{ __('kredit-mantap-pensiun.12') }}<i></i></label>
+                              <label class="ac-label" for="ac-12"><strong> {{ __('kredit-mantap-pensiun.12') }}</strong><i></i></label>
                               <div class="article ac-content col-sm-11">
-                                  <small style="font-style: italic;"> {!! __('kredit-mantap-pensiun.d12') !!}</small>
+                             <small> {!! __('kredit-mantap-pensiun.d12') !!}</small>
                               </div>
                           </div>
 
@@ -251,6 +251,7 @@ img.img-responsive{
             </div><!-- col-sm-12 -->
         </div><!-- row -->
     </div><!-- coontainer -->
+    <br/> <br/><br/><br/>
 
 
 

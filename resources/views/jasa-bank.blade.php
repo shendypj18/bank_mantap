@@ -210,7 +210,7 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-                <h4 class="mt-5">{{__('bisnis.tarif_layanan')}}</h4>
+                <h4 class="mt-5"><strong>{{__('bisnis.tarif_layanan')}}</strong></h4>
                 <small>{{__('bisnis.tarif_layanan_deskripsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/tarif-layanan.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -230,7 +230,7 @@
                 <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/bank-garansi.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
-                <h4 class="mt-5">{{__('bisnis.bank_garansi')}}</h4>
+                <h4 class="mt-5"><strong>{{__('bisnis.bank_garansi')}}</strong></h4>
                 <small>{{__('bisnis.bank_garansi_deskripsi')}}</small>
             </div>
         </div>
@@ -248,7 +248,7 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-                <h4 class="mt-5">{{__('bisnis.referensi_bank')}}</h4>
+                <h4 class="mt-5"><strong>{{__('bisnis.referensi_bank')}}</strong></h4>
                 <small>{{__('bisnis.referensi_bank_deskripsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/referensi-bank.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -268,7 +268,7 @@
                 <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pic-transfer.png')}}" alt="Logo"  width="600px" class="img-responsive" />
             </div>
             <div class="col-sm-5 right-text" id="navbar-upper-text">
-                <h4 class="mt-5">{{__('bisnis.transfer')}}</h4>
+                <h4 class="mt-5"><strong>{{__('bisnis.transfer')}}</strong></h4>
                 <small>{{__('bisnis.transfer_deskripsi')}}</small>
             </div>
         </div>
@@ -286,7 +286,7 @@
  <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-                <h4 class="mt-5">{{__('bisnis.inkaso')}}</h4>
+                <h4 class="mt-5"><strong>{{__('bisnis.inkaso')}}</strong></h4>
                 <small>{{__('bisnis.inkaso_deskripsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/pic-inkaso.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>

@@ -197,7 +197,7 @@
     <div class="container mc">
         <div class="row">
             <div class="col-sm-6" id="navbar-upper-text">
-              <h4 class="mt-5">{{__('bisnis.simpanan_tabunganku')}}</h4>
+              <h4 class="mt-5"><strong>{{__('bisnis.simpanan_tabunganku')}}</strong></h4>
               <small>{{__('bisnis.simpanan_tabunganku_deskripsi')}}</small>
             </div>
             <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/img-tabunganku.png')}}"  alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -218,7 +218,7 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/img-simulasi01.png')}}" alt="Logo"  width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.tabungan_simantap_berjangka')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.tabungan_simantap_berjangka')}}</strong></h4>
           <small>{{__('bisnis.tabungan_simantap_berjangka_deskripsi')}}</small>
         </div>
     </div>
@@ -237,7 +237,7 @@
   <div class="container mc">
     <div class="row">
         <div class="col-sm-6" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.tabungan_simantap')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.tabungan_simantap')}}</strong></h4>
           <small>{{__('bisnis.tabungan_simantap_deskripsi')}}</small>
         </div>
         <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/img-tabungan-simantap.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -258,7 +258,7 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/pic-pinjaman-ritel.png')}}" alt="Logo" width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.tabungan_simantap_pensiun')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.tabungan_simantap_pensiun')}}</strong></h4>
           <small>{{__('bisnis.tabungan_simantap_pensiun_deskripsi')}}</small>
         </div>
     </div>
@@ -277,7 +277,7 @@
   <div class="container mc">
     <div class="row">
         <div class="col-sm-6" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.deposito_mantap')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.deposito_mantap')}}</strong></h4>
           <small>{{__('bisnis.deposito_mantap_deskripsi')}}</small>
         </div>
         <div class="col-sm-5"><img id="img-navbar-temp" src="{{asset('asset/img-simulasi02.png')}}" alt="Logo" width="600px" style="left: 686px; height: 360px; margin-bottom: 8%;" class="img-responsive" /></div>
@@ -298,7 +298,7 @@
             <img class="margin-img-left" id="img-navbar-temp" src="{{asset('asset/img-giro.png')}}" alt="Logo" width="600px" class="img-responsive" />
         </div>
         <div class="col-sm-5 right-text" id="navbar-upper-text">
-          <h4 class="mt-5">{{__('bisnis.giro')}}</h4>
+          <h4 class="mt-5"><strong>{{__('bisnis.giro')}}</strong></h4>
           <small>{{__('bisnis.giro_deskripsi')}}</small>
         </div>
     </div>
