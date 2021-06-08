@@ -94,7 +94,7 @@ td {
                 <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
                 <div class="col-md-8 col-sm-8 input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
-                    <input type="text" pattern="\d*" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
                 </div>
                 <div class="col-sm-3">
                     <span id="lesss" style="color: red;">*{{__("bisnis.simulasi_kurang_jk")}}</span>
