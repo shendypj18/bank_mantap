@@ -333,7 +333,7 @@ function formatRupiah(angka){
 
      $('#hasil_setor').text(toRp(Math.round(setoran_bulanan)));
      $('#hasil_bunga').text(toRp(Math.round(bunga)));
-     $('#hasil_waktu').text(jangka_waktu + " Bulan");
+     $('#hasil_waktu').text(jangka_waktu + " {{__('bisnis.simulasi_bulan')}}");
      $('#hasil_total').text(toRp(Math.round(total_dana)));
 
     

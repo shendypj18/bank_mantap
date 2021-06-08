@@ -110,7 +110,7 @@ td {
                 </div>
                 <div class="col-sm-3">
                     <span id="less" style="color: red;">*{{__("bisnis.simulasi_kurang_bln")}}</span>
-                    <span id="more" style="color: red;">*{{__("bisnis.simulasi_lebih_bln")}}</span>
+                    <span id="more" style="color: red;">*{{__("bisnis.simulasi_lebih_bln_depo")}}</span>
                 </div>
             </div>
 
@@ -239,6 +239,10 @@ td {
         $('#less').show();
         $('#more').hide();
         window.bWaktu = false;
+    } else if(input.value > 24){
+        $('#more').show();
+        $('#less').hide();
+        window.bWaktu = false;
     } else{
         $('#less').hide();
         $('#more').hide();
@@ -336,7 +340,7 @@ function formatRupiah(angka){
 
     $('#hasil_setor').text(toRp(Math.round(setoran_bulanan)));
     $('#hasil_bunga').text(toRp(Math.round(bunga)));
-    $('#hasil_waktu').text(jangka_waktu + " Bulan");
+    $('#hasil_waktu').text(jangka_waktu + " {{__('bisnis.simulasi_bulan')}}");
     $('#hasil_total').text(toRp(Math.round(total_dana)));
 
 
