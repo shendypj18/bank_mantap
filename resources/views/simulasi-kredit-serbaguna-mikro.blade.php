@@ -95,7 +95,7 @@ td {
                   <input type="text" pattern="[0-9]*" inputmode="numeric" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
               </div>
               <div class="col-sm-3">
-                  <span id="lesss" style="color: red;">*{{__("bisnis.simulasijk_kurang_jk")}}</span>
+                  <span id="lesss" style="color: red;">*{{__("bisnis.simulasi_kurang_jk")}}</span>
                   <span id="moree" style="color: red;">*{{__("bisnis.simulasiksm_lebih_jk")}}</span>
               </div>
           </div>
