@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'tarif_layanan' => 'Tarif Layanan',
-    'tarif_layanan_deskripsi' => 'belum ada',
+    'tarif_layanan' => 'Service Charge',
+    'tarif_layanan_deskripsi' => 'Service Charge PT Bank Mandiri Taspen.',
     'bank_garansi' => 'Bank Guarantee',
     'bank_garansi_deskripsi' => 'One of the important things in business is trust. However, Trust usually only comes when the track records of the parties involved in the transaction are noticeable or when there is a party who is supported or guaranteed by a trusted third party.',
     'referensi_bank' => 'Bank Reference',
@@ -24,7 +24,7 @@ return [
     'simpanan_tabunganku_deskripsi' => 'TabunganKu is a savings account for individual Indonesian citizens with easy and light requirements issued jointly by the banks in Indonesia to foster a culture of saving and improve the welfare of the community.',
     'tabungan_simantap_berjangka' => 'Term savings account of siMantap Berjangka',
     'tabungan_simantap_berjangka_deskripsi' => 'siMantap Berjangka (TSB) is a savings account with mandatory monthly deposit that gives you the opportunity to prepare a better future.',
-    'tabungan_simantap' => 'siMantap Savings GOld Account',
+    'tabungan_simantap' => 'siMantap Savings Gold Account',
     'tabungan_simantap_deskripsi' => 'siMantap Gold Savings is a savings account for individual Indonesian citizens with easy and light requirements.',
     'tabungan_simantap_pensiun' => 'siMantap Pension Savings Account',
     'tabungan_simantap_pensiun_deskripsi' => 'SiMantap Pensiun is a savings account for retiree customers as a means to accommodate their pension money and pension salaries each month upon the appointment of Bank Mantap as the bank that pays the pension salaries.',

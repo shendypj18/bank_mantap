@@ -121,7 +121,7 @@ img.img-responsive{
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="mt-5" style="color:#063462;">Frequently Asked & Question (FAQ) “Produk Kredit Mantap Pensiun (KMP)”</h1>
+                <h3 class="mt-5" style="color:#063462;">Frequently Asked & Question (FAQ) “Produk Kredit Mantap Pensiun (KMP)”</h3>
 
                 <br/>
                 <div class="accordion-started accordion-bral row">
