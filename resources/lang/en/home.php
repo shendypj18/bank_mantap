@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'call_po' => 'cal_po_en.jpeg',
+    'call_po' => 'call_po_en.png',
 ];
