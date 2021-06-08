@@ -92,7 +92,7 @@ td {
               <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
               <div class="col-md-8 col-sm-8 input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
-                  <input type="number" pattern="\d*" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
+                  <input type="text" pattern="[0-9]*" inputmode="numeric" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
               </div>
               <div class="col-sm-3">
                   <span id="lesss" style="color: red;">*{{__("bisnis.simulasijk_kurang_jk")}}</span>
@@ -256,6 +256,30 @@ td {
     }
   }
 
+  var rupiah = document.getElementById("setor");
+    rupiah.addEventListener("keyup", function(e) {
+ 
+    rupiah.value = formatRupiah(this.value);
+  });
+
+/* Fungsi formatRupiah */
+function formatRupiah(angka){
+	var number_string = angka.replace(/[^,\d]/g, '').toString(),
+	split   		= number_string.split(','),
+	sisa     		= split[0].length % 3,
+	rupiah     		= split[0].substr(0, sisa),
+	ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+ 
+	// tambahkan titik jika yang di input sudah menjadi angka ribuan
+	if(ribuan){
+		separator = sisa ? '.' : '';
+		rupiah += separator + ribuan.join('.');
+	}
+ 
+	return rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+	
+}
+
   function toRp(angka){
     var rev     = parseInt(angka, 10).toString().split('').reverse().join('');
     var rev2    = '';
@@ -311,30 +335,7 @@ td {
     $('#hasil_total_angsuran_bulan').text(toRp(Math.round(total_angsuran_bulan)));
     $('#hasil_total_angsuran').text(toRp(Math.round(total_angsuran_bulan * jangka_waktu)));
       
-    var rupiah = document.getElementById("setor");
-rupiah.addEventListener("keyup", function(e) {
-  // tambahkan 'Rp.' pada saat form di ketik
-  // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
-  rupiah.value = formatRupiah(this.value);
-});
 
-/* Fungsi formatRupiah */
-function formatRupiah(angka) {
-  var number_string = angka.replace(/[^,\d]/g, "").toString(),
-    split = number_string.split(","),
-    sisa = split[0].length % 3,
-    rupiah = split[0].substr(0, sisa),
-    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-
-  // tambahkan titik jika yang di input sudah menjadi angka ribuan
-  if (ribuan) {
-    separator = sisa ? "." : "";
-    rupiah += separator + ribuan.join(".");
-  }
-
-  rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-  return rupiah == undefined ? rupiah : rupiah;
-}
 
   }
 </script>
