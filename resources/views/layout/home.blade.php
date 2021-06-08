@@ -13,9 +13,11 @@
             <div class="carousel-item @if($j == 1) active @endif w-100">
                 <img class="d-block w-100" src="{{ url('storage/'. $banner->id_nama) }}"  alt="First slide">
                 <div class="carousel-caption text-left">
-                <div class="container">
-                <a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}" role="button">{{__('admin.selengkapnya')}}</a>
-                </div>
+                    @if($banner['link_button_to'] != 0)
+                    <div class="container">
+                        <a class="btn btn-lg btn-more" href="{{url('article/'. $banner[$bahasa. '_slug_link_button_to']  .'/'. $bahasa)}}" role="button">{{__('admin.selengkapnya')}}</a>
+                    </div>
+                    @endif
                 </div>
             </div>
 

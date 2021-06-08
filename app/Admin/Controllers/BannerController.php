@@ -9,6 +9,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use App\Models\Navbar;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Collection;
 
 class BannerController extends AdminController
 {
@@ -101,16 +102,20 @@ class BannerController extends AdminController
         $form->textarea('en_text_bawah', __('Teks Bawah Inggris'))
              ->rules('required');
         $form->select('link_button_to', __('Link To'))
-             ->options(Navbar::all()->pluck('id_navigasi','id_navigasi'))->default("Sekilas Perusahaan");
+             ->options(Navbar::all()->pluck('id_navigasi','id_navigasi')->merge(new Collection(['NONE'])))->default("NONE");
 
         $form->saved(function (Form $form) {
             $id = $form->model()->id;
             $link_to = $form->model()->link_button_to;
             $data_navigasi = Navbar::where('id_navigasi', $link_to)->first();
+            dd($data_navigasi);
+            if ($data_navigasi != null) {
             Banner::where('id', $id)
             ->update(['id_slug_link_button_to' => $data_navigasi->id_slug]);
             Banner::where('id', $id)
                 ->update(['en_slug_link_button_to' => $data_navigasi->en_slug]);
+            }
+
         });
 
         return $form;
