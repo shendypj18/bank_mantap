@@ -2,6 +2,9 @@
 
 return [
     'online'                => 'Online',
+    'kirim_pesan'           => 'Send Message',
+    'pesan'                 => 'Message',
+    'telp'                  => 'Telephone',
     'login'                 => 'Login',
     'logout'                => 'Logout',
     'setting'               => 'Setting',

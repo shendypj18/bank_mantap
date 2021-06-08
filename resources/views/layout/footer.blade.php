@@ -324,16 +324,16 @@
                                 @csrf
                                 <div class="form-group">
 
-                                    <input type="text" class="form-control" required="required" id="nama_cs" name="nama" placeholder="Nama">
+                                    <input type="text" class="form-control" required="required" id="nama_cs" name="nama" placeholder="{{__("admin.name")}}">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" required="required" id="email_cs" name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" required="required" id="telp_cs" name="telp" placeholder="Telp">
+                                    <input type="text" class="form-control" required="required" id="telp_cs" name="telp" placeholder="{{__("admin.telp")}}">
                                 </div>
                                 <div class="form-group">
-                                    <textarea rows="5" class="form-control" required="required" id="pesan_cs" name="pesan" placeholder="Pesan"></textarea>
+                                    <textarea rows="5" class="form-control" required="required" id="pesan_cs" name="pesan" placeholder="{{__("admin.pesan")}}"></textarea>
                                 </div>
 
 
@@ -352,7 +352,7 @@
                                     {!!htmlFormSnippet()!!}
                                 </div>
                                 <br>
-                                <button type="button" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >Kirim Pesan</button>
+                                <button type="button" class="btn btn-warning" onclick="validateModal()" style="background-color: #fcd10d;    border-radius: 5px;" >{{__("admin.kirim_pesan")}}</button>
                             </form>
                         </div>
                     </div>
