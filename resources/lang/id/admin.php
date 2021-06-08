@@ -2,6 +2,9 @@
 
 return [
     'online'                => 'Daring',
+    'kirim_pesan'           => 'Kirim Pesan',
+    'pesan'                 => 'Pesan',
+    'telp'                  => 'Telp',
     'login'                 => 'Masuk',
     'logout'                => 'Keluar',
     'setting'               => 'Pengaturan',
