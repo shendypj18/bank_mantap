@@ -56,6 +56,7 @@ return [
     'simulasi_lebih_jk' => 'Lebih dari Rp 5.000.000',
     'simulasi_kurang_jk' => 'Kurang dari Rp 5.000.000',
     'simulasi_lebih_bln' => 'Lebih dari 12 bulan',
+    'simulasi_lebih_bln_depo' => 'Lebih dari 24 bulan',
     'simulasi_kurang_bln' => 'Kurang daari 6 bulan',
     'simulasi_per_tahun' => '% Pertahun',
     'simulasijk_kurang_jk' => 'Kurang dari Rp 100.000',

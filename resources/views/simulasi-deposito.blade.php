@@ -110,7 +110,7 @@ td {
                 </div>
                 <div class="col-sm-3">
                     <span id="less" style="color: red;">*{{__("bisnis.simulasi_kurang_bln")}}</span>
-                    <span id="more" style="color: red;">*{{__("bisnis.simulasi_lebih_bln")}}</span>
+                    <span id="more" style="color: red;">*{{__("bisnis.simulasi_lebih_bln_depo")}}</span>
                 </div>
             </div>
 
@@ -238,6 +238,10 @@ td {
     if (input.value <0) {
         $('#less').show();
         $('#more').hide();
+        window.bWaktu = false;
+    } else if(input.value > 24){
+        $('#more').show();
+        $('#less').hide();
         window.bWaktu = false;
     } else{
         $('#less').hide();
