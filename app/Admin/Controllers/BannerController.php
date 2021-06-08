@@ -108,7 +108,6 @@ class BannerController extends AdminController
             $id = $form->model()->id;
             $link_to = $form->model()->link_button_to;
             $data_navigasi = Navbar::where('id_navigasi', $link_to)->first();
-            dd($data_navigasi);
             if ($data_navigasi != null) {
             Banner::where('id', $id)
             ->update(['id_slug_link_button_to' => $data_navigasi->id_slug]);
