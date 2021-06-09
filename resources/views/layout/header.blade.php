@@ -16,6 +16,87 @@
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
 <style>
+    /* simulasi */
+#input{
+    font-family:"Calibri, sans-serif" !important;
+}
+/* hasil */
+div#hasil{
+    font-family:"Calibri, sans-serif" !important;
+}
+/* branch */
+div#search{
+    font-family:"Calibri, sans-serif" !important;
+}
+/* karir */
+.card-danger{
+    font-family:"Calibri, sans-serif" !important;
+}
+/* tmplt */
+.cnt-txt{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt span{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt p{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt li{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt a{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt h4{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt th{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt td{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt h2{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt strong{
+    font-family:"Calibri, sans-serif" !important;
+}
+.cnt-txt small{
+    font-family:"Calibri, sans-serif" !important;
+}
+/* promosi */
+.text-justify strong{
+    font-family:"Calibri, sans-serif" !important;
+ }
+ .col-md-10 p span {
+    font-family: "Calibri, sans-serif" !important;
+}
+.col-md-10 ol li {
+    font-family: "Calibri, sans-serif" !important;
+}
+ol li span {
+    font-family: "Calibri, sans-serif" !important;
+}
+
+/* program */
+.fz-berita strong {
+    font-family: "Calibri, Sans-serif";
+}
+div#news {
+    font-family: "Calibri, sans-serif";
+}
+div span span span {
+    font-family: 'calibri, sans-serif';
+}
+/* berita */
+.text-center{
+    font-family:"Calibri, sans-serif" !important;
+ }
+ .MsoNormal span{
+    font-family:"Calibri, sans-serif" !important;
+ }
 #bahasa-indonesia.btn-outline-warning{
 
     border-radius: 10px 0px 0px 10px !important;

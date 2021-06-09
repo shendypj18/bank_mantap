@@ -9,7 +9,7 @@
          font-size:12px;
          box-shadow: 0px 20px 40px #00000014;
          border-radius: 16px;
-
+         font-family:"Calibri, sans-serif" !important;
      }
 
      th {
