@@ -91,7 +91,7 @@ td {
 
         <form>
             <div class="form-group row mt-4 ">
-                <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
+                <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran_depo")}}</label>
                 <div class="col-md-8 col-sm-8 input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
                     <input type="text" pattern="[0-9]*" inputmode="numeric" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>
@@ -319,7 +319,7 @@ function formatRupiah(angka){
     var bln=findAndReplace($('#setor').val(),".","");
     var setoran_bulanan = parseInt(bln);
     var jangka_waktu = $('#waktu').val();
-    var bunga_thn = ($('#bunga').val()+"."+$('#bungaa').val())/100;
+    var bunga_thn = ($('#bunga').val()+"."+$('#bungaa').val())/1000;
     // var bunga_bln = bunga_thn/12;
     var bunga = (bunga_thn * setoran_bulanan) * 5;
     var total_dana = setoran_bulanan + bunga;
