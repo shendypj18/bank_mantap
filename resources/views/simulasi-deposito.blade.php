@@ -147,6 +147,11 @@ td {
     
     <table style="width:70%">
 <tbody>
+
+  <tr style="background-color: #FCD1161A;">
+    <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_td")}}</td>
+    <td  style="color:#0F2B5B;">: <strong id="hasil_total"></strong></td>
+  </tr>
   <tr>
     <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_setoran")}}</td>
     <td style="color:#0F2B5B;">: <strong id="hasil_setor"></strong></td>
@@ -157,15 +162,12 @@ td {
     <td style=" color:#0F2B5B;">: <strong id="hasil_bunga"></strong></td>
   </tr>
 
-  <tr>
+  {{-- <tr>
     <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_jk")}}</td>
     <td style="color:#0F2B5B;">: <strong id="hasil_waktu"></strong></td>
-  </tr>
+  </tr> --}}
 
-  <tr style="background-color: #FCD1161A;">
-    <td style="padding-left:18px;">{{__("bisnis.hasil_deposito_td")}}</td>
-    <td  style="color:#0F2B5B;">: <strong id="hasil_total"></strong></td>
-  </tr>
+ 
 
  </tbody>
 
@@ -318,21 +320,21 @@ function formatRupiah(angka){
     var setoran_bulanan = parseInt(bln);
     var jangka_waktu = $('#waktu').val();
     var bunga_thn = ($('#bunga').val()+"."+$('#bungaa').val())/100;
-    var bunga_bln = bunga_thn/12;
-    var bunga = setoran_bulanan * bunga_bln;
+    // var bunga_bln = bunga_thn/12;
+    var bunga = (bunga_thn * setoran_bulanan) * 5;
     var total_dana = setoran_bulanan + bunga;
 
-    for (var i = 1; i < jangka_waktu; i++) {
-      var ul = total_dana + setoran_bulanan;
-      bunga = ul * bunga_bln;
-      total_dana = ul +bunga;
+    // for (var i = 1; i < jangka_waktu; i++) {
+    //   var ul = total_dana + setoran_bulanan;
+    //   bunga = ul * bunga_bln;
+    //   total_dana = ul +bunga;
 
 
-      console.log("no = "+(i+1));
-      console.log("setoran = "+ul);
-      console.log("bunga = "+bunga);
-      console.log("total = " + total_dana);
-    }
+    //   console.log("no = "+(i+1));
+    //   console.log("setoran = "+ul);
+    //   console.log("bunga = "+bunga);
+    //   console.log("total = " + total_dana);
+    // }
 
 
     $('#input').hide();
