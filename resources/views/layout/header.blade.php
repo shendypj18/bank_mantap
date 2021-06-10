@@ -66,6 +66,7 @@ div#search{
 }
 .cnt-txt p{
     font-family:"Calibri, sans-serif" !important;
+    font-size: 80% !important;
 }
 .cnt-txt li{
     font-family:"Calibri, sans-serif" !important;
