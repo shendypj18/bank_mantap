@@ -115,8 +115,8 @@
                         <div class="card-body">
                             <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
                             <p class="card-text text-left fz" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/' .$page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
-                                @if(strlen($page[$bahasa. '_judul']) > 60)
-                                    {{ substr($page[$bahasa. '_judul'], 0, 60) . '....'}}
+                                @if(strlen($page[$bahasa. '_judul']) > 56)
+                                    {{ substr($page[$bahasa. '_judul'], 0, 56) . '....'}}
                                 @else
                                     {{$page[$bahasa. '_judul']}}
                                 @endif
