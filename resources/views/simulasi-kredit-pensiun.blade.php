@@ -89,7 +89,7 @@ td {
 
       <form>
           <div class="form-group row mt-4 ">
-              <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran")}}</label>
+              <label class="col-sm-4 col-form-label" for="setor">{{__("bisnis.simulasi_setoran_sb")}}</label>
               <div class="col-md-8 col-sm-8 input-group">
                   <div class="input-group-prepend"><span class="input-group-text"><b>Rp</b></span></div>
                   <input type="text" pattern="[0-9]*" inputmode="numeric" class="form-control text-right" id="setor" onkeyup="updateSetor(this); checkInput();" required>

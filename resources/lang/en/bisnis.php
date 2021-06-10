@@ -49,6 +49,7 @@ return [
     'simulasi_section' => 'Simulating budget calculation according to your favor.',
     'simulasi_setoran' => 'Deposit amount (monthly)',
     'simulasi_setoran_depo' => 'Deposit amount',
+    'simulasi_setoran_sb' => 'Loan amount',
     'simulasi_jangka_waktu' => 'Period',
     'simulasi_suku_bunga' => 'Interest rates',
     'simulasi_bulan' => 'Month',

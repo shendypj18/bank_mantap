@@ -51,6 +51,7 @@ return [
     'simulasi_section' => 'Lakukan simulasi perhitungan dana sesuai dengan kebutuhan yang Anda pilih.',
     'simulasi_setoran' => 'Jumlah Setoran (perbulan)',
     'simulasi_setoran_depo' => 'Jumlah Setoran',
+    'simulasi_setoran_sb' => 'Jumlah Pinjaman',
     'simulasi_jangka_waktu' => 'Jangka Waktu',
     'simulasi_suku_bunga' => 'Suku Bunga',
     'simulasi_bulan' => 'Bulan',
