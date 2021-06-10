@@ -657,6 +657,9 @@ a:hover{
 .chat-float img {
 	width: 70px;
   }
+  .profile {
+	margin-top: 0rem;
+}
 
 @media (max-width: 480px)  {
 	.footer-nav{
@@ -1008,6 +1011,9 @@ a:hover{
 	.fz-navbar {
 		font-size: 20px !important;
 	}
+	.profile {
+		margin-top: 0rem;
+	}
 
 }
 
@@ -1304,6 +1310,10 @@ a:hover{
 	margin-right: -8px;
   }
 
+  .profile {
+	margin-top: 0rem;
+}
+
 
 /* [id^=btn]:checked + ul{
     display: block;
@@ -1312,6 +1322,9 @@ a:hover{
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
 
+	.profile {
+		margin-top: 0rem;
+	}
 
 	#navbar-upper-text {
 		-webkit-box-flex: 0;
@@ -2323,5 +2336,5 @@ section .section-title {
 	}
 }
 .ff{
-	font-family: Calibri, sans-serif; !important;
+	font-family: Calibri, sans-serif !important;
 }
