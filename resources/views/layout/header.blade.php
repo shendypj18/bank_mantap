@@ -70,6 +70,7 @@ div#search{
 }
 .cnt-txt li{
     font-family:"Calibri, sans-serif" !important;
+    font-size: 16px !important
 }
 .cnt-txt a{
     font-family:"Calibri, sans-serif" !important;
@@ -88,7 +89,7 @@ div#search{
 }
 .cnt-txt strong{
     font-family:"Calibri, sans-serif" !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
 }
 .cnt-txt small{
     font-family:"Calibri, sans-serif" !important;
