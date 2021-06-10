@@ -26,7 +26,7 @@
 
 
 
-<section class="section" style="position:relative">
+<section class="section cnt-txt" style="position:relative">
     <div class="container fit-parent" >
         {!!  $navbardata[$bahasa. '_text_content']!!}
     </div>

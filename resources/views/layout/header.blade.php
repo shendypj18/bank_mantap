@@ -16,6 +16,29 @@
 <!-- ====================================================== NAVBAR MENU ===================================================== -->
 <header>
 <style>
+@media (min-width:480px) and (max-width:630px){
+    .col-sm-5 #img-navbar-temp {
+        width: 445px !important;
+        height: auto !important;
+    }
+}
+.fit-parent .row .col-sm-12.mt-5 {
+    font-size: 16px !important;
+}
+#navbar-upper-text{
+    font-size: 16px;
+}
+.card .card-img {
+    width: 100%;
+    height: auto;
+}
+section#profile {
+    margin-top: 0px !important;
+}
+img#img-struktur-organisasi {
+    width: 100%;
+    height: auto;
+}
     /* simulasi */
 #input{
     font-family:"Calibri, sans-serif" !important;
@@ -35,9 +58,11 @@ div#search{
 /* tmplt */
 .cnt-txt{
     font-family:"Calibri, sans-serif" !important;
+    font-size: 20px !important;
 }
 .cnt-txt span{
     font-family:"Calibri, sans-serif" !important;
+    /* font-size: 16px !important; */
 }
 .cnt-txt p{
     font-family:"Calibri, sans-serif" !important;
@@ -62,6 +87,7 @@ div#search{
 }
 .cnt-txt strong{
     font-family:"Calibri, sans-serif" !important;
+    font-size: 16px !important;
 }
 .cnt-txt small{
     font-family:"Calibri, sans-serif" !important;
@@ -93,10 +119,21 @@ div span span span {
 /* berita */
 .text-center{
     font-family:"Calibri, sans-serif" !important;
+    
  }
  .MsoNormal span{
     font-family:"Calibri, sans-serif" !important;
+    font-size: 16px !important;
  }
+ .text-justify .col-md-10{
+    font-size: 16px !important;
+ }
+/* .cnt-txt .fit-parent{
+    font-family: 'calibri, sans-serif' !important;
+    font-size: 16px;
+} */
+
+
 #bahasa-indonesia.btn-outline-warning{
 
     border-radius: 10px 0px 0px 10px !important;
