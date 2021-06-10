@@ -108,12 +108,12 @@
                                 <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem;">
                                 <div class="card-body">
                                     <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
-                                    <p class="card-text text-left fz" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('storage/'. '/' .$b->nama_file)}}'">
-                                        @if(strlen($b->nama) > 56)
+                                    <p class="card-text wrapp-text text-left fz" style="color: #0F2B5B; cursor:pointer;" onclick="location.href='{{url('storage/'. '/' .$b->nama_file)}}'">
+                                        {{--  @if(strlen($b->nama) > 56)
                                             {{ substr($b->nama, 0, 56) . '....'}}
-                                        @else
+                                        @else --}}
                                             {{$b->nama}}
-                                        @endif
+                                        {{--  @endif --}}
                                     </p>
                                 </div>
                             </div>

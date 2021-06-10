@@ -23,12 +23,11 @@
                                 <img class="card-img-top" src="{{ url('storage/' .$b->gambar) }}" alt="Card image cap"  style="height: 12rem; border-radius: 15px 15px 0px 0px;">
                                 <div class="card-body" onclick="location.href='{{url('info/'. $b[$bahasa .'_slug'] . '/'. $bahasa)}}'">
                                     <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($b->updated_at)) }}</small></p>
-                                    <p class="card-text text-left fz" style="color: #0F2B5B; cursor:pointer;" >
-                                        @if(strlen($b[$bahasa. '_judul']) > 56)
-                                            {{ substr($b[$bahasa. '_judul'], 0, 56) . '....'}}
-                                        @else
-                                            {{$b[$bahasa. '_judul']}}
-                                        @endif
+                                    <p class="card-text wrapp-text text-left fz" style="color: #0F2B5B; cursor:pointer;" >
+                                        {{-- {{ substr($b[$bahasa. '_judul'], 0, 56) . '....' }}
+                                              @else --}}
+                                        {{$b[$bahasa. '_judul']}}
+                                        {{--  @endif --}}
                                     </p>
                                 </div>
                             </div>

@@ -113,12 +113,12 @@
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar)}}" alt="Card image cap"  style="height: 12rem;">
                         <div class="card-body">
                             <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
-                            <p class="card-text text-left fz" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
-                                @if(strlen($page[$bahasa. '_judul']) > 56)
+                            <p class="card-text wrapp-text text-left fz" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
+                                {{-- @if(strlen($page[$bahasa. '_judul']) > 56)
                                     {{ substr($page[$bahasa. '_judul'], 0, 56) . '....'}}
-                                @else
+                                @else  --}}
                                     {{$page[$bahasa. '_judul']}}
-                                @endif
+                                {{--  @endif --}}
                             </p>
                         </div>
                     </div>
