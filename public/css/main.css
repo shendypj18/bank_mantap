@@ -1003,13 +1003,14 @@ a:hover{
 		margin-right: -8px;
 	}
 	.fz {
-		font-size: 16px;
+		font-size: 10px;
 	}
 	.fz-navbar {
 		font-size: 20px !important;
 	}
 
 }
+
 
 @media (min-width: 576px) and (max-width: 768px)  {
 	.display-header{
@@ -1309,6 +1310,9 @@ a:hover{
     display: block;
   } */
 
+}
+.cardd-body{
+	height: 140px;
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
 
@@ -2297,7 +2301,11 @@ section .section-title {
 		margin-bottom: 38%;
 	}
 }
+
 @media (max-width: 767px) {
+	.cardd-body{
+		height: 105px;
+	}
 	.carousel-indicators {
 		display: none;
 	}

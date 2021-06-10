@@ -111,15 +111,22 @@
                 <div class="col-sm-3 pad-sz" style="float:left">
                     <div class="card mb-2" style="height: fit-content; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar)}}" alt="Card image cap"  style="height: 12rem;">
-                        <div class="card-body">
+                        <div class="card-body cardd-body">
                             <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
-                            <p class="card-text wrapp-text text-left fz" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
-                                {{-- @if(strlen($page[$bahasa. '_judul']) > 56)
-                                    {{ substr($page[$bahasa. '_judul'], 0, 56) . '....'}}
-                                @else  --}}
-                                    {{$page[$bahasa. '_judul']}}
-                                {{--  @endif --}}
-                            </p>
+                            <div class="container p-0">
+                                <div class="row">
+                                    <div class="col-lg-12 d-flex align-items-stretch">
+                                        <p class="card-text wrapp-text text-left" style="color:#0F2B5B; cursor:pointer;" onclick="location.href='{{url('info/'. $page[$bahasa. '_slug'] .'/'. $bahasa)}}'">
+                                            {{-- @if(strlen($page[$bahasa. '_judul']) > 56)
+                                            {{ substr($page[$bahasa. '_judul'], 0, 56) . '....'}}
+                                            @else  --}}
+                                            {{$page[$bahasa. '_judul']}}
+                                            {{--  @endif --}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
