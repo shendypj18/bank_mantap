@@ -11,7 +11,7 @@
                             <div class="container p-0">
                                 <div class="row">
                                     <div class="col-lg-12 d-flex align-items-stretch">
-                                        <p class="card-text wrapp-text text-left" style="color: #0F2B5B; cursor:pointer;" >
+                                        <p class="card-text wrapp-text text-left ml-2" style="color: #0F2B5B; cursor:pointer;" >
                                             {{-- {{ substr($b[$bahasa. '_judul'], 0, 56) . '....' }}
                                                       @else --}}
                                             {{$b[$bahasa. '_judul']}}
