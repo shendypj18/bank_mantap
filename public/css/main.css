@@ -26,6 +26,10 @@ body{
 	padding:0px;
 }
 
+.container-videos {
+	padding-bottom: 15px;
+}
+
 
 h4,h5{
 	color: #0F2B5B;
@@ -468,6 +472,7 @@ a:hover{
 .container-videos{
 	position: relative;
 	width: 100%;
+	padding-bottom: 15px;
 	/* overflow: hidden; */
 }
 
@@ -787,6 +792,7 @@ a:hover{
 		position: relative;
 		width: 100%;
 		padding: 35px;
+		padding-bottom: 15px;
 		/* overflow: hidden; */
 
 	}
@@ -1095,6 +1101,7 @@ a:hover{
 	.container-videos{
 		position: relative;
 		width: 100%;
+		padding-bottom: 15px;
 		overflow: hidden;
 	}
 
@@ -1346,6 +1353,7 @@ a:hover{
 		position: relative;
 		width: 100%;
 		overflow: hidden;
+		padding-bottom: 15px;
 	}
 
 	.container-video{

@@ -160,8 +160,6 @@
         <div class="container-videos" align="center">
             <iframe class="container-video" allowfullscreen src=@if($video_1)"{{url($video_1->link_video)}}"@endif></iframe>
         </div>
-        <br/><br/>
-
         <div class="row text-center text-left text-xs-center text-sm-left text-md-left">
             <div class="col-md-2">
             </div>
