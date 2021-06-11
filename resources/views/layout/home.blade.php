@@ -156,7 +156,6 @@
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
         <p align="center"><a>{{__("admin.txt_section_youtube")}}</a></p>
         <!-- <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p> -->
-        <br/><br/>
         <div class="container-videos" align="center">
             <iframe class="container-video" allowfullscreen src=@if($video_1)"{{url($video_1->link_video)}}"@endif></iframe>
         </div>

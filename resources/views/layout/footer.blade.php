@@ -2,17 +2,22 @@
 <!--  ================================================ FIRST FOOTER ========================================================== -->
 
 <style>
-
+  
   .chat-float{
     bottom:unset;
   }
-  @media (max-width:359px){
+  @media(max-width:1023px){
+    .float-menu{
+      top:24% !important;
+    }
+  }
+  @media (max-width:1023px){
     #onTop{
       bottom:10px;
     }
   }
   @media (max-width:1023px),(max-height:767px){
-
+    
    @media screen and (orientation:landscape) {
     #onTop{
           bottom: 0px;
@@ -37,7 +42,7 @@
           margin-bottom: 0;
           list-style: none;
           padding: 0;
-
+          
           overflow: visible;
       }
 
@@ -354,7 +359,7 @@
     <!--  ================================================ MILEA ================================================================== -->
 <div class="chat-float" id="chat-float">
   <a id="milea" href="https://milea.bankmantap.co.id/" target="_blank">
-
+  
       <div>
         <img src="{{ asset('asset/icon/milea.png') }}">
       </div>
@@ -514,7 +519,7 @@
 $(document).ready(function(){
 $("#preloader").fadeOut();
 })
-</script>
+</script> 
 
 
 <script type="text/javascript">
@@ -798,4 +803,4 @@ $(window).resize(function(){
       $(".crd-itm").removeClass("crd-cbg col-6 col-md-6 col-lg-3").addClass("card-margin");
     }
   })
-</script>
+  </script>
