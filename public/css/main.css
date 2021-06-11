@@ -2289,6 +2289,9 @@ section .section-title {
 #berita-ipad {
 	display: none;
 }
+#berita-ipad2 {
+	display: none;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
 	#berita-mobile {
 		display: none;
@@ -2297,6 +2300,9 @@ section .section-title {
 		display: none;
 	}
 	#berita-ipad {
+		display: inline-block;
+	}
+	#berita-ipad2 {
 		display: inline-block;
 	}
 	.simulasi {
