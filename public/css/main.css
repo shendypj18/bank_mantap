@@ -18,10 +18,10 @@
 \*-------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
-@font-face { font-family: Calibri; src: url('../fonts/Calibri.ttf'); }
+@font-face { font-family: Calibri, sans-serif ; src: url('../fonts/Calibri.ttf'); }
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Calibri', sans-serif;
 	margin:0px;
 	padding:0px;
 }
