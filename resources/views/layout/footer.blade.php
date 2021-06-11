@@ -8,7 +8,11 @@
   }
   @media(max-width:1023px){
     .float-menu{
+<<<<<<< HEAD
       top:24% !important;
+=======
+      top: 24% !important;
+>>>>>>> dc157c04de95092828a7f8976649a716335d2f1d
     }
   }
   @media (max-width:1023px){
