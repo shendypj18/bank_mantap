@@ -284,24 +284,30 @@
           <img style="height: 30px;" src="{{ asset('asset/icon/share.png') }}">
       </li>
     </ul>
+
+    <!--  ================================================ MILEA ================================================================== -->
+<div class="chat-float">
+  <a id="milea" href="https://milea.bankmantap.co.id/" target="_blank">
+  
+      <div>
+        <img src="{{ asset('asset/icon/milea.png') }}">
+      </div>
+    </a>
+    <div id="milea-tol" class="tooltip fade top in" role="tooltip" id="tooltip416138" style="top: -35px; left: -60px; display: none;">
+      <div class="tooltip-arrow" style="left: 50%; border-top-color: #ffd427;"></div>
+      <div class="tooltip-inner" style="padding: 7px;background: #ffd00a;color: #043364;font-weight: bold;    -webkit-box-shadow: 0 5px 15px 0 #808080;-ms-box-shadow: 0 5px 15px 0 #808080; -o-box-shadow: 0 5px 15px 0 #808080;box-shadow: 0 5px 15px 0 #808080;">Chat langsung dengan MILeA</div>
+    </div>
+  </div>
+  <!--  ================================================ END MILEA ============================================================== -->
+
+  <!-- Start Scrolling -->
+<button onclick="topFunction()" id="onTop" title="Go to top" class="fa fa-angle-double-up"></button>
+<!-- End Scrolling -->
   </div>
   <!-- ================================================= END FLOATING MENU ======================================================-->
 
 
-<!--  ================================================ MILEA ================================================================== -->
-<div class="chat-float">
-<a id="milea" href="https://milea.bankmantap.co.id/" target="_blank">
 
-    <div>
-      <img src="{{ asset('asset/icon/milea.png') }}">
-    </div>
-  </a>
-  <div id="milea-tol" class="tooltip fade top in" role="tooltip" id="tooltip416138" style="top: -35px; left: -60px; display: none;">
-    <div class="tooltip-arrow" style="left: 50%; border-top-color: #ffd427;"></div>
-    <div class="tooltip-inner" style="padding: 7px;background: #ffd00a;color: #043364;font-weight: bold;    -webkit-box-shadow: 0 5px 15px 0 #808080;-ms-box-shadow: 0 5px 15px 0 #808080; -o-box-shadow: 0 5px 15px 0 #808080;box-shadow: 0 5px 15px 0 #808080;">Chat langsung dengan MILeA</div>
-  </div>
-</div>
-<!--  ================================================ END MILEA ============================================================== -->
 
 <!-- Modal email -->
 <div class="modal fade bs-example-modal-lg" id="ModalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -426,9 +432,7 @@
 </div>
 
 
-<!-- Start Scrolling -->
-<button onclick="topFunction()" id="onTop" title="Go to top" class="fa fa-angle-double-up"></button>
-<!-- End Scrolling -->
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
