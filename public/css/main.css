@@ -1008,7 +1008,9 @@ a:hover{
 	.fz-navbar {
 		font-size: 20px !important;
 	}
-
+	.mll {
+		margin-left: 2%;
+	}
 }
 
 
