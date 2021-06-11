@@ -140,28 +140,28 @@
     <!-- PAGGING -->
     @if ($pages["Promosi Mantap"])
         @if ($pages["Promosi Mantap"]->hasPages())
-            <div class="container" id="page">
-                <nav aria-label="Page navigation example" class="paging mb-5" style="margin-left:30%;">
-                    <ul class="pagination">
-                        <li class="page-item mr-3"><a class="btn page-link active pl-4
-                                                             @if($pages["Berita Mantap"]->onFirstPage()) disabled @endif
-                                                             " href="{{ $pages["Berita Mantap"]->previousPageUrl() }}"
-                                                      style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
-                                                             border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px; "><</a></li>
-                        @for($i = 1; $i <= $pages["Berita Mantap"]->lastPage(); $i++)
-                            <li class="page-item mr-3"><a class="btn page-link pl-3
-                                                                 @if($pages["Berita Mantap"]->currentPage() == $i) bg-warning @endif
-                                                                 "
-                                                          href="{{$pages["Berita Mantap"]->url($i)}}"
-                                                          style="border: 1px solid #0f2b5b;background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
-                                                                 border-radius: 12px;opacity: 1; width: 54px;height: 44px; font-size:14px;">{{$i}}</a></li>
-                        @endfor
-                        <li class="page-item mr-3"><a class="btn page-link pl-3"
-                                                      href="{{$pages["Berita Mantap"]->nextPageUrl() }}"
-                                                      style="border: 1px solid #0f2b5b;background: #0f2b5b 0% 0% no-repeat padding-box;border: 1px solid #0F2B5B;
-                                                             border-radius: 12px;opacity: 1; width: 54px;height: 44px; color:#FFFF; font-size:20px">></a></li>
-                    </ul>
-                </nav>
+            <div class="container mt-3 pl-4">
+                <div class="row">
+                    <nav aria-label="Page navigation example" class="mb-5">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="btn page-link
+                                                            @if($pages["Promosi Mantap"]->onFirstPage()) disabled @endif
+                                                            "
+                                                     href="{{$pages["Promosi Mantap"]->previousPageUrl()}}"
+                                                     style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Prev</a></li>
+                            @for($i = 1; $i <= $pages["Promosi Mantap"]->lastPage(); $i++)
+                                <li class="page-item"><a class="btn page-link
+                                                                @if($pages["Promosi Mantap"]->currentPage() == $i ) bg-warning @endif
+                                                                "
+                                                         href="{{$pages["Promosi Mantap"]->url($i)}}"
+                                                         style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">{{$i}}</a></li>
+                            @endfor
+                            <li class="page-item"><a class="btn page-link"
+                                                     href="{{$pages["Promosi Mantap"]->nextPageUrl()}}"
+                                                     style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         @endif
      @endif

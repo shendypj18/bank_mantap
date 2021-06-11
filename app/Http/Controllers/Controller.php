@@ -161,7 +161,7 @@ class Controller extends BaseController
         {
             $data_info_mantap = [
                 "berita" => "",
-                "pages" => $this->xpage($slug = null, 8),
+                "pages" => $this->xpage($slug = null, 4),
                 //'active' => $navbar_data->id_slug,
 
             ];
