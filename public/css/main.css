@@ -2332,7 +2332,7 @@ section .section-title {
 }
 
 .ff{
-	font-family: Calibri, sans-serif !important;
+	font-family: 'Calibri', sans-serif !important;
 }
 .wrapp-text {
 	display: -webkit-box;
