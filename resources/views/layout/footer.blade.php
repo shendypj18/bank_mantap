@@ -6,7 +6,12 @@
   .chat-float{
     bottom:unset;
   }
-  @media (max-width:359px){
+  @media(max-width:1023px){
+    .float-menu{
+      top: 24% !important;
+    }
+  }
+  @media (max-width:1023px){
     #onTop{
       bottom:10px;
     }
