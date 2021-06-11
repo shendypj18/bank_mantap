@@ -1,7 +1,7 @@
 @include('layout.header')
 
 <section id="img-header" class="img-header">
-<img src="asset/slider_simulasi.png">
+<img src="{{asset(__('bisnis.img_simulasi'))}}">
 <ul class="breadcrumb">
 
 <div class="container">

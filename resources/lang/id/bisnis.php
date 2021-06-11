@@ -163,4 +163,6 @@ return [
     'tarif_layanan_tasimATM_k3' => ' Maks. Penarikan ATM Reguler Rp 5.000.00-, ',
     'tarif_layanan_tasimATM_k4' => ' Maks. Penarikan ATM Tabunganku Rp 3.000.00-, ',
     'tarif_layanan_tasimATM_k5' => ' Maks. Penarikan ATM Tabunganku Rp 5.000.00-, ',
+    'img_karir' => 'asset/slider22.png',
+    'img_simulasi' => 'asset/slider_simulasi.png',
 ];

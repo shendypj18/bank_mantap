@@ -39,7 +39,7 @@
 </style>
 
 <section id="img-header" class="img-header" style="margin-top:-2%;">
-<img src="{{asset('asset/slider22.png')}}">
+<img src="{{asset(__('bisnis.img_karir'))}}">
 <ul class="breadcrumb">
 <div class="container">
   <li><a href="{{url('/')}}">Home</a></li>

@@ -162,4 +162,6 @@ return [
     'tarif_layanan_tasimATM_k3' => ' Max. Withdrawal ATM Regular Rp 5.000.00-, ',
     'tarif_layanan_tasimATM_k4' => ' Max. Withdrawal ATM Tabunganku Rp 3.000.00-, ',
     'tarif_layanan_tasimATM_k5' => ' Max. Withdrawal ATM Tabunganku Rp 5.000.00-, ',
+    'img_karir' => 'asset/karir-eng.png',
+    'img_simulasi' => 'asset/slider_simulasi_eng.png',
 ];
