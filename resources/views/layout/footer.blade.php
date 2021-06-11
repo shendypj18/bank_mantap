@@ -3,6 +3,71 @@
 
 <style>
 
+  .chat-float{
+    bottom:unset;
+  }
+  @media (max-width:359px){
+    #onTop{
+      bottom:10px;
+    }
+  }
+  @media (max-width:1023px),(max-height:767px){
+
+   @media screen and (orientation:landscape) {
+    #onTop{
+          bottom: 0px;
+        }
+        .float-menu {
+            display: block;
+            position: fixed;
+            top: 15%;
+            z-index: 9;
+            right: 0;
+            width: 50px;
+        }
+
+
+      .float-menu ul {
+          -webkit-box-shadow: 0 5px 15px 0 #808080;
+          -ms-box-shadow: 0 5px 15px 0 #808080;
+          -o-box-shadow: 0 5px 15px 0 #808080;
+          box-shadow: 0 5px 15px 0 #808080;
+          border-radius: 12px 0 0 12px;
+          background-color: #FCD116;
+          margin-bottom: 0;
+          list-style: none;
+          padding: 0;
+
+          overflow: visible;
+      }
+
+
+      ul.coba {
+          height: 100%;
+      }
+
+      .float-menu ul li a {
+          display: block;
+          height: auto;
+          color: white;
+          padding: 10px 0;
+      }
+
+      ul.coba li a img {
+          width: 25px !important;
+          height: 25px !important;
+          margin-left: 25%;
+      }
+
+      .chat-float {
+          display: block;
+          position: fixed;
+          z-index: 100;
+          bottom: 40px;
+          right: 8px;
+      }
+   }
+}
  .mmm {
      margin-left: 10%;
  }
@@ -259,7 +324,7 @@
 
 <!-- ================================================= FLOATING MENU ========================================================== -->
 <div class="float-menu">
-    <ul>
+    <ul class="coba">
       <li>
         <a data-toggle="modal" data-target="#ModalEmail" data-whatever="email" href="#">
           <span class="text">email</span>
@@ -289,7 +354,7 @@
     <!--  ================================================ MILEA ================================================================== -->
 <div class="chat-float" id="chat-float">
   <a id="milea" href="https://milea.bankmantap.co.id/" target="_blank">
-  
+
       <div>
         <img src="{{ asset('asset/icon/milea.png') }}">
       </div>
@@ -449,7 +514,7 @@
 $(document).ready(function(){
 $("#preloader").fadeOut();
 })
-</script> 
+</script>
 
 
 <script type="text/javascript">
@@ -733,4 +798,4 @@ $(window).resize(function(){
       $(".crd-itm").removeClass("crd-cbg col-6 col-md-6 col-lg-3").addClass("card-margin");
     }
   })
-  </script>
+</script>
