@@ -1,11 +1,11 @@
 <!-- ====================================================== CAROUSEL  ======================================================= -->
 <section id="hero" class="carousel slide  carousel-res" data-ride="carousel">
 
-    <ol class="carousel-indicators" style="margin-left:-43rem; margin-bottom:10rem;">
+    {{-- <ol class="carousel-indicators" style="margin-left:-43rem; margin-bottom:10rem;">
         <li data-target="#hero" data-slide-to="0" class="active" style="height: 10px; width: 50px; padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="1" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
         <li data-target="#hero" data-slide-to="2" style="width: 12px; height: 10px;  padding-box; border-radius: 6px;"></li>
-    </ol>
+    </ol> --}}
     <div class="carousel-inner">
         @php $j = 1 @endphp
         @foreach($banner as $banner)
