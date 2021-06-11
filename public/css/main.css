@@ -222,7 +222,7 @@ a:hover{
 .profile {
 	margin-top:-3rem;
 	height: 800px;
-	background: linear-gradient(to bottom, rgba(234, 243, 255, 0.357), rgba(34, 22, 121, 0.611)), url('../asset/profile.png') no-repeat;
+	background: linear-gradient(to bottom, rgba(234, 243, 255, 0.357), rgba(34, 22, 121, 0.611)), url('../asset/profile-beranda.png') no-repeat;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
