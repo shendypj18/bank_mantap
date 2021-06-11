@@ -282,11 +282,12 @@
         <a data-toggle="modal" data-target="#ModalShare" data-whatever="share" href="#">
           <span class="text">share</span>
           <img style="height: 30px;" src="{{ asset('asset/icon/share.png') }}">
+        </a>
       </li>
     </ul>
 
     <!--  ================================================ MILEA ================================================================== -->
-<div class="chat-float">
+<div class="chat-float" id="chat-float">
   <a id="milea" href="https://milea.bankmantap.co.id/" target="_blank">
   
       <div>
@@ -452,6 +453,18 @@ $("#preloader").fadeOut();
 
 
 <script type="text/javascript">
+
+  $('input').focus(function() {
+   $('onTop').addClass('hide-onTop');
+   $('chat-float').addClass('hide-chat-float');
+  });
+
+  $('input').focusout(function() {
+   $('chat-float').removeClass('hide-chat-float');
+   $('onTop').removeClass('hide-onTop');
+  });
+
+
   function validateModal(){
     var bValidName = check_validation("#nama_cs");
     var bValidEmail = check_validation_email("#email_cs");

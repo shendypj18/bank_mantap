@@ -292,6 +292,14 @@ a:hover{
 
 @media (max-width: 768px) {
 
+.hide-onTop {
+		display: none;
+	}
+
+.hide-chat-float {
+		display: none;
+	}
+
 #tbl-pemegang-saham {
 	width: 700px;
 }
@@ -2293,6 +2301,15 @@ section .section-title {
 	display: none;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+	
+	.hide-onTop {
+		display: none;
+	}
+
+	.hide-chat-float {
+		display: none;
+	}
+	
 	#berita-mobile {
 		display: none;
 	}
@@ -2311,6 +2328,15 @@ section .section-title {
 }
 
 @media (max-width: 767px) {
+	
+	.hide-onTop {
+		display: none;
+	}
+
+	.hide-chat-float {
+		display: none;
+	}
+	
 	.cardd-body{
 		height: 105px;
 	}
@@ -2334,6 +2360,13 @@ section .section-title {
 
 }
 @media (min-width: 540px) and (max-width: 577px) {
+	.hide-onTop {
+		display: none;
+	}
+
+	.hide-chat-float {
+		display: none;
+	}
 	.simulasi {
 		margin-bottom: -660px;
 	}
