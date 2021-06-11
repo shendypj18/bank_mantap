@@ -219,7 +219,7 @@
                         <td class="font-weight-bold">@if($l->jenis_laporan == "7") {{$l->nama. ' '}} @endif {{$l->tahun}}</td>
                         <td >{{$l->deskripsi}}</td>
                         @if($l->jenis_laporan != "7")
-                            <td> <img class="img-table" src="{{ asset('asset/download.svg') }}"> <a class="txt-unduh" href="{{url('storage/'. $l->nama_file)}}">Unduh File</a></td>
+                            <td> <img class="img-table" src="{{ asset('asset/download.svg') }}"> <a class="txt-unduh" href="{{url('storage/'. $l->nama_file)}}">{{__("bisnis.unduh_file")}}</a></td>
                         @endif
                     </tr>
                     @php
