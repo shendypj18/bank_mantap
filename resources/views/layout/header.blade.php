@@ -41,71 +41,71 @@ img#img-struktur-organisasi {
 }
     /* simulasi */
 #input{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 /* hasil */
 div#hasil{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 /* branch */
 div#search{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 /* karir */
 .card-danger{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 /* tmplt */
 .cnt-txt{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     font-size: 20px !important;
 }
 .cnt-txt span{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     /* font-size: 16px !important; */
 }
 .cnt-txt p{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     font-size: 16px !important
 }
 .cnt-txt li{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     font-size: 16px !important
 }
 .cnt-txt a{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 .cnt-txt h4{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 .cnt-txt th{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 .cnt-txt td{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 .cnt-txt h2{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 .cnt-txt strong{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     font-size: 18px !important;
 }
 .cnt-txt small{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
 }
 /* promosi */
 .text-justify strong{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
  }
  .col-md-10 p span {
-    font-family: "Calibri, sans-serif" !important;
+    font-family: 'Calibri', sans-serif !important;
 }
 .col-md-10 ol li {
-    font-family: "Calibri, sans-serif" !important;
+    font-family: 'Calibri', sans-serif !important;
 }
 ol li span {
-    font-family: "Calibri, sans-serif" !important;
+    font-family: 'Calibri', sans-serif !important;
 }
 
 /* program */
@@ -120,11 +120,11 @@ div span span span {
 }
 /* berita */
 .text-center{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     
  }
  .MsoNormal span{
-    font-family:"Calibri, sans-serif" !important;
+    font-family:'Calibri', sans-serif !important;
     font-size: 16px !important;
  }
  .text-justify .col-md-10{
