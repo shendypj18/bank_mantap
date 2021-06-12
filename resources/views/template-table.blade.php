@@ -211,11 +211,12 @@
             </thead>
             <tbody>
                 @php
-                   $i = 1;
+                   $i = (($laporan->currentPage() - 1) * 10);
+                   $ii = 1;
                 @endphp
                 @foreach($laporan as $l)
                     <tr>
-                        <td class="text-center font-weight-bold" style="width:5%">{{$i }} <span>. </span></td>
+                        <td class="text-center font-weight-bold" id="idx" style="width:5%">{{$i + $ii}} <span>. </span></td>
                         <td class="font-weight-bold">@if($l->jenis_laporan == "7") {{$l->nama. ' '}} @endif {{$l->tahun}}</td>
                         <td >{{$l->deskripsi}}</td>
                         @if($l->jenis_laporan != "7")
@@ -223,12 +224,13 @@
                         @endif
                     </tr>
                     @php
-                    $i++;
+                    $ii++;
                     @endphp
                 @endforeach
             </tbody>
 
         </table>
+
         <nav aria-label="Page navigation example" class="mb-5">
             <ul class="pagination">
                 <li class="page-item"><a class="btn page-link
