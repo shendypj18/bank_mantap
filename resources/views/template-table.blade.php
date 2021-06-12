@@ -211,7 +211,7 @@
             </thead>
             <tbody>
                 @php
-                   $i = (($laporan->currentPage() - 1) * 7);
+                   $i = (($laporan->currentPage() - 1) * 10);
                    $ii = 1;
                 @endphp
                 @foreach($laporan as $l)
