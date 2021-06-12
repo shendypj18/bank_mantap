@@ -60,11 +60,15 @@
          color: #0F2B5B;
 
      }
+
+     .strong-font {
+         font-size: 28px !important;
+     }
     </style>
 
     <div class="container text-center" id="report">
         <div class="col-sm-8 mt-3" style="float:none;margin:auto;">
-        <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }}<strong> Bank Mandiri Taspen</strong></h3>
+        <h3 class="text-center">{{ __('admin.dapatkan_informasi_berita') }}<strong class="strong-font"> Bank Mandiri Taspen</strong></h3>
         </div>
         <p><br/></p>
         <div class="display-button">

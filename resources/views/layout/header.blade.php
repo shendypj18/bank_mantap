@@ -89,7 +89,7 @@ div#search{
 }
 .cnt-txt strong{
     font-family:'Calibri', sans-serif !important;
-    font-size: 18px !important;
+    font-size: 18px;
 }
 .cnt-txt small{
     font-family:'Calibri', sans-serif !important;
