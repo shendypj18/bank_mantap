@@ -230,6 +230,7 @@
             </tbody>
 
         </table>
+        @php $link_limit = 7; @endphp
         <nav aria-label="Page navigation example" class="mb-5">
             <ul class="pagination">
                 <li class="page-item"><a class="btn page-link
@@ -237,12 +238,26 @@
                                                 "
                                          href="{{$laporan->previousPageUrl()}}"
                                          style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Prev</a></li>
+
                 @for($i = 1; $i <= $laporan->lastPage(); $i++)
-                    <li class="page-item"><a class="btn page-link
-                                                    @if($laporan->currentPage() == $i ) bg-warning @endif
-                                                    "
-                                             href="{{$laporan->url($i)}}"
-                                             style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">{{$i}}</a></li>
+                    @php
+                    $half_total_links = floor($link_limit / 2);
+                    $from = $laporan->currentPage() - $half_total_links;
+                    $to = $laporan->currentPage() + $half_total_links;
+                    if ($laporan->currentPage() < $half_total_links) {
+                    $to += $half_total_links - $laporan->currentPage();
+                    }
+                    if ($laporan->lastPage() - $laporan->currentPage() < $half_total_links) {
+                    $from -= $half_total_links - ($laporan->lastPage() - $laporan->currentPage()) - 1;
+                    }
+                    @endphp
+                    @if ($from < $i && $i < $to)
+                        <li class="page-item"><a class="btn page-link
+                                @if($laporan->currentPage() == $i ) bg-warning @endif
+                                                        "
+                                                 href="{{$laporan->url($i)}}"
+                                                 style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">{{$i}}</a></li>
+                    @endif
                 @endfor
                 <li class="page-item"><a class="btn page-link"
                                          href="{{$laporan->nextPageUrl()}}"

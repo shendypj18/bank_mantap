@@ -135,7 +135,7 @@
         </div> <!-- row -->
     </div> <!-- container -->
 
-
+    @php $link_limit = 7; @endphp
     <!-- PAGGING -->
     @if ($pages["Program Mantap"])
         @if ($pages["Program Mantap"]->hasPages())
@@ -149,11 +149,24 @@
                                                      href="{{$pages["Program Mantap"]->previousPageUrl()}}"
                                                      style="color:#FFF;border-radius: 8px;background: #0F2B5B 0% 0% no-repeat padding-box;">Prev</a></li>
                             @for($i = 1; $i <= $pages["Program Mantap"]->lastPage(); $i++)
+                                @php
+                                $half_total_links = floor($link_limit / 2);
+                                $from = $laporan->currentPage() - $half_total_links;
+                                $to = $laporan->currentPage() + $half_total_links;
+                                if ($laporan->currentPage() < $half_total_links) {
+                                $to += $half_total_links - $laporan->currentPage();
+                                }
+                                if ($laporan->lastPage() - $laporan->currentPage() < $half_total_links) {
+                                $from -= $half_total_links - ($laporan->lastPage() - $laporan->currentPage()) - 1;
+                                }
+                                @endphp
+                                @if ($from < $i && $i < $to)
                                 <li class="page-item"><a class="btn page-link
                                                                 @if($pages["Program Mantap"]->currentPage() == $i ) bg-warning @endif
                                                                 "
                                                          href="{{$pages["Program Mantap"]->url($i)}}"
                                                          style="border-radius: 8px;background: #FFF 0% 0% no-repeat padding-box;">{{$i}}</a></li>
+                                @endif
                             @endfor
                             <li class="page-item"><a class="btn page-link"
                                                      href="{{$pages["Program Mantap"]->nextPageUrl()}}"
