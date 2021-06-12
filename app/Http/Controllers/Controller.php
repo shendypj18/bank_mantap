@@ -131,12 +131,12 @@ class Controller extends BaseController
             $kategori_laporan = KategoriLaporan::where('jenis', $navbar_data->kategori_laporan)->first();
 
             $laporan = Laporan::where('jenis_laporan', $kategori_laporan->id)
-                    ->orderBy('tahun', 'DESC')
+                    ->orderBy('created_at', 'DESC')
                     ->paginate(10);
             if(request()->has('tahun')) {
                 $laporan = Laporan::where('jenis_laporan', $kategori_laporan->id)
                     ->where('tahun', request('tahun'))
-                    ->orderBy('tahun', 'DESC')
+                    ->orderBy('created_at', 'DESC')
                     ->paginate(10)
                     ->appends('tahun', request('tahun'));
             }
@@ -146,7 +146,7 @@ class Controller extends BaseController
                 "laporanTahunan" => Laporan::where('jenis_laporan', $tahunan->id)->get(),
                 "tahun" => Laporan::select('tahun')
                                     ->where('jenis_laporan', $kategori_laporan->id)
-                                    ->orderBy('tahun', 'DESC')
+                                    ->orderBy('created_at', 'DESC')
                                     ->distinct()
                                     ->get(),
                 "kategori_laporan" => $kategori_laporan->jenis,
