@@ -211,7 +211,7 @@
             </thead>
             <tbody>
                 @php
-                   $i = (($laporan->currentPage() - 1) * 10);
+                   $i = (($laporan->currentPage() - 1) * 7);
                    $ii = 1;
                 @endphp
                 @foreach($laporan as $l)
@@ -230,7 +230,6 @@
             </tbody>
 
         </table>
-
         <nav aria-label="Page navigation example" class="mb-5">
             <ul class="pagination">
                 <li class="page-item"><a class="btn page-link
