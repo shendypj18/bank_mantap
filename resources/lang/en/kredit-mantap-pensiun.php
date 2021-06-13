@@ -1,6 +1,6 @@
 <?php
 return [
-  '1' => '1. What is a "MANTAP PENSION CREDITS PRODUCT" (KMP)?',
+  '1' => '1. What is a Mantap Pension Credits Product (KMP)?',
   '2' => '2. What are the benefits of this (KMP) product?',
   '3' => '3. Is this product has prizes?',
   '4' => '4. Whose responsibility of the gift tax on KMP?',

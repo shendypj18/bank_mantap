@@ -75,7 +75,7 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>a. {{__("bisnis.tarif_layanan_giro_a")}}</td>
-   <td>Rp 20,000,-/{{__("bisnis.simulasi_bulan")}}</td>
+   <td>Rp20,000,-/{{__("bisnis.simulasi_bulan")}}</td>
  </tr>
 
  <tr>
@@ -92,19 +92,19 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>b. {{__("bisnis.tarif_layanan_adm_b")}}</td>
-   <td>Rp 25,000,-/{{__("bisnis.simulasi_bulan")}}</td>
+   <td>Rp25,000,-/{{__("bisnis.simulasi_bulan")}}</td>
  </tr>
 
  <tr>
    <td class="pl-4"></td>
    <td>c. {{__("bisnis.tarif_layanan_adm_c")}}</td>
-   <td>Rp 25,000,-/{{__("bisnis.simulasi_bulan")}}</td>
+   <td>Rp25,000,-/{{__("bisnis.simulasi_bulan")}}</td>
  </tr>
 
  <tr>
    <td class="pl-4"></td>
    <td>d. {{__("bisnis.tarif_layanan_adm_d")}}</td>
-   <td>Rp 25,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
+   <td>Rp25,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
  </tr>
 
  <tr>
@@ -115,25 +115,25 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>a. {{__("bisnis.tarif_layanan_cek_a")}}</td>
-   <td>Rp 25,000,- per {{__("bisnis.tarif_layanan_warkat")}}</td>
+   <td>Rp25,000,- per {{__("bisnis.tarif_layanan_warkat")}}</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>b. {{__("bisnis.tarif_layanan_cek_b")}}</td>
-   <td>Rp 25,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
+   <td>Rp25,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>c. {{__("bisnis.tarif_layanan_cek_c")}}</td>
-   <td>Rp 20,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
+   <td>Rp20,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>d. {{__("bisnis.tarif_layanan_cek_d")}}</td>
-   <td>Rp 2,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
+   <td>Rp2,000,- per {{__("bisnis.tarif_layanan_laporan")}}</td>
  </tr>
 
  <tr>
@@ -149,31 +149,31 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td  class="strip-txt">- {{__("bisnis.tarif_layanan_cf_a1")}}</td>
-   <td>Rp 50,000,-</td>
+   <td>Rp50,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td  class="strip-txt">- {{__("bisnis.tarif_layanan_cf_a2")}}</td>
-   <td>Rp 100,000,-</td>
+   <td>Rp100,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>b. {{__("bisnis.tarif_layanan_cf_b")}}</td>
-   <td>Rp 25,000,-</td>
+   <td>Rp25,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>c. {{__("bisnis.tarif_layanan_cf_c")}}</td>
-   <td>Rp 3,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
+   <td>Rp3,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
 </tr>
  
  <tr>
    <td class="pl-5"></td>
    <td>d. {{__("bisnis.tarif_layanan_cf_d")}}</td>
-   <td>Rp 125,000,-/{{__("bisnis.tarif_layanan_buku")}}</td>
+   <td>Rp125,000,-/{{__("bisnis.tarif_layanan_buku")}}</td>
  </tr>
 
  <tr>
@@ -184,19 +184,19 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>a. {{__("bisnis.tarif_layanan_tasimGold_a")}}</td>
-   <td>Rp 6,500,-/{{__("bisnis.simulasi_bulan")}}</td>
+   <td>Rp6,500,-/{{__("bisnis.simulasi_bulan")}}</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>b. {{__("bisnis.tarif_layanan_tasimGold_b")}}</td>
-   <td>Rp 25,000,-</td>
+   <td>Rp25,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>c. {{__("bisnis.tarif_layanan_tasimGold_c")}}</td>
-   <td>Rp 2,000,-/{{__("bisnis.simulasi_bulan")}}</td>
+   <td>Rp2,000,-/{{__("bisnis.simulasi_bulan")}}</td>
  </tr>
 
  <tr>
@@ -219,19 +219,19 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td  class="strip-txt">- {{__("bisnis.tarif_layanan_tasimGold_d2")}}</td>
-   <td>Rp 5,000,-</td>
+   <td>Rp5,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>e. {{__("bisnis.tarif_layanan_tasimGold_e")}}</td>
-   <td>Rp 5,000,-</td>
+   <td>Rp5,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>f. {{__("bisnis.tarif_layanan_tasimGold_f")}}</td>
-   <td>Rp 15,000,-</td>
+   <td>Rp15,000,-</td>
  </tr>
  <tr>
    <td class="pl-5"></td>
@@ -259,25 +259,25 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>c. {{__("bisnis.tarif_layanan_tasimBer_c")}}</td>
-   <td>Rp 100,000,-</td>
+   <td>Rp100,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>d. {{__("bisnis.tarif_layanan_tasimBer_d")}}</td>
-   <td>Rp 105,000,-</td>
+   <td>Rp105,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>e. {{__("bisnis.tarif_layanan_tasimBer_e")}}</td>
-   <td>Rp 10,000,-</td>
+   <td>Rp10,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>f. {{__("bisnis.tarif_layanan_tasimBer_f")}}</td>
-   <td>Rp 20,000,-</td>
+   <td>Rp20,000,-</td>
  </tr>
 
  <tr>
@@ -289,7 +289,7 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>h. {{__("bisnis.tarif_layanan_tasimBer_h")}}</td>
-   <td>Rp 3,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
+   <td>Rp3,000,-/{{__("bisnis.tarif_layanan_lembar")}}</td>
  </tr>
 
 
@@ -309,13 +309,13 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td>b. {{__("bisnis.tarif_layanan_tasimKu_b")}}</td>
-   <td>Rp 20,000,-</td>
+   <td>Rp20,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>c. {{__("bisnis.tarif_layanan_tasimKu_c")}}</td>
-   <td>Rp 2,000,-</td>
+   <td>Rp2,000,-</td>
  </tr>
 
  <tr>
@@ -333,25 +333,25 @@ th {
  <tr>
    <td class="pl-5"></td>
    <td  class="strip-txt">- {{__("bisnis.tarif_layanan_tasimKu_d2")}}</td>
-   <td>Rp 5,000,-</td>
+   <td>Rp5,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>e. {{__("bisnis.tarif_layanan_tasimKu_e")}}</td>
-   <td>Rp 5,000,-</td>
+   <td>Rp5,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>f. {{__("bisnis.tarif_layanan_tasimKu_f")}}</td>
-   <td>Rp 15,000,-</td>
+   <td>Rp15,000,-</td>
  </tr>
 
  <tr>
    <td class="pl-5"></td>
    <td>g. {{__("bisnis.tarif_layanan_tasimKu_g")}}</td>
-   <td>Rp 5,000,-</td>
+   <td>Rp5,000,-</td>
  </tr>
 
 

@@ -1,4 +1,4 @@
-@include('layout.header');
+@include('layout.header')
 
 <style>
   @media (max-width:575px){

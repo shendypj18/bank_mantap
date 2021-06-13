@@ -1,13 +1,13 @@
 <?php
 return [
-  '1' => '1. Apa yang dimaksud dengan "Produk KREDIT MANTAP PENSIUN (KMP)" ?',
-  '2' => '2. Apa keuntungan yang didapatkan dari Produk KREDIT MANTAP PENSIUN (KMP) ini?',
+  '1' => '1. Apa yang dimaksud dengan Produk Kredit Mantap Pensiun (KMP) ?',
+  '2' => '2. Apa keuntungan yang didapatkan dari Produk Kredit Mantap Pensiun (KMP) ini?',
   '3' => '3. Apakah produk ini merupakan produk berhadiah?',
   '4' => '4. Pajak hadiah atas produk KMP menjadi tanggungan siapa ?',
   '5' => '5. Bagaimana cara mengikuti produk ini?',
-  '6' => '6. Apa syarat dan ketentuan Produk KREDIT MANTAP PENSIUN (KMP) ini ?',
+  '6' => '6. Apa syarat dan ketentuan produk Kredit Mantap Pensiun (KMP) ini ?',
   '7' => '7.  Kapan Produk ini berlaku sejak dimulai dan berakhir?',
-  '8' => '8. Apakah terdapat biaya yang dipungut atas produk Produk KREDIT MANTAP PENSIUN (KMP) ?',
+  '8' => '8. Apakah terdapat biaya yang dipungut atas produk produk Kredit Mantap Pensiun (KMP) ?',
   '9' => '9.  Apakah promo ini berlaku untuk seluruh nasabah Bank Mantap ?',
   '10' => '10. Bagaimana Cara Pengambilan Hadiah ?',
   '11' => '11. Apakah resiko yang akan diterima oleh nasabah atas produk ini ?',

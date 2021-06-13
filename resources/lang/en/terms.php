@@ -2,7 +2,7 @@
 
 return [
 
-    'term_tittle' => 'Terms and Condition',
+'term_tittle' => 'Terms and Condition',
 
 'term_tittle_1' => 'Terms & Condition Mobile Mantap',
 
@@ -72,7 +72,7 @@ return [
 'term_t5' => ' The use of User ID, Login PIN and OTP code has the same legal force as a written order signed by the Customer User, therefore the Customer User hereby declares that the use of User ID, Login PIN and OTP code in every order for a Mantap Mobile service transaction is also a granting power of attorney from the Customer User to the Bank to execute the transactions including but not limited to debiting the Customer`s account both in the context of carrying out the transactions ordered and for the payment of transaction fees that have been and or will be determined later by the Bank.',
 'term_t6' => ' Any misuse of User ID, Login PIN and OTP code for the Mantap Mobile Application is the responsibility of the Customer User. The Customer User hereby releases the Bank from all claims that may arise, both from other parties and the Customer User him/herself as a result of misuse of the User ID, Login PIN and OTP code for the Mantap Mobile Application.',
 'term_t7' => ' If the Customer User`s SIM Card is lost/stolen/duplicated/transferred to another party, the Customer User must notify the Bank in writing via the Branch Office or telephone to the Bank`s Call Center at 14024. Prior to receiving the notification by the authorized Bank official, all orders, transactions and communication by unauthorized parties based on the use of User ID, Login PIN and OTP code, is the responsibility of the Customer User.',
-'term_u' => ' <strong>Termination of Access to the Mantap Mobile Services</strong> ',
+'term_u' => ' <strong>V. Termination of Access to the Mantap Mobile Services</strong> ',
 'term_u1' => ' The access to Mantap Mobile services will be stopped by the Bank if: ',
 'term_u1_a' => ' The Customer User asks the Bank to temporarily or permanently halt the access to the Mantap Mobile services, which is caused by, among other things: ',
 'term_u1_b' => ' The Customer User forgets the User ID and PIN Login. ',
@@ -87,14 +87,14 @@ return [
 'term_u1_j' => ' The Bank carries out a requirement in accordance with the applicable laws and regulations. ',
 'term_u2' => ' To re-activate the access to the the Mantap Mobile services after the termination mentioned above, the Customer User has to register again at the Bank Office. ',
 
-'term_v' => ' <strong>Force Majeure</strong>  ',
+'term_v' => ' <strong>VI. Force Majeure</strong>  ',
 
 'term_v1' => ' The Customer User will release the Bank from any claims whatsoever, in the event that the Bank is unable to execute orders from the Customer User either partially or wholly due to the events or causes beyond the Bank`s control or ability, including but not limited to any disturbances by computer virus or Trojan Horses or dangerous components that can interfere with the Mantap Mobile services, Mantap Mobile Application or the computer system of the Bank, the Customer, or the Internet Service Provider, due to natural disasters, war, riots, malfunctioning equipment, systems or transmissions, power failures, telecommunication disturbances, government policies, and other events or causes beyond the control or ability of the Bank. ',
 
 'term_v2' => ' Send feedback ',
 
 'term_v2' => ' Side panels.',
-'term_w' => '<strong>Others</strong> ',
+'term_w' => '<strong>VII. Others</strong> ',
 'term_w1' => ' Evidence of Customer User’s order through the Mantap Mobile services is a mutation recorded in the Current Account or Savings Book if printed.',
 'term_w2' => ' The Customers User can contact the Bank or the Call Center at 14024 for any problems related to the transactions done through the Mantap Mobile services.',
 
