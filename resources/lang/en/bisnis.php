@@ -164,4 +164,5 @@ return [
     'tarif_layanan_tasimATM_k5' => ' Max. Withdrawal ATM Tabunganku Rp 5.000.00-, ',
     'img_karir' => 'asset/karir-eng.png',
     'img_simulasi' => 'asset/slider_simulasi_eng.png',
+    'karir_txt' => 'Come and join us to become professional banker of Bank Mantap within wonderfull career experiences along with Akhlakfull culture order of Mantap squad',
 ];

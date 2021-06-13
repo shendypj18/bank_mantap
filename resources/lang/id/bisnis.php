@@ -165,4 +165,5 @@ return [
     'tarif_layanan_tasimATM_k5' => ' Maks. Penarikan ATM Tabunganku Rp 5.000.00-, ',
     'img_karir' => 'asset/slider22.png',
     'img_simulasi' => 'asset/slider_simulasi.png',
+    'karir_txt' => 'Bergabunglah menjadi insan profesional Bank Mantap untuk mendapatkan pengalaman karier luar biasa bersama Mantap Squad yang menjunjung tinggi tata nilai budaya AKHLAK.',
 ];
