@@ -122,7 +122,7 @@
                     <div class="card mb-2" style="height: fit-content; box-shadow: 0px 20px 40px #75B2DD1A;border-radius: 12px 12px 0px 0px; opacity: 1;">
                         <img class="card-img-top" src="{{url('storage/'. $page->gambar)}}" alt="Card image cap"  style="height: 12rem;">
                         <div class="card-body cardd-body">
-                            <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p>
+                            {{-- <p class="card-text text-left fz"><small class="text-muted">Last Update : {{ date("d F Y", strtotime($page->updated_at)) }}</small></p> --}}
                             <div class="container p-0">
                                 <div class="row">
                                     <div class="col-lg-12 d-flex align-items-stretch">
