@@ -15,12 +15,12 @@
  
         <div style="width: 100%; height: 60%; margin-top:8%;">
 
-		<div class="title"><h4>Syarat dan ketentuan</h4></div><hr/>
+		<div class="title"><h4>{{__("terms.term_tittle")}}</h4></div><hr/>
 		<div class="box">
-<p><strong>Terms &amp; Conditions Mantap Mobile</strong></p>
-<p>&nbsp;<strong>I.&nbsp;Definisi</strong></p>
+<p><strong>{{__("terms.term_tittle_1")}}</strong></p>
+<p>&nbsp;<strong>I.&nbsp;{{__("terms.term_a")}}</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p style="padding-left: 30px;"><strong>Mantap Mobile </strong>adalah layanan <em>electronic channel</em> dari Bank Mandiri Taspen untuk melakukan transaksi financial dan non-finansial dimana aplikasi Mantap Mobile harus diunduh terlebih dahulu menggunakan <em>smartphone</em> atau komputer tablet.<strong>&nbsp;</strong></p>
+<p style="padding-left: 30px;">{!! __("terms.term_b") !!}<strong>&nbsp;</strong></p>
 <p style="padding-left: 30px;"><strong>Aplikasi Mantap Mobile </strong>adalah aplikasi yang dikeluarkan oleh Bank Mandiri Taspen yang dapat diunduh melalui <strong>Google Play Store</strong> dan <strong>Apple App store</strong>.</p>
 <p style="padding-left: 30px;"><strong>Bank </strong>adalah PT Bank Mandiri Taspen yang meliputi Kantor Pusat dan Kantor Cabang serta kantor lainnya yang merupakan bagian yang tak terpisahkan dari PT Bank Mandiri Taspen Pos.</p>
 <p style="padding-left: 30px;"><strong>Nasabah </strong>adalah perorangan pemilik rekening Tabungan Bank Mandiri Taspen.</p>
