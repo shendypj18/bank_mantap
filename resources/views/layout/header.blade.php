@@ -110,13 +110,13 @@ ol li span {
 
 /* program */
 .fz-berita strong {
-    font-family: "Calibri, Sans-serif";
+    font-family: 'Calibri', sans-serif;
 }
 div#news {
-    font-family: "Calibri, sans-serif";
+    font-family: 'Calibri', sans-serif;
 }
 div span span span {
-    font-family: 'calibri, sans-serif';
+    font-family: 'Calibri', sans-serif;
 }
 /* berita */
 .text-center{
