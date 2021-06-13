@@ -7,22 +7,16 @@
  }
  .img-responsive-2 {
      width: 100%;
-     max-width: 100%;
+     max-width: 80%;
      height: auto;
-     max-height: 60%;
+     max-height: 80%;
  }
  @media (min-width: 1337px) {
      .img-responsive-2 {
          width: 100%;
-         max-width: 70%;
+         max-width: 100%;
          height: auto;
-         max-height: 60%;
-     }
-     .h {
-         height: 400px;
-     }
-     .strong-font {
-         font-size: 28px !important;
+         max-height: 100%;
      }
  }
 
