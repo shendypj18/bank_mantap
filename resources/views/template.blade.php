@@ -5,14 +5,14 @@
      box-sizing: border-box;
      width: 100%;
  }
- .img-responsive-2 {
+ .img-responsive-3 {
      width: 100%;
      max-width: 80%;
      height: auto;
      max-height: 80%;
  }
  @media (min-width: 1337px) {
-     .img-responsive-2 {
+     .img-responsive-3 {
          width: 100%;
          max-width: 100%;
          height: auto;
