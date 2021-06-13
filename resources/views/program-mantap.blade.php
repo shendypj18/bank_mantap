@@ -160,13 +160,13 @@
                             @for($i = 1; $i <= $pages["Program Mantap"]->lastPage(); $i++)
                                 @php
                                 $half_total_links = floor($link_limit / 2);
-                                $from = $laporan->currentPage() - $half_total_links;
-                                $to = $laporan->currentPage() + $half_total_links;
-                                if ($laporan->currentPage() < $half_total_links) {
-                                $to += $half_total_links - $laporan->currentPage();
+                                $from = $pages["Program Mantap"]->currentPage() - $half_total_links;
+                                $to = $pages["Program Mantap"]->currentPage() + $half_total_links;
+                                if ($pages["Program Mantap"]->currentPage() < $half_total_links) {
+                                $to += $half_total_links - $pages["Program Mantap"]->currentPage();
                                 }
-                                if ($laporan->lastPage() - $laporan->currentPage() < $half_total_links) {
-                                $from -= $half_total_links - ($laporan->lastPage() - $laporan->currentPage()) - 1;
+                                if ($pages["Program Mantap"]->lastPage() - $pages["Program Mantap"]->currentPage() < $half_total_links) {
+                                $from -= $half_total_links - ($pages["Program Mantap"]->lastPage() - $pages["Program Mantap"]->currentPage()) - 1;
                                 }
                                 @endphp
                                 @if ($from < $i && $i < $to)

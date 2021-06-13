@@ -161,13 +161,13 @@
                             @for($i = 1; $i <= $pages["Berita Mantap"]->lastPage(); $i++)
                                 @php
                                 $half_total_links = floor($link_limit / 2);
-                                $from = $laporan->currentPage() - $half_total_links;
-                                $to = $laporan->currentPage() + $half_total_links;
-                                if ($laporan->currentPage() < $half_total_links) {
-                                $to += $half_total_links - $laporan->currentPage();
+                                $from = $pages["Berita Mantap"]->currentPage() - $half_total_links;
+                                $to = $pages["Berita Mantap"]->currentPage() + $half_total_links;
+                                if ($pages["Berita Mantap"]->currentPage() < $half_total_links) {
+                                $to += $half_total_links - $pages["Berita Mantap"]->currentPage();
                                 }
-                                if ($laporan->lastPage() - $laporan->currentPage() < $half_total_links) {
-                                $from -= $half_total_links - ($laporan->lastPage() - $laporan->currentPage()) - 1;
+                                if ($pages["Berita Mantap"]->lastPage() - $pages["Berita Mantap"]->currentPage() < $half_total_links) {
+                                $from -= $half_total_links - ($pages["Berita Mantap"]->lastPage() - $pages["Berita Mantap"]->currentPage()) - 1;
                                 }
                                 @endphp
                                 @if ($from < $i && $i < $to)
