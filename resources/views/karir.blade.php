@@ -66,7 +66,7 @@
     <div class="col-sm"></div>
     <div class="text-center col-sm-8">
     <h4 class="text-center"><strong>{{__("admin.karir2")}}</strong></h4>
-    <small style="color:#0F2B5B;">{{__("bisnis.karir_txt")}}</small>
+    <small style="color:#0F2B5B; font-size: 18px !important;">{{__("bisnis.karir_txt")}}</small>
     </div>
     <div class="col-sm"></div>
     </div>
