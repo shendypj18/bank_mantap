@@ -1,10 +1,10 @@
         <!--Carousel Wrapper-->
         <div id="news" class="carousel slide carousel-multi-item" data-ride="carousel">
-             <ol class="carousel-indicators" style="top: 25rem;">
+             {{-- <ol class="carousel-indicators" style="top: 25rem;">
 		      <li data-target="#news" data-slide-to="0"  style="width: 8%; height: 8px; background: var(--yellow-fcd116) 0% 0% no-repeat padding-box;
 		      background: #FCD116 0% 0% no-repeat padding-box; border-radius: 6px;"></li>
 		      <li data-target="#news" data-slide-to="1"  style="width: 10px; height: 8px; padding-box; border-radius: 6px; background-color: #121212;"></li>
-		    </ol>
+		    </ol> --}}
             <!--Slides-->
 
 
