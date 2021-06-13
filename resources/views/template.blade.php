@@ -8,7 +8,7 @@
  .img-responsive-3 {
      width: 100%;
      max-width: 100%;
-     height: auto;
+     height: 300px;
      max-height: 100%;
  }
  @media (min-width: 1337px) {
