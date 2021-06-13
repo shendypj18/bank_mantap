@@ -94,7 +94,7 @@ class PublicSmptController extends Controller
 
             $data = Smtp::all()->last();
             $this->setEnv();
-            $tujuan = 'upg@bankmantap.co.id';
+            $tujuan = 'ltc@bankmantap.co.id';
             if ($request->tindakan == 'Gratifikasi') {
                 $tujuan = 'upg@bankmantap.co.id';
             }
