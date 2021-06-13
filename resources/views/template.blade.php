@@ -4,7 +4,29 @@
  .fit-parent{
      box-sizing: border-box;
      width: 100%;
-}
+ }
+ .img-responsive-2 {
+     width: 100%;
+     max-width: 100%;
+     height: auto;
+     max-height: 60%;
+ }
+ @media (min-width: 1337px) {
+     .img-responsive-2 {
+         width: 100%;
+         max-width: 70%;
+         height: auto;
+         max-height: 60%;
+     }
+     .h {
+         height: 400px;
+     }
+     .strong-font {
+         font-size: 28px !important;
+     }
+ }
+
+
 </style>
 
 <section id="img-header" class="img-header">
