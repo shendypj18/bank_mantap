@@ -7,14 +7,14 @@
  }
  .img-responsive-3 {
      width: 100%;
-     max-width: 80%;
+     max-width: 100%;
      height: auto;
-     max-height: 80%;
+     max-height: 100%;
  }
  @media (min-width: 1337px) {
      .img-responsive-3 {
          width: 100%;
-         max-width: 80%;
+         max-width: 100%;
          height: auto;
          max-height: 100%;
      }
