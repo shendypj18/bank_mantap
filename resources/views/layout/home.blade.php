@@ -152,7 +152,7 @@
     <!-- ================================================  VIDEO YOUTUBE ====================================================== -->
     <section id="video" class="video">
     <br/><br/>
-    <div class="container">
+    <div class="container" style="padding-top: 100px;">
         <h1 align="center">#BankMantap #BankMandiriTaspen</h1>
         <p align="center"><a>{{__("admin.txt_section_youtube")}}</a></p>
         <!-- <p align="center"><a>@if($video_1){{$video_1->nama }} @endif</a></p> -->
