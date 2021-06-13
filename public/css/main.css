@@ -30,6 +30,14 @@ body{
 	padding-bottom: 15px;
 }
 
+/* .container-videos .container-video {
+	margin-top: 0%;
+	margin-bottom: 5%;
+} */
+
+.right-text {
+	text-align: right;
+}
 
 h4,h5{
 	color: #0F2B5B;
@@ -296,6 +304,10 @@ a:hover{
 
 @media (max-width: 768px) {
 
+
+.right-text {
+		text-align: center;
+	}
 .hide-onTop {
 		display: none;
 	}
@@ -672,6 +684,10 @@ a:hover{
   }
 
 @media (max-width: 480px)  {
+
+	.right-text {
+		text-align: center;
+	}
 	.footer-nav{
 		font-family: 'Roboto', sans-serif;
 		font-size:12px;
@@ -1029,6 +1045,10 @@ a:hover{
 
 
 @media (min-width: 576px) and (max-width: 768px)  {
+
+	.right-text {
+		text-align: center;
+	}
 	.display-header{
 		margin-left: 5%;
 	}
@@ -1067,6 +1087,9 @@ a:hover{
 }
 
 @media (min-width: 480px) and (max-width: 768px)  {
+	.right-text {
+		text-align: center;
+	}
 	.display-header{
 		margin-left: 5%;
 	}
@@ -1332,6 +1355,9 @@ a:hover{
 	height: 140px;
 }
 @media (min-width: 768px) and (max-width: 1024px)  {
+	.right-text {
+		text-align: center;
+	}
 
 
 	#navbar-upper-text {
@@ -2137,6 +2163,9 @@ section .section-title {
   }
 
 @media only screen and (max-width: 992px) {
+	.right-text {
+		text-align: center;
+	}
 	.icon {
 		display: block;
 		color: #FCD116;

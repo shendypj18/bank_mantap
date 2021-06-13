@@ -162,7 +162,7 @@
         <div class="row text-center text-left text-xs-center text-sm-left text-md-left">
             <div class="col-md-2">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 right-text">
                 <a href="https://web.facebook.com/BankMandiriTaspen" target="_blank" class="fa fa-facebook"></a>
                 <a href="https://twitter.com/BankMantap_id" target="_blank" class="fa fa-twitter"></a>
                 <a href="https://www.instagram.com/bankmantap_id" target="_blank" class="fa fa-instagram"></a>
