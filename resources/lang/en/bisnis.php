@@ -30,7 +30,7 @@ return [
     'tabungan_simantap_pensiun' => 'siMantap Pension Savings Account',
     'tabungan_simantap_pensiun_deskripsi' => 'SiMantap Pensiun is a savings account for retiree customers as a means to accommodate their pension money and pension salaries each month upon the appointment of Bank Mantap as the bank that pays the pension salaries.',
     'deposito_mantap' => 'Mantap Of Deposit',
-    'deposito_mantap_deskripsi' => 'Investment Choices that Provide Benefits and Sense of Security To ensure your money is invested in a safe and reliable and profitable place, Bank Mantap Deposit is the right choice and reliable. Deposit Bank Mantap is a time deposit in Rupiah currency with attractive interest and various other benefits.',
+    'deposito_mantap_deskripsi' => 'An investment option that provides benefits and a sense of security to ensure that your money is invested in a safe and reliable place that is at the same time profitable, Bank Mantap Deposit is the right and reliable choice. Bank Mantap time deposits are time deposits denominated in rupiah with attractive interest rates and various other benefits.',
     'giro' => 'Giro',
     'giro_deskripsi' => 'Your trusted Business Support. For the currently business, clients certainly need a variety of reliable means of support. For that reason Bank Mantap offers lucrative banking transactions through Giro Bank Mantap. Deposit of third party funds in Rupiah withdrawal may be made at any time by check (bilyet giro) and other payment order facilities in accordance with the provisions stipulated by Bank Mantap.',
     'simulasi' => 'Simulation',
