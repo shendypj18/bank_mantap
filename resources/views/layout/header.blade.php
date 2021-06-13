@@ -416,6 +416,33 @@ div span span span {
 
 
     }
+
+    /* pinjaman */
+    .mc .row .col-sm-5 #img-navbar-temp{
+        /* box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 20px 20px 20px 20px;
+        margin-bottom: 50px !important; */
+        width: 70% !important;
+        height: inherit !important;
+        /* margin-left: 30%; */
+    }
+    .col-sm-6.right-img .margin-img-left{
+        width: 70% !important;
+        height: inherit !important;
+    }
+
+    /* berita */
+    #news .carousel-indicators li{
+        display: none;
+    }
+    .container-videos .container-video{
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    #input .mt-5 p small{
+        font-size: 18px !important;
+    }
+    
 </style>
 <body>
 
