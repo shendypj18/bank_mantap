@@ -443,8 +443,8 @@ a:hover{
 
 .card-simpanan{
 	background: url('../asset/simpanan.png') repeat-x padding-box;
-	background-repeat: repeat-x;
-	background-color: #fff;
+	background-repeat: no-repeat;
+	background-color: #fbfbfb;
 	box-shadow: 0px 10px 30px #00000014;
 	border-radius: 24px;
 	font-size: 18px;
@@ -460,7 +460,8 @@ a:hover{
 	padding-left:10px;
 	padding-right:10px;
 	padding-bottom:0px;
-	background-size: 538px 230px;
+	background-size: 427px 230px;
+	background-position: right center;
 }
 
 
