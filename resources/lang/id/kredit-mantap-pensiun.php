@@ -11,7 +11,7 @@ return [
   '9' => '9.  Apakah promo ini berlaku untuk seluruh nasabah Bank Mantap ?',
   '10' => '10. Bagaimana Cara Pengambilan Hadiah ?',
   '11' => '11. Apakah resiko yang akan diterima oleh nasabah atas produk ini ?',
-  '12' => '12. Kemana saya dapat menghubungi apabila ada pertanyaan terkai program ini ?',
+  '12' => '12. Kemana saya dapat menghubungi apabila ada pertanyaan terkait program ini ?',
   'd1' => 'Produk Kredit Bank Mantap yang di berikan khusus kepada para Pensiunan dari PNS, TNI, POLRI, BUMN & BUMD.',
   'd2' => 'Untuk membantu para Pensiunan mendapatkan modal usaha atau modal kerja dan kebutuhan konsumtif sepertirenovasi rumah, pendidikan, kebutuhan keagamaan, dll.',
   'd3' => 'Iya',
