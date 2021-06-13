@@ -20,7 +20,7 @@ return [
 Period I : 1st of January 2016 - 30th of june 2016 (would be drawn in early july 2016).</br>
 Period II: 1st of July 2016 -31th of December 2016 (drawn in early January 2017)
 ',
-  'd6' => 'The Pension Customer must have a minimum credit facility of Rp. 5.000.000, - (five million rupiah) does not apply multiples to get 1 (one) lucky draw',
+  'd6' => 'The Pension Customer must have a minimum credit facility of Rp5.000.000, - (five million rupiah) does not apply multiples to get 1 (one) lucky draw',
   'd7' => 'Period 1 (Motor Prize): 1st January 2016 to 30th June 2016 (drawn in early july 2016)</br>
 Period II (Reward Religi Gift): July 1 2016 to December 31 2016 (drawn early January 2017)
 ',
@@ -30,6 +30,6 @@ Period II (Reward Religi Gift): July 1 2016 to December 31 2016 (drawn early Jan
 Period I (Motor Prize): 1 January 2016 to June 2016 (drawn in early July 2016)</br>
 Period II (Religious Gifts): July 1, 2016 to December 31, 2016 (drawn early January 2017)',
   'd11' => 'If it is related to the acquisition of prizes, the risk is not that all Retirement Account holders get drawing prizes.',
-  'd12' => 'PT Bank Mandiri Taspen Pos',
+  'd12' => 'PT Bank Mandiri Taspen',
 
 ];

@@ -13,22 +13,22 @@ return [
   '11' => '11. Apakah resiko yang akan diterima oleh nasabah atas produk ini ?',
   '12' => '12. Kemana saya dapat menghubungi apabila ada pertanyaan terkait program ini ?',
   'd1' => 'Produk Kredit Bank Mantap yang di berikan khusus kepada para Pensiunan dari PNS, TNI, POLRI, BUMN & BUMD.',
-  'd2' => 'Untuk membantu para Pensiunan mendapatkan modal usaha atau modal kerja dan kebutuhan konsumtif sepertirenovasi rumah, pendidikan, kebutuhan keagamaan, dll.',
+  'd2' => 'Untuk membantu para pensiunan mendapatkan modal usaha atau modal kerja dan kebutuhan konsumtif seperti renovasi rumah, pendidikan, kebutuhan keagamaan, dll.',
   'd3' => 'Iya',
-  'd4' => 'Pajak hadia ditanggung persuahaan',
+  'd4' => 'Pajak hadiah ditanggung persuahaan',
   'd5' => 'Setiap nasabah pensiunan yang telah mendapatkan fasilitas KMP berhak memperoleh 1 (satu) tiket undian berhadiah yang akan diundi pada akhir periode.</br>
-           Periode I: 1 Januari 2016 s/d 30 juni 2016 (diundi awal bulain juli 2016)</br>
+           Periode I: 1 Januari 2016 s/d 30 juni 2016 (diundi awal bulan juli 2016)</br>
            Periode II: 1 Juli 2016 s/d 31 Desember 2016 (diundi awal bulan januari 2016)
 ',
-  'd6' => 'Nasabah Pensiunan harus memiliki fasilitas kredit minimal Rp. 5.000.000,- (lima juta rupiah) tidak berlaku kelipatan untuk mendapatkan 1 (satu) tiket undian.',
+  'd6' => 'Nasabah pensiunan harus memiliki fasilitas kredit minimal Rp5.000.000,- (lima juta rupiah) tidak berlaku kelipatan untuk mendapatkan 1 (satu) tiket undian.',
   'd7' => 'Periode I  : 1 Januari s/d 31 Desember 2017 (diundi bulan Januari 2018).</br>
-           Periode II : (Hadia wisata Religi) : 1 juli 2016 s/d 31 Desember 2016 (diundi awal bulan januari 2017)',
+           Periode II : (Hadiah wisata Religi) : 1 juli 2016 s/d 31 Desember 2016 (diundi awal bulan januari 2017)',
   'd8' => 'Gratis, tidak dipungut biaya apapun.',
   'd9' => 'Promo ini hanya berlaku untuk nasabah yang memiliki fasilitas Kredit Pensiun',
-  'd10' => 'Hadia akan diundi 2 periode:</br>
+  'd10' => 'Hadiah akan diundi 2 periode:</br>
             Periode I (Hadiah Motor): 1 Januari 2016 s/d 30 juni 2016 ( diundi awal bulan juli 2016)</br>
             Periode II (Wisata Religi): 1 juli 2016 s/d 31 Desember 2016 (diundi awal bulan januari 2017)',
   'd11' => 'Jika terkait perolehan hadiah, resikonya tidak semua Nasabah Pensiunan pemegang tiket undian mendapatkan Hadiah Undian.',
-  'd12' => 'PT Bank Mandiri Taspen Pos',
+  'd12' => 'PT Bank Mandiri Taspen',
 
 ];

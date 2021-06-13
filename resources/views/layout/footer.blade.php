@@ -68,7 +68,7 @@
           display: block;
           position: fixed;
           z-index: 100;
-          bottom: 40px;
+          /* bottom: 0px; */
           right: 8px;
       }
    }
