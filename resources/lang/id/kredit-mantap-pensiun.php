@@ -12,7 +12,7 @@ return [
   '10' => '10. Bagaimana Cara Pengambilan Hadiah ?',
   '11' => '11. Apakah resiko yang akan diterima oleh nasabah atas produk ini ?',
   '12' => '12. Kemana saya dapat menghubungi apabila ada pertanyaan terkait program ini ?',
-  'd1' => 'Produk Kredit Bank Mantap yang di berikan khusus kepada para Pensiunan dari PNS, TNI, POLRI, BUMN & BUMD.',
+  'd1' => 'Produk Kredit Bank Mantap yang di berikan khusus kepada para pensiunan dari PNS, TNI, POLRI, BUMN & BUMD.',
   'd2' => 'Untuk membantu para pensiunan mendapatkan modal usaha atau modal kerja dan kebutuhan konsumtif seperti renovasi rumah, pendidikan, kebutuhan keagamaan, dll.',
   'd3' => 'Iya',
   'd4' => 'Pajak hadiah ditanggung persuahaan',
@@ -28,7 +28,7 @@ return [
   'd10' => 'Hadiah akan diundi 2 periode:</br>
             Periode I (Hadiah Motor): 1 Januari 2016 s/d 30 juni 2016 ( diundi awal bulan juli 2016)</br>
             Periode II (Wisata Religi): 1 juli 2016 s/d 31 Desember 2016 (diundi awal bulan januari 2017)',
-  'd11' => 'Jika terkait perolehan hadiah, resikonya tidak semua Nasabah Pensiunan pemegang tiket undian mendapatkan Hadiah Undian.',
+  'd11' => 'Jika terkait perolehan hadiah, resikonya tidak semua Nasabah pensiunan pemegang tiket undian mendapatkan Hadiah Undian.',
   'd12' => 'PT Bank Mandiri Taspen',
 
 ];
