@@ -2145,7 +2145,7 @@ section .section-title {
 	width: 50%
 }
 .float-menu ul li:hover a img {
-	margin-left: 8px;
+   margin-top: -25px;
    float: right;
 }
 .float-menu ul li:hover a .text {
@@ -2366,6 +2366,11 @@ section .section-title {
 }
 
 @media (max-width: 767px) {
+
+	.float-menu ul li:hover a img {
+		margin-top: -5px;
+		float: right;
+	 }
 	
 	.hide-onTop {
 		display: none;
@@ -2401,6 +2406,11 @@ section .section-title {
 	.hide-onTop {
 		display: none;
 	}
+
+	.float-menu ul li:hover a img {
+		margin-top: -5px;
+		float: right;
+	 }
 
 	.hide-chat-float {
 		display: none;
