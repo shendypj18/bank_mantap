@@ -22,7 +22,7 @@ return [
     'pinjaman_mikro' => 'Micro Loans',
     'pinjaman_mikro_deskripsi' => 'Provision of funds for individual entrepreneurs/business entities to finance various kinds of needs either for investment, working capital and consumption with the collateral in the form of financed objects and plus material collateral with a credit limit of more than Rp200 million.',
     'simpanan_tabunganku' => 'Savings Account of TabunganKu',
-    'simpanan_tabunganku_deskripsi' => 'TabunganKu is a savings account for individual Indonesian citizens with easy and light requirements issued jointly by the banks in Indonesia to foster a culture of saving and improve the welfare of the community.',
+    'simpanan_tabunganku_deskripsi' => 'In order to foster culture and improve the welfare of society, banks issue TabunganKu product. This type of savings can be used for individual Indonesian citizens. Enjoy various easy and light requirements in opening a TabunganKu account.',
     'tabungan_simantap_berjangka' => 'Term savings account of siMantap Berjangka',
     'tabungan_simantap_berjangka_deskripsi' => 'siMantap Berjangka (TSB) is a savings account with mandatory monthly deposit that gives you the opportunity to prepare a better future.',
     'tabungan_simantap' => 'siMantap Savings Gold Account',
