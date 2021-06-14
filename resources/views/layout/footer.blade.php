@@ -152,9 +152,9 @@
    .row.icn-logo .col-sm{
      flex-basis: auto;
    }
-   .text-footer a.fa{
+   /* .text-footer a.fa{
      font-size: initial;
-   }
+   } */
   .row.small-footer{
     display: block;
   }
