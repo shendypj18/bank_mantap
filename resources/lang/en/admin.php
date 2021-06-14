@@ -140,7 +140,7 @@ return [
     'budaya_kerja' => 'Work Culture',
     'text_budaya_kerja' => 'Competent and trustworthy while serving with heart',
     'penghargaan2' => 'Award',
-    'text_penghargaan2' => 'As the best bank for pensioners in Indonesia',
+    'text_penghargaan2' => 'As The Best Pension Business Bank in Indonesia',
     'terus_berinovasi' => 'Keep Innovating',
     'text_terus_berinovasi' => 'Bank Mandiri Taspen continues to innovate for developing products in accordance with the current development to meet the customer needs',
     'dapatkan_informasi_berita' => 'Get information on news, promotion,
