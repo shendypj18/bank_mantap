@@ -165,4 +165,8 @@ return [
     'img_karir' => 'asset/karir-eng.png',
     'img_simulasi' => 'asset/slider_simulasi_eng.png',
     'karir_txt' => 'Join as a professional member of Bank Mantap to get an extraordinary career experience with the Mantap Squad that upholds the AKHLAK cultural values.',
+    'deposito' => 'Deposit',
+    'kredit_pensiun' => 'Pension Credit',
+    'kredit_serbaguna_mikro' => 'Micro Multipurpose Credit',
+    'tabungan_berjangka' => 'Term Saving',
 ];

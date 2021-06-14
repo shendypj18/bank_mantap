@@ -47,9 +47,9 @@ td {
 <ul class="breadcrumb">
 
 <div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Simulasi</li>
-  <li>Kredit Serbaguna Mikro</li>
+  <li><a href="{{url('/')}}">{{__('admin.BERANDA')}}</a></li>
+  <li>{{__('bisnis.simulasi')}}</li>
+  <li>{{__('bisnis.kredit_serbaguna_mikro')}}</li>
 </div>
 
 </ul>

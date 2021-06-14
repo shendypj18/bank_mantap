@@ -49,9 +49,9 @@ td {
 
     <div class="container">
 
-        <li><a href="#">Home</a></li>
-        <li>Simulasi</li>
-        <li>Deposito</li>
+        <li><a href="{{url('/')}}">{{__('admin.BERANDA')}}</a></li>
+        <li>{{__('bisnis.simulasi')}}</li>
+        <li>{{__('bisnis.deposito')}}</li>
     </div>
 
 </ul>

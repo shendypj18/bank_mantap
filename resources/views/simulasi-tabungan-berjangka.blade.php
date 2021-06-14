@@ -47,9 +47,9 @@ td {
 <ul class="breadcrumb">
 
 <div class="container">
-  <li><a href="#">Home</a></li>
-  <li>Simulasi</li>
-  <li>Tabungan Berjangka</li>
+  <li><a href="{{url('/')}}">{{__('admin.BERANDA')}}</a></li>
+  <li>{{__('bisnis.simulasi')}}</li>
+  <li>{{__('bisnis.tabungan_berjangka')}}</li>
 </div>
 
 </ul>
