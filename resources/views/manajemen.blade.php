@@ -345,7 +345,7 @@
                                </div>
                                <div class="col-sm mt-5 txt">
                                    <h3 class="nme">{{$p->nama}}</h3>
-                                   <p class="ttle">{{$p->jabatan}}</p>
+                                   <p class="ttle">{{__('admin.txt_jabatan_'.$p->jabatan)}}</p>
                                </div>
                            </div>
                        </div>
