@@ -112,7 +112,7 @@
     <div class="card simulasi simulasi-bottom">
 		  <div class="card-body out">
 		  <br/>
-      <img src="{{ asset('asset/img-simulasi02.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
+      <img src="{{ asset('asset/img-simulasi-02.png') }}" class="card-img-top mb-4 width-img-simulasi" alt="Image Simulasi"/>
 		  <h4><img src="{{ asset('asset/icon/calculator.png') }}"  alt="Logo" width="10%">&nbsp;&nbsp;{{ __('bisnis.simulasi_deposito') }}</h4>
 		  <p class="card-text">{{ __('bisnis.simulasi_deposito_detail_atas') }}<br/>{{ __('bisnis.simulasi_deposito_detail_bawah') }}</p>
 		  <a class="btn btn-simulasi-flat out" role="button" href="{{url('simulasi-deposito/'.$bahasa)}}">{{ __('bisnis.hitung_simulasi') }}</a>
